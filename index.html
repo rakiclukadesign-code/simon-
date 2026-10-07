@@ -292,7 +292,7 @@ footer a:hover{color:var(--orange)}
     .c1,.c2,.c3,.c4,.c5,.c6{grid-column:span 12}
   .steps{grid-template-columns:1fr 1fr;gap:40px 0}
   section{padding:84px 0}
-  .about-grid{grid-template-columns:1fr;gap:32px}
+  .about-grid{grid-template-columns:minmax(0,1fr);gap:32px}
   .about-head h2{font-size:44px;line-height:48px}
   .tablist{flex-direction:row;overflow-x:auto;padding-bottom:4px}.tab{flex:none}.tab .n{display:none}.tab[aria-selected=true]{transform:none}
   .panels{padding:40px 32px}
@@ -300,7 +300,14 @@ footer a:hover{color:var(--orange)}
   .sec-head h2,.config h2{font-size:44px;line-height:48px}
   .career h2{font-size:44px;line-height:48px}
 }
-@media(max-width:560px){.hero .eyebrow{letter-spacing:0}
+@media(max-width:560px){.partners .tile{font-size:16px;line-height:24px}.partners .p-f{font-size:16px}
+.panel:not(.partners) .tile{display:flex;align-items:center;gap:20px;text-align:left;padding:16px 24px}
+.panel:not(.partners) .tile b{min-width:96px;text-align:center}
+.about-grid>*,.panels{min-width:0}
+.tablist{scroll-snap-type:x mandatory;scrollbar-width:none;margin-right:-20px;padding-right:20px}
+.tablist::-webkit-scrollbar{display:none}
+.tab{scroll-snap-align:start}
+.hero .eyebrow{letter-spacing:0}
 .hero p.lead{font-size:16px;line-height:24px;margin:24px 0 32px}
 .cta-row .btn{width:100%;justify-content:center}
 .brandbar{gap:16px 24px}
