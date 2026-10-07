@@ -301,15 +301,18 @@ footer a:hover{color:var(--orange)}
   .career h2{font-size:44px;line-height:48px}
 }
 @media(max-width:560px){.partners .tile{font-size:16px;line-height:24px}.partners .p-f{font-size:16px}
-.panel:not(.partners) .tile{display:flex;align-items:center;gap:20px;text-align:left;padding:16px 24px}
-.panel:not(.partners) .tile b{min-width:96px;text-align:center}
+.panel:not(.partners) .tile{display:flex;align-items:center;gap:12px;text-align:left;padding:16px 20px}
+.panel:not(.partners) .tile b{min-width:72px;text-align:center}
+.panel:not(.partners) .tile span{white-space:nowrap}
 .about-grid>*,.panels{min-width:0}
-.tablist{scroll-snap-type:x mandatory;scrollbar-width:none;margin-right:-20px;padding-right:20px}
-.tablist::-webkit-scrollbar{display:none}
-.tab{scroll-snap-align:start}
+.tablist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;overflow:visible;margin-right:0;padding-right:0;padding-bottom:0}
+.tab{flex-direction:column;justify-content:flex-start;gap:8px;padding:12px 8px;text-align:center;font-size:12px;line-height:16px}
+.tab .ti{width:40px;height:40px}
+.panel p{margin-top:20px}
 .hero .eyebrow{letter-spacing:0}
-.hero p.lead{font-size:16px;line-height:24px;margin:24px 0 32px}
-.cta-row .btn{width:100%;justify-content:center}
+.hero p.lead{font-size:16px;line-height:24px;margin:20px 0 32px}
+.cta-row{flex-direction:column;align-items:flex-start;gap:12px}
+.cta-row .btn{width:auto;padding:12px 24px;font-size:16px}
 .brandbar{gap:16px 24px}
 .brandbar .l{width:100%;margin-right:0;letter-spacing:0}
 .wrap{padding:0 20px}.steps{grid-template-columns:1fr}.stats b{font-size:36px;line-height:40px}.hero h1{font-size:44px;line-height:48px}.sec-head h2,.config h2,.about-head h2,.career h2{font-size:36px;line-height:40px}.panel h3{font-size:28px;line-height:32px}.tile b{font-size:36px;line-height:40px}.tiles{grid-template-columns:1fr}.partners .tiles{grid-template-columns:1fr 1fr}.checks{grid-template-columns:1fr}.panels{padding:40px 24px}}
