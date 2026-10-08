@@ -86,6 +86,18 @@ header.solid .burger{color:var(--brown)}
 .brandbar .bl img{display:block;width:auto;height:24px}
 .brandbar .bl-r img{height:28px}.brandbar .bl-c img{height:28px}.brandbar .bl-f img{height:32px}
 
+/* partneri: svetla traka sa beskonacnim klizanjem zdesna ulevo */
+.pstrip{padding:0;background:var(--white);border-bottom:1px solid var(--line)}
+.pstrip-in{max-width:1440px;margin:0 auto;padding:32px 28px;display:flex;align-items:center;gap:48px}
+.pstrip-l{flex:none;font:600 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
+.pmarq{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ptrack{display:flex;align-items:center;width:max-content;list-style:none;padding:0;margin:0;animation:pmarq 40s linear infinite}
+.pmarq:hover .ptrack{animation-play-state:paused}
+.pl{flex:none;display:grid;place-items:center;padding:0 40px}
+.pl img{display:block;width:auto;height:28px}
+.pl-t img{height:24px}.pl-r img{height:36px}.pl-c img{height:40px}.pl-f img{height:48px}
+@keyframes pmarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ptrack{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.pl[aria-hidden],.pl:nth-child(n+7){display:none}.pmarq{-webkit-mask-image:none;mask-image:none}}
 /* sections */
 section{padding:132px 0}
 .sec-head{max-width:720px;margin-bottom:60px}
@@ -321,7 +333,12 @@ footer a:hover{color:var(--orange)}
   .sec-head h2,.config h2{font-size:44px;line-height:48px}
   .career h2{font-size:44px;line-height:48px}
 }
-@media(max-width:560px){.career h2{font-size:28px;line-height:32px;margin-bottom:20px}
+@media(max-width:560px){.pstrip-in{flex-direction:column;align-items:flex-start;gap:16px;padding:24px 20px}
+.pstrip-l{letter-spacing:0}
+.pl{padding:0 24px}
+.pl img{height:24px}.pl-t img{height:20px}.pl-r img{height:28px}.pl-c img{height:32px}.pl-f img{height:40px}
+.pmarq{width:100%}
+.career h2{font-size:28px;line-height:32px;margin-bottom:20px}
 .career-in{gap:52px}
 .refs .sec-head h2{white-space:normal}
 .config-in{gap:24px}
@@ -435,12 +452,16 @@ footer a:hover{color:var(--orange)}
       <a class="btn btn-light btn-lg" href="#konfigurator">Izračunaj okvirnu cenu</a>
     </div>
   </div>
-  <div class="brandwrap"><div class="brandbar">
-    <span class="l">Ovlašćeni partneri i oprema</span>
-    <span class="bl bl-v"><img src="assets/partneri/viessmann.png" alt="Viessmann logotip" width="1280" height="280" loading="lazy" decoding="async"></span><span class="bl bl-t"><img src="assets/partneri/toshiba.png" alt="Toshiba logotip" width="960" height="147" loading="lazy" decoding="async"></span><span class="bl bl-r"><img src="assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" loading="lazy" decoding="async"></span><span class="bl bl-c"><img src="assets/partneri/carrier.png" alt="Carrier logotip" width="1280" height="517" loading="lazy" decoding="async"></span><span class="bl bl-d"><img src="assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" loading="lazy" decoding="async"></span><span class="bl bl-f"><img src="assets/partneri/flowair.png" alt="Flowair logotip" width="514" height="198" loading="lazy" decoding="async"></span>
-  </div></div>
 </section>
 </div>
+<section class="pstrip" aria-label="Ovlašćeni partneri i oprema">
+  <div class="pstrip-in">
+    <p class="pstrip-l">Ovlašćeni partneri i oprema</p>
+    <div class="pmarq" role="group" aria-label="Logotipi partnera">
+      <ul class="ptrack"><li class="pl pl-v"><img src="assets/partneri/viessmann.png" alt="Viessmann logotip" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="assets/partneri/toshiba.png" alt="Toshiba logotip" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="assets/partneri/carrier.png" alt="Carrier logotip" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="assets/partneri/flowair.png" alt="Flowair logotip" width="514" height="198" decoding="async"></li><li class="pl pl-v"><img src="assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li><li class="pl pl-v"><img src="assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li><li class="pl pl-v"><img src="assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li></ul>
+    </div>
+  </div>
+</section>
 
 <section id="o-nama" class="about">
   <div class="wrap">
