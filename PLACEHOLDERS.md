@@ -146,7 +146,6 @@ Sve što NIJE na listi potvrđenih činjenica označeno je u HTML-u sa `data-pla
 
 | Polje | Privremena vrednost | Mesto na stranici |
 |---|---|---|
-| Prvobitni logo firme | prazan okvir sa tekstom „Prvobitni logo firme“ | Priča o imenu, desno od teksta |
 | Reč osnivača (ceo citat) | Nismo ovo radili kao posao. Sve što smo uradili za svetinje, uradili smo kao dar… (napisano na osnovu motiva ktitora) | Sekcija „Reč osnivača“, tamna traka |
 | Potpis uz citat | Osnivač firme (bez imena) | Ispod citata |
 | Ukupan broj svetinja | 40+ („svetinja ukupno, sve kao donacija“) | Brojke, četvrta stavka |
@@ -182,7 +181,6 @@ Sve su privremene dok klijent ne pošalje sopstvene. Atribucija autora je uklonj
 
 ### Šta treba tražiti od klijenta
 
-- prvobitni logo firme (fajl, najbolje SVG ili visoka rezolucija PNG)
 - potvrda ili korekcija citata osnivača i ime osnivača za potpis
 - odnos Zorana Petrovića sa firmom (osnivač? član porodice?)
 - godina osvećenja temelja crkve u Osečini i trenutni status gradnje (stranica je pisana u vremenu „u izgradnji“)
