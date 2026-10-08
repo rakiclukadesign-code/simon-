@@ -3,8 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Simon – termotehnička rešenja</title>
-<meta name="description" content="Simon d.o.o. – projektovanje i izvođenje sistema grejanja, hlađenja, ventilacije i klimatizacije. 26 godina iskustva, Valjevo.">
+<title>Čuvari tradicije – rad na hramovima i manastirima | Simon</title>
+<meta name="description" content="Radove na hramovima i manastirima firma Simon iz Valjeva i porodica vlasnika izveli su kao donaciju. Priča o imenu, o Hramu Svetog Save, Hilandaru i crkvi Svetog Simeona Stolpnika u Osečini.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:site_name" content="Simon d.o.o.">
+<meta property="og:title" content="Čuvari tradicije | Simon">
+<meta property="og:description" content="Rad na svetinjama za nas je dar, a ne posao. Priča o imenu Simon i o hramovima u kojima smo služili.">
+<!-- TODO: og:image mora biti apsolutni URL (https://...) kada se zna adresa sajta -->
+<meta property="og:image" content="../assets/tradicija/hero-hilandar.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff4a1c'/><text x='16' y='24' font-size='20' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'>S</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,227 +69,6 @@ header.solid .menu a{color:var(--ink)}
 .burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
 header.solid .burger{color:var(--brown)}
 
-/* hero */
-.hero-sec{padding:76px 0 0}
-.hero{position:relative;overflow:hidden;color:#fff;
-  background:
-   radial-gradient(800px 480px at 84% 0%,rgba(255,74,28,.5),transparent 60%),
-   radial-gradient(600px 400px at 0% 100%,rgba(201,162,39,.16),transparent 60%),
-   linear-gradient(160deg,var(--brown-2),var(--brown) 72%)}
-.hero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");pointer-events:none}
-.hero-in{position:relative;z-index:2;max-width:1440px;margin:0 auto;padding:136px 28px 112px}
-.hero h1{max-width:900px}
-.eyebrow{display:inline-block;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--orange);margin-bottom:24px}
-.hero .eyebrow{padding:8px 16px;border:1px solid rgba(255,255,255,.2);border-radius:1000px;color:#fff;letter-spacing:4px;font-size:12px}
-.hero .eyebrow::before{content:"";display:inline-block;width:8px;height:8px;border-radius:1000px;background:var(--orange);margin-right:12px}
-.hero h1{font-size:92px;line-height:96px;letter-spacing:-4px;font-weight:800}
-.hero h1 em{font-style:normal;color:var(--orange)}
-.hero p.lead{max-width:560px;margin:28px 0 40px;font-size:20px;line-height:28px;color:rgba(255,255,255,.78)}
-.cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-.btn-lg{padding:20px 32px;font-size:16px}
-.brandwrap{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.14)}
-.brandbar{max-width:1440px;margin:0 auto;padding:24px 28px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;color:rgba(255,255,255,.5);font:600 12px/16px Sora;letter-spacing:0;text-transform:uppercase}
-.brandbar .l{font:600 12px/16px Manrope;letter-spacing:4px;margin-right:auto}
-
-/* sections */
-section{padding:132px 0}
-.sec-head{max-width:720px;margin-bottom:60px}
-.sec-head h2{font-size:56px;line-height:60px;font-weight:700;color:var(--brown)}
-.sec-head h2 em{font-style:normal;color:var(--orange)}
-.sec-head p{margin-top:20px;color:var(--muted);font-size:16px;max-width:540px}
-
-/* about: tabs */
-.about-grid{display:grid;grid-template-columns:360px 1fr;gap:48px;align-items:start}
-.about-head{max-width:880px;margin-bottom:56px}
-.about-head h2{font-size:52px;line-height:56px;color:var(--brown)}
-.tablist{display:flex;flex-direction:column;gap:12px}
-.tab{display:flex;align-items:center;gap:16px;text-align:left;padding:16px 24px 16px 16px;border-radius:var(--r-md);border:1px solid var(--line);background:var(--white);font:600 16px/24px Manrope;color:var(--brown);cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .3s}
-.tab:hover{border-color:var(--orange)}
-.tab:active{transform:scale(.97)}
-.tab .ti{flex:none;width:48px;height:48px;border-radius:12px;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;transition:background .2s,color .2s}
-.tab .ti svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.tab .n{margin-left:auto;font:700 12px/16px Manrope;letter-spacing:4px;opacity:.56}
-.tab[aria-selected=true]{background:var(--orange);border-color:var(--orange);color:#fff;transform:translateX(16px)}
-.tab[aria-selected=true] .ti{background:rgba(255,255,255,.2);color:#fff}
-.panels{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:80px 56px;box-shadow:var(--shadow)}
-.panel{display:none;flex-direction:column;align-items:center;text-align:center}
-.panel.on{display:flex;animation:panelIn .4s ease}
-@keyframes panelIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.panel h3{font-size:36px;line-height:40px;color:var(--brown);max-width:720px}
-.panel p{margin-top:24px;max-width:640px;font-size:16px;line-height:28px;color:var(--muted)}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px;width:100%}
-.tile{background:var(--cream);border-radius:var(--r-md);padding:24px;text-align:center}
-.tile b{display:block;font:700 56px/60px Sora;color:var(--orange);font-variant-numeric:tabular-nums}
-.tile span{font-size:16px;color:var(--muted)}
-.partners .tile{display:grid;place-items:center;height:96px;padding:0;font:800 24px/32px Sora;color:var(--brown)}
-.partners .p-v{color:#d4502a}.partners .p-t{color:#e60012}.partners .p-c{color:#0a1a8a;font-family:Georgia,serif;font-style:italic;font-weight:700}
-.partners .p-f{color:#2a2a2a;font-size:20px;line-height:24px}.partners .p-d{color:#00a1e4;font-style:italic}.partners .p-r{color:#111}
-.checks{list-style:none;padding:0;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%}
-.checks li{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;background:var(--cream);border-radius:var(--r-md);padding:24px;font-weight:600;color:var(--brown);line-height:24px}
-.checks li::before{content:"\2713";flex:none;width:24px;height:24px;border-radius:1000px;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:12px}
-.panel .btn{margin-top:40px}
-
-/* services: bento */
-.services{background:var(--white)}
-.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-.card{position:relative;border-radius:var(--r-lg);padding:36px;background:var(--cream);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s,border-color .3s;overflow:hidden}
-.card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--orange)}
-.card .ic{width:56px;height:56px;border-radius:16px;background:var(--orange-soft);color:var(--orange);display:grid;place-items:center;margin-bottom:auto}
-.card .ic svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-size:28px;line-height:32px;margin:44px 0 12px;color:var(--brown)}
-.card p{font-size:16px;color:var(--muted);margin-bottom:24px;max-width:400px}
-.rec{display:flex;align-items:center;gap:12px;margin-bottom:24px}
-.rec small{font:600 12px/16px Manrope;color:var(--muted)}
-.rec b{font:700 12px/16px Sora;color:var(--brown);padding:4px 12px;border:1px solid var(--line);border-radius:1000px;background:var(--white)}
-.c1 .rec small{color:rgba(255,255,255,.7)}
-.c1 .rec b{color:#fff;background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.3)}
-.card .cnt{position:absolute;top:52px;right:36px;z-index:1;font:600 12px/16px Manrope;color:var(--orange-d);background:var(--orange-soft);padding:4px 12px;border-radius:1000px;white-space:nowrap}
-.card .cnt b{font-weight:700}
-.c1 .cnt{color:#fff;background:rgba(255,255,255,.12)}
-.c1{grid-column:span 7;min-height:380px;background:linear-gradient(150deg,var(--brown),var(--brown-2));color:#fff;border:0}
-.c1 h3{color:#fff;font-size:36px;line-height:40px}.c1 p{color:rgba(255,255,255,.75)}.c1 .ic{background:rgba(255,255,255,.12);color:var(--orange)}
-.c1::after{content:"";position:absolute;right:-92px;bottom:-112px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,74,28,.55),transparent 64%)}
-.c2{grid-column:span 5}
-.c3,.c4,.c5,.c6{grid-column:span 3}
-.c3 h3,.c4 h3,.c5 h3,.c6 h3{font-size:24px;line-height:28px;margin-top:36px}
-.c3 p,.c4 p,.c5 p,.c6 p{font-size:16px}
-
-/* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s}
-.step{padding:0 28px 0 0;position:relative}
-.step::before{counter-increment:s;content:"0" counter(s);display:block;font:800 64px/64px Sora;color:transparent;-webkit-text-stroke:1px var(--orange);margin-bottom:20px}
-.step h3{font-size:20px;line-height:24px;color:var(--brown);margin-bottom:8px}
-.step p{font-size:16px;color:var(--muted)}
-
-/* configurator teaser */
-.config{background:var(--brown);color:#fff;padding:100px 0;position:relative;overflow:hidden}
-.config::before{content:"";position:absolute;left:-120px;top:-120px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(255,74,28,.4),transparent 64%)}
-.config-in{padding:0 28px;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:stretch}
-.config-left{display:flex;flex-direction:column;gap:48px}
-.config-left .partner-cta{margin-top:auto}
-.cfg{display:flex;flex-direction:column}
-.cfg .out{margin-top:auto}
-.config h2{font-size:56px;line-height:60px;font-weight:700}
-.config h2 em{font-style:normal;color:var(--orange)}
-.config p.lead{margin:20px 0 32px;color:rgba(255,255,255,.72);max-width:432px}
-.partner-cta{display:flex;flex-direction:column;align-items:flex-start;gap:24px;background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:36px}
-.partner-cta img{height:84px;width:auto}
-.partner-cta .btn{margin-top:auto}
-.partner-cta b{display:block;font:700 20px/24px Sora;color:var(--brown);margin-bottom:8px}
-.partner-cta span{font-size:16px;color:var(--muted)}
-.cfg{background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:36px;box-shadow:0 40px 80px -32px rgba(0,0,0,.6)}
-.cfg h3{font-size:20px;line-height:24px;margin-bottom:24px;color:var(--brown)}
-.cfg label{display:block;font-weight:700;font-size:16px;margin:16px 0 8px}
-.opts{display:flex;gap:8px;flex-wrap:wrap}
-.opts input{position:absolute;opacity:0}
-.opts span{display:block;padding:12px 16px;border:1px solid var(--line);border-radius:1000px;font-weight:600;font-size:16px;cursor:pointer;background:var(--white);transition:background .4s,border-color .4s,color .4s}
-@media(hover:hover){.opts label:hover span{background:var(--orange);border-color:var(--orange);color:#fff}}
-.opts input:checked+span{background:var(--orange);border-color:var(--orange);color:#fff}
-.opts input:focus-visible+span{outline:4px solid var(--orange);outline-offset:4px}
-.opts label{margin:0;position:relative}
-.range{width:100%;accent-color:var(--orange)}
-.out{margin-top:24px;padding:20px;border-radius:var(--r-md);background:var(--orange-soft);display:flex;justify-content:space-between;align-items:center;gap:12px}
-.cfg-note{margin-top:16px;font-size:12px;line-height:16px;color:var(--muted)}
-.out small{display:block;color:var(--muted);font-size:12px}
-.out b{font:700 24px/28px Sora;color:var(--orange-d);font-variant-numeric:tabular-nums}
-
-/* references */
-.refs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:60px;align-items:center}
-.refs>div:first-child{order:2}
-.refs>div:last-child{order:1}
-#konfigurator{padding-bottom:0}
-.map{position:relative;height:640px}
-.map svg{position:absolute;inset:0;width:100%;height:100%}
-.srb-map{filter:drop-shadow(0 20px 32px rgba(120,30,10,.16))}
-.okrug{fill:#ecd4c5;stroke:#fff;stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round;transition:fill .3s}
-.okrug:hover{fill:#ffc9b5}
-.okrug[data-okrug=kolubarski]{fill:var(--orange)}
-.okrug[data-okrug=kosovo]{fill:var(--gold)}
-.okrug[data-okrug=beograd]{fill:var(--orange)}
-.okrug[data-okrug]:hover{filter:brightness(1.08)}
-.pins .dot{fill:#fff;stroke:var(--orange);stroke-width:2}
-.pins .dot.g{stroke:var(--gold)}
-.pins .ring{fill:none;stroke:var(--orange);stroke-width:2;animation:ring 2.4s ease-out infinite}
-.pins .ring.g{stroke:var(--gold)}
-@keyframes ring{from{r:4;opacity:.8}to{r:16;opacity:0}}
-.pin{position:absolute;width:16px;height:16px;border-radius:1000px;background:var(--orange);box-shadow:0 0 0 0 rgba(255,74,28,.5);animation:pulse 2.4s infinite;cursor:pointer}
-.pin span{position:absolute;left:20px;top:-4px;font:700 12px Manrope;color:var(--brown);white-space:nowrap;background:#fff;padding:4px 8px;border-radius:8px;box-shadow:0 4px 12px -4px rgba(0,0,0,.2)}
-@keyframes pulse{72%{box-shadow:0 0 0 16px rgba(255,74,28,0)}100%{box-shadow:0 0 0 0 rgba(255,74,28,0)}}
-.refs-all{margin-top:32px}
-.map-hint{display:none}
-.refs .sec-head h2{white-space:nowrap}
-.legend{justify-content:center;display:flex;gap:24px;margin-top:20px;font-size:12px;color:var(--muted);flex-wrap:wrap}
-.legend i{display:inline-block;width:12px;height:12px;border-radius:1000px;margin-right:8px;background:var(--orange)}
-.legend i.g{background:var(--gold)}
-.legend i.n{background:#ecd4c5}
-.tradition{scroll-margin-top:108px;margin-top:36px;padding:32px;border-left:4px solid var(--gold);background:#fff;border-radius:0 var(--r-md) var(--r-md) 0}
-.tradition h3{font-size:24px;line-height:28px;color:var(--brown);margin-bottom:8px}
-.tradition p{font-size:16px;color:var(--muted);margin-bottom:16px}
-
-/* map: tooltip + popup */
-.okrug{cursor:pointer}
-.srb-map :focus,.srb-map :focus-visible{outline:none!important}
-.okrug:focus-visible{stroke:var(--orange);stroke-width:2}
-.map-tip{position:absolute;z-index:2;pointer-events:none;background:var(--brown);color:#fff;font:600 12px/16px Manrope;padding:8px 12px;border-radius:8px;white-space:nowrap;opacity:0;transform:translate(-50%,calc(-100% - 16px));transition:opacity .15s}
-.map-tip.on{opacity:1}
-.map-tip small{display:block;font-weight:500;opacity:.7}
-.okr{margin:auto;border:0;padding:0;border-radius:var(--r-lg);width:calc(100% - 32px);max-width:1040px;max-height:calc(100dvh - 32px);color:var(--ink);background:var(--white);box-shadow:0 40px 80px -32px rgba(0,0,0,.6);overflow:auto}
-.okr:focus{outline:none}
-.okr::backdrop{background:rgba(43,13,8,.56);backdrop-filter:blur(4px)}
-.okr[open]{animation:panelIn .3s ease}
-.okr-in{padding:40px}
-.okr-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
-.okr h3{font-size:36px;line-height:40px;color:var(--brown)}
-.okr-count{margin-top:8px;font-size:16px;color:var(--muted)}
-.okr-x{flex:none;width:48px;height:48px;border-radius:1000px;border:1px solid var(--line);background:var(--white);color:var(--brown);font-size:20px;line-height:24px;cursor:pointer;transition:background .2s,border-color .2s}
-.okr-x:hover{background:var(--orange-soft);border-color:var(--orange)}
-.okr-grid{display:grid;grid-template-columns:1fr 360px;gap:40px;margin-top:32px;align-items:start}
-.okr-list{list-style:none;padding:0;margin:0;max-height:560px;overflow-y:auto}
-.okr-list .ts{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
-.okr-list li{border-top:1px solid var(--line)}
-.okr-list button{display:grid;grid-template-columns:32px 1fr auto;gap:16px;align-items:center;width:100%;text-align:left;padding:16px;border:0;background:none;border-radius:var(--r-sm);font:inherit;color:inherit;cursor:pointer;transition:background .2s}
-.okr-list button:hover{background:var(--cream)}
-.okr-list button[aria-current=true]{background:var(--orange-soft)}
-.okr-list li.holy button[aria-current=true]{background:#fbf3d6}
-.okr-list .n{font:700 12px/16px Manrope;color:var(--muted)}
-.okr-list b{display:block;font:600 16px/24px Manrope;color:var(--brown)}
-.okr-list span.m{font-size:12px;line-height:16px;color:var(--muted)}
-.okr-list .t{font:600 12px/16px Manrope;color:var(--orange-d);background:var(--orange-soft);padding:4px 12px;border-radius:1000px;white-space:nowrap}
-.okr-list li.holy .t{color:#7a5f0a;background:#f6ecc4}
-.okr-list li.holy b::before{content:"";display:inline-block;width:8px;height:8px;border-radius:1000px;background:var(--gold);margin-right:8px}
-.okr-d{background:var(--cream);border-radius:var(--r-md);overflow:hidden}
-.okr-d .ph{height:208px;background:linear-gradient(150deg,var(--brown-2),var(--brown));position:relative}
-.okr-d .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.okr-d .bd{padding:24px}
-.okr-d h4{font:700 20px/24px Sora;color:var(--brown)}
-.okr-d .loc{margin-top:4px;font-size:12px;line-height:16px;color:var(--muted)}
-.okr-d p{margin-top:16px;font-size:16px;line-height:24px;color:var(--muted)}
-.okr-d dl{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
-.okr-d dt{font:600 12px/16px Manrope;color:var(--muted)}
-.okr-d dd{margin:4px 0 0;font:600 16px/24px Manrope;color:var(--brown)}
-.okr-empty{margin-top:32px;padding:32px;border-radius:var(--r-md);background:var(--cream);color:var(--muted);text-align:center}
-@media(max-width:760px){.okr-in{padding:24px}.okr-grid{grid-template-columns:1fr}.okr h3{font-size:28px;line-height:32px}}
-.btn-soft{background:var(--orange-soft);color:var(--orange-d)}
-.btn-soft:hover{background:#ffe0d3}
-.okr-foot{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px}
-
-/* career */
-.career{position:relative;overflow:hidden;background:var(--white);border-top:1px solid var(--line)}
-.career .form{background:var(--cream)}
-.career .form input{background:var(--white)}
-.career-in{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
-.career h2{font-size:52px;line-height:56px;color:var(--brown);margin-bottom:20px}
-.career h2 em{font-style:normal;color:var(--orange)}
-.career p{color:var(--muted);max-width:468px}
-.form{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--shadow);display:grid;gap:16px}
-.form input{font:500 16px Manrope;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--cream);width:100%;transition:border-color .2s}
-.form input:focus{outline:0;border-color:var(--orange)}
-.form input:user-invalid{border-color:#c0321a}
-.form small{color:var(--muted);font-size:12px}
-.form .btn{justify-content:center}
-.ok{display:none;color:#1d7a46;font-weight:600;font-size:16px}
-
-/* footer */
 footer{background:var(--brown);color:rgba(255,255,255,.72);padding:92px 0 36px}
 .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px}
 footer .logo{font-size:56px;line-height:56px;color:#fff}
@@ -290,337 +77,321 @@ footer li{list-style:none;margin-bottom:12px;font-size:16px}
 footer ul{padding:0}
 footer a:hover{color:var(--orange)}
 .copy{margin-top:72px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:12px}
-
 /* reveal */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.menu a::after{transition:none}.pins .ring{animation:none;opacity:0}.rv{opacity:1;transform:none;transition:none}.pin{animation:none}html{scroll-behavior:auto}}
 
-/* responsive */
+
+/* ---- stranica Cuvari tradicije ---- */
+[hidden]{display:none!important}
+:root{--gold-d:#8a6d0b;--gold-soft:#fbf5df}
+.eyebrow{display:inline-block;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--gold-d);margin-bottom:20px}
+.menu a[aria-current=page]{color:var(--orange)}
+.menu a[aria-current=page]::after{transform:scaleX(1)}
+.gline{display:block;width:48px;height:2px;background:var(--gold);margin:0 0 24px}
+.t-sec{padding:132px 0}
+.t-sec h2{font-size:52px;line-height:56px;font-weight:700;color:var(--brown)}
+.t-sec p{font-size:16px;line-height:28px;color:var(--muted)}
+.t-sec p+p{margin-top:16px}
+.t-anchor{scroll-margin-top:108px}
+.ph-tag{display:inline;border-bottom:1px dashed var(--gold-d)}
+figure{margin:0}
+figcaption{margin-top:12px;font-size:12px;line-height:16px;color:var(--muted)}
+figcaption a{text-decoration:underline;text-underline-offset:2px}
+.pic{height:480px;border-radius:var(--r-lg);overflow:hidden;background:var(--brown-2);box-shadow:var(--shadow)}
+.pic img{width:100%;height:100%;object-fit:cover}
+
+/* hero */
+.thero{position:relative;margin-top:76px;display:flex;min-height:min(720px,calc(100dvh - 76px));overflow:hidden;background:var(--brown);color:#fff}
+.thero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:slowzoom 24s ease-out both}
+@keyframes slowzoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.thero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,13,8,.3) 0%,rgba(43,13,8,.55) 50%,rgba(43,13,8,.9) 100%)}
+.thero-in{position:relative;z-index:2;width:100%;max-width:1440px;margin:0 auto;padding:0 28px 112px;display:flex;flex-direction:column;justify-content:flex-end}
+.thero .eyebrow{color:var(--gold)}
+.thero h1{font-size:80px;line-height:84px;font-weight:700;letter-spacing:0;max-width:900px}
+.thero p.sub{margin-top:24px;max-width:560px;font-size:20px;line-height:32px;color:rgba(255,255,255,.86)}
+.thero .credit{position:absolute;z-index:2;right:28px;bottom:24px;font-size:12px;line-height:16px;color:rgba(255,255,255,.7)}
+.thero .credit a{text-decoration:underline;text-underline-offset:2px}
+
+/* ime */
+.ime{background:var(--cream)}
+.ime-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:96px;align-items:center}
+.ime p{max-width:560px}
+.logo-box{display:grid;place-items:center;height:320px;padding:32px;border:2px dashed var(--gold);border-radius:var(--r-lg);text-align:center;color:var(--gold-d);background:var(--gold-soft)}
+.logo-box b{display:block;font:700 20px/24px Sora;margin-bottom:8px}
+.logo-box span{font-size:12px;line-height:16px}
+
+/* osnivac */
+.osn{position:relative;overflow:hidden;background:var(--brown);color:#fff;padding:152px 0;text-align:center}
+.osn>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.2}
+.osn .wrap{position:relative}
+.osn blockquote{margin:0 auto;max-width:840px}
+.osn .mark{display:block;font:700 96px/72px Sora;color:var(--gold)}
+.osn blockquote p{margin-top:16px;font:500 32px/48px Sora;color:#fff}
+.osn cite{display:block;margin-top:32px;font:600 16px/24px Manrope;font-style:normal;color:var(--gold)}
+
+/* brojke */
+.num{background:var(--white);padding:104px 0}
+.num-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.num-grid div{padding:0 32px}
+.num-grid div+div{border-left:1px solid var(--line)}
+.num-grid div:first-child{padding-left:0}
+.num-grid b{display:block;font:700 48px/52px Sora;color:var(--gold-d);font-variant-numeric:tabular-nums}
+.num-grid span{display:block;margin-top:8px;font-size:16px;line-height:24px;color:var(--muted)}
+
+/* svetinje */
+.svet{background:var(--cream)}
+.svet-head{max-width:720px;margin-bottom:96px}
+.svet-head p{margin-top:20px}
+.blk{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:80px;align-items:center}
+.blk+.blk{margin-top:128px}
+.blk.rev{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.blk.rev .blk-media{order:2}
+.blk h3{font:700 36px/40px Sora;color:var(--brown)}
+.blk .where{margin-top:8px;font-size:16px;line-height:24px;color:var(--muted)}
+.blk p{margin-top:20px}
+.duo{display:grid;gap:16px}
+.duo .pic{height:360px}.duo .pic+.pic{height:240px}
+.duo figcaption{margin-top:0}
+.fact{display:inline-block;margin-top:24px;padding:8px 16px;border:1px solid var(--gold);border-radius:1000px;font:700 16px/24px Manrope;color:var(--gold-d);background:var(--gold-soft)}
+.zad{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.zad li{padding:8px 16px;border:1px dashed var(--gold-d);border-radius:1000px;font-size:16px;line-height:24px;color:var(--gold-d)}
+
+/* ktitorska crkva */
+.kt{background:var(--gold-soft)}
+.kt-head{max-width:760px;margin-bottom:72px}
+.kt-head .lead{margin-top:20px;font-size:20px;line-height:32px;color:var(--muted)}
+.kt-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:start}
+.kt .pic{height:560px}
+.kt h3{font:700 24px/28px Sora;color:var(--brown);margin-bottom:12px}
+.kt-data{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 32px;margin-top:72px;padding:40px;background:var(--white);border-radius:var(--r-lg)}
+.kt-data dt{font:600 12px/16px Manrope;color:var(--muted)}
+.kt-data dd{margin:4px 0 0;font:600 16px/24px Manrope;color:var(--brown)}
+.kt-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
+.kt-card{padding:40px;background:var(--white);border-radius:var(--r-lg)}
+.kt-card::before{content:"";display:block;width:48px;height:2px;background:var(--gold);margin-bottom:20px}
+.kt-card p{margin:0}
+.kt-photos{margin-top:72px}
+.kt-photos h3{margin-bottom:12px}
+.kt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.kt-grid figure{position:relative}
+.kt-grid .pic{height:280px;box-shadow:none}
+.kt-grid figcaption{position:absolute;left:16px;bottom:16px;margin:0;padding:4px 12px;border-radius:1000px;background:rgba(255,255,255,.92);color:var(--brown);font-weight:600}
+
+/* izazov */
+.chal{background:var(--white)}
+.chal-head{max-width:720px;margin-bottom:72px}
+.chal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 96px;counter-reset:c}
+.chal-item{padding-top:24px;border-top:1px solid var(--line)}
+.chal-item::before{counter-increment:c;content:"0" counter(c);display:block;font:700 40px/44px Sora;color:var(--gold);margin-bottom:12px}
+.chal-item h3{font:700 20px/24px Sora;color:var(--brown);margin-bottom:8px}
+.chal-item p{margin:0}
+
+/* mapa */
+.mapa{background:var(--cream)}
+.mapa-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:center}
+.mapa-list{list-style:none;padding:0;margin-top:40px}
+.mapa-list li{padding:20px 0;border-top:1px solid var(--line)}
+.mapa-list li:last-child{border-bottom:1px solid var(--line)}
+.mapa-list b{display:block;font:700 16px/24px Sora;color:var(--brown)}
+.mapa-list a{display:block;font-size:16px;line-height:24px;color:var(--muted);transition:color .4s}
+.mapa-list a:hover{color:var(--gold-d)}
+.map{position:relative;height:640px}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.srb-map{filter:drop-shadow(0 20px 32px rgba(120,30,10,.12))}
+.okrug{fill:#ecd4c5;stroke:#fff;stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round;transition:fill .4s}
+.okrug.hl{fill:var(--gold);cursor:pointer}
+.okrug.hl:hover{filter:brightness(1.08)}
+.okrug:focus-visible{stroke:var(--brown);stroke-width:2}
+.srb-map :focus,.srb-map :focus-visible{outline:none!important}
+.pins .dot{fill:#fff;stroke:var(--gold-d);stroke-width:2}
+.pins .ring{fill:none;stroke:var(--gold-d);stroke-width:2;animation:ring 3s ease-out infinite}
+@keyframes ring{from{r:4;opacity:.8}to{r:16;opacity:0}}
+.map-tip{position:absolute;z-index:2;pointer-events:none;background:var(--brown);color:#fff;font:600 12px/16px Manrope;padding:8px 12px;border-radius:8px;white-space:nowrap;opacity:0;transform:translate(-50%,calc(-100% - 16px));transition:opacity .2s}
+.map-tip.on{opacity:1}
+.map-note{margin-top:16px;font-size:12px;line-height:16px;color:var(--muted);text-align:center}
+
+/* kosovo */
+.kos{background:var(--white)}
+.kos-in{max-width:720px}
+.kos .zad{margin-top:32px}
+
+/* svedocanstva */
+.sved{background:var(--cream)}
+.sved-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:56px}
+.sved blockquote{margin:0;padding:40px;background:var(--white);border-left:4px solid var(--gold);border-radius:0 var(--r-lg) var(--r-lg) 0}
+.sved blockquote p{font:500 20px/32px Manrope;color:var(--brown)}
+.sved cite{display:block;margin-top:20px;font:600 16px/24px Manrope;font-style:normal;color:var(--muted)}
+
+/* zavrsetak */
+.kraj{background:var(--gold-soft);padding:152px 0;text-align:center}
+.kraj .gline{margin:0 auto 32px}
+.kraj p.mis{max-width:760px;margin:0 auto;font:500 36px/52px Sora;color:var(--brown)}
+.kraj-links{display:flex;justify-content:center;gap:16px 40px;flex-wrap:wrap;margin-top:56px}
+.kraj-links a{font:600 16px/24px Manrope;color:var(--gold-d);text-decoration:underline;text-underline-offset:4px;transition:color .4s}
+.kraj-links a:hover{color:var(--brown)}
+.credits{background:var(--cream);padding:40px 0;font-size:12px;line-height:16px;color:var(--muted)}
+.credits p{max-width:960px}
+.credits a{text-decoration:underline;text-underline-offset:2px}
+
+/* sporije, mirnije pojavljivanje */
+.rv{transform:translateY(16px);transition:opacity 1.1s cubic-bezier(.2,.7,.2,1),transform 1.1s cubic-bezier(.2,.7,.2,1)}
+@media(prefers-reduced-motion:reduce){.thero>img{animation:none}.pins .ring{animation:none;opacity:0}}
+
 @media(max-width:1100px){
   .menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
   .menu.open{display:flex}.menu a{color:var(--ink)!important}
+  .menu a[aria-current=page]{color:var(--orange)!important}
   .burger{display:block}
 }
 @media(max-width:980px){
-  .menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
-  .menu.open{display:flex}.menu a{color:var(--ink)!important}
-  .burger{display:block}
-  .hero-in{padding:64px 28px 48px}.brandbar{padding:24px 28px}.config-in{padding:0 28px;grid-template-columns:1fr;gap:48px}  .about,.config-in,.refs,.career-in,.f-grid{grid-template-columns:1fr}
-    .c1,.c2,.c3,.c4,.c5,.c6{grid-column:span 12}
-  .steps{grid-template-columns:1fr 1fr;gap:40px 0}
-  section{padding:84px 0}
-  .about-grid{grid-template-columns:minmax(0,1fr);gap:32px}
-  .about-head h2{font-size:44px;line-height:48px}
-  .tablist{flex-direction:row;overflow-x:auto;padding-bottom:4px}.tab{flex:none}.tab .n{display:none}.tab[aria-selected=true]{transform:none}
-  .panels{padding:40px 32px}
-  .hero h1{font-size:64px;line-height:68px;letter-spacing:0}
-  .sec-head h2,.config h2{font-size:44px;line-height:48px}
-  .career h2{font-size:44px;line-height:48px}
+  .f-grid{grid-template-columns:1fr}
+  .t-sec{padding:96px 0}
+  .t-sec h2{font-size:40px;line-height:44px}
+  .ime-grid,.blk,.kt-row,.mapa-grid{grid-template-columns:minmax(0,1fr);gap:48px}
+  .blk.rev{grid-template-columns:minmax(0,1fr)}
+  .blk.rev .blk-media{order:0}
+  .blk+.blk{margin-top:96px}
+  .num-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 0}
+  .num-grid div:nth-child(3){border-left:0;padding-left:0}
+  .kt-data{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kt-cards,.chal-grid,.sved-grid{grid-template-columns:minmax(0,1fr)}
+  .chal-grid{gap:40px}
+  .thero h1{font-size:64px;line-height:68px}
 }
-@media(max-width:560px){.career h2{font-size:28px;line-height:32px;margin-bottom:20px}
-.career-in{gap:52px}
-.refs .sec-head h2{white-space:normal}
-.config-in{gap:24px}
-.refs{gap:0}
-.refs>div:last-child{display:contents}
-.refs>div:first-child{order:3;margin-bottom:52px}
-.refs .eyebrow{order:1}
-.refs .sec-head{order:2;margin-bottom:52px!important}
-.refs .sec-head p{margin-top:20px}
-.refs-all{padding:12px 24px}
-#konfigurator{padding-bottom:0}
-.tradition{order:4;margin-top:0}
-.map{height:480px}
-.map-hint{display:block;margin-top:8px;font-size:12px;line-height:16px;color:var(--muted);text-align:center}
-.legend{flex-wrap:nowrap;justify-content:space-between;gap:8px;margin-top:12px}
-.legend i{margin-right:4px}
-.lg-x{display:none}
-.btn-gold,.btn-gold:hover{min-width:0;padding:12px 28px;background:var(--gold);transition:none}
-/* popup kao donji panel */
-.okr{width:100%;max-width:100%;height:100dvh;max-height:100dvh;margin:0;border-radius:0}
-.okr[open]{animation:sheetUp .3s ease}
-@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
-.okr-in{padding:0;display:flex;flex-direction:column;min-height:100dvh}
-.okr-top{position:sticky;top:0;z-index:2;background:var(--white);padding:20px;border-bottom:1px solid var(--line)}
-.okr h3{font-size:24px;line-height:28px}
-.okr-count{margin-top:4px;font-size:14px;line-height:20px}
-.okr-x{width:40px;height:40px;font-size:16px}
-#okrBody{padding:0 20px;flex:1}
-.okr-grid{display:block;margin-top:0}
-.okr-list{max-height:none;overflow:visible}
-.okr-list li{border-top:1px solid var(--line)}
-.okr-list li:first-child{border-top:0}
-.okr-list button{padding:16px 0}
-.okr-list button[aria-current=true]{background:none}
-.okr-list li.holy button[aria-current=true]{background:none}
-.okr-list li .okr-d{margin:0 0 16px}
-.okr-d .ph{height:128px}
-.okr-d .bd{padding:16px}
-.okr-d h4{font-size:16px;line-height:24px}
-.okr-d p{margin-top:8px}
-.okr-d dl{gap:12px 16px;margin-top:16px;padding-top:16px}
-.okr-empty{margin:24px 0;padding:24px}
-.okr-foot{position:sticky;bottom:0;z-index:2;flex-direction:column;gap:8px;margin-top:0;padding:16px 20px;background:var(--white);border-top:1px solid var(--line)}
-.okr-foot .btn{width:100%;justify-content:center;padding:12px 24px}
-.config h2{font-size:28px;line-height:32px}
-.partner-cta{padding:24px;align-items:center;text-align:center}
-.cfg .out{margin-top:24px}
-.config h2+p.lead{margin:20px 0 0}
-.config-left{gap:52px}
-.partner-cta img{height:56px}
-.partner-cta .btn{padding:12px 24px}
-.cfg{padding:24px}
-.cfg h3{margin-bottom:12px}
-.cfg label{font-size:14px}
-.cfg{text-align:center}
-.opts{justify-content:center}
-.opts{flex-wrap:nowrap;gap:4px}
-.opts label{flex:1 1 auto}
-.opts span{padding:8px 4px;font-size:12px;line-height:16px;text-align:center;white-space:nowrap}
-.out{flex-direction:column;align-items:center;gap:8px;text-align:center}
-.out b{white-space:nowrap}
-.partners .tile{font-size:16px;line-height:24px}.partners .p-f{font-size:16px}
-.panel:not(.partners) .tile{display:flex;align-items:center;justify-content:center;gap:12px;text-align:left;padding:16px 20px}
-.panel:not(.partners) .tile b{min-width:72px;text-align:center}
-.panel:not(.partners) .tile span{white-space:nowrap}
-.about-grid>*,.panels{min-width:0}
-.tablist{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;overflow:visible;margin-right:0;padding-right:0;padding-bottom:0}
-.tab{flex-direction:column;justify-content:flex-start;gap:8px;padding:12px 8px;text-align:center;font-size:12px;line-height:16px}
-.tab .ti{width:40px;height:40px}
-.panel p{margin-top:20px}
-.hero .eyebrow{letter-spacing:0}
-.hero p.lead{font-size:16px;line-height:24px;margin:20px 0 40px}
-.cta-row{flex-direction:column;align-items:flex-start;gap:12px}
-.cta-row .btn{width:auto;padding:12px 24px;font-size:16px}
-.brandbar{gap:16px 24px}
-.brandbar .l{width:100%;margin-right:0;letter-spacing:0}
-.wrap{padding:0 20px}.steps{grid-template-columns:1fr}.stats b{font-size:36px;line-height:40px}.hero h1{font-size:44px;line-height:48px}.sec-head h2,.about-head h2{font-size:36px;line-height:40px}.panel h3{font-size:28px;line-height:32px}.tile b{font-size:36px;line-height:40px}.tiles{grid-template-columns:1fr}.partners .tiles{grid-template-columns:1fr 1fr}.checks{grid-template-columns:1fr}.panels{padding:40px 24px}}
+@media(max-width:560px){
+  .wrap{padding:0 20px}
+  .thero{min-height:560px}
+  .thero-in{padding:0 20px 72px}
+  .thero h1{font-size:44px;line-height:48px;letter-spacing:0}
+  .thero p.sub{font-size:16px;line-height:28px}
+  .thero .credit{left:20px;right:20px;bottom:16px}
+  .t-sec{padding:72px 0}
+  .t-sec h2{font-size:32px;line-height:36px}
+  .logo-box{height:200px}
+  .osn{padding:96px 0}
+  .osn blockquote p{font-size:24px;line-height:36px}
+  .osn .mark{font-size:72px;line-height:56px}
+  .num{padding:72px 0}
+  .num-grid b{font-size:32px;line-height:36px}
+  .num-grid div{padding:0 16px}
+  .svet-head{margin-bottom:56px}
+  .pic{height:280px}
+  .duo .pic{height:240px}.duo .pic+.pic{height:200px}
+  .kt .pic{height:320px}
+  .blk h3{font-size:28px;line-height:32px}
+  .kt-head{margin-bottom:48px}
+  .kt-head .lead{font-size:16px;line-height:28px}
+  .kt-data{grid-template-columns:minmax(0,1fr);padding:24px;margin-top:48px}
+  .kt-card{padding:24px}
+  .kt-photos{margin-top:48px}
+  .kt-grid{grid-template-columns:minmax(0,1fr)}
+  .kt-grid .pic{height:200px}
+  .map{height:480px}
+  .sved blockquote{padding:24px}
+  .sved blockquote p{font-size:16px;line-height:28px}
+  .kraj{padding:96px 0}
+  .kraj p.mis{font-size:24px;line-height:36px}
+}
 </style>
 </head>
 <body>
-<a class="skip" href="#usluge">Preskoči na sadržaj</a>
-
+<a class="skip" href="#ime">Preskoči na sadržaj</a>
 <header id="hdr" class="solid">
   <div class="wrap nav">
-    <a href="#" class="logo" aria-label="Simon – početna">SIMON<b>.</b></a>
+    <a href="../" class="logo" aria-label="Simon – početna">SIMON<b>.</b></a>
     <nav class="menu" id="menu" aria-label="Glavna navigacija">
-      <a href="#usluge">Usluge</a>
-      <a href="#proces">Kako radimo</a>
-      <a href="#reference">Reference</a>
-      <a href="cuvari-tradicije/">Tradicija</a>
-      <a href="#konfigurator">Konfigurator</a>
-      <a href="#karijera">Karijera</a>
-      <a href="#kontakt" class="btn btn-primary">Stručno savetovanje</a>
+      <a href="../#usluge">Usluge</a>
+      <a href="../#proces">Kako radimo</a>
+      <a href="../reference/">Reference</a>
+      <a href="./" aria-current="page">Tradicija</a>
+      <a href="../#konfigurator">Konfigurator</a>
+      <a href="../#karijera">Karijera</a>
+      <a href="../#kontakt" class="btn btn-primary">Stručno savetovanje</a>
     </nav>
     <button class="burger" id="burger" aria-label="Meni" aria-expanded="false">☰</button>
   </div>
 </header>
-
 <main>
-<div class="hero-sec">
-<section class="hero" style="padding:0" aria-labelledby="h1">
-  <div class="hero-in">
-    <span class="eyebrow">Termotehnička rešenja · Valjevo</span>
-    <h1 id="h1">Energija koja <em>radi za vas.</em></h1>
-    <p class="lead">Projektujemo i izvodimo sisteme grejanja, hlađenja i ventilacije za domove, poslovne prostore i industriju. Od ideje do puštanja u rad, sa istim timom.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary btn-lg" href="#kontakt">Zatraži besplatnu ponudu</a>
-      <a class="btn btn-light btn-lg" href="#konfigurator">Izračunaj okvirnu cenu</a>
-    </div>
-  </div>
-  <div class="brandwrap"><div class="brandbar">
-    <span class="l">Ovlašćeni partneri i oprema</span>
-    <span>Viessmann</span><span>Toshiba</span><span>Rehau</span><span>Carrier</span><span>Daikin</span><span>Flowair</span>
-  </div></div>
-</section>
-</div>
-
-<section id="o-nama" class="about">
-  <div class="wrap">
-    <div class="about-head rv">
-      <span class="eyebrow">O nama</span>
-      <h2>Inženjeri koji stoje iza svakog sistema</h2>
-    </div>
-    <div class="about-grid">
-    <div class="about-side rv">
-      <div class="tablist" role="tablist" aria-label="O nama" aria-orientation="vertical">
-        <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true"><span class="ti"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.01"/></svg></span>Ko smo mi?<span class="n">01</span></button>
-        <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><span class="ti"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></span>Čime se bavimo?<span class="n">02</span></button>
-        <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span class="ti"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v5c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>Zašto nas biraju?<span class="n">03</span></button>
-      </div>
-    </div>
-    <div class="panels rv">
-      <div class="panel on" role="tabpanel" id="p1" aria-labelledby="t1">
-        <h3>Inženjerski centar sa tradicijom dugom 26 godina</h3>
-        <p>Osnovani smo u Valjevu sa vizijom da pružimo projektovanje i izvođenje termotehničkih sistema. Danas naš tim čini 16 diplomiranih inženjera, projektanata i stručnih izvođača radova. Saradnja sa Mašinskim fakultetom u Beogradu i ulaganje u mlade kadrove drže nas u toku sa svim što je novo u struci.</p>
-        <div class="tiles">
-          <div class="tile"><b data-n="26">0</b><span>godina iskustva</span></div>
-          <div class="tile"><b data-n="64">0</b><span>završenih projekata</span></div>
-          <div class="tile"><b data-n="16">0</b><span>inženjera i stručnjaka</span></div>
-        </div>
-      </div>
-      <div class="panel partners" role="tabpanel" id="p2" aria-labelledby="t2">
-        <h3>Kompletna HVAC rešenja za stambene i industrijske objekte</h3>
-        <p>Pružamo zaokružen ciklus usluga: od konsaltinga i projektovanja, preko izvođenja radova, do tehničkog nadzora i redovnog servisa. Kao regionalni zastupnici svetskih lidera garantujemo ugradnju opreme najnovije generacije, a naša rešenja su energetski optimalna i dugovečna.</p>
-        <div class="tiles">
-          <!-- zameniti pravim logotipima -->
-          <div class="tile p-v">VIESSMANN</div><div class="tile p-t">TOSHIBA</div><div class="tile p-c">Carrier</div>
-          <div class="tile p-f">FLOWAIR</div><div class="tile p-d">DAIKIN</div><div class="tile p-r">REHAU</div>
-        </div>
-      </div>
-      <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3">
-        <h3>Sigurnost sistema kroz potpunu kontrolu procesa</h3>
-        <p>Razlikujemo se po tome što sami projektujemo sisteme koje izvodimo, pa imamo nadzor nad funkcionalnošću svakog detalja. Klijenti znaju da je njihov objekat u rukama profesionalaca koji ne prave kompromise sa kvalitetom.</p>
-        <ul class="checks">
-          <li>Sami projektujemo ono što izvodimo</li>
-          <li>Sopstveni vozni park, brza reakcija na terenu</li>
-          <li>Najsavremenija licencirana oprema</li>
-          <li>Sertifikati i fokus na bezbednost i zdravlje na radu</li>
-        </ul>
-        <a class="btn btn-primary btn-lg" href="#kontakt">Stručno savetovanje</a>
-      </div>
-    </div>
-    </div>
-  </div>
-</section>
-
-<section id="usluge" class="services">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Usluge</span>
-      <h2>Sveobuhvatna rešenja po meri vašeg objekta</h2>
-      <p>Od preciznog projektovanja do stručnog izvođenja i redovnog servisa. Naš tim licenciranih inženjera pretvara kompleksne tehničke zahteve u pouzdana i energetski efikasna rešenja.</p>
-    </div>
-    <div class="bento">
-      <article class="card c1 rv">
-        <span class="cnt"><b>26</b> projekata</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 .3 1.3 1 2 2 2-1-3-.5-6 1-8z"/></svg></div>
-        <h3>Grejanje</h3>
-        <p>Projektujemo i izvodimo centralno i podno grejanje, kotlarnice i toplotne pumpe. Uz proračun troškova i izbor opreme koja se isplati.</p>
-        <div class="rec"><small>Preporučujemo</small><b>Viessmann</b></div>
-        <a href="#kontakt" class="link" style="color:#fff">Zakaži savetovanje →</a>
-      </article>
-      <article class="card c2 rv">
-        <span class="cnt"><b>12</b> projekata</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M4.9 6l14.2 12M19.1 6 4.9 18M2 12h20"/></svg></div>
-        <h3>Hlađenje</h3>
-        <p>Efikasni sistemi hlađenja za stambene, poslovne i industrijske prostore, uz kontrolu temperature i niske troškove rada.</p>
-        <div class="rec"><small>Preporučujemo</small><b>Toshiba</b></div>
-        <a href="#kontakt" class="link">Zakaži savetovanje →</a>
-      </article>
-      <article class="card c3 rv">
-        <span class="cnt"><b>10</b> projekata</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
-        <h3>Solarni sistemi</h3>
-        <p>Solarni kolektori za sanitarnu vodu i podršku grejanju, ugrađeni u postojeće sisteme.</p>
-        <div class="rec"><small>Preporučujemo</small><b>Viessmann</b></div>
-        <a href="#kontakt" class="link">Savetovanje →</a>
-      </article>
-      <article class="card c4 rv">
-        <span class="cnt"><b>14</b> projekata</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-5 4-7 6-4s-1 6-6 4zM14 12c5 0 7 4 4 6s-6-1-4-6zM12 14c0 5-4 7-6 4s1-6 6-4zM10 12c-5 0-7-4-4-6s6 1 4 6z"/></svg></div>
-        <h3>Ventilacija</h3>
-        <p>Sistemi ventilacije sa rekuperacijom za zdrav vazduh i manje gubitke toplote.</p>
-        <div class="rec"><small>Preporučujemo</small><b>Rehau</b></div>
-        <a href="#kontakt" class="link">Savetovanje →</a>
-      </article>
-      <article class="card c5 rv">
-        <span class="cnt"><b>16</b> projekata</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="9" rx="2"/><path d="M7 18c0 1.5 1 2 1 3M12 18v3M17 18c0 1.5-1 2-1 3"/></svg></div>
-        <h3>Klimatizacija</h3>
-        <p>Kompletno HVAC rešenje: izbor, ugradnja i servis klima uređaja i VRF sistema.</p>
-        <div class="rec"><small>Preporučujemo</small><b>Toshiba</b></div>
-        <a href="#kontakt" class="link">Savetovanje →</a>
-      </article>
-      <article class="card c6 rv">
-        <span class="cnt"><b>11</b> projekata</span>
-        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v6M8 9h8M12 9l-4 6M12 9l4 6M8 15v0M16 15v0"/><circle cx="8" cy="18" r="1.5"/><circle cx="16" cy="18" r="1.5"/><circle cx="12" cy="20" r="1.5"/></svg></div>
-        <h3>Sprinkleri</h3>
-        <p>Instalacije sprinkler zaštite od požara po standardima, sa servisom i proverom ispravnosti.</p>
-        <div class="rec"><small>Preporučujemo</small><b>Carrier</b></div>
-        <a href="#kontakt" class="link">Savetovanje →</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="proces">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">Kako radimo</span>
-      <h2>Četiri koraka do sistema koji radi</h2>
-    </div>
-    <div class="steps">
-      <div class="step rv"><h3>Razgovor i obilazak</h3><p>Slušamo potrebe, obilazimo objekat i procenjujemo mogućnosti.</p></div>
-      <div class="step rv"><h3>Projekat i ponuda</h3><p>Proračun gubitaka, izbor opreme i jasna ponuda bez skrivenih troškova.</p></div>
-      <div class="step rv"><h3>Izvođenje</h3><p>Sopstveni tim izvodi radove prema projektu, uz nadzor inženjera.</p></div>
-      <div class="step rv"><h3>Puštanje u rad i servis</h3><p>Probni rad, obuka korisnika i redovno održavanje.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="konfigurator" style="padding-top:0">
-  <div class="config">
-    <div class="wrap config-in">
-      <div class="config-left rv">
-      <div class="config-head">
-        <span class="eyebrow">Konfigurator</span>
-        <h2>Okvirna procena vašeg novog sistema</h2>
-        <p class="lead">Nije sigurno odakle da počnete? Odgovorite na par pitanja i dobijte okvirni raspon. Za tačniju i kompletniju ponudu koristite konfigurator našeg partnera.</p>
-      </div>
-        <div class="partner-cta">
-          <img src="assets/novo-grejanje.png" alt="Novo grejanje by Viessmann" width="240" height="84">
-          <div>
-            <b>Kompletna ponuda u nekoliko koraka</b>
-            <span>Konfigurator Novo grejanje, partnera kompanije Viessmann.</span>
-          </div>
-          <!-- TODO: zameniti pravim linkom ka konfiguratoru -->
-          <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Otvori konfigurator</a>
-        </div>
-      </div>
-      <form class="cfg rv" id="cfg" onsubmit="return false">
-        <h3>Brza procena</h3>
-        <label id="l1">Tip sistema</label>
-        <div class="opts" role="radiogroup" aria-labelledby="l1">
-          <label><input type="radio" name="t" value="96" checked><span>Toplotna pumpa</span></label>
-          <label><input type="radio" name="t" value="56"><span>Gasni kotao</span></label>
-          <label><input type="radio" name="t" value="40"><span>Klima</span></label>
-        </div>
-        <label for="m2">Površina objekta: <span id="m2v">120</span> m²</label>
-        <input class="range" id="m2" type="range" min="40" max="500" step="20" value="120">
-        <label id="l3">Objekat</label>
-        <div class="opts" role="radiogroup" aria-labelledby="l3">
-          <label><input type="radio" name="o" value="100" checked><span>Nova gradnja</span></label>
-          <label><input type="radio" name="o" value="124"><span>Adaptacija</span></label>
-        </div>
-        <label id="l4">Dodatno</label>
-        <div class="opts" role="group" aria-labelledby="l4">
-          <label><input type="checkbox" name="x" value="24"><span>Podno grejanje</span></label>
-          <label><input type="checkbox" name="x" value="20"><span>Ventilacija</span></label>
-          <label><input type="checkbox" name="x" value="16"><span>Solarni kolektori</span></label>
-        </div>
-        <div class="out" aria-live="polite">
-          <div><small>Okvirni raspon</small><b id="res">–</b></div>
-          <small>Bez PDV-a, orijentaciono</small>
-        </div>
-        <p class="cfg-note">Orijentaciona procena, nije ponuda.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section id="reference">
-  <div class="wrap refs">
-    <div class="rv">
-      <div class="map">
-<div class="map-tip" id="mapTip" role="status"></div>
-<svg class="srb-map" viewBox="0 0 392 572" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa Srbije: obojeni su Kolubarski okrug, Beograd i Kosovo i Metohija">
+<section class="thero" aria-labelledby="h1"><img src="../assets/tradicija/hero-hilandar.webp" alt="Pozlaćeni krst u senci lučnih otvora manastira" width="1920" height="1280" decoding="async" fetchpriority="high">
+<div class="thero-in"><span class="eyebrow">Simon · hramovi i manastiri</span><h1 id="h1">Čuvari tradicije</h1><p class="sub">Rad na svetinjama za nas nikada nije bio posao, nego dar.</p></div>
+<p class="credit">Foto: Sreten Vuković, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Hilandar_24.jpg" rel="noopener">Wikimedia Commons</a></p></section>
+<section class="t-sec ime" id="ime" aria-labelledby="ime-h"><div class="wrap ime-grid">
+<div class="rv"><span class="gline"></span><span class="eyebrow">Ime</span><h2 id="ime-h">Zašto se zovemo Simon</h2>
+<p style="margin-top:24px">Naše ime potiče od monaškog imena Svetog Stefana Prvovenčanog, Simona.</p>
+<p>Osnovač firme, otac sadašnjeg vlasnika, dao nam je to ime kao simbol novog početka, kada je pre više od četvrt veka osnivao firmu.</p>
+<p>Danas, kada u hramovima i manastirima grejemo prostor u kojem se generacijama moli, ime nas podseća odakle smo krenuli i kome dugujemo zahvalnost.</p></div>
+<div class="rv"><div class="logo-box"><div><b data-placeholder="true">Prvobitni logo firme</b><span data-placeholder="true">Mesto za istorijski logo (fajl stiže od klijenta)</span></div></div></div>
+</div></section>
+<section class="osn" id="osnivac" aria-labelledby="osn-h"><img src="../assets/tradicija/svece.webp" alt="Upaljene sveće u mraku" width="1600" height="900" loading="lazy" decoding="async">
+<div class="wrap"><h2 id="osn-h" class="visually-hidden" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Reč osnivača</h2><div class="rv"><blockquote data-placeholder="true"><span class="mark" aria-hidden="true">„</span>
+<p>Nismo ovo radili kao posao. Sve što smo uradili za svetinje, uradili smo kao dar, jer se uistinu poseduje samo ono što se daje. Mi smo samo jedni od mnogih koji su učestvovali, i zahvalni smo što smo smeli da služimo.</p>
+<cite>Osnivač firme</cite></blockquote></div></div></section>
+<section class="num" aria-label="U brojkama"><div class="wrap"><div class="num-grid rv">
+<div><b>5.000+ m²</b><span>podnog grejanja u Hramu Svetog Save</span></div>
+<div><b>1.200+ m²</b><span>podnog grejanja u hramu u Valjevu</span></div>
+<div><b>Skoro sve</b><span>zadužbine Nemanjića, u kojima smo izveli neki vid grejanja</span></div>
+<div><b data-placeholder="true">40+</b><span data-placeholder="true">svetinja ukupno, sve kao donacija</span></div>
+</div></div></section>
+<section class="t-sec svet" id="svetinje" aria-labelledby="svet-h"><div class="wrap">
+<div class="svet-head rv"><span class="gline"></span><span class="eyebrow">Izdvojene svetinje</span><h2 id="svet-h">Mesta na kojima smo bili gosti</h2><p>Sve što je navedeno u nastavku izvedeno je kao donacija.</p></div>
+<article class="blk t-anchor" id="hilandar"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/hilandar.webp" alt="Skele i dizalica uz kameni zid manastira tokom obnove" width="1600" height="818" loading="lazy" decoding="async"></div><figcaption>Foto: Sreten Vuković, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Hilandar_19.jpg" rel="noopener">Wikimedia Commons</a></figcaption></figure></div>
+<div class="rv"><span class="eyebrow">Sveta Gora · donacija</span><h3>Manastir Hilandar</h3><p>Nakon velikog požara 2004. godine učestvovali smo u obnovi manastira Hilandar. To je jedna od najvećih donacija koje je naša firma dala.</p>
+<p data-placeholder="true">Izveli smo radove na instalacijama grejanja u obnovljenim objektima manastira. Tačan obim radova biće potvrđen sa bratstvom manastira.</p></div></article>
+<article class="blk rev t-anchor" id="hram-svetog-save"><div class="blk-media rv"><div class="duo"><figure><div class="pic"><img src="../assets/tradicija/hram-svetog-save.webp" alt="Hram Svetog Save na Vračaru, pogled sa strane" width="1600" height="1188" loading="lazy" decoding="async"></div><figcaption>Foto: kallerna, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Church_of_Saint_Sava_4.jpg" rel="noopener">Wikimedia Commons</a></figcaption></figure>
+<figure><div class="pic"><img src="../assets/tradicija/hram-svetog-save-enterijer.webp" alt="Unutrašnjost hrama sa mozaicima i ikonostasom" width="1600" height="1200" loading="lazy" decoding="async"></div><figcaption>Foto: DKjellby, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="noopener">CC0</a>, <a href="https://commons.wikimedia.org/wiki/File:Church_of_Saint_Sava,_Belgrade_(4).jpg" rel="noopener">Wikimedia Commons</a></figcaption></figure></div></div>
+<div class="rv"><span class="eyebrow">Vračar, Beograd · donacija</span><h3>Hram Svetog Save</h3><p>Izveli smo celokupno podno grejanje hrama, na više od 5.000 m² površine.</p>
+<p>Za ovako veliki prostor podno grejanje je pravo rešenje. Toplota se širi ravnomerno od poda, nema vidljivih grejnih tela koja bi narušila enterijer, a zidovi i umetnička dela ostaju zaštićeni od naglih promena temperature.</p><span class="fact">5.000+ m²</span></div></article>
+<article class="blk t-anchor" id="hram-valjevo"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/hram-valjevo.webp" alt="Veliki beli hram u Valjevu na obali reke" width="1600" height="1067" loading="lazy" decoding="async"></div><figcaption>Foto: Nikolina Šepić, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a>, <a href="https://commons.wikimedia.org/wiki/File:Saborna_crkva_u_Valjevu_02.jpg" rel="noopener">Wikimedia Commons</a> (privremena fotografija)</figcaption></figure></div>
+<div class="rv"><span class="eyebrow">Valjevo · donacija</span><h3>Hram u Valjevu <span class="ph-tag" data-placeholder="true" style="font:600 12px/16px Manrope;letter-spacing:0">naziv hrama se potvrđuje</span></h3><p>U Valjevu, gradu u kome je naša firma nastala, izveli smo više od 1.200 m² podnog grejanja u velikom hramu.</p><span class="fact">1.200+ m²</span></div></article>
+<article class="blk rev t-anchor" id="zaduzbine-nemanjica"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/fresko2.webp" alt="Oslikana kupola crkve sa zlatnim ornamentima" width="1400" height="1050" loading="lazy" decoding="async"></div><figcaption>Privremena fotografija (Unsplash).</figcaption></figure></div>
+<div class="rv"><span class="eyebrow">Širom Srbije · donacija</span><h3>Zadužbine Nemanjića</h3><p>U skoro svim zadužbinama Nemanjića izveli smo neki vid grejanja. Nasleđe koje je godinama čuvalo veru i narod zaslužuje da u njemu bude toplo i bezbedno.</p>
+<ul class="zad" data-placeholder="true" aria-label="Zadužbine u kojima smo radili"><li>Naziv zadužbine 1</li><li>Naziv zadužbine 2</li><li>Naziv zadužbine 3</li><li>Naziv zadužbine 4</li><li>Naziv zadužbine 5</li><li>Naziv zadužbine 6</li></ul></div></article>
+</div></section>
+<section class="t-sec kt t-anchor" id="ktitorska-crkva" aria-labelledby="kt-h"><div class="wrap">
+<div class="kt-head rv"><span class="gline"></span><span class="eyebrow">Porodična zadužbina · u izgradnji</span><h2 id="kt-h">Crkva Svetog Simeona Stolpnika</h2><p class="lead">Zaseok Marići, selo Osečina</p></div>
+<div class="kt-row"><div class="rv"><p>U zaseoku Marići, u selu Osečina, rodnom kraju ktitora Zorana Petrovića iz Valjeva, gradi se crkva posvećena Svetom Simeonu Stolpniku. To je zadužbina <span class="ph-tag" data-placeholder="true">porodice Petrović</span> i delo mnogih ruku.</p>
+<p>Ktitor je ovo započeo iz vere i iz želje za duhovnom obnovom svog kraja. Osečina i njena okolina imaju duboku duhovnu tradiciju: od vladike Nikolaja i bogomoljačkog pokreta do porodica iz kojih su potekli mnogi sveštenici i monasi.</p>
+<p>Nada je da će hram doprineti povratku života u selo i da će mesto postati duhovni centar. Ktitor za sebe kaže da je samo jedan od mnogih koji su učestvovali u gradnji.</p>
+<p>Temelje je osveštao episkop valjevski Isihije, uz prisustvo velikog broja vernika i sveštenstva <span class="ph-tag" data-placeholder="true">(godina osvećenja: [godina])</span>.</p></div>
+<div class="rv"><figure><div class="pic"><img src="../assets/tradicija/dolina.webp" alt="Zelena dolina sa brdima u pozadini" width="1600" height="1000" loading="lazy" decoding="async"></div><figcaption data-placeholder="true">Privremena fotografija. Ovde dolazi fotografija mesta gradnje.</figcaption></figure></div></div>
+<dl class="kt-data rv">
+<div><dt>Posveta</dt><dd>Sveti Simeon Stolpnik</dd></div>
+<div><dt>Mesto</dt><dd>zaseok Marići, selo Osečina</dd></div>
+<div><dt>Ktitor</dt><dd>Zoran Petrović, Valjevo</dd></div>
+<div><dt>Projekat</dt><dd>arhitektica Milka Krstivojević</dd></div>
+<div><dt>Stil</dt><dd>srpsko-vizantijski</dd></div>
+<div><dt>Dimenzije</dt><dd>oko 14 × 8 m</dd></div>
+<div><dt>Površina</dt><dd>oko 120 m², od čega oko 50 m² za vernike</dd></div>
+<div><dt>Osnova</dt><dd>centralni naos sa polukružnim završecima</dd></div>
+<div><dt>Status</dt><dd>u izgradnji</dd></div>
+</dl>
+<div class="kt-cards"><div class="kt-card rv"><h3>Vremenska kapsula</h3><p>U temelje, u prostor budućeg oltara, uzidana je vremenska kapsula sa osnovnim podacima o vremenu gradnje i darodavcima. Poruka onima koji dolaze posle nas.</p></div>
+<div class="kt-card rv"><h3>Freskopis rukom</h3><p>Posebna želja ktitora jeste originalan freskopis, rađen rukom, bez šablona.</p></div></div>
+<div class="kt-photos rv"><h3>Osvećenje temelja</h3><p data-placeholder="true">Fotografije sa osvećenja temelja dodaćemo kada ih dobijemo. Do tada su ovde privremene fotografije.</p><div class="kt-grid">
+<figure><div class="pic"><img src="../assets/tradicija/temelj.webp" alt="Kameni blok i alat na gradilištu" width="1400" height="1050" loading="lazy" decoding="async"></div><figcaption data-placeholder="true">Privremena fotografija</figcaption></figure>
+<figure><div class="pic"><img src="../assets/tradicija/svece.webp" alt="Upaljene sveće u mraku" width="1400" height="1050" loading="lazy" decoding="async"></div><figcaption data-placeholder="true">Privremena fotografija</figcaption></figure>
+<figure><div class="pic"><img src="../assets/tradicija/kamen.webp" alt="Kamena kapela sa krstovima" width="1400" height="1050" loading="lazy" decoding="async"></div><figcaption data-placeholder="true">Privremena fotografija</figcaption></figure>
+</div></div></div></section>
+<section class="t-sec chal" id="izazov" aria-labelledby="chal-h"><div class="wrap"><div class="chal-head rv"><span class="gline"></span><span class="eyebrow">Stručni pogled</span><h2 id="chal-h">Zašto je grejanje svetinje poseban izazov</h2></div><div class="chal-grid rv">
+<div class="chal-item"><h3>Freske i ikonostas</h3><p>Oslikane površine ne trpe nagle promene temperature i vlage. Zato se prostor zagreva polako i ravnomerno.</p></div>
+<div class="chal-item"><h3>Kondenzacija</h3><p>Hladne površine zidova i kupola mogu da skupljaju vlagu. Pažljivo planirana toplota i provetravanje sprečavaju je.</p></div>
+<div class="chal-item"><h3>Debeli kameni zidovi</h3><p>Kamen se sporo zagreva i dugo drži hladnoću, pa grejanje mora da radi tiho i dugo, a ne naglo.</p></div>
+<div class="chal-item"><h3>Povremeno korišćenje</h3><p>Hram se ne koristi svakog dana. Sistem mora da prati bogosluženja i da u ostalo vreme čuva osnovnu temperaturu.</p></div>
+<div class="chal-item"><h3>Nevidljiva ugradnja</h3><p>Instalacije se ugrađuju bez vidljivih elemenata i bez zahvata na onome što treba sačuvati, po uslovima zavoda za zaštitu spomenika kulture.</p></div>
+</div></div></section>
+<section class="t-sec mapa" id="mapa" aria-labelledby="mapa-h"><div class="wrap mapa-grid"><div class="rv"><span class="gline"></span><span class="eyebrow">Na mapi</span><h2 id="mapa-h">Svetinje na mapi Srbije</h2>
+<ul class="mapa-list"><li><b>Beogradski okrug</b><a href="#hram-svetog-save">Hram Svetog Save</a></li>
+<li><b>Kolubarski okrug</b><a href="#hram-valjevo">Hram u Valjevu</a><a href="#ktitorska-crkva">Crkva Svetog Simeona Stolpnika, Osečina</a></li>
+<li><b>Kosovo i Metohija</b><a href="#kosovo">Crkve i manastiri na Kosovu i Metohiji</a></li>
+<li><b>Širom Srbije</b><a href="#zaduzbine-nemanjica">Zadužbine Nemanjića</a></li></ul></div>
+<div class="rv"><div class="map" id="map"><div class="map-tip" id="mapTip" role="status"></div><svg class="srb-map" viewBox="0 0 392 572" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa Srbije: obojeni su Kolubarski okrug, Beograd i Kosovo i Metohija">
 <g clip-path="url(#srbClip)">
 <mask id="path-1-inside-1" fill="white">
 <path d="M148.869 248.669L147.414 248.943L144.619 251.39L144.1 253.837L139.908 254.537L137.466 255.937L132.063 250.343L128.922 245.796L128.742 244.577L131.71 244.223L132.236 242.477L130.139 240.557L131.883 238.283L131.71 236.01L133.806 234.79L134.325 231.99L132.754 230.77L133.806 229.197L134.152 225.877L130.665 223.076L130.492 218.356L129.268 216.436L125.255 223.776L123.166 222.376L122.287 220.283L120.198 218.71L118.455 218.883L117.756 221.676L115.487 222.557L113.916 220.63L111.301 219.756L109.205 218.01L110.249 215.736L110.43 212.416L108.506 211.016L107.793 207.436L109.752 206.007L110.955 203.835L112.994 202.009L121.848 197.779L117.655 194.532L117.749 193.478L120.998 191.139L122.057 188.83L120.861 186.239L121.091 184.492L125.831 183.244L127.445 182.11L127.603 180.508L125.284 177.701L125.241 175.413L126.681 172.49L130.269 169.516L138.69 165.453L137.905 162.753L138.395 160.632L139.475 159.47L142.84 158.466L144.136 156.835L144.734 154.879L144.417 152.252L143.524 150.441L141.55 149.914L142.768 148.34L146.607 147.467L149.359 147.323L149.568 152.166L153.436 155.832L155.165 159.982L159.898 162.147L159.711 163.648L162.139 169.04L166.944 168.895L168.384 169.661L171.345 181.454L169.371 187.17L170.545 191.414L174.407 194.07L179.327 201.179L182.936 203.488L185.774 203.907L186.142 203.921L185.58 206.722L185.933 210.561L187.849 211.088L189.945 213.881L183.311 214.935L180.35 217.208L182.792 219.475L184.009 221.748H186.632L186.452 223.848L189.945 227.688L190.99 231.015L189.074 232.589L187.15 232.408L185.234 231.189L183.491 231.715L182.439 235.728L180.696 237.829L185.58 242.549L183.311 243.768L183.476 247.226L181.956 245.977L179.514 245.45L178.815 243.35L176.193 243.177L174.803 244.404L171.835 244.05L170.265 241.957L170.092 239.33L168.168 238.456L166.425 238.983L165.553 240.203L162.067 241.084L160.669 234.963L154.913 233.917L153.869 232.69L151.427 231.99L150.901 234.436L149.676 235.837L150.555 237.756L152.118 238.63L153.17 240.903L149.157 245.977L148.869 248.669Z"/>
 </mask>
-<path class="okrug" data-i="0" data-okrug="beograd" d="M148.869 248.669L147.414 248.943L144.619 251.39L144.1 253.837L139.908 254.537L137.466 255.937L132.063 250.343L128.922 245.796L128.742 244.577L131.71 244.223L132.236 242.477L130.139 240.557L131.883 238.283L131.71 236.01L133.806 234.79L134.325 231.99L132.754 230.77L133.806 229.197L134.152 225.877L130.665 223.076L130.492 218.356L129.268 216.436L125.255 223.776L123.166 222.376L122.287 220.283L120.198 218.71L118.455 218.883L117.756 221.676L115.487 222.557L113.916 220.63L111.301 219.756L109.205 218.01L110.249 215.736L110.43 212.416L108.506 211.016L107.793 207.436L109.752 206.007L110.955 203.835L112.994 202.009L121.848 197.779L117.655 194.532L117.749 193.478L120.998 191.139L122.057 188.83L120.861 186.239L121.091 184.492L125.831 183.244L127.445 182.11L127.603 180.508L125.284 177.701L125.241 175.413L126.681 172.49L130.269 169.516L138.69 165.453L137.905 162.753L138.395 160.632L139.475 159.47L142.84 158.466L144.136 156.835L144.734 154.879L144.417 152.252L143.524 150.441L141.55 149.914L142.768 148.34L146.607 147.467L149.359 147.323L149.568 152.166L153.436 155.832L155.165 159.982L159.898 162.147L159.711 163.648L162.139 169.04L166.944 168.895L168.384 169.661L171.345 181.454L169.371 187.17L170.545 191.414L174.407 194.07L179.327 201.179L182.936 203.488L185.774 203.907L186.142 203.921L185.58 206.722L185.933 210.561L187.849 211.088L189.945 213.881L183.311 214.935L180.35 217.208L182.792 219.475L184.009 221.748H186.632L186.452 223.848L189.945 227.688L190.99 231.015L189.074 232.589L187.15 232.408L185.234 231.189L183.491 231.715L182.439 235.728L180.696 237.829L185.58 242.549L183.311 243.768L183.476 247.226L181.956 245.977L179.514 245.45L178.815 243.35L176.193 243.177L174.803 244.404L171.835 244.05L170.265 241.957L170.092 239.33L168.168 238.456L166.425 238.983L165.553 240.203L162.067 241.084L160.669 234.963L154.913 233.917L153.869 232.69L151.427 231.99L150.901 234.436L149.676 235.837L150.555 237.756L152.118 238.63L153.17 240.903L149.157 245.977L148.869 248.669Z" mask="url(#path-1-inside-1)"/>
+<path class="okrug" data-i="0" d="M148.869 248.669L147.414 248.943L144.619 251.39L144.1 253.837L139.908 254.537L137.466 255.937L132.063 250.343L128.922 245.796L128.742 244.577L131.71 244.223L132.236 242.477L130.139 240.557L131.883 238.283L131.71 236.01L133.806 234.79L134.325 231.99L132.754 230.77L133.806 229.197L134.152 225.877L130.665 223.076L130.492 218.356L129.268 216.436L125.255 223.776L123.166 222.376L122.287 220.283L120.198 218.71L118.455 218.883L117.756 221.676L115.487 222.557L113.916 220.63L111.301 219.756L109.205 218.01L110.249 215.736L110.43 212.416L108.506 211.016L107.793 207.436L109.752 206.007L110.955 203.835L112.994 202.009L121.848 197.779L117.655 194.532L117.749 193.478L120.998 191.139L122.057 188.83L120.861 186.239L121.091 184.492L125.831 183.244L127.445 182.11L127.603 180.508L125.284 177.701L125.241 175.413L126.681 172.49L130.269 169.516L138.69 165.453L137.905 162.753L138.395 160.632L139.475 159.47L142.84 158.466L144.136 156.835L144.734 154.879L144.417 152.252L143.524 150.441L141.55 149.914L142.768 148.34L146.607 147.467L149.359 147.323L149.568 152.166L153.436 155.832L155.165 159.982L159.898 162.147L159.711 163.648L162.139 169.04L166.944 168.895L168.384 169.661L171.345 181.454L169.371 187.17L170.545 191.414L174.407 194.07L179.327 201.179L182.936 203.488L185.774 203.907L186.142 203.921L185.58 206.722L185.933 210.561L187.849 211.088L189.945 213.881L183.311 214.935L180.35 217.208L182.792 219.475L184.009 221.748H186.632L186.452 223.848L189.945 227.688L190.99 231.015L189.074 232.589L187.15 232.408L185.234 231.189L183.491 231.715L182.439 235.728L180.696 237.829L185.58 242.549L183.311 243.768L183.476 247.226L181.956 245.977L179.514 245.45L178.815 243.35L176.193 243.177L174.803 244.404L171.835 244.05L170.265 241.957L170.092 239.33L168.168 238.456L166.425 238.983L165.553 240.203L162.067 241.084L160.669 234.963L154.913 233.917L153.869 232.69L151.427 231.99L150.901 234.436L149.676 235.837L150.555 237.756L152.118 238.63L153.17 240.903L149.157 245.977L148.869 248.669Z" mask="url(#path-1-inside-1)"/>
 <path class="okrug" data-i="1" d="M81.1333 1.69482L81.2749 1.79248L81.4165 1.69482L82.5337 0.928223L84.3833 3.12939L84.4604 3.22119L84.5806 3.21826L85.7974 3.19092L88.3501 6.31689L88.3872 6.36182L88.4409 6.38623L93.8003 8.82568L93.9458 8.89209L94.0669 8.78662L97.3618 5.93311L99.8599 5.37061L100.84 8.7085L100.029 10.4966L98.4995 11.8608L98.4312 11.9224L98.4175 12.0122L97.3784 19.3159L93.0366 28.5415L93.019 28.5776L93.0142 28.6167L92.1431 35.6108L92.1323 35.6919L92.1724 35.7632L93.7114 38.5063V40.1655L91.8042 40.646L91.6431 40.686L91.6177 40.8511L91.272 43.1167L91.2593 43.1978L91.2983 43.271L93.0093 46.5298L92.8403 50.1362L92.8354 50.2261L92.8892 50.2974L93.8999 51.6519L94.4087 54.0474L94.4302 54.1499L94.519 54.2065L96.3657 55.3774L96.8579 56.8667L96.897 56.9858L97.0151 57.0249L97.978 57.3472L92.4556 61.106L89.5249 61.9683L89.4438 61.9927L89.394 62.061L87.9966 63.981L87.854 64.1763L88.0444 64.3257L89.519 65.4771V68.0562L85.7446 72.5337L85.686 72.604V76.105L84.2466 78.0298L81.8149 77.8687L74.1919 73.7026L74.1421 73.6763L74.0854 73.6724L71.6577 73.5327L75.2603 70.979L75.4351 70.856L75.3403 70.6646L74.1226 68.2173L74.0933 68.1577L74.0376 68.1206L69.5952 65.1528L70.9243 63.9683L70.9966 63.9038L71.0063 63.8062L71.1792 62.0601L71.1958 61.8911L71.0454 61.813L65.2896 58.8394L65.0903 58.7368L64.9663 58.9233L63.0366 61.8198L58.4028 57.3413L56.6802 53.3687L56.6626 53.3267L56.6304 53.2944L51.0845 47.5669L49.728 43.8335L50.2417 41.1079L50.2573 41.0249L50.2202 40.9497L48.5493 37.5952L50.1421 35.6831L51.646 35.1782L51.7603 35.1401L51.8013 35.0269L52.5005 33.1069L52.6743 32.6304L52.1899 32.7827L49.2212 33.7202L49.3745 30.9351L49.3804 30.8257L49.3042 30.7476L45.8647 27.1909L46.0679 26.9683L46.1929 26.8296L46.0972 26.6704L44.3931 23.855L51.5913 19.2612L52.9946 21.147L53.1128 21.3052L53.2944 21.2271L56.4995 19.8413L56.5435 19.8218L56.5767 19.7886L61.2671 15.1118L61.3423 15.0366L61.3403 14.9302L61.3062 13.1499L66.7485 9.99756L67.0054 9.84912L66.8149 9.62158L65.2905 7.79834L65.0171 6.5249L65.8755 5.78076L66.8169 6.06592L66.939 6.10303L67.0405 6.0249L69.5552 4.11279L69.6011 4.07764L69.6265 4.02588L70.5806 2.12646L76.6733 3.16455L76.7993 3.18604L76.8901 3.09619L79.48 0.555176L81.1333 1.69482Z"/>
 <mask id="path-3-inside-2" fill="white">
 <path d="M142.436 148.766L139.907 147.431L137.818 143.411L135.196 141.138L137.12 139.918L136.075 137.117L139.389 134.498L141.132 131.878L139.036 128.031L130.838 119.464L134.678 116.844L135.722 114.924L133.979 113.351L130.665 112.124L129.095 110.031V106.711L130.492 105.311L131.011 103.564L129.966 100.764L127.351 103.037L124.909 102.164L125.608 97.7973L124.729 95.5238L122.287 94.8237L121.595 92.5502L119.672 91.3305L117.583 95.5238L115.659 97.4436L114.442 95.5238L114.788 92.2038L116.012 90.1036L114.615 87.6569L120.025 84.5101L122.287 82.0634L119.672 81.1901L116.012 82.4098L115.832 79.7899L118.455 78.5702L118.627 75.4234L113.044 76.6432L112.519 74.3769L113.57 73.15L119.672 72.6231L118.102 67.7297L119.845 65.6367H123.857L125.781 64.2365V61.4362L123.512 59.3431L124.909 58.4698L126.127 55.8499L137.465 54.2766L140.779 55.3231L142.875 54.4498L146.016 60.0432L146.888 63.3632L149.856 65.1098L149.157 67.9029L144.446 70.1764V73.15L141.305 76.8236L143.747 78.9166L148.458 79.0899L153.869 76.2967L155.785 77.5165H159.624L158.4 70.8765L159.797 67.5565L163.637 64.2365L165.38 65.9831H168.521L168.867 59.5164L170.61 56.8965L170.963 54.2766L172.836 53.5909L174.839 53.3167L175.646 58.3688L176.337 59.5885L177.648 59.87L179.377 58.9029L183.26 59.0761L184.132 54.8251L187.827 56.2974L187.15 59.8267L186.408 59.9205L185.918 61.4073L185.897 66.4667L185.299 68.1628L185.954 68.834L186.113 72.1179L184.658 73.5686L183.728 76.6793L182.432 78.0145L183.037 81.9696L185.169 81.2623L188.677 88.2054L186.401 90.7892L182.713 92.9472L183.512 94.2102L182.914 95.5815L188.749 95.6104L191.941 97.6313L193.223 100.1L192.632 100.049L192.243 101.882L191.573 101.911L195.06 103.946L196.883 103.867L198.309 107.064L197.79 107.129L197.898 107.822L199.498 107.952L200.607 110.449L202.682 111.712L204 113.502L205.311 113.733L205.671 115.473L204.353 116.88L196.674 118.107L192.661 121.427L186.905 123.693L190.745 126.147L190.046 127.713L187.604 128.413L182.893 131.387L178.88 137.327L172.08 130.34L165.971 129.287L164.753 127.894L163.356 128.594L162.139 132.26L157.6 131.56L156.03 132.433L153.933 134.707L152.19 138.027L152.543 143.62L150.62 145.02L149.921 147.294L146.607 147.467L142.767 148.34L142.436 148.766Z"/>
@@ -650,7 +421,7 @@ footer a:hover{color:var(--orange)}
 <mask id="path-10-inside-8" fill="white">
 <path d="M110.329 214.928L110.249 215.736L109.205 218.01L111.301 219.756L113.916 220.63L115.487 222.557L117.756 221.676L118.455 218.883L120.198 218.71L122.287 220.283L123.166 222.376L125.255 223.776L129.268 216.436L130.492 218.356L130.665 223.076L134.152 225.877L133.806 229.197L132.754 230.77L134.325 231.99L133.806 234.79L131.71 236.01L131.883 238.283L130.139 240.557L132.236 242.477L131.71 244.223L128.742 244.577L128.922 245.797L132.063 250.344L137.465 255.937L139.908 254.537L144.1 253.837L144.619 251.39L147.414 248.943L148.869 248.669L148.804 249.297L150.901 249.47L151.074 255.41L151.895 256.37L150.375 258.911L146.542 263.631L144.273 264.324L142.35 267.824L139.562 268.524L138.517 271.144H135.376L132.754 272.364L128.569 272.017L124.909 275.337L120.544 275.864L119.233 276.254L118.627 275.164L113.217 274.637L110.43 274.991L107.807 276.737L105.365 274.991L103.449 271.317L100.661 270.617L97.8661 272.017L96.2956 273.937L94.3794 272.191H91.9373L92.809 274.118L94.8981 275.864L95.7697 278.484L94.8981 280.057H91.9373L91.2385 277.438L89.1422 274.464L78.848 268.344L76.939 268.697L75.0155 266.251L72.7463 265.197V261.531L71.003 258.911L67.5091 258.384L65.0671 256.984L61.7533 256.283L58.0938 253.664L59.8371 251.39L62.1063 249.997L62.7978 247.897L65.9387 247.37L66.1188 245.277L62.1063 241.43L62.9779 240.557L65.42 240.384V238.457L66.4646 235.837L66.2917 233.736L64.0225 231.99L65.0671 230.77H68.7338L70.65 229.897L73.7909 231.29L74.4897 233.217L76.586 233.563L78.5022 231.643L83.0406 230.943L84.611 233.217L87.5718 233.563L90.5398 234.79L91.9373 236.883L94.3794 237.937L96.8215 237.757L98.2118 234.617V231.99L99.6094 229.543L99.7823 227.27L99.6094 224.477L97.1673 219.41L101.706 215.036L104.148 216.61L106.417 215.736L107.116 214.517L110.329 214.928Z"/>
 </mask>
-<path class="okrug" data-i="9" data-okrug="kolubarski" d="M110.329 214.928L110.249 215.736L109.205 218.01L111.301 219.756L113.916 220.63L115.487 222.557L117.756 221.676L118.455 218.883L120.198 218.71L122.287 220.283L123.166 222.376L125.255 223.776L129.268 216.436L130.492 218.356L130.665 223.076L134.152 225.877L133.806 229.197L132.754 230.77L134.325 231.99L133.806 234.79L131.71 236.01L131.883 238.283L130.139 240.557L132.236 242.477L131.71 244.223L128.742 244.577L128.922 245.797L132.063 250.344L137.465 255.937L139.908 254.537L144.1 253.837L144.619 251.39L147.414 248.943L148.869 248.669L148.804 249.297L150.901 249.47L151.074 255.41L151.895 256.37L150.375 258.911L146.542 263.631L144.273 264.324L142.35 267.824L139.562 268.524L138.517 271.144H135.376L132.754 272.364L128.569 272.017L124.909 275.337L120.544 275.864L119.233 276.254L118.627 275.164L113.217 274.637L110.43 274.991L107.807 276.737L105.365 274.991L103.449 271.317L100.661 270.617L97.8661 272.017L96.2956 273.937L94.3794 272.191H91.9373L92.809 274.118L94.8981 275.864L95.7697 278.484L94.8981 280.057H91.9373L91.2385 277.438L89.1422 274.464L78.848 268.344L76.939 268.697L75.0155 266.251L72.7463 265.197V261.531L71.003 258.911L67.5091 258.384L65.0671 256.984L61.7533 256.283L58.0938 253.664L59.8371 251.39L62.1063 249.997L62.7978 247.897L65.9387 247.37L66.1188 245.277L62.1063 241.43L62.9779 240.557L65.42 240.384V238.457L66.4646 235.837L66.2917 233.736L64.0225 231.99L65.0671 230.77H68.7338L70.65 229.897L73.7909 231.29L74.4897 233.217L76.586 233.563L78.5022 231.643L83.0406 230.943L84.611 233.217L87.5718 233.563L90.5398 234.79L91.9373 236.883L94.3794 237.937L96.8215 237.757L98.2118 234.617V231.99L99.6094 229.543L99.7823 227.27L99.6094 224.477L97.1673 219.41L101.706 215.036L104.148 216.61L106.417 215.736L107.116 214.517L110.329 214.928Z" mask="url(#path-10-inside-8)"/>
+<path class="okrug" data-i="9" d="M110.329 214.928L110.249 215.736L109.205 218.01L111.301 219.756L113.916 220.63L115.487 222.557L117.756 221.676L118.455 218.883L120.198 218.71L122.287 220.283L123.166 222.376L125.255 223.776L129.268 216.436L130.492 218.356L130.665 223.076L134.152 225.877L133.806 229.197L132.754 230.77L134.325 231.99L133.806 234.79L131.71 236.01L131.883 238.283L130.139 240.557L132.236 242.477L131.71 244.223L128.742 244.577L128.922 245.797L132.063 250.344L137.465 255.937L139.908 254.537L144.1 253.837L144.619 251.39L147.414 248.943L148.869 248.669L148.804 249.297L150.901 249.47L151.074 255.41L151.895 256.37L150.375 258.911L146.542 263.631L144.273 264.324L142.35 267.824L139.562 268.524L138.517 271.144H135.376L132.754 272.364L128.569 272.017L124.909 275.337L120.544 275.864L119.233 276.254L118.627 275.164L113.217 274.637L110.43 274.991L107.807 276.737L105.365 274.991L103.449 271.317L100.661 270.617L97.8661 272.017L96.2956 273.937L94.3794 272.191H91.9373L92.809 274.118L94.8981 275.864L95.7697 278.484L94.8981 280.057H91.9373L91.2385 277.438L89.1422 274.464L78.848 268.344L76.939 268.697L75.0155 266.251L72.7463 265.197V261.531L71.003 258.911L67.5091 258.384L65.0671 256.984L61.7533 256.283L58.0938 253.664L59.8371 251.39L62.1063 249.997L62.7978 247.897L65.9387 247.37L66.1188 245.277L62.1063 241.43L62.9779 240.557L65.42 240.384V238.457L66.4646 235.837L66.2917 233.736L64.0225 231.99L65.0671 230.77H68.7338L70.65 229.897L73.7909 231.29L74.4897 233.217L76.586 233.563L78.5022 231.643L83.0406 230.943L84.611 233.217L87.5718 233.563L90.5398 234.79L91.9373 236.883L94.3794 237.937L96.8215 237.757L98.2118 234.617V231.99L99.6094 229.543L99.7823 227.27L99.6094 224.477L97.1673 219.41L101.706 215.036L104.148 216.61L106.417 215.736L107.116 214.517L110.329 214.928Z" mask="url(#path-10-inside-8)"/>
 <path class="okrug" data-i="10" d="M207.862 196.188L207.489 201.805L207.487 201.837L207.493 201.869L208.012 204.496L208.027 204.576L208.088 204.632L210.261 206.637L209.933 209.136L209.924 209.202L209.95 209.265L210.821 211.357L210.863 211.457L210.964 211.495L217.235 213.872L216.387 221.019L216.379 221.089L216.408 221.153L220.039 228.958L219.707 232.484L215.922 236.79L215.848 236.874L215.861 236.984L216.214 239.958L216.232 240.111L216.377 240.164L220.08 241.51L220.7 244.3L216.033 245.804L215.877 245.854L215.86 246.018L215.562 249.068L214.812 250.578L214.745 250.714L214.833 250.836L219.355 257.129L217.67 259.298L217.642 259.334L217.628 259.378L216.598 262.734L216.336 263.473L214.991 263.305L215.312 260.761L215.342 260.53L215.114 260.484L212.499 259.957L212.378 259.933L212.285 260.014L211.075 261.069L208.625 258.29L208.597 258.259L208.561 258.238L204.627 256.01L203.435 252.775L203.347 252.537L203.109 252.629L200.012 253.832H196.271L191.786 251.932L191.751 251.917L191.713 251.913L188.33 251.587L189.137 248.2L189.179 248.022L189.022 247.928L188.151 247.401L188.096 247.368L188.031 247.365L183.729 247.2L183.567 243.913L185.698 242.769L185.999 242.606L185.753 242.369L181.035 237.81L182.631 235.888L182.666 235.845L182.681 235.792L183.696 231.914L185.195 231.46L187.016 232.619L187.066 232.651L187.127 232.657L189.05 232.838L189.152 232.847L189.232 232.782L191.148 231.208L191.278 231.102L191.229 230.94L190.184 227.613L190.167 227.561L190.13 227.52L186.709 223.761L186.881 221.77L186.903 221.498H184.159L183.012 219.356L182.992 219.32L182.962 219.291L180.735 217.226L183.412 215.171L189.984 214.128L190.395 214.063L190.146 213.731L188.049 210.938L187.997 210.87L187.915 210.847L186.165 210.365L185.831 206.737L186.345 204.18L187.14 204.214L187.156 204.215L187.174 204.214L192.036 203.752L192.058 203.749L192.078 203.744L197.128 202.365L197.186 202.35L197.229 202.31L203.757 196.441L206.68 196.018L207.862 196.188Z"/>
 <path class="okrug" data-i="11" d="M239.741 184.149L241.438 188.254L241.5 188.407L241.666 188.409L248.243 188.487L251.66 189.312L251.706 189.322L251.752 189.315L254.176 188.978L258.736 190.655L260.208 192.675L261.346 196.371L261.532 201.103L261.535 201.177L261.579 201.238L263.099 203.359L263.179 203.473L263.319 203.464L268.974 203.085L271.708 204.512L271.785 204.551L271.87 204.535L278.273 203.353L279.494 204.46L279.558 204.519L279.644 204.524L285.307 204.926L287.526 205.695L287.578 205.713L287.631 205.708L290.391 205.44L293.51 207.018L293.553 207.039L293.601 207.043L296.896 207.332L298.231 210.767L296.972 211.477L296.87 211.535L296.849 211.651L296.265 214.949L294.741 216.284L294.67 216.346L294.658 216.438L294.491 217.639L292.298 217.818L292.06 217.838L292.069 218.077L292.268 223.198L291.298 225.341L291.274 225.396L291.277 225.456L291.465 229.143L290.009 230.78L287.129 230.976L286.966 230.986L286.911 231.141L285.976 233.761H282.565L282.528 233.966L282.143 236.09L278.805 239.827L278.659 239.992L278.803 240.158L280.163 241.717L281.087 244.31L279.809 245.591L279.471 245.93L279.942 246.014L285.454 246.999L288.295 249.09L288.885 257.55L288.894 257.676L289 257.743L291.191 259.136L291.424 259.285L291.548 259.037L292.707 256.715L293.955 256.093L294.652 258.553L294.461 260.896L294.453 260.998L294.518 261.077L296.399 263.338L294.288 267.376L294.24 267.468L294.27 267.566L295.241 270.684L294.492 273.132L293.029 274.411L288.75 274.222L288.616 274.216L288.537 274.324L287.033 276.389L283.207 275.819L283.054 275.796L282.965 275.923L281.467 278.062L280.112 275.578L280.041 275.448H276.621L273.338 273.421L273.278 273.384H267.894L264.883 270.613L264.818 270.554L264.729 270.548L256.439 270.047L255.95 266.641L255.936 266.55L255.868 266.489L251.495 262.621L251.417 262.551L251.312 262.559L247.823 262.803L246.103 261.08L246.03 261.006H242.491L242.422 261.06L240.249 262.754L237.75 261.166L238.397 259.883L239.884 258.888L240.211 258.668L239.875 258.465L237.369 256.96L234.822 251.358L234.789 251.284L234.716 251.244L232.404 249.952L232.185 249.83L232.064 250.049L229.576 254.537L226.553 254.075L225.57 250.869L225.544 250.786L225.473 250.737L222.13 248.42L222.057 248.369L221.967 248.377L216.084 248.863L216.342 246.229L221.071 244.707L221.288 244.637L221.238 244.414L220.54 241.268L220.509 241.134L220.38 241.087L216.692 239.746L216.371 237.036L220.137 232.754L220.191 232.693L220.198 232.612L220.544 228.938L220.55 228.871L220.522 228.81L216.891 221.007L217.755 213.737L217.779 213.544L217.596 213.475L211.242 211.065L210.437 209.135L210.775 206.574L210.792 206.445L210.696 206.357L208.486 204.318L207.99 201.804L208.362 196.216L211.09 196.117L211.144 196.115L211.191 196.092L214.632 194.406L218.4 193.526L218.485 193.507L218.54 193.438L220.759 190.612L224.77 187.721L237.5 182.319L239.741 184.149Z"/>
 <path class="okrug" data-i="12" d="M153.727 232.909L154.723 234.079L154.781 234.147L154.869 234.163L160.461 235.179L161.823 241.139L161.879 241.388L162.127 241.326L165.615 240.446L165.704 240.423L165.756 240.348L166.578 239.199L168.15 238.722L169.852 239.495L170.015 241.973L170.02 242.047L170.064 242.107L171.635 244.2L171.699 244.286L171.805 244.298L174.773 244.652L174.884 244.666L174.968 244.591L176.28 243.433L178.63 243.587L179.277 245.529L179.322 245.665L179.461 245.695L181.843 246.208L183.318 247.418L183.377 247.468L183.455 247.475L187.942 247.859L188.607 248.261L187.779 251.75L187.712 252.03L187.998 252.057L191.625 252.407L196.123 254.312L196.169 254.333H200.106L200.15 254.315L203.053 253.187L204.19 256.269L204.222 256.355L204.301 256.4L208.276 258.652L210.865 261.587L211.03 261.774L211.217 261.611L212.521 260.471L214.788 260.928L214.464 263.491L214.432 263.74L214.681 263.77L216.166 263.956L215.319 266.333L215.285 266.429L215.329 266.522L217.129 270.39L217.163 270.461L217.23 270.501L220.131 272.195L218.955 275.019L214.386 278.067L214.327 278.106L214.297 278.171L213.007 281.007L212.952 281.131L213.024 281.246L214.791 284.028L215.031 287.357L211.641 288.091L211.599 288.1L211.562 288.123L208.212 290.187L207.889 290.386L208.201 290.605L210.704 292.356L211.417 294.979L210.212 296.425L210.167 296.479L210.157 296.549L209.918 298.202L207.753 298.924L207.697 298.943L207.656 298.985L205.595 301.049L205.498 301.147L205.529 301.282L206.299 304.638L206.333 304.784L206.477 304.823L208.754 305.444L198.477 311.821L197.519 311.981L197.266 310.466L197.247 310.352L197.148 310.293L194.577 308.749L194.531 308.721L194.477 308.714L190.104 308.195L190.052 308.189L190.002 308.204L187.423 308.984L187.413 308.987L187.403 308.991L184.832 310.023L184.708 310.072L184.68 310.201L184.168 312.518L184.133 312.678L184.267 312.775L185.787 313.865L183.294 315.682L179.133 315.922L173.55 307.283L173.51 307.22L173.443 307.19L172.012 306.547L172.254 305.092L172.281 304.935L172.15 304.845L169.401 302.953L166.986 299.319L166.969 299.294L166.948 299.274L164.716 297.209L162.716 292.713L169.325 287.109L171.868 286.772L172.022 286.751L172.072 286.603L172.598 285.03L172.638 284.911L172.566 284.807L170.124 281.314L170.103 281.285L170.075 281.262L163.354 275.911L163.188 272.876L163.185 272.828L163.164 272.784L161.42 269.11L161.405 269.077L161.379 269.049L159.636 267.129L159.569 267.055L159.469 267.047L157.14 266.882L154.115 262.842L153.938 258.374L153.935 258.29L153.88 258.224L152.137 256.124L151.909 255.848L151.855 255.939L151.321 255.315L151.151 249.463L151.144 249.24L150.921 249.221L149.08 249.068L149.398 246.075L153.366 241.058L153.461 240.938L153.397 240.798L152.345 238.525L152.311 238.451L152.24 238.412L150.748 237.578L149.969 235.879L151.088 234.601L151.131 234.552L151.145 234.489L151.614 232.303L153.727 232.909Z"/>
@@ -693,15 +464,15 @@ footer a:hover{color:var(--orange)}
 <path d="M339.561 440.514L338.971 440.911L339.165 443.054L340.505 444.787L340.887 446.605L344.568 451.289L344.287 453.577L343.444 453.715L341.773 457.316L340.728 457.915L342.306 459.691L340.267 463.162L341.276 464.151L338.834 470.632L338.661 473.252L341.622 474.01L344.201 477.2L346.427 478.362L348.725 480.715L349.892 483.623L348.487 486.431L347.658 491.476L346.527 492.623L346.275 494.543L342.436 495.186L342.601 496.932L340.664 499.299L340.93 501.306L340.051 502.771L338.243 504.034L337.479 503.052L335.643 503.038L335.059 503.76L331.99 504.222L331.544 505.319L330.103 505.925L322.568 499.783L320.356 501.977L316.819 503.363L316.913 505.059L317.907 506.596L317.575 507.498L316.567 506.553L314.326 506.632L312.554 505.369L308.585 507.729L301.821 505.889L300.437 506.452L297.758 504.402L291.807 501.674L291.029 502.619L290.28 506.365L288.227 506.906L284.524 505.42L280.713 506.012L275.13 511.814L266.032 513.915L260.478 512.226L260.571 506.704L258.756 505.824L257.748 503.63L257.913 501.234L259.368 498.534L262.156 496.513L263.15 491.75L262.394 490.047L263.071 488.062L265.744 485.601L270.549 483.161L272.364 481.011L274.23 472.703L276.686 468.438L280.396 466.309L279.071 464.115L278.667 459.828L276.578 457.98L275.937 457.597L276.009 456.284L278.595 455.483L279.388 450.308L281.182 448.114V446.519L282.572 444.325H285.554L287.146 443.127L289.336 442.932L291.526 444.527L295.899 443.928L297.693 439.944H299.479L301.871 441.936L304.652 439.742L308.83 440.139L308.628 442.932L309.428 444.722L314.795 442.131L316.79 445.321L317.381 444.325H318.577V448.511L322.359 449.709H325.139L326.508 448.85L327.128 446.981L330.24 446.353L332.415 444.801L333.654 441.994H335.21L337.076 440.442L339.561 440.514Z"/>
 </mask>
 <path class="okrug" data-i="24" d="M339.561 440.514L338.971 440.911L339.165 443.054L340.505 444.787L340.887 446.605L344.568 451.289L344.287 453.577L343.444 453.715L341.773 457.316L340.728 457.915L342.306 459.691L340.267 463.162L341.276 464.151L338.834 470.632L338.661 473.252L341.622 474.01L344.201 477.2L346.427 478.362L348.725 480.715L349.892 483.623L348.487 486.431L347.658 491.476L346.527 492.623L346.275 494.543L342.436 495.186L342.601 496.932L340.664 499.299L340.93 501.306L340.051 502.771L338.243 504.034L337.479 503.052L335.643 503.038L335.059 503.76L331.99 504.222L331.544 505.319L330.103 505.925L322.568 499.783L320.356 501.977L316.819 503.363L316.913 505.059L317.907 506.596L317.575 507.498L316.567 506.553L314.326 506.632L312.554 505.369L308.585 507.729L301.821 505.889L300.437 506.452L297.758 504.402L291.807 501.674L291.029 502.619L290.28 506.365L288.227 506.906L284.524 505.42L280.713 506.012L275.13 511.814L266.032 513.915L260.478 512.226L260.571 506.704L258.756 505.824L257.748 503.63L257.913 501.234L259.368 498.534L262.156 496.513L263.15 491.75L262.394 490.047L263.071 488.062L265.744 485.601L270.549 483.161L272.364 481.011L274.23 472.703L276.686 468.438L280.396 466.309L279.071 464.115L278.667 459.828L276.578 457.98L275.937 457.597L276.009 456.284L278.595 455.483L279.388 450.308L281.182 448.114V446.519L282.572 444.325H285.554L287.146 443.127L289.336 442.932L291.526 444.527L295.899 443.928L297.693 439.944H299.479L301.871 441.936L304.652 439.742L308.83 440.139L308.628 442.932L309.428 444.722L314.795 442.131L316.79 445.321L317.381 444.325H318.577V448.511L322.359 449.709H325.139L326.508 448.85L327.128 446.981L330.24 446.353L332.415 444.801L333.654 441.994H335.21L337.076 440.442L339.561 440.514Z" mask="url(#path-25-inside-17)"/>
-<path class="okrug" data-i="25" data-okrug="kosovo" d="M182.878 468.142L183.635 466.438L184.153 461.278L188.526 459.734L189.045 456.897L192.647 455.605L194.707 457.929L196.767 455.093L199.339 454.313L201.399 456.118L201.911 458.442L205.254 457.669L210.404 453.801L212.465 448.9L211.175 445.551L212.976 443.487L216.585 442.455L215.555 438.846L211.953 437.042L211.175 426.729L212.205 423.372L212.465 418.732L207.573 414.351L205.772 410.735V406.094L203.525 402.94L203.748 402.861L205.254 401.865L208.582 403.373L213.336 401.201L215.541 403.452L216.909 407.458L218.573 405.957L219.964 405.863L221.087 410.107L221.275 421.878L223.695 418.472L225.619 417.988L226.908 418.955L228.27 423.026L226.224 429.24L226.598 430.272L230.784 429.875L235.2 430.987L237.649 433.419L239.292 436.674L242.115 435.974L242.8 436.941L242.159 441.466L239.918 445.472L240.264 448.864L247.064 449.369L251.156 451.52L251.214 451.542L249.269 456.637L245.408 455.345L242.836 456.118L247.468 460.506L247.727 464.887H244.377L240.005 466.179L239.486 468.495L237.174 471.592L234.595 472.624L230.741 477.265L234.595 480.621L233.312 483.71L231.252 484.489L230.993 488.098L233.312 490.415L234.083 492.479L232.282 493.511L233.572 498.411L229.451 500.216L228.421 501.508L230.481 502.02V504.597L229.451 507.953L231.511 509.497V511.302L232.542 512.334L239.745 513.626L240.617 514.939L236.741 518.663L234.652 522.424L232.376 529.569L230.683 531.568L228.824 531.972L224.927 531.366L223.097 526.891L220.605 524.365L219.611 520.237L217.911 518.764L214.986 518.562L211.42 521.081L210.001 523.196L203.849 527.086L203.2 523.167L199.08 520.583L195.478 520.843L193.158 519.298L193.418 517.234L198.568 512.594L201.399 511.561L203.453 508.985L203.712 505.116L201.911 498.664L198.568 497.119L201.399 494.543L202.17 491.706L199.598 488.35L197.538 487.326L196.767 483.969L189.045 479.841H186.725L186.214 476.492L187.244 474.948L185.695 472.111L186.725 470.047L184.413 468.755L182.878 468.142Z"/>
-<path class="okrug" data-i="26" data-okrug="kosovo" d="M186.725 479.841H185.183L182.611 481.393L178.75 481.646L175.919 477.005L174.37 476.492L171.287 479.069L164.335 478.557L159.703 482.678L160.733 491.447L160.215 498.411L163.305 501.248L168.708 503.565L165.877 504.344L162.794 507.953L159.444 510.529L157.722 515.892L157.369 514.485L153.782 510.652L148.717 508.891L147.788 507.274L143.977 505.903L144.071 505.015L142.493 503.557L141.391 503.594L139.619 505.116L138.092 504.019L135.023 504.691L133.762 503.933L133.921 502.598L132.984 500.981L133.698 500.404L133.813 498.318L133.309 496.99L130.398 494.37L132.091 492.255L131.436 490.025L128.893 487.795L129.354 486.445L127.97 484.98L126.429 480.945L120.356 477.64L119.131 475.352L117.82 474.796L119.239 470.682L118.764 466.597L123.987 460.845L120.803 456.825L116.769 454.451L115.335 450.488L117.1 446.591L126.335 449.355L134.223 449.954L135.21 449.499L138.409 445.27L137.652 442.917L138.214 441.914L141.895 439.157L144.417 439.532L158.111 437.374L159.61 436.494L160.705 434.661L161.072 433.823L162.794 434.206L165.366 431.882L169.227 433.434L172.829 439.879L172.569 445.552L170.509 447.356L172.058 448.388V453.029L169.738 453.541L170.257 455.865L171.799 456.897L172.569 460.246L174.63 460.506L176.171 458.702L177.201 458.961L179.002 465.147L180.292 465.659L181.833 467.723L184.412 468.755L186.725 470.047L185.695 472.111L187.244 474.948L186.213 476.492L186.725 479.841Z"/>
-<path class="okrug" data-i="27" data-okrug="kosovo" d="M203.849 527.086L199.152 528.58L195.312 532.723L192.006 532.752L189.967 533.957L185.71 535.061L181.863 541.42L182.158 547.287L183.39 550.174L183.073 552.765L184.47 555.385L180.163 560.098L173.996 563.88L169.839 571.032L168.73 571.797L167.297 571.249L164.934 571.711L163.327 566.68L163.306 561.347L164.494 560.401L166.439 560.163L164.797 555.335L168.809 552.267L169.249 547.843L168.06 546.212L166.446 539.456L164.213 537.284L162.751 534.448L163.759 532.513L163.32 531.207L163.896 529.381L162.989 526.35L161.627 524.639L159.841 518.071L157.723 515.892L159.444 510.529L162.794 507.953L165.877 504.344L168.708 503.565L163.306 501.248L160.215 498.411L160.734 491.447L159.704 482.677L164.336 478.556L171.287 479.069L174.371 476.492L175.92 477.005L178.751 481.645L182.612 481.393L185.184 479.841H189.045L196.767 483.969L197.538 487.325L199.598 488.35L202.17 491.706L201.399 494.543L198.568 497.119L201.911 498.664L203.712 505.116L203.453 508.985L201.399 511.561L198.568 512.593L195.219 515.43L193.418 517.234L193.158 519.298L195.478 520.843L199.08 520.583L203.2 523.167L203.849 527.086Z"/>
-<path class="okrug" data-i="28" data-okrug="kosovo" d="M203.525 402.94L205.772 406.094V410.735L207.573 414.351L212.464 418.732L212.205 423.373L211.175 426.729L211.953 437.042L215.555 438.847L216.585 442.455L212.976 443.487L211.175 445.552L212.464 448.9L210.404 453.801L205.253 457.669L201.911 458.442L201.399 456.118L199.339 454.313L196.767 455.093L194.707 457.929L192.647 455.605L189.045 456.897L188.526 459.734L184.153 461.278L183.635 466.439L182.878 468.142L181.834 467.723L180.292 465.659L179.003 465.147L177.202 458.961L176.172 458.702L174.63 460.506L172.57 460.246L171.799 456.897L170.257 455.865L169.739 453.541L172.058 453.029V448.388L170.509 447.356L172.57 445.552L172.829 439.879L169.227 433.434L165.366 431.882L162.794 434.206L161.072 433.823L161.245 433.441L161.31 432.661L157.715 427.263L157.542 425.776L158.609 423.531L165.654 418.587L169.256 417.288L171.95 418.638L171.914 416.942L177.324 416.155L177.677 415.159L177.576 412.402L176.1 407.617L176.143 404.449L174.45 404.752L173.744 403.9L173.312 402.06L173.931 398.646L169.933 394.554L169.494 392.583L175.473 390.743L180.977 387.3L183.26 386.636L186.091 384.125L188.007 383.663H188.476L190.313 383.728L192.784 385.287L197.74 393.789L197.538 395.348L194.232 394.207L192.625 394.402L191.66 395.268L192.308 398.278L194.642 400.616L197.135 401.179L199.649 402.695L200.247 402.955L201.702 403.568L203.208 403.056L203.525 402.94Z"/>
-<path class="okrug" data-i="29" data-okrug="kosovo" d="M240.617 514.939L239.745 513.626L232.541 512.334L231.511 511.302V509.497L229.451 507.953L230.481 504.597V502.02L228.421 501.508L229.451 500.216L233.572 498.411L232.282 493.511L234.083 492.479L233.312 490.415L230.993 488.098L231.252 484.489L233.312 483.71L234.595 480.621L230.741 477.265L234.595 472.624L237.174 471.592L239.486 468.495L240.005 466.179L244.377 464.887H247.727L247.468 460.506L242.836 456.118L245.408 455.345L249.269 456.637L251.214 451.542L251.25 451.556L255.911 451.47L259.556 452.343L262.61 454.321L266.198 460.643L268.489 462.606L270.405 461.819L273.963 457.648L275.851 457.547L276.578 457.98L278.668 459.827L279.071 464.115L280.396 466.309L276.687 468.438L274.23 472.703L272.364 481.01L270.549 483.161L265.744 485.601L263.071 488.062L262.394 490.047L263.151 491.75L262.156 496.513L259.369 498.534L257.913 501.233L257.748 503.63L258.756 505.824L260.572 506.704L260.478 512.225L251.588 513.323L248.26 511.612H245.962L244.024 514.687L240.617 514.939Z"/>
+<path class="okrug" data-i="25" d="M182.878 468.142L183.635 466.438L184.153 461.278L188.526 459.734L189.045 456.897L192.647 455.605L194.707 457.929L196.767 455.093L199.339 454.313L201.399 456.118L201.911 458.442L205.254 457.669L210.404 453.801L212.465 448.9L211.175 445.551L212.976 443.487L216.585 442.455L215.555 438.846L211.953 437.042L211.175 426.729L212.205 423.372L212.465 418.732L207.573 414.351L205.772 410.735V406.094L203.525 402.94L203.748 402.861L205.254 401.865L208.582 403.373L213.336 401.201L215.541 403.452L216.909 407.458L218.573 405.957L219.964 405.863L221.087 410.107L221.275 421.878L223.695 418.472L225.619 417.988L226.908 418.955L228.27 423.026L226.224 429.24L226.598 430.272L230.784 429.875L235.2 430.987L237.649 433.419L239.292 436.674L242.115 435.974L242.8 436.941L242.159 441.466L239.918 445.472L240.264 448.864L247.064 449.369L251.156 451.52L251.214 451.542L249.269 456.637L245.408 455.345L242.836 456.118L247.468 460.506L247.727 464.887H244.377L240.005 466.179L239.486 468.495L237.174 471.592L234.595 472.624L230.741 477.265L234.595 480.621L233.312 483.71L231.252 484.489L230.993 488.098L233.312 490.415L234.083 492.479L232.282 493.511L233.572 498.411L229.451 500.216L228.421 501.508L230.481 502.02V504.597L229.451 507.953L231.511 509.497V511.302L232.542 512.334L239.745 513.626L240.617 514.939L236.741 518.663L234.652 522.424L232.376 529.569L230.683 531.568L228.824 531.972L224.927 531.366L223.097 526.891L220.605 524.365L219.611 520.237L217.911 518.764L214.986 518.562L211.42 521.081L210.001 523.196L203.849 527.086L203.2 523.167L199.08 520.583L195.478 520.843L193.158 519.298L193.418 517.234L198.568 512.594L201.399 511.561L203.453 508.985L203.712 505.116L201.911 498.664L198.568 497.119L201.399 494.543L202.17 491.706L199.598 488.35L197.538 487.326L196.767 483.969L189.045 479.841H186.725L186.214 476.492L187.244 474.948L185.695 472.111L186.725 470.047L184.413 468.755L182.878 468.142Z"/>
+<path class="okrug" data-i="26" d="M186.725 479.841H185.183L182.611 481.393L178.75 481.646L175.919 477.005L174.37 476.492L171.287 479.069L164.335 478.557L159.703 482.678L160.733 491.447L160.215 498.411L163.305 501.248L168.708 503.565L165.877 504.344L162.794 507.953L159.444 510.529L157.722 515.892L157.369 514.485L153.782 510.652L148.717 508.891L147.788 507.274L143.977 505.903L144.071 505.015L142.493 503.557L141.391 503.594L139.619 505.116L138.092 504.019L135.023 504.691L133.762 503.933L133.921 502.598L132.984 500.981L133.698 500.404L133.813 498.318L133.309 496.99L130.398 494.37L132.091 492.255L131.436 490.025L128.893 487.795L129.354 486.445L127.97 484.98L126.429 480.945L120.356 477.64L119.131 475.352L117.82 474.796L119.239 470.682L118.764 466.597L123.987 460.845L120.803 456.825L116.769 454.451L115.335 450.488L117.1 446.591L126.335 449.355L134.223 449.954L135.21 449.499L138.409 445.27L137.652 442.917L138.214 441.914L141.895 439.157L144.417 439.532L158.111 437.374L159.61 436.494L160.705 434.661L161.072 433.823L162.794 434.206L165.366 431.882L169.227 433.434L172.829 439.879L172.569 445.552L170.509 447.356L172.058 448.388V453.029L169.738 453.541L170.257 455.865L171.799 456.897L172.569 460.246L174.63 460.506L176.171 458.702L177.201 458.961L179.002 465.147L180.292 465.659L181.833 467.723L184.412 468.755L186.725 470.047L185.695 472.111L187.244 474.948L186.213 476.492L186.725 479.841Z"/>
+<path class="okrug" data-i="27" d="M203.849 527.086L199.152 528.58L195.312 532.723L192.006 532.752L189.967 533.957L185.71 535.061L181.863 541.42L182.158 547.287L183.39 550.174L183.073 552.765L184.47 555.385L180.163 560.098L173.996 563.88L169.839 571.032L168.73 571.797L167.297 571.249L164.934 571.711L163.327 566.68L163.306 561.347L164.494 560.401L166.439 560.163L164.797 555.335L168.809 552.267L169.249 547.843L168.06 546.212L166.446 539.456L164.213 537.284L162.751 534.448L163.759 532.513L163.32 531.207L163.896 529.381L162.989 526.35L161.627 524.639L159.841 518.071L157.723 515.892L159.444 510.529L162.794 507.953L165.877 504.344L168.708 503.565L163.306 501.248L160.215 498.411L160.734 491.447L159.704 482.677L164.336 478.556L171.287 479.069L174.371 476.492L175.92 477.005L178.751 481.645L182.612 481.393L185.184 479.841H189.045L196.767 483.969L197.538 487.325L199.598 488.35L202.17 491.706L201.399 494.543L198.568 497.119L201.911 498.664L203.712 505.116L203.453 508.985L201.399 511.561L198.568 512.593L195.219 515.43L193.418 517.234L193.158 519.298L195.478 520.843L199.08 520.583L203.2 523.167L203.849 527.086Z"/>
+<path class="okrug" data-i="28" d="M203.525 402.94L205.772 406.094V410.735L207.573 414.351L212.464 418.732L212.205 423.373L211.175 426.729L211.953 437.042L215.555 438.847L216.585 442.455L212.976 443.487L211.175 445.552L212.464 448.9L210.404 453.801L205.253 457.669L201.911 458.442L201.399 456.118L199.339 454.313L196.767 455.093L194.707 457.929L192.647 455.605L189.045 456.897L188.526 459.734L184.153 461.278L183.635 466.439L182.878 468.142L181.834 467.723L180.292 465.659L179.003 465.147L177.202 458.961L176.172 458.702L174.63 460.506L172.57 460.246L171.799 456.897L170.257 455.865L169.739 453.541L172.058 453.029V448.388L170.509 447.356L172.57 445.552L172.829 439.879L169.227 433.434L165.366 431.882L162.794 434.206L161.072 433.823L161.245 433.441L161.31 432.661L157.715 427.263L157.542 425.776L158.609 423.531L165.654 418.587L169.256 417.288L171.95 418.638L171.914 416.942L177.324 416.155L177.677 415.159L177.576 412.402L176.1 407.617L176.143 404.449L174.45 404.752L173.744 403.9L173.312 402.06L173.931 398.646L169.933 394.554L169.494 392.583L175.473 390.743L180.977 387.3L183.26 386.636L186.091 384.125L188.007 383.663H188.476L190.313 383.728L192.784 385.287L197.74 393.789L197.538 395.348L194.232 394.207L192.625 394.402L191.66 395.268L192.308 398.278L194.642 400.616L197.135 401.179L199.649 402.695L200.247 402.955L201.702 403.568L203.208 403.056L203.525 402.94Z"/>
+<path class="okrug" data-i="29" d="M240.617 514.939L239.745 513.626L232.541 512.334L231.511 511.302V509.497L229.451 507.953L230.481 504.597V502.02L228.421 501.508L229.451 500.216L233.572 498.411L232.282 493.511L234.083 492.479L233.312 490.415L230.993 488.098L231.252 484.489L233.312 483.71L234.595 480.621L230.741 477.265L234.595 472.624L237.174 471.592L239.486 468.495L240.005 466.179L244.377 464.887H247.727L247.468 460.506L242.836 456.118L245.408 455.345L249.269 456.637L251.214 451.542L251.25 451.556L255.911 451.47L259.556 452.343L262.61 454.321L266.198 460.643L268.489 462.606L270.405 461.819L273.963 457.648L275.851 457.547L276.578 457.98L278.668 459.827L279.071 464.115L280.396 466.309L276.687 468.438L274.23 472.703L272.364 481.01L270.549 483.161L265.744 485.601L263.071 488.062L262.394 490.047L263.151 491.75L262.156 496.513L259.369 498.534L257.913 501.233L257.748 503.63L258.756 505.824L260.572 506.704L260.478 512.225L251.588 513.323L248.26 511.612H245.962L244.024 514.687L240.617 514.939Z"/>
 <g class="pins" aria-hidden="true">
 <g transform="translate(107 247)"><circle class="ring" r="4"/><circle class="dot" r="4"/></g>
 <g transform="translate(150 200)"><circle class="ring" r="4"/><circle class="dot" r="4"/></g>
-<g transform="translate(220 464)"><circle class="ring g" r="4"/><circle class="dot g" r="4"/></g>
+<g transform="translate(220 464)"><circle class="ring" r="4"/><circle class="dot" r="4"/></g>
 </g>
 </g>
 <defs>
@@ -709,48 +480,19 @@ footer a:hover{color:var(--orange)}
 <rect width="392" height="572" fill="white"/>
 </clipPath>
 </defs>
-</svg>
-
-
-</div>
-<p class="map-hint">Dodirnite okrug da vidite projekte.</p>
-<div class="legend"><span><i></i>Završeni projekti</span><span><i class="g"></i>Crkve i manastiri<span class="lg-x"> (zlatna boja)</span></span><span><i class="n"></i>Ostali okruzi</span></div>
-    </div>
-    <div class="rv">
-      <span class="eyebrow">Reference</span>
-      <div class="sec-head" style="margin-bottom:0"><h2>Naša rešenja u praksi</h2>
-      <p>Preko dve decenije gradimo poverenje kroz realizaciju kompleksnih HVAC sistema na teritoriji cele Srbije, od porodičnih domova do velikih industrijskih postrojenja.</p>
-      <a class="btn btn-primary refs-all" href="reference/">Istaknuti projekti</a></div>
-      <div class="tradition" id="cuvari-tradicije">
-        <h3>Čuvari tradicije kroz inženjerski rad</h3>
-        <p>Postoje projekti koji se mere kvadratima i oni koji se mere trajanjem. Naš rad na crkvama i manastirima širom Srbije, na Kosovu i Metohiji i u Beogradu za nas je odgovornost, a ne samo posao.</p>
-        <a href="cuvari-tradicije/" class="btn btn-gold">Saznaj više</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="karijera" class="career">
-  <div class="wrap career-in">
-    <div class="rv">
-      <span class="eyebrow">Karijera</span>
-      <h2>Izgradite karijeru uz lidere u termotehnici</h2>
-      <p>Pridružite se timu koji 26 godina gradi ugled u HVAC industriji. Nudimo rad na raznovrsnim projektima, usavršavanje i stabilno okruženje u kojem se ceni struka.</p>
-    </div>
-    <form class="form rv" id="cv" novalidate>
-      <input type="text" name="ime" placeholder="Ime i prezime" required aria-label="Ime i prezime">
-      <input type="email" name="email" placeholder="E-mail adresa" required aria-label="E-mail">
-      <input type="tel" name="tel" placeholder="Telefon" aria-label="Telefon">
-      <input type="file" name="cv" aria-label="Priloži CV">
-      <button class="btn btn-primary" type="submit">Pošalji prijavu</button>
-      <small>Prijavom se slažete sa obradom podataka u svrhu zapošljavanja.</small>
-      <span class="ok" id="ok" role="status">Hvala, prijava je primljena.</span>
-    </form>
-  </div>
-</section>
+</svg></div><p class="map-note">Zlatnom bojom su označeni okruzi sa svetinjama navedenim na ovoj stranici.</p></div></div></section>
+<section class="t-sec kos t-anchor" id="kosovo" aria-labelledby="kos-h"><div class="wrap"><div class="kos-in rv"><span class="gline"></span><span class="eyebrow">Kosovo i Metohija</span><h2 id="kos-h">Svetinje na Kosovu i Metohiji</h2>
+<p style="margin-top:24px">Radove na crkvama i manastirima izveli smo i na Kosovu i Metohiji, takođe kao donaciju.</p>
+<ul class="zad" data-placeholder="true" aria-label="Objekti na Kosovu i Metohiji"><li>Naziv objekta 1</li><li>Naziv objekta 2</li><li>Naziv objekta 3</li></ul></div></div></section>
+<section class="t-sec sved" id="svedocanstva" aria-labelledby="sved-h"><div class="wrap"><div class="rv"><span class="gline"></span><span class="eyebrow">Svedočanstva</span><h2 id="sved-h">Reči zahvalnosti</h2></div><div class="sved-grid rv">
+<blockquote data-placeholder="true"><p>Hvala vam što ste hram ogrejali, a da freske nisu pretrpele ni najmanju promenu. Molimo se za vas i vaše porodice.</p><cite>Starešina manastira (primer)</cite></blockquote>
+<blockquote data-placeholder="true"><p>Došli ste tiho, radili pažljivo i otišli bez traženja ičega zauzvrat.</p><cite>Bratstvo manastira (primer)</cite></blockquote>
+</div></div></section>
+<section class="kraj" id="zavrsetak" aria-label="Završna misao"><div class="wrap rv"><span class="gline"></span><p class="mis">Sve što je podignuto za svetinje, podignuto je zajedno. Zahvalni smo što smo bili deo toga.</p>
+<div class="kraj-links"><a href="../">← Nazad na početnu</a><a href="../reference/">Naši projekti →</a></div></div></section>
+<section class="credits" aria-label="Autori fotografija"><div class="wrap"><p><b>Fotografije.</b> Sve fotografije su privremene dok ne dobijemo sopstvene. Wikimedia Commons: Sreten Vuković (Hilandar), kallerna (Hram Svetog Save), DKjellby (Hram Svetog Save, enterijer, CC0), Nikolina Šepić (hram u Valjevu); licenca <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> osim gde je naznačeno. Ostale fotografije: <a href="https://unsplash.com" rel="noopener">Unsplash</a> (<a href="https://unsplash.com/photos/VuCw5GjkUrA" rel="noopener">Kristijan Arsov</a>, <a href="https://unsplash.com/photos/pujZSwLi_7c" rel="noopener">Matt Seymour</a>, <a href="https://unsplash.com/photos/bdA0TtmbeVI" rel="noopener">Yvonne Assen</a>, <a href="https://unsplash.com/photos/vegEZ8GphSM" rel="noopener">Soham Banerjee</a> i još jedna fotografija sa Unsplash-a).</p></div></section>
 </main>
-
-<footer id="kontakt">
+<footer>
   <div class="wrap">
     <div class="f-grid">
       <div>
@@ -759,7 +501,7 @@ footer a:hover{color:var(--orange)}
       </div>
       <div>
         <h4>Brzi linkovi</h4>
-        <ul><li><a href="#usluge">Usluge</a></li><li><a href="#reference">Reference</a></li><li><a href="#konfigurator">Konfigurator</a></li><li><a href="#karijera">Karijera</a></li></ul>
+        <ul><li><a href="../#usluge">Usluge</a></li><li><a href="../#reference">Reference</a></li><li><a href="../#konfigurator">Konfigurator</a></li><li><a href="../#karijera">Karijera</a></li></ul>
       </div>
       <div>
         <h4>Kontakt</h4>
@@ -774,140 +516,29 @@ footer a:hover{color:var(--orange)}
     <div class="copy"><span>© 2026 Simon d.o.o. Sva prava zadržana.</span><span><a href="#">Politika privatnosti</a> · <a href="#">Uslovi korišćenja</a></span></div>
   </div>
 </footer>
-
-<dialog class="okr" id="okr" aria-labelledby="okrT" tabindex="-1">
-  <div class="okr-in">
-    <div class="okr-top">
-      <div><h3 id="okrT"></h3><p class="okr-count" id="okrC"></p></div>
-      <button class="okr-x" id="okrX" aria-label="Zatvori">✕</button>
-    </div>
-    <div id="okrBody"></div>
-    <div class="okr-foot">
-      <!-- TODO: zameniti linkom ka stranici sa detaljnim opisima projekata -->
-      <a class="btn btn-primary" id="okrMore" href="#">Detaljniji opisi projekata</a>
-    </div>
-  </div>
-</dialog>
-
 <script>
-const hdr=document.getElementById('hdr');
-const burger=document.getElementById('burger'),menu=document.getElementById('menu');
-burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
-menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
-
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%4)*70+'ms';io.observe(el)});
-
-const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;
-  const el=e.target,n=+el.dataset.n,t0=performance.now();
-  const f=t=>{const p=Math.min((t-t0)/1200,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+'+';if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f);cio.unobserve(el)}),{threshold:.6});
-document.querySelectorAll('[data-n]').forEach(el=>cio.observe(el));
-
-// bez usamljenih reči: poslednji razmak u tekstu postaje nedeljiv
-(()=>{const last=n=>{while(n&&n.lastChild)n=n.lastChild;return n};
-document.querySelectorAll('h1,h2,h3,p,li,small,.tile span,.stats span,.legend span').forEach(el=>{
-const t=last(el);if(!t||t.nodeType!==3)return;
-t.nodeValue=t.nodeValue.replace(/\s+(\S+\s*)$/,' $1')})})();
-
-// mapa: nazivi okruga, tooltip i popup
 (()=>{
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+if(burger){burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)};menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'))}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// mapa: nazivi okruga, zlatni su okruzi sa svetinjama i vode na odgovarajuci deo stranice
 const NAZIVI=['Beogradski','Severnobački','Srednjobanatski','Severnobanatski','Južnobanatski','Zapadnobački','Južnobački','Sremski','Mačvanski','Kolubarski','Podunavski','Braničevski','Šumadijski','Pomoravski','Borski','Zaječarski','Zlatiborski','Moravički','Raški','Rasinski','Nišavski','Toplički','Pirotski','Jablanički','Pčinjski','Kosovski','Pećki','Prizrenski','Kosovskomitrovački','Kosovskopomoravski'].map(n=>n+' okrug');
-// PRIMER PODACI: [naziv, mesto, usluga, godina, crkva/manastir]
-const P={
-0:[['Hram Svetog Save','Vračar','Podno grejanje','donacija',1,'cuvari-tradicije/#hram-svetog-save'],
-['Poslovni kompleks','Novi Beograd','Klimatizacija',2024,0,'poslovni-beograd'],['Stambena zgrada','Zvezdara','Grejanje',2021],['Osnovna škola','Voždovac','Grejanje',2018],
-['Sportska hala','Čukarica',['Ventilacija','Grejanje'],2020],['Porodična kuća','Zemun','Toplotna pumpa',2023],['Poslovna zgrada','Palilula','Hlađenje',2022],
-['Stambeni kompleks','Novi Beograd','Grejanje',2017],['Vrtić','Rakovica','Grejanje',2019],['Hotel','Stari grad',['Klimatizacija','Grejanje'],2021],
-['Skladišni prostor','Surčin','Ventilacija',2016],['Porodična kuća','Barajevo','Solarni sistem',2023],['Poslovni centar','Savski venac','Hlađenje',2020],
-['Zdravstvena ustanova','Zvezdara','Ventilacija',2018],['Stambena zgrada','Vračar','Grejanje',2015],['Prodajni centar','Novi Beograd','Sprinkleri',2019],
-['Poslovna zgrada','Čukarica','Klimatizacija',2024],['Porodična kuća','Grocka','Toplotna pumpa',2024],['Restoran','Stari grad','Ventilacija',2022],
-['Fabrička hala','Obrenovac','Grejanje',2017]],
-9:[['Hram u Valjevu','Valjevo','Podno grejanje','donacija',1,'cuvari-tradicije/#hram-valjevo'],['Crkva Svetog Simeona Stolpnika','Osečina','Zadužbina','u izgradnji',1,'cuvari-tradicije/#ktitorska-crkva'],['Porodična kuća','Valjevo','Toplotna pumpa',2024,0,'kuca-valjevo'],['Poslovni prostor','Valjevo','Klimatizacija',2022],['Škola','Lajkovac','Ventilacija',2023,0,'skola-kolubarski'],
-['Stambena zgrada','Valjevo','Grejanje',2018],['Hala','Ub','Ventilacija',2020],['Porodična kuća','Mionica',['Toplotna pumpa','Solarni sistem'],2021]],
-25:[['Manastir (primer)','Priština','Podno grejanje','donacija',1,'cuvari-tradicije/#kosovo'],['Crkva (primer)','Gračanica','Podno grejanje','donacija',1,'cuvari-tradicije/#kosovo']],
-26:[['Manastir (primer)','Peć','Podno grejanje','donacija',1,'cuvari-tradicije/#kosovo'],['Manastir (primer)','Dečani','Podno grejanje','donacija',1,'cuvari-tradicije/#kosovo'],['Crkva (primer)','Peć','Podno grejanje','donacija',1,'cuvari-tradicije/#kosovo']],
-28:[['Manastir (primer)','Kosovska Mitrovica','Podno grejanje','donacija',1,'cuvari-tradicije/#kosovo']]
-};
-const map=document.querySelector('.map'),tip=document.getElementById('mapTip'),dlg=document.getElementById('okr');
-const naz=p=>NAZIVI[+p.dataset.i];
-const cnt=n=>{const m=n%10,h=n%100;return n+(m===1&&h!==11?' završen projekat':' završenih projekata')};
-// PRIMER PODACI: površine, oprema i opisi su ilustrativni
-const POV={'Hram Svetog Save':5000,'Hram u Valjevu':1200,'Crkva Svetog Simeona Stolpnika':120,'Poslovni kompleks':6400,'Stambena zgrada':2800,'Osnovna škola':3200,'Sportska hala':2400,'Porodična kuća':180,'Poslovna zgrada':1800,'Stambeni kompleks':9200,'Vrtić':960,'Hotel':4400,'Skladišni prostor':2000,'Poslovni centar':3600,'Zdravstvena ustanova':2800,'Prodajni centar':5200,'Restoran':320,'Fabrička hala':4800,'Poslovni prostor':140,'Škola':2400,'Hala':1600,'Manastir (primer)':1200,'Crkva (primer)':420};
-const OPR={'Grejanje':'Viessmann','Toplotna pumpa':'Viessmann','Solarni sistem':'Viessmann','Klimatizacija':'Toshiba','Hlađenje':'Toshiba','Ventilacija':'Rehau','Sprinkleri':'Carrier'};
-const OPIS={'Podno grejanje':'celokupno podno grejanje hrama, izvedeno kao donacija','Zadužbina':'porodična zadužbina u izgradnji, srpsko-vizantijski stil','Grejanje':'sistem centralnog grejanja sa kotlarnicom i regulacijom po zonama','Toplotna pumpa':'toplotna pumpa sa podnim grejanjem','Solarni sistem':'solarni kolektori za sanitarnu vodu','Klimatizacija':'klimatizacija sa centralnim upravljanjem','Hlađenje':'sistem hlađenja prilagođen opterećenju objekta','Ventilacija':'ventilacija sa rekuperacijom toplote','Sprinkleri':'sprinkler zaštita od požara po standardima'};
-const sv=r=>[].concat(r[2]);
-const detalj=r=>{const v=sv(r);return{pov:(POV[r[0]]||200).toLocaleString('sr-RS')+' m²',opr:[...new Set(v.map(x=>OPR[x]).filter(Boolean))].join(', ')||'–',opis:'Izvedeno: '+v.map(x=>OPIS[x]).filter(Boolean).join(' i ')+'.'}};
-function place(x,y){const w=map.clientWidth;tip.style.left=Math.min(Math.max(x,64),w-64)+'px';tip.style.top=y+'px'}
-function showTip(p,x,y){const n=(P[p.dataset.i]||[]).length;tip.innerHTML=naz(p)+(n?'<small>'+cnt(n)+'</small>':'');place(x,y);tip.classList.add('on')}
+const LINK={0:'#hram-svetog-save',9:'#hram-valjevo',25:'#kosovo',26:'#kosovo',27:'#kosovo',28:'#kosovo',29:'#kosovo'};
+const map=document.getElementById('map'),tip=document.getElementById('mapTip');
+function show(p,x,y){tip.textContent=NAZIVI[+p.dataset.i];const w=map.clientWidth;tip.style.left=Math.min(Math.max(x,64),w-64)+'px';tip.style.top=y+'px';tip.classList.add('on')}
 document.querySelectorAll('.okrug').forEach(p=>{
-  p.setAttribute('tabindex','0');p.setAttribute('role','button');p.setAttribute('aria-label',naz(p));
-  p.addEventListener('mousemove',e=>{const r=map.getBoundingClientRect();showTip(p,e.clientX-r.left,e.clientY-r.top)});
+  const i=+p.dataset.i,hl=i in LINK;
+  if(hl){p.classList.add('hl');p.setAttribute('tabindex','0');p.setAttribute('role','link');p.setAttribute('aria-label',NAZIVI[i]+': pređi na svetinje u ovom okrugu');
+    p.addEventListener('click',()=>{location.hash=LINK[i]});
+    p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();location.hash=LINK[i]}});
+    p.addEventListener('focus',()=>{const r=map.getBoundingClientRect(),b=p.getBoundingClientRect();show(p,b.left+b.width/2-r.left,b.top-r.top)});
+    p.addEventListener('blur',()=>tip.classList.remove('on'))}
+  p.addEventListener('mousemove',e=>{const r=map.getBoundingClientRect();show(p,e.clientX-r.left,e.clientY-r.top)});
   p.addEventListener('mouseleave',()=>tip.classList.remove('on'));
-  p.addEventListener('focus',()=>{const r=map.getBoundingClientRect(),b=p.getBoundingClientRect();showTip(p,b.left+b.width/2-r.left,b.top-r.top)});
-  p.addEventListener('blur',()=>tip.classList.remove('on'));
-  p.addEventListener('click',e=>{if(e.detail)p.blur();open(p)});
-  p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(p)}});
 });
-const esc=t=>String(t).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-function open(p){
-  const k=p.dataset.i,list=P[k]||[];
-  document.getElementById('okrT').textContent=naz(p);
-  document.getElementById('okrC').textContent=list.length?cnt(list.length):'';
-  const body=document.getElementById('okrBody'),more=document.getElementById('okrMore');
-  if(!list.length){
-    body.innerHTML='<div class="okr-empty">Za ovaj okrug još nemamo objavljenih projekata. Ako imate objekat u ovom delu Srbije, javite nam se.</div>';
-    more.style.display='none';
-  }else{
-    more.style.display=list.some(x=>x[5])?'':'none';
-    more.setAttribute('href','reference/');
-    body.innerHTML='<div class="okr-grid"><ol class="okr-list">'+list.map((r,i)=>'<li'+(r[4]?' class="holy"':'')+'><button type="button" data-j="'+i+'"><span class="n">'+String(i+1).padStart(2,'0')+'</span><span><b>'+esc(r[0])+'</b><span class="m">'+esc(r[1])+' · '+r[3]+'</span></span><span class="ts">'+sv(r).map(x=>'<span class="t">'+esc(x)+'</span>').join('')+'</span></button></li>').join('')+'</ol><aside class="okr-d" id="okrD" aria-live="polite" hidden></aside></div>';
-    const mq=matchMedia('(max-width:560px)');
-    const dock=()=>{const a=document.getElementById('okrD'),cur=body.querySelector('.okr-list button[aria-current=true]');if(!a||!cur)return;if(mq.matches)cur.parentElement.appendChild(a);else body.querySelector('.okr-grid').appendChild(a)};
-    const sel=j=>{
-      const a=document.getElementById('okrD'),open0=body.querySelector('.okr-list button[aria-current=true]');
-      if(mq.matches&&open0&&+open0.dataset.j===j){open0.setAttribute('aria-current',false);a.hidden=true;body.querySelector('.okr-grid').appendChild(a);return}
-      a.hidden=false;
-      const r=list[j],d=detalj(r);
-      body.querySelectorAll('.okr-list button').forEach(b=>b.setAttribute('aria-current',+b.dataset.j===j));
-      document.getElementById('okrD').innerHTML='<div class="ph"><img src="https://picsum.photos/seed/simon-'+k+'-'+j+'/720/416" alt="Fotografija projekta: '+esc(r[0])+'" loading="lazy" onerror="this.remove()"></div><div class="bd"><h4>'+esc(r[0])+'</h4><div class="loc">'+esc(r[1])+' · '+esc(naz(p))+'</div><p>'+esc(d.opis)+'</p><dl><div><dt>Usluga</dt><dd>'+sv(r).map(esc).join('<br>')+'</dd></div><div><dt>Površina</dt><dd>'+d.pov+'</dd></div><div><dt>'+(isNaN(r[3])?'Status':'Godina')+'</dt><dd>'+(isNaN(r[3])?r[3].charAt(0).toUpperCase()+r[3].slice(1):r[3])+'</dd></div><div><dt>Oprema</dt><dd>'+esc(d.opr)+'</dd></div></dl></div>';
-      more.setAttribute('href',r[5]?(r[5].indexOf('/')>-1?r[5]:'reference/#'+r[5]):'reference/');
-      dock();
-      if(mq.matches)setTimeout(()=>body.querySelector('.okr-list button[aria-current=true]').scrollIntoView({block:'nearest',behavior:'smooth'}),50);
-    };
-    mq.onchange=()=>{if(!mq.matches&&!body.querySelector('.okr-list button[aria-current=true]'))sel(0);dock()};
-    body.querySelectorAll('.okr-list button').forEach(b=>b.onclick=()=>sel(+b.dataset.j));
-    if(!mq.matches)sel(0);
-  }
-  tip.classList.remove('on');
-  dlg.showModal();dlg.focus({preventScroll:true});
-}
-document.getElementById('okrX').onclick=()=>dlg.close();
-dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 })();
-
-// tabs
-(()=>{const tabs=[...document.querySelectorAll('.tab')];
-const show=t=>{tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).classList.toggle('on',on)});t.focus()};
-tabs.forEach((t,i)=>{t.onclick=()=>show(t);t.onkeydown=e=>{const k={ArrowRight:1,ArrowLeft:-1}[e.key];if(k){e.preventDefault();show(tabs[(i+k+tabs.length)%tabs.length])}}})})();
-
-// konfigurator (orijentacioni koeficijenti, EUR/m²)
-const cfg=document.getElementById('cfg'),m2=document.getElementById('m2');
-function calc(){
-  const a=+m2.value,o=+cfg.o.value/100;
-  const extra=[...cfg.querySelectorAll('input[name=x]:checked')].reduce((n,i)=>n+ +i.value,0);
-  const rate=+cfg.t.value+extra;
-  document.getElementById('m2v').textContent=a;
-  const base=a*rate*o;
-  const f=n=>Math.round(n/100)*100;
-  document.getElementById('res').textContent=f(base*.84).toLocaleString('sr-RS')+' – '+f(base*1.2).toLocaleString('sr-RS')+' €';
-}
-cfg.addEventListener('input',calc);calc();
-
-document.getElementById('cv').addEventListener('submit',e=>{
-  e.preventDefault();const f=e.target;
-  if(!f.checkValidity()){f.reportValidity();return}
-  document.getElementById('ok').style.display='block';f.reset();
-});
 </script>
 </body>
 </html>

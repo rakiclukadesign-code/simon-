@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Reference – studije slučaja | Simon termotehnička rešenja</title>
-<meta name="description" content="Šest projekata Simon d.o.o. iz Valjeva: grejanje, hlađenje, solarni sistemi, ventilacija, klimatizacija i grejanje sakralnih objekata. Izazov, rešenje i rezultati u brojkama.">
+<meta name="description" content="Pet projekata Simon d.o.o. iz Valjeva: grejanje, hlađenje, solarni sistemi, ventilacija i klimatizacija. Izazov, rešenje i rezultati u brojkama.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sr_RS">
 <meta property="og:site_name" content="Simon d.o.o.">
 <meta property="og:title" content="Reference – studije slučaja | Simon termotehnička rešenja">
-<meta property="og:description" content="Šest detaljno opisanih projekata: od porodične kuće do manastirskog hrama. Izazov, rešenje i rezultati u brojkama.">
+<meta property="og:description" content="Pet detaljno opisanih projekata: od porodične kuće do poslovnog objekta. Izazov, rešenje i rezultati u brojkama.">
 <!-- TODO: og:image mora biti apsolutni URL (https://...) kada se zna adresa sajta -->
 <meta property="og:image" content="../assets/projekti/kuca-valjevo/01.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -85,7 +85,7 @@ footer a:hover{color:var(--orange)}
 
 /* ---- stranica Reference ---- */
 [hidden]{display:none!important}
-:root{--off:176px}
+:root{--off:176px;--gold-d:#8a6d0b}
 .eyebrow{display:inline-block;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--orange);margin-bottom:24px}
 .btn-lg{padding:20px 32px;font-size:16px}
 .menu a[aria-current=page]{color:var(--orange)}
@@ -169,6 +169,16 @@ footer a:hover{color:var(--orange)}
 .w-v{color:#d4502a!important}.w-t{color:#e60012!important}.w-c{color:#0a1a8a!important;font-family:Georgia,serif!important;font-style:italic;font-weight:700!important}
 .w-f{color:#2a2a2a!important}.w-d{color:#00a1e4!important;font-style:italic}.w-r{color:#111!important}
 
+.pcard-holy{border-color:var(--gold);background:#fbf5df}
+.pcard-holy:hover{border-color:var(--gold-d)}
+.holy-ic{display:grid;place-items:center;flex:none;width:72px;height:72px;border-radius:12px;background:var(--gold);color:var(--brown);font-size:32px}
+.pcard-holy .n{letter-spacing:0;font-size:16px;color:var(--gold-d)}
+.holy-block{padding:112px 0;background:#fbf5df;border-top:1px solid var(--line)}
+.holy-in{max-width:720px;margin:0 auto;text-align:center}
+.holy-cross{display:block;margin-bottom:16px;font-size:32px;line-height:40px;color:var(--gold-d)}
+.holy-block h2{font-size:44px;line-height:48px;font-weight:700;color:var(--brown)}
+.holy-block p{margin:20px auto 32px;font-size:20px;line-height:32px;color:var(--muted)}
+.holy-link{color:var(--gold-d)}
 /* zavrsni CTA */
 .pcta{background:var(--white);padding:96px 0;border-top:1px solid var(--line)}
 .pcta-card{position:relative;overflow:hidden;background:var(--brown);color:#fff;border-radius:var(--r-lg);padding:80px}
@@ -191,6 +201,12 @@ footer a:hover{color:var(--orange)}
 .lb-p{left:16px;top:50%;margin-top:-24px}
 .lb-n{right:16px;top:50%;margin-top:-24px}
 
+@media(max-width:1100px){
+  .menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
+  .menu.open{display:flex}.menu a{color:var(--ink)!important}
+  .menu a[aria-current=page]{color:var(--orange)!important}
+  .burger{display:block}
+}
 @media(max-width:980px){
   .menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
   .menu.open{display:flex}.menu a{color:var(--ink)!important}
@@ -235,6 +251,9 @@ footer a:hover{color:var(--orange)}
   .quote p{font-size:16px;line-height:28px}
   .equip{gap:12px 24px;margin-top:32px}
   .equip .w{font-size:20px;line-height:24px}
+  .holy-block{padding:72px 0}
+  .holy-block h2{font-size:28px;line-height:32px}
+  .holy-block p{font-size:16px;line-height:28px}
   .pcta{padding:56px 0}
   .pcta-card{padding:40px 24px;border-radius:24px}
   .pcta h2{font-size:28px;line-height:32px}
@@ -254,6 +273,7 @@ footer a:hover{color:var(--orange)}
       <a href="../#usluge">Usluge</a>
       <a href="../#proces">Kako radimo</a>
       <a href="./" aria-current="page">Reference</a>
+      <a href="../cuvari-tradicije/">Tradicija</a>
       <a href="../#konfigurator">Konfigurator</a>
       <a href="../#karijera">Karijera</a>
       <a href="../#kontakt" class="btn btn-primary">Stručno savetovanje</a>
@@ -266,7 +286,7 @@ footer a:hover{color:var(--orange)}
 <div class="phero-in">
 <span class="eyebrow">Reference · studije slučaja</span>
 <h1 id="h1">Projekti koji govore za nas</h1>
-<p class="lead">Šest projekata iz različitih delova Srbije, od porodične kuće do manastirskog hrama. Za svaki opisujemo izazov, rešenje i rezultat u konkretnim brojkama.</p>
+<p class="lead">Pet projekata iz različitih delova Srbije, od porodične kuće do poslovnog objekta. Za svaki opisujemo izazov, rešenje i rezultat u konkretnim brojkama. O radu na svetinjama pišemo posebno.</p>
 </div>
 <div class="pstats-wrap"><div class="pstats">
 <div><b>26<i>+</i></b><span>godina iskustva</span></div>
@@ -283,7 +303,7 @@ footer a:hover{color:var(--orange)}
 <a class="pcard" href="#hotel-zlatibor" data-cat="solarni"><img src="../assets/projekti/hotel-zlatibor/thumb.webp" alt="Planinski hotel sa drvenom fasadom u snežnom pejzažu" width="320" height="320" loading="lazy" decoding="async"><span><b>Hotel, Zlatibor</b><span class="m">Solarni sistemi</span></span><span class="n">03</span></a>
 <a class="pcard" href="#skola-kolubarski" data-cat="ventilacija"><img src="../assets/projekti/skola-kolubarski/thumb.webp" alt="Učionica sa klupama i tablom u svetloj prostoriji" width="320" height="320" loading="lazy" decoding="async"><span><b>Školska zgrada, Kolubarski okrug</b><span class="m">Ventilacija</span></span><span class="n">04</span></a>
 <a class="pcard" href="#poslovni-beograd" data-cat="klimatizacija"><img src="../assets/projekti/poslovni-beograd/thumb.webp" alt="Staklena fasada savremene poslovne zgrade na plavom nebu" width="320" height="320" loading="lazy" decoding="async"><span><b>Poslovni objekat, Beograd</b><span class="m">Klimatizacija</span></span><span class="n">05</span></a>
-<a class="pcard" href="#hram-zapadna-srbija" data-cat="sakralni"><img src="../assets/projekti/hram-zapadna-srbija/thumb.webp" alt="Svetao kameni sakralni enterijer sa visokim lučnim prozorima" width="320" height="320" loading="lazy" decoding="async"><span><b>Manastirski hram, Zapadna Srbija</b><span class="m">Grejanje</span></span><span class="n">06</span></a>
+<a class="pcard pcard-holy" href="../cuvari-tradicije/" data-always="1"><span class="holy-ic" aria-hidden="true">✝</span><span><b>Čuvari tradicije</b><span class="m">Rad na svetinjama</span></span><span class="n">→</span></a>
 </nav>
 </div>
 </section>
@@ -295,7 +315,6 @@ footer a:hover{color:var(--orange)}
 <button type="button" class="chip" data-f="solarni" aria-pressed="false">Solarni sistemi</button>
 <button type="button" class="chip" data-f="ventilacija" aria-pressed="false">Ventilacija</button>
 <button type="button" class="chip" data-f="klimatizacija" aria-pressed="false">Klimatizacija</button>
-<button type="button" class="chip" data-f="sakralni" aria-pressed="false">Sakralni objekti</button>
 </div>
 <nav class="jump" aria-label="Skok na projekat"><span>Projekat</span>
 <a href="#kuca-valjevo" data-cat="grejanje" title="Porodična kuća, Valjevo" aria-label="Porodična kuća, Valjevo">01</a>
@@ -303,7 +322,6 @@ footer a:hover{color:var(--orange)}
 <a href="#hotel-zlatibor" data-cat="solarni" title="Hotel, Zlatibor" aria-label="Hotel, Zlatibor">03</a>
 <a href="#skola-kolubarski" data-cat="ventilacija" title="Školska zgrada, Kolubarski okrug" aria-label="Školska zgrada, Kolubarski okrug">04</a>
 <a href="#poslovni-beograd" data-cat="klimatizacija" title="Poslovni objekat, Beograd" aria-label="Poslovni objekat, Beograd">05</a>
-<a href="#hram-zapadna-srbija" data-cat="sakralni" title="Manastirski hram, Zapadna Srbija" aria-label="Manastirski hram, Zapadna Srbija">06</a>
 </nav>
 </div><p class="live" id="live" role="status" aria-live="polite"></p></div>
 <div id="projekti">
@@ -323,7 +341,7 @@ footer a:hover{color:var(--orange)}
 <div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, servis</dd></div>
 </dl>
 </div>
-<a class="proj-media rv" href="../assets/projekti/kuca-valjevo/01.webp" data-group="kuca-valjevo"><span class="proj-num">01 / 06</span><img src="../assets/projekti/kuca-valjevo/01.webp" alt="Savremena porodična kuća sa spoljnom jedinicom toplotne pumpe pored garaže" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/kuca-valjevo/01.webp" data-group="kuca-valjevo"><span class="proj-num">01 / 05</span><img src="../assets/projekti/kuca-valjevo/01.webp" alt="Savremena porodična kuća sa spoljnom jedinicom toplotne pumpe pored garaže" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p data-placeholder="true">Kuća iz 1998. godine grejala se kotlom na čvrsto gorivo starim više od dvadeset godina. Ručno loženje, neravnomerna temperatura po prostorijama i rastući troškovi ogreva naterali su vlasnike da traže rešenje bez dimnjaka, ali i bez radikalne rekonstrukcije objekta.</p></div>
@@ -356,7 +374,7 @@ footer a:hover{color:var(--orange)}
 <div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, nadzor, servis</dd></div>
 </dl>
 </div>
-<a class="proj-media rv" href="../assets/projekti/pogon-sabac/01.webp" data-group="pogon-sabac"><span class="proj-num">02 / 06</span><img src="../assets/projekti/pogon-sabac/01.webp" alt="Transportna traka u pogonu za preradu hrane" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/pogon-sabac/01.webp" data-group="pogon-sabac"><span class="proj-num">02 / 05</span><img src="../assets/projekti/pogon-sabac/01.webp" alt="Transportna traka u pogonu za preradu hrane" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p data-placeholder="true">Širenje linije pakovanja zahtevalo je stabilnih 12 °C u hali od 1.850 m², dok je proizvodnja radila u tri smene. Pogon nije smeo da stane ni na jedan dan, a higijenski zahtevi isključivali su prašnjave radove u blizini proizvodnje.</p></div>
@@ -389,7 +407,7 @@ footer a:hover{color:var(--orange)}
 <div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, servis</dd></div>
 </dl>
 </div>
-<a class="proj-media rv" href="../assets/projekti/hotel-zlatibor/01.webp" data-group="hotel-zlatibor"><span class="proj-num">03 / 06</span><img src="../assets/projekti/hotel-zlatibor/01.webp" alt="Planinski hotel sa drvenom fasadom u snežnom pejzažu" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/hotel-zlatibor/01.webp" data-group="hotel-zlatibor"><span class="proj-num">03 / 05</span><img src="../assets/projekti/hotel-zlatibor/01.webp" alt="Planinski hotel sa drvenom fasadom u snežnom pejzažu" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p data-placeholder="true">Hotel sa 38 soba troši velike količine tople vode, a postojeća kotlarnica na pelet radila je i leti, samo zbog sanitarne vode. Vlasnik je tražio rešenje koje smanjuje potrošnju goriva bez prekida rada hotela.</p></div>
@@ -422,7 +440,7 @@ footer a:hover{color:var(--orange)}
 <div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, nadzor</dd></div>
 </dl>
 </div>
-<a class="proj-media rv" href="../assets/projekti/skola-kolubarski/01.webp" data-group="skola-kolubarski"><span class="proj-num">04 / 06</span><img src="../assets/projekti/skola-kolubarski/01.webp" alt="Učionica sa klupama i tablom u svetloj prostoriji" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/skola-kolubarski/01.webp" data-group="skola-kolubarski"><span class="proj-num">04 / 05</span><img src="../assets/projekti/skola-kolubarski/01.webp" alt="Učionica sa klupama i tablom u svetloj prostoriji" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p data-placeholder="true">U zimskim mesecima prozori u učionicama bili su zatvoreni, pa je koncentracija CO₂ tokom časova prelazila 2.000 ppm. Škola nije imala prostora za velike kanale, a radovi su morali da stanu u letnji raspust.</p></div>
@@ -455,7 +473,7 @@ footer a:hover{color:var(--orange)}
 <div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, nadzor, servis</dd></div>
 </dl>
 </div>
-<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="poslovni-beograd"><span class="proj-num">05 / 06</span><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Staklena fasada savremene poslovne zgrade na plavom nebu" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="poslovni-beograd"><span class="proj-num">05 / 05</span><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Staklena fasada savremene poslovne zgrade na plavom nebu" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p data-placeholder="true">Zgrada sa šest spratova imala je zastarele pojedinačne split uređaje različitih proizvođača, bez kontrole potrošnje po zakupcu. Vlasnik je tražio jedinstven sistem sa upravljanjem po spratovima, uz neometan rad zgrade tokom radova.</p></div>
@@ -472,40 +490,7 @@ footer a:hover{color:var(--orange)}
 <div class="equip"><h3>Korišćena oprema</h3><span class="w w-t">TOSHIBA</span></div>
 </div>
 </section>
-<section class="proj rev" id="hram-zapadna-srbija" data-cat="sakralni" data-tone="w" aria-labelledby="hram-zapadna-srbija-h">
-<div class="wrap">
-<div class="proj-top">
-<div class="rv">
-<span class="eyebrow">Projekat 06 · Sakralni objekti</span>
-<h2 id="hram-zapadna-srbija-h">Manastirski hram, Zapadna Srbija</h2>
-<p class="proj-meta">Zapadna Srbija · <span data-placeholder="true">2021</span></p>
-<div class="tags"><span class="tag g">Sakralni objekat</span><span class="tag">Grejanje</span></div>
-<dl class="kv">
-<div><dt>Površina</dt><dd data-placeholder="true">340 m²</dd></div>
-<div><dt>Instalisana snaga</dt><dd data-placeholder="true">22 kW</dd></div>
-<div><dt>Oprema</dt><dd>Viessmann</dd></div>
-<div><dt>Trajanje radova</dt><dd data-placeholder="true">12 nedelja, uz stalni konzervatorski nadzor</dd></div>
-<div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, nadzor, servis</dd></div>
-</dl>
-</div>
-<a class="proj-media rv" href="../assets/projekti/hram-zapadna-srbija/01.webp" data-group="hram-zapadna-srbija"><span class="proj-num">06 / 06</span><img src="../assets/projekti/hram-zapadna-srbija/01.webp" alt="Svetao kameni sakralni enterijer sa visokim lučnim prozorima" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div>
-<div class="proj-story">
-<div class="rv"><h3>Izazov</h3><p data-placeholder="true">Freske i ikonostas starog hrama osetljivi su na nagle promene temperature i vlage, pa klasično grejanje nije dolazilo u obzir. Nije smelo biti vidljivih elemenata, a svaki zahvat morao je da prođe odobrenje Zavoda za zaštitu spomenika kulture.</p></div>
-<div class="rv"><h3>Rešenje</h3><p data-placeholder="true">Projektovali smo niskotemperaturno grejanje sa cevima ugrađenim u pod, bez ijednog zahvata na zidovima sa freskama. Osnovna temperatura u hramu drži se na 12–14 °C, a za bogosluženja se postepeno podiže do 18 °C, najviše 0,5 °C na sat.</p><p data-placeholder="true">Senzori temperature i vlažnosti u šest tačaka hrama upravljaju radom sistema i održavaju relativnu vlažnost između 45% i 60%. Izvor toplote izmešten je van hrama, a svi radovi izvedeni su po uslovima i uz nadzor konzervatora.</p>
-<a class="link proj-more" href="../#cuvari-tradicije">Više o našem radu na crkvama i manastirima →</a>
-</div>
-</div>
-<div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res" data-placeholder="true"><b>≤ 0,5 °C/h</b><span>najveća brzina promene temperature</span></div><div class="res" data-placeholder="true"><b>45–60%</b><span>stabilna relativna vlažnost tokom cele godine</span></div><div class="res" data-placeholder="true"><b>0</b><span>zahvata na freskama i ikonostasu</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/hram-zapadna-srbija/02.webp" data-group="hram-zapadna-srbija"><img src="../assets/projekti/hram-zapadna-srbija/02.webp" alt="Unutrašnjost kamene crkve sa stubovima i lusterom" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/hram-zapadna-srbija/03.webp" data-group="hram-zapadna-srbija"><img src="../assets/projekti/hram-zapadna-srbija/03.webp" alt="Tamni enterijer crkve sa vitražom i klupama" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/hram-zapadna-srbija/04.webp" data-group="hram-zapadna-srbija"><img src="../assets/projekti/hram-zapadna-srbija/04.webp" alt="Kamena crkvena građevina u zelenom planinskom pejzažu" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-<figure class="quote" data-placeholder="true"><blockquote><p>„Hram je prvi put posle decenija suv i topao, a freske nisu pretrpele nikakvu promenu. Bili smo mirni jer su radili sa velikim poštovanjem.“</p></blockquote><cite>Jeromonah S., starešina manastira</cite></figure>
-<div class="equip"><h3>Korišćena oprema</h3><span class="w w-v">VIESSMANN</span></div>
-</div>
-</section>
+<section class="holy-block" id="svetinje" aria-labelledby="holy-h"><div class="wrap"><div class="holy-in rv"><span class="holy-cross" aria-hidden="true">✝</span><h2 id="holy-h">Čuvari tradicije</h2><p>Radove na hramovima i manastirima izveli smo kao donaciju. O njima ne pišemo kao o projektima, nego kao o dugu i zahvalnosti.</p><a class="link holy-link" href="../cuvari-tradicije/">Pročitajte priču o našim svetinjama →</a></div></div></section>
 </div>
 <section class="pcta" aria-labelledby="cta-h"><div class="wrap"><div class="pcta-card rv"><h2 id="cta-h">Imate sličan objekat? Zakažite obilazak.</h2><p>Dođemo na lokaciju, izmerimo, predložimo rešenje i pripremimo ponudu bez obaveze.</p><a class="btn btn-primary btn-lg" href="../#kontakt">Zakažite obilazak</a></div></div></section>
 </main>
@@ -549,7 +534,7 @@ function setFilter(f){
   chips.forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===f));
   let n=0;
   projs.forEach(p=>{const show=f==='svi'||p.dataset.cat===f;p.hidden=!show;if(show){p.dataset.tone=n%2?'w':'c';p.classList.toggle('rev',n%2===1);n++}});
-  links.forEach(a=>{a.hidden=!(f==='svi'||a.dataset.cat===f)});
+  links.forEach(a=>{if(a.dataset.always)return;a.hidden=!(f==='svi'||a.dataset.cat===f)});
   live.textContent='Prikazano '+n+' od '+projs.length+' projekata';
 }
 chips.forEach(c=>c.addEventListener('click',()=>setFilter(c.dataset.f)));

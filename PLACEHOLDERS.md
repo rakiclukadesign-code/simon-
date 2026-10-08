@@ -96,29 +96,12 @@ Naziv projekta, lokacija, vrsta usluge i brend opreme dolaze iz zadatka i nisu i
 | Izjava klijenta | „Svaki zakupac sada sam bira temperaturu na svom spratu, a mi vidimo potrošnju u realnom vremenu.“ | Citat na kraju projekta |
 | Ime i funkcija klijenta | Nikola T., upravnik objekta | Potpis uz citat |
 
-## 6. Manastirski hram, Zapadna Srbija (`#hram-zapadna-srbija`)
-
-| Polje | Izmišljena vrednost | Mesto na stranici |
-|---|---|---|
-| Godina | 2021 | Zaglavlje projekta, ispod naslova |
-| Površina | 340 m² | Blok „Ključni podaci“ |
-| Instalisana snaga | 22 kW | Blok „Ključni podaci“ |
-| Trajanje radova | 12 nedelja, uz stalni konzervatorski nadzor | Blok „Ključni podaci“ |
-| Obim posla | Projektovanje, izvođenje, nadzor, servis | Blok „Ključni podaci“ |
-| Izazov (ceo tekst i brojke u njemu) | Freske i ikonostas starog hrama osetljivi su na nagle promene temperature i vlage, pa klasično grejanje nije dolazilo u obzir. Nije smelo biti vidljivih elemenata, a svaki zahvat morao je da prođe odobrenje Zavoda za zaštitu spomenika kulture. | Sekcija „Izazov“ |
-| Rešenje (ceo tekst, tehničke vrednosti) | Projektovali smo niskotemperaturno grejanje sa cevima ugrađenim u pod, bez ijednog zahvata na zidovima sa freskama. Osnovna temperatura u hramu drži se na 12–14 °C, a za bogosluženja se postepeno podiže do 18 °C, najviše 0,5 °C na sat. Senzori temperature i vlažnosti u šest tačaka hrama upravljaju radom sistema i održavaju relativnu vlažnost između 45% i 60%. Izvor toplote izmešten je van hrama, a svi radovi izvedeni su po uslovima i uz nadzor konzervatora. | Sekcija „Rešenje“ |
-| Rezultat 1 | ≤ 0,5 °C/h: najveća brzina promene temperature | Sekcija „Rezultat“ |
-| Rezultat 2 | 45–60%: stabilna relativna vlažnost tokom cele godine | Sekcija „Rezultat“ |
-| Rezultat 3 | 0: zahvata na freskama i ikonostasu | Sekcija „Rezultat“ |
-| Izjava klijenta | „Hram je prvi put posle decenija suv i topao, a freske nisu pretrpele nikakvu promenu. Bili smo mirni jer su radili sa velikim poštovanjem.“ | Citat na kraju projekta |
-| Ime i funkcija klijenta | Jeromonah S., starešina manastira | Potpis uz citat |
-
 ## Landing page: ilustrativni podaci (nisu deo ove stranice, ali treba ih zameniti)
 
 | Polje | Izmišljena vrednost | Mesto |
 |---|---|---|
 | Broj projekata po usluzi | Grejanje 26, Hlađenje 12, Solarni 10, Ventilacija 14, Klimatizacija 16, Sprinkleri 11 | Značke u uglu kartica usluga |
-| Projekti u popupu mape | 20 u Beogradu (prvi je Hram Svetog Save), 6 u Kolubarskom okrugu, 6 na Kosovu i Metohiji, sa površinama, opisima i opremom | Popup nakon klika na okrug |
+| Projekti u popupu mape | 20 u Beogradu, 8 u Kolubarskom okrugu, 6 na Kosovu i Metohiji, sa površinama, opisima i opremom (svetinje su označene kao donacija) | Popup nakon klika na okrug |
 | Okruzi označeni na mapi | Kolubarski, Beogradski, Kosovo i Metohija | Mapa u sekciji Reference |
 | Cene u brzoj proceni | 96 / 56 / 40 € po m², dodaci 24 / 20 / 16 € po m², korekcija 124% za adaptaciju | Konfigurator |
 | Brojke „64+“ i „16+“ | preuzete sa starog sajta | Sekcija „O nama“ |
@@ -154,10 +137,65 @@ Sve fotografije su besplatne sa [Unsplash](https://unsplash.com) (Unsplash licen
 | poslovni-beograd | `assets/projekti/poslovni-beograd/03.webp` | Kettenreaktion | https://unsplash.com/photos/l_Vn4HlFQVw |
 | poslovni-beograd | `assets/projekti/poslovni-beograd/04.webp` | Arlington Research | https://unsplash.com/photos/kN_kViDchA0 |
 | poslovni-beograd | `assets/projekti/poslovni-beograd/thumb.webp` | isto kao 01.webp (isečak) | |
-| hram-zapadna-srbija | `assets/projekti/hram-zapadna-srbija/01.webp` | John Towner | https://unsplash.com/photos/X48hkTT1qQc |
-| hram-zapadna-srbija | `assets/projekti/hram-zapadna-srbija/02.webp` | Michael Fousert | https://unsplash.com/photos/_adGw5v7sSo |
-| hram-zapadna-srbija | `assets/projekti/hram-zapadna-srbija/03.webp` | Jack Gardner | https://unsplash.com/photos/9S9YGw6nmCg |
-| hram-zapadna-srbija | `assets/projekti/hram-zapadna-srbija/04.webp` | Joran Quinten | https://unsplash.com/photos/wYzuwwLKmGM |
-| hram-zapadna-srbija | `assets/projekti/hram-zapadna-srbija/thumb.webp` | isto kao 01.webp (isečak) | |
 
 Logotipi partnera su ispisani tekstom u bojama brendova. Treba ih zameniti pravim logotipima (SVG/PNG), uz dozvolu partnera.
+
+## Čuvari tradicije (`/cuvari-tradicije/`)
+
+Sve što NIJE na listi potvrđenih činjenica označeno je u HTML-u sa `data-placeholder="true"`. Svi radovi na svetinjama su **donacija**, to je potvrđeno i stoji kao jasna poruka na stranici.
+
+| Polje | Privremena vrednost | Mesto na stranici |
+|---|---|---|
+| Prvobitni logo firme | prazan okvir sa tekstom „Prvobitni logo firme“ | Priča o imenu, desno od teksta |
+| Reč osnivača (ceo citat) | Nismo ovo radili kao posao. Sve što smo uradili za svetinje, uradili smo kao dar… (napisano na osnovu motiva ktitora) | Sekcija „Reč osnivača“, tamna traka |
+| Potpis uz citat | Osnivač firme (bez imena) | Ispod citata |
+| Ukupan broj svetinja | 40+ („svetinja ukupno, sve kao donacija“) | Brojke, četvrta stavka |
+| Obim radova na Hilandaru | Izveli smo radove na instalacijama grejanja u obnovljenim objektima manastira. | Izdvojene svetinje, Hilandar |
+| Tačan naziv hrama u Valjevu | oznaka „naziv hrama se potvrđuje“ (fotografija je Saborni hram Vaskrsenja Hristovog) | Izdvojene svetinje, hram u Valjevu |
+| Lista zadužbina Nemanjića | 6 praznih stavki „Naziv zadužbine 1–6“ | Izdvojene svetinje, zbirni blok |
+| Odnos Zorana Petrovića sa firmom | u tekstu piše „zadužbina porodice Petrović“ (označeno) | Crkva u Osečini, prvi pasus |
+| Godina osvećenja temelja | „(godina osvećenja: [godina])“ | Crkva u Osečini, četvrti pasus |
+| Fotografije sa osvećenja temelja i gradnje | tri privremene fotografije (Unsplash) sa oznakom „Privremena fotografija“ | Crkva u Osečini, „Osvećenje temelja“ |
+| Fotografija mesta gradnje | privremena fotografija doline | Crkva u Osečini, desno od priče |
+| Objekti na Kosovu i Metohiji | 3 prazne stavke „Naziv objekta 1–3“ | Sekcija Kosovo i Metohija |
+| Svedočanstva sveštenstva | 2 izmišljena skromna teksta sa oznakom „(primer)“ | Sekcija „Reči zahvalnosti“ |
+
+**Potvrđeno (nije placeholder):** ime firme i monaško ime Svetog Stefana Prvovenčanog; osnivač je otac sadašnjeg vlasnika; osnovano pre više od četvrt veka; Hram Svetog Save (celokupno podno grejanje, preko 5.000 m²); hram u Valjevu (preko 1.200 m² podnog grejanja); Hilandar (obnova nakon požara 2004, jedna od najvećih donacija); skoro sve zadužbine Nemanjića; radovi širom Srbije, na Kosovu i Metohiji i u Beogradu; sve je donacija; svi podaci o crkvi u Osečini (ktitor Zoran Petrović, posveta, mesto, episkop Isihije, arhitektica Milka Krstivojević, dimenzije, vremenska kapsula, freskopis, motiv ktitora).
+
+### Fotografije (Čuvari tradicije)
+
+Sve su privremene dok klijent ne pošalje sopstvene. Atribucija je na stranici (u opisima ispod fotografija i u donjem redu sa autorima).
+
+| Fajl | Autor | Licenca | Izvor |
+|---|---|---|---|
+| `assets/tradicija/hero-hilandar.webp` | Sreten Vuković | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | https://commons.wikimedia.org/wiki/File:Hilandar_24.jpg |
+| `assets/tradicija/hilandar.webp` | Sreten Vuković | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | https://commons.wikimedia.org/wiki/File:Hilandar_19.jpg |
+| `assets/tradicija/hram-svetog-save.webp` | kallerna | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | https://commons.wikimedia.org/wiki/File:Church_of_Saint_Sava_4.jpg |
+| `assets/tradicija/hram-svetog-save-enterijer.webp` | DKjellby | [CC0](https://creativecommons.org/publicdomain/zero/1.0/) | https://commons.wikimedia.org/wiki/File:Church_of_Saint_Sava,_Belgrade_(4).jpg |
+| `assets/tradicija/hram-valjevo.webp` | Nikolina Šepić | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) | https://commons.wikimedia.org/wiki/File:Saborna_crkva_u_Valjevu_02.jpg |
+| `assets/tradicija/fresko1.webp` | Lorenzo Turroni | Unsplash licenca | https://unsplash.com/photos/d_xruvlLGjA (nije korišćena na stranici) |
+| `assets/tradicija/fresko2.webp` | Kristijan Arsov | Unsplash licenca | https://unsplash.com/photos/VuCw5GjkUrA |
+| `assets/tradicija/svece.webp` | Matt Seymour | Unsplash licenca | https://unsplash.com/photos/pujZSwLi_7c |
+| `assets/tradicija/kamen.webp` | Yvonne Assen | Unsplash licenca | https://unsplash.com/photos/bdA0TtmbeVI |
+| `assets/tradicija/temelj.webp` | Tr Ng Tuy T Ly | Unsplash licenca | https://unsplash.com/photos/B9chJyEzO0Q |
+| `assets/tradicija/dolina.webp` | Soham Banerjee | Unsplash licenca | https://unsplash.com/photos/vegEZ8GphSM |
+
+### Šta treba tražiti od klijenta
+
+- prvobitni logo firme (fajl, najbolje SVG ili visoka rezolucija PNG)
+- potvrda ili korekcija citata osnivača i ime osnivača za potpis
+- odnos Zorana Petrovića sa firmom (osnivač? član porodice?)
+- godina osvećenja temelja crkve u Osečini i trenutni status gradnje (stranica je pisana u vremenu „u izgradnji“)
+- fotografije sa osvećenja temelja i sa gradnje, uz dozvolu za objavu
+- lista zadužbina Nemanjića u kojima je firma radila
+- obim radova na Hilandaru
+- tačan naziv hrama u Valjevu
+- objekti na Kosovu i Metohiji (nazivi i, ako može, fotografije)
+- svedočanstva sveštenstva ili bratstava (stvarni tekstovi i dozvola za objavu)
+- sopstvene fotografije objekata, sa dozvolom za objavu i, gde treba, saglasnošću manastira
+- ukupan broj svetinja u kojima je firma radila
+- dozvola Zavoda za zaštitu spomenika kulture i saglasnost manastira ako se pominju konkretni projekti (preporuka)
+
+### Napomena za održavanje
+
+Blok „Crkva Svetog Simeona Stolpnika, Osečina“ treba ažurirati kako gradnja napreduje (status, nove fotografije, godina osvećenja).
