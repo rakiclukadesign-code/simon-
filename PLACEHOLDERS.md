@@ -155,7 +155,7 @@ Sve što NIJE na listi potvrđenih činjenica označeno je u HTML-u sa `data-pla
 | Lista zadužbina Nemanjića | 6 praznih stavki „Naziv zadužbine 1–6“ | Izdvojene svetinje, zbirni blok |
 | Odnos Zorana Petrovića sa firmom | u tekstu piše „zadužbina porodice Petrović“ (označeno) | Crkva u Osečini, prvi pasus |
 | Godina osvećenja temelja | „(godina osvećenja: [godina])“ | Crkva u Osečini, četvrti pasus |
-| Fotografije sa osvećenja temelja i gradnje | tri privremene fotografije (Unsplash) sa oznakom „Privremena fotografija“ | Crkva u Osečini, „Osvećenje temelja“ |
+| Fotografije sa osvećenja temelja i gradnje | tri privremene fotografije (Unsplash) | Crkva u Osečini, „Osvećenje temelja“ |
 | Fotografija mesta gradnje | privremena fotografija doline | Crkva u Osečini, desno od priče |
 | Objekti na Kosovu i Metohiji | 3 prazne stavke „Naziv objekta 1–3“ | Sekcija Kosovo i Metohija |
 | Svedočanstva sveštenstva | 2 izmišljena skromna teksta sa oznakom „(primer)“ | Sekcija „Reči zahvalnosti“ |
@@ -164,7 +164,7 @@ Sve što NIJE na listi potvrđenih činjenica označeno je u HTML-u sa `data-pla
 
 ### Fotografije (Čuvari tradicije)
 
-Sve su privremene dok klijent ne pošalje sopstvene. Atribucija je na stranici (u opisima ispod fotografija i u donjem redu sa autorima).
+Sve su privremene dok klijent ne pošalje sopstvene. Atribucija autora je uklonjena sa stranice radi dizajna. Fotografije sa Wikimedia Commons (CC BY-SA 4.0) zahtevaju navođenje autora, pa ih treba zameniti sopstvenim fotografijama pre objave, ili vratiti atribuciju. Spisak autora je u tabeli ispod.
 
 | Fajl | Autor | Licenca | Izvor |
 |---|---|---|---|
