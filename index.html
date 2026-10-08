@@ -200,6 +200,7 @@ section{padding:132px 0}
 .pin{position:absolute;width:16px;height:16px;border-radius:1000px;background:var(--orange);box-shadow:0 0 0 0 rgba(255,74,28,.5);animation:pulse 2.4s infinite;cursor:pointer}
 .pin span{position:absolute;left:20px;top:-4px;font:700 12px Manrope;color:var(--brown);white-space:nowrap;background:#fff;padding:4px 8px;border-radius:8px;box-shadow:0 4px 12px -4px rgba(0,0,0,.2)}
 @keyframes pulse{72%{box-shadow:0 0 0 16px rgba(255,74,28,0)}100%{box-shadow:0 0 0 0 rgba(255,74,28,0)}}
+.map-hint{display:none}
 .legend{display:flex;gap:24px;margin-top:20px;font-size:12px;color:var(--muted);flex-wrap:wrap}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:1000px;margin-right:8px;background:var(--orange)}
 .legend i.g{background:var(--gold)}
@@ -216,6 +217,7 @@ section{padding:132px 0}
 .map-tip.on{opacity:1}
 .map-tip small{display:block;font-weight:500;opacity:.7}
 .okr{margin:auto;border:0;padding:0;border-radius:var(--r-lg);width:calc(100% - 32px);max-width:1040px;max-height:calc(100dvh - 32px);color:var(--ink);background:var(--white);box-shadow:0 40px 80px -32px rgba(0,0,0,.6);overflow:auto}
+.okr:focus{outline:none}
 .okr::backdrop{background:rgba(43,13,8,.56);backdrop-filter:blur(4px)}
 .okr[open]{animation:panelIn .3s ease}
 .okr-in{padding:40px}
@@ -300,7 +302,43 @@ footer a:hover{color:var(--orange)}
   .sec-head h2,.config h2{font-size:44px;line-height:48px}
   .career h2{font-size:44px;line-height:48px}
 }
-@media(max-width:560px){.config h2{font-size:28px;line-height:32px}
+@media(max-width:560px){.config-in{gap:24px}
+.refs{gap:0}
+.refs>div:last-child{display:contents}
+.refs>div:first-child{order:3;margin-bottom:32px}
+.refs .eyebrow{order:1}
+.refs .sec-head{order:2;margin-bottom:32px!important}
+.tradition{order:4;margin-top:0}
+.map{height:480px}
+.map-hint{display:block;margin-top:8px;font-size:12px;line-height:16px;color:var(--muted);text-align:center}
+.legend{flex-wrap:nowrap;justify-content:space-between;gap:8px;margin-top:12px}
+.legend i{margin-right:4px}
+.lg-x{display:none}
+.btn-gold,.btn-gold:hover{min-width:0;padding:12px 24px;background:var(--gold);transition:none}
+/* popup kao donji panel */
+.okr{width:100%;max-width:100%;margin:auto 0 0;border-radius:24px 24px 0 0;max-height:92dvh}
+.okr[open]{animation:sheetUp .3s ease}
+@keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
+.okr-in{padding:0}
+.okr-top{position:sticky;top:0;z-index:2;background:var(--white);padding:20px;border-bottom:1px solid var(--line)}
+.okr h3{font-size:24px;line-height:28px}
+.okr-count{margin-top:4px;font-size:14px;line-height:20px}
+.okr-x{width:40px;height:40px;font-size:16px}
+#okrBody{padding:0 20px}
+.okr-grid{display:block;margin-top:0}
+.okr-list{max-height:none;overflow:visible}
+.okr-list li{border-top:1px solid var(--line)}
+.okr-list li:first-child{border-top:0}
+.okr-list button{padding:16px 0}
+.okr-list button[aria-current=true]{background:none}
+.okr-list li.holy button[aria-current=true]{background:none}
+.okr-list li .okr-d{margin:0 0 16px}
+.okr-d .ph{height:176px}
+.okr-d .bd{padding:20px}
+.okr-empty{margin:24px 0;padding:24px}
+.okr-foot{position:sticky;bottom:0;z-index:2;flex-direction:column;gap:8px;margin-top:0;padding:16px 20px;background:var(--white);border-top:1px solid var(--line)}
+.okr-foot .btn{width:100%;justify-content:center;padding:12px 24px}
+.config h2{font-size:28px;line-height:32px}
 .partner-cta{padding:24px;align-items:center;text-align:center}
 .cfg .out{margin-top:24px}
 .config h2+p.lead{margin:20px 0 0}
@@ -643,7 +681,8 @@ footer a:hover{color:var(--orange)}
 
 
 </div>
-<div class="legend"><span><i></i>Završeni projekti</span><span><i class="g"></i>Crkve i manastiri (zlatna boja)</span><span><i class="n"></i>Ostali okruzi</span></div>
+<p class="map-hint">Dodirnite okrug da vidite projekte.</p>
+<div class="legend"><span><i></i>Završeni projekti</span><span><i class="g"></i>Crkve i manastiri<span class="lg-x"> (zlatna boja)</span></span><span><i class="n"></i>Ostali okruzi</span></div>
     </div>
     <div class="rv">
       <span class="eyebrow">Reference</span>
@@ -703,7 +742,7 @@ footer a:hover{color:var(--orange)}
   </div>
 </footer>
 
-<dialog class="okr" id="okr" aria-labelledby="okrT">
+<dialog class="okr" id="okr" aria-labelledby="okrT" autofocus>
   <div class="okr-in">
     <div class="okr-top">
       <div><h3 id="okrT"></h3><p class="okr-count" id="okrC"></p></div>
@@ -789,12 +828,17 @@ function open(p){
   }else{
     more.style.display='';
     body.innerHTML='<div class="okr-grid"><ol class="okr-list">'+list.map((r,i)=>'<li'+(r[4]?' class="holy"':'')+'><button type="button" data-j="'+i+'"><span class="n">'+String(i+1).padStart(2,'0')+'</span><span><b>'+esc(r[0])+'</b><span class="m">'+esc(r[1])+' · '+r[3]+'</span></span><span class="ts">'+sv(r).map(x=>'<span class="t">'+esc(x)+'</span>').join('')+'</span></button></li>').join('')+'</ol><aside class="okr-d" id="okrD" aria-live="polite"></aside></div>';
+    const mq=matchMedia('(max-width:560px)');
+    const dock=()=>{const a=document.getElementById('okrD'),cur=body.querySelector('.okr-list button[aria-current=true]');if(!a||!cur)return;if(mq.matches)cur.parentElement.appendChild(a);else body.querySelector('.okr-grid').appendChild(a)};
     const sel=j=>{
       const r=list[j],d=detalj(r);
       body.querySelectorAll('.okr-list button').forEach(b=>b.setAttribute('aria-current',+b.dataset.j===j));
       document.getElementById('okrD').innerHTML='<div class="ph"><img src="https://picsum.photos/seed/simon-'+k+'-'+j+'/720/416" alt="Fotografija projekta: '+esc(r[0])+'" loading="lazy" onerror="this.remove()"></div><div class="bd"><h4>'+esc(r[0])+'</h4><div class="loc">'+esc(r[1])+' · '+esc(naz(p))+'</div><p>'+esc(d.opis)+'</p><dl><div><dt>Usluga</dt><dd>'+sv(r).map(esc).join('<br>')+'</dd></div><div><dt>Površina</dt><dd>'+d.pov+'</dd></div><div><dt>Godina</dt><dd>'+r[3]+'</dd></div><div><dt>Oprema</dt><dd>'+esc(d.opr)+'</dd></div></dl></div>';
       more.setAttribute('href','#'+'projekat-'+k+'-'+j); // TODO: projekti.html#projekat-...
+      dock();
+      if(mq.matches)setTimeout(()=>body.querySelector('.okr-list button[aria-current=true]').scrollIntoView({block:'nearest',behavior:'smooth'}),50);
     };
+    mq.onchange=dock;
     body.querySelectorAll('.okr-list button').forEach(b=>b.onclick=()=>sel(+b.dataset.j));
     sel(0);
   }
