@@ -305,26 +305,28 @@ footer a:hover{color:var(--orange)}
 @media(max-width:560px){.config-in{gap:24px}
 .refs{gap:0}
 .refs>div:last-child{display:contents}
-.refs>div:first-child{order:3;margin-bottom:32px}
+.refs>div:first-child{order:3;margin-bottom:52px}
 .refs .eyebrow{order:1}
-.refs .sec-head{order:2;margin-bottom:32px!important}
+.refs .sec-head{order:2;margin-bottom:52px!important}
+.refs .sec-head p{margin-top:20px}
+#konfigurator{padding-bottom:0}
 .tradition{order:4;margin-top:0}
 .map{height:480px}
 .map-hint{display:block;margin-top:8px;font-size:12px;line-height:16px;color:var(--muted);text-align:center}
 .legend{flex-wrap:nowrap;justify-content:space-between;gap:8px;margin-top:12px}
 .legend i{margin-right:4px}
 .lg-x{display:none}
-.btn-gold,.btn-gold:hover{min-width:0;padding:12px 24px;background:var(--gold);transition:none}
+.btn-gold,.btn-gold:hover{min-width:0;padding:12px 28px;background:var(--gold);transition:none}
 /* popup kao donji panel */
-.okr{width:100%;max-width:100%;margin:auto 0 0;border-radius:24px 24px 0 0;max-height:92dvh}
+.okr{width:100%;max-width:100%;height:100dvh;max-height:100dvh;margin:0;border-radius:0}
 .okr[open]{animation:sheetUp .3s ease}
 @keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
-.okr-in{padding:0}
+.okr-in{padding:0;display:flex;flex-direction:column;min-height:100dvh}
 .okr-top{position:sticky;top:0;z-index:2;background:var(--white);padding:20px;border-bottom:1px solid var(--line)}
 .okr h3{font-size:24px;line-height:28px}
 .okr-count{margin-top:4px;font-size:14px;line-height:20px}
 .okr-x{width:40px;height:40px;font-size:16px}
-#okrBody{padding:0 20px}
+#okrBody{padding:0 20px;flex:1}
 .okr-grid{display:block;margin-top:0}
 .okr-list{max-height:none;overflow:visible}
 .okr-list li{border-top:1px solid var(--line)}
@@ -333,8 +335,11 @@ footer a:hover{color:var(--orange)}
 .okr-list button[aria-current=true]{background:none}
 .okr-list li.holy button[aria-current=true]{background:none}
 .okr-list li .okr-d{margin:0 0 16px}
-.okr-d .ph{height:176px}
-.okr-d .bd{padding:20px}
+.okr-d .ph{height:128px}
+.okr-d .bd{padding:16px}
+.okr-d h4{font-size:16px;line-height:24px}
+.okr-d p{margin-top:8px}
+.okr-d dl{gap:12px 16px;margin-top:16px;padding-top:16px}
 .okr-empty{margin:24px 0;padding:24px}
 .okr-foot{position:sticky;bottom:0;z-index:2;flex-direction:column;gap:8px;margin-top:0;padding:16px 20px;background:var(--white);border-top:1px solid var(--line)}
 .okr-foot .btn{width:100%;justify-content:center;padding:12px 24px}
@@ -742,7 +747,7 @@ footer a:hover{color:var(--orange)}
   </div>
 </footer>
 
-<dialog class="okr" id="okr" aria-labelledby="okrT" autofocus>
+<dialog class="okr" id="okr" aria-labelledby="okrT" tabindex="-1">
   <div class="okr-in">
     <div class="okr-top">
       <div><h3 id="okrT"></h3><p class="okr-count" id="okrC"></p></div>
@@ -752,7 +757,6 @@ footer a:hover{color:var(--orange)}
     <div class="okr-foot">
       <!-- TODO: zameniti linkom ka stranici sa detaljnim opisima projekata -->
       <a class="btn btn-primary" id="okrMore" href="#">Detaljniji opisi projekata</a>
-      <a class="btn btn-soft" href="#kontakt" id="okrCta">Stručno savetovanje</a>
     </div>
   </div>
 </dialog>
@@ -827,10 +831,13 @@ function open(p){
     more.style.display='none';
   }else{
     more.style.display='';
-    body.innerHTML='<div class="okr-grid"><ol class="okr-list">'+list.map((r,i)=>'<li'+(r[4]?' class="holy"':'')+'><button type="button" data-j="'+i+'"><span class="n">'+String(i+1).padStart(2,'0')+'</span><span><b>'+esc(r[0])+'</b><span class="m">'+esc(r[1])+' · '+r[3]+'</span></span><span class="ts">'+sv(r).map(x=>'<span class="t">'+esc(x)+'</span>').join('')+'</span></button></li>').join('')+'</ol><aside class="okr-d" id="okrD" aria-live="polite"></aside></div>';
+    body.innerHTML='<div class="okr-grid"><ol class="okr-list">'+list.map((r,i)=>'<li'+(r[4]?' class="holy"':'')+'><button type="button" data-j="'+i+'"><span class="n">'+String(i+1).padStart(2,'0')+'</span><span><b>'+esc(r[0])+'</b><span class="m">'+esc(r[1])+' · '+r[3]+'</span></span><span class="ts">'+sv(r).map(x=>'<span class="t">'+esc(x)+'</span>').join('')+'</span></button></li>').join('')+'</ol><aside class="okr-d" id="okrD" aria-live="polite" hidden></aside></div>';
     const mq=matchMedia('(max-width:560px)');
     const dock=()=>{const a=document.getElementById('okrD'),cur=body.querySelector('.okr-list button[aria-current=true]');if(!a||!cur)return;if(mq.matches)cur.parentElement.appendChild(a);else body.querySelector('.okr-grid').appendChild(a)};
     const sel=j=>{
+      const a=document.getElementById('okrD'),open0=body.querySelector('.okr-list button[aria-current=true]');
+      if(mq.matches&&open0&&+open0.dataset.j===j){open0.setAttribute('aria-current',false);a.hidden=true;body.querySelector('.okr-grid').appendChild(a);return}
+      a.hidden=false;
       const r=list[j],d=detalj(r);
       body.querySelectorAll('.okr-list button').forEach(b=>b.setAttribute('aria-current',+b.dataset.j===j));
       document.getElementById('okrD').innerHTML='<div class="ph"><img src="https://picsum.photos/seed/simon-'+k+'-'+j+'/720/416" alt="Fotografija projekta: '+esc(r[0])+'" loading="lazy" onerror="this.remove()"></div><div class="bd"><h4>'+esc(r[0])+'</h4><div class="loc">'+esc(r[1])+' · '+esc(naz(p))+'</div><p>'+esc(d.opis)+'</p><dl><div><dt>Usluga</dt><dd>'+sv(r).map(esc).join('<br>')+'</dd></div><div><dt>Površina</dt><dd>'+d.pov+'</dd></div><div><dt>Godina</dt><dd>'+r[3]+'</dd></div><div><dt>Oprema</dt><dd>'+esc(d.opr)+'</dd></div></dl></div>';
@@ -838,15 +845,14 @@ function open(p){
       dock();
       if(mq.matches)setTimeout(()=>body.querySelector('.okr-list button[aria-current=true]').scrollIntoView({block:'nearest',behavior:'smooth'}),50);
     };
-    mq.onchange=dock;
+    mq.onchange=()=>{if(!mq.matches&&!body.querySelector('.okr-list button[aria-current=true]'))sel(0);dock()};
     body.querySelectorAll('.okr-list button').forEach(b=>b.onclick=()=>sel(+b.dataset.j));
-    sel(0);
+    if(!mq.matches)sel(0);
   }
   tip.classList.remove('on');
-  dlg.showModal();
+  dlg.showModal();dlg.focus({preventScroll:true});
 }
 document.getElementById('okrX').onclick=()=>dlg.close();
-document.getElementById('okrCta').onclick=()=>dlg.close();
 dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
 })();
 
