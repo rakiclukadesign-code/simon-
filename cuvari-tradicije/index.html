@@ -136,8 +136,8 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 .num-grid div{padding:0 32px}
 .num-grid div+div{border-left:1px solid var(--line)}
 .num-grid div:first-child{padding-left:0}
-.num-grid b{display:block;font:700 48px/52px Sora;color:var(--gold-d);font-variant-numeric:tabular-nums}
-.num-grid span{display:block;margin-top:8px;font-size:16px;line-height:24px;color:var(--muted)}
+.num-grid b{display:block;font:700 48px/52px Sora;color:var(--gold-d);font-variant-numeric:tabular-nums;white-space:nowrap}
+.num-grid span{display:block;margin-top:8px;font-size:16px;line-height:24px;color:var(--muted);text-wrap:balance}
 
 /* svetinje */
 .svet{background:var(--cream)}
@@ -164,9 +164,13 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 .kt-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:start}
 .kt .pic{height:560px}
 .kt h3{font:700 24px/28px Sora;color:var(--brown);margin-bottom:12px}
-.kt-data{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 32px;margin-top:72px;padding:40px;background:var(--white);border-radius:var(--r-lg)}
-.kt-data dt{font:600 12px/16px Manrope;color:var(--muted)}
-.kt-data dd{margin:4px 0 0;font:600 16px/24px Manrope;color:var(--brown)}
+.kt-data{margin-top:72px;padding:56px;background:var(--white);border-radius:var(--r-lg)}
+.kt-data h3{margin-bottom:32px}
+.kt-data dl{margin:0;column-count:2;column-gap:96px}
+.kt-data dl div{break-inside:avoid;padding:20px 0;border-top:1px solid var(--line)}
+.kt-data dt{font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--gold-d)}
+.kt-data dd{margin:8px 0 0;font:600 20px/28px Sora;color:var(--brown)}
+.kt-data dd.st{display:inline-block;padding:4px 16px;border-radius:1000px;background:var(--gold-soft);border:1px solid var(--gold);font:700 16px/24px Manrope;color:var(--gold-d)}
 .kt-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
 .kt-card{padding:40px;background:var(--white);border-radius:var(--r-lg)}
 .kt-card::before{content:"";display:block;width:48px;height:2px;background:var(--gold);margin-bottom:20px}
@@ -250,11 +254,12 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
   .t-sec h2{font-size:40px;line-height:44px}
   .ime-grid,.blk,.kt-row,.mapa-grid{grid-template-columns:minmax(0,1fr);gap:48px}
   .blk.rev{grid-template-columns:minmax(0,1fr)}
-  .blk.rev .blk-media{order:0}
+  .blk .blk-media,.blk.rev .blk-media{order:2}
+  .blk{gap:40px}
   .blk+.blk{margin-top:96px}
   .num-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 0}
   .num-grid div:nth-child(3){border-left:0;padding-left:0}
-  .kt-data{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kt-data dl{column-gap:56px}
   .kt-cards,.chal-grid,.sved-grid{grid-template-columns:minmax(0,1fr)}
   .chal-grid{gap:40px}
   .thero h1{font-size:64px;line-height:68px}
@@ -263,8 +268,8 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
   .wrap{padding:0 20px}
   .thero{min-height:560px}
   .thero-in{padding:0 20px 72px}
-  .thero h1{font-size:44px;line-height:48px;letter-spacing:0}
-  .thero p.sub{font-size:16px;line-height:28px}
+  .thero h1{font-size:32px;line-height:36px;letter-spacing:0;white-space:nowrap}
+  .thero p.sub{margin-top:20px;font-size:16px;line-height:28px}
   .thero .credit{left:20px;right:20px;bottom:16px}
   .t-sec{padding:72px 0}
   .t-sec h2{font-size:32px;line-height:36px}
@@ -273,8 +278,11 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
   .osn blockquote p{font-size:24px;line-height:36px}
   .osn .mark{font-size:72px;line-height:56px}
   .num{padding:72px 0}
+  .num-grid{grid-template-columns:minmax(0,1fr);gap:0}
   .num-grid b{font-size:32px;line-height:36px}
-  .num-grid div{padding:0 16px}
+  .num-grid div,.num-grid div+div,.num-grid div:first-child,.num-grid div:nth-child(3){padding:24px 0;border-left:0;border-top:1px solid var(--line)}
+  .num-grid div:first-child{border-top:0;padding-top:0}
+  .num-grid span{max-width:320px}
   .svet-head{margin-bottom:56px}
   .pic{height:280px}
   .duo .pic{height:240px}.duo .pic+.pic{height:200px}
@@ -282,7 +290,10 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
   .blk h3{font-size:28px;line-height:32px}
   .kt-head{margin-bottom:48px}
   .kt-head .lead{font-size:16px;line-height:28px}
-  .kt-data{grid-template-columns:minmax(0,1fr);padding:24px;margin-top:48px}
+  .kt-data{padding:32px 24px;margin-top:48px}
+  .kt-data h3{margin-bottom:16px}
+  .kt-data dl{column-count:1}
+  .kt-data dd{font-size:16px;line-height:24px}
   .kt-card{padding:24px}
   .kt-photos{margin-top:48px}
   .kt-grid{grid-template-columns:minmax(0,1fr)}
@@ -343,7 +354,7 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <div class="rv"><span class="eyebrow">Vračar, Beograd · donacija</span><h3>Hram Svetog Save</h3><p>Izveli smo celokupno podno grejanje hrama, na više od 5.000 m² površine.</p>
 <p>Za ovako veliki prostor podno grejanje je pravo rešenje. Toplota se širi ravnomerno od poda, nema vidljivih grejnih tela koja bi narušila enterijer, a zidovi i umetnička dela ostaju zaštićeni od naglih promena temperature.</p><span class="fact">5.000+ m²</span></div></article>
 <article class="blk t-anchor" id="hram-valjevo"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/hram-valjevo.webp" alt="Veliki beli hram u Valjevu na obali reke" width="1600" height="1067" loading="lazy" decoding="async"></div></figure></div>
-<div class="rv"><span class="eyebrow">Valjevo · donacija</span><h3>Hram u Valjevu <span class="ph-tag" data-placeholder="true" style="font:600 12px/16px Manrope;letter-spacing:0">naziv hrama se potvrđuje</span></h3><p>U Valjevu, gradu u kome je naša firma nastala, izveli smo više od 1.200 m² podnog grejanja u velikom hramu.</p><span class="fact">1.200+ m²</span></div></article>
+<div class="rv"><span class="eyebrow">Valjevo · donacija</span><h3>Hram u Valjevu <span class="ph-tag" data-placeholder="true" style="font:600 12px/16px Manrope;letter-spacing:0">Naziv hrama se potvrđuje</span></h3><p>U Valjevu, gradu u kome je naša firma nastala, izveli smo više od 1.200 m² podnog grejanja u velikom hramu.</p><span class="fact">1.200+ m²</span></div></article>
 <article class="blk rev t-anchor" id="zaduzbine-nemanjica"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/fresko2.webp" alt="Oslikana kupola crkve sa zlatnim ornamentima" width="1400" height="1050" loading="lazy" decoding="async"></div></figure></div>
 <div class="rv"><span class="eyebrow">Širom Srbije · donacija</span><h3>Zadužbine Nemanjića</h3><p>U skoro svim zadužbinama Nemanjića izveli smo neki vid grejanja. Nasleđe koje je godinama čuvalo veru i narod zaslužuje da u njemu bude toplo i bezbedno.</p>
 <ul class="zad" data-placeholder="true" aria-label="Zadužbine u kojima smo radili"><li>Naziv zadužbine 1</li><li>Naziv zadužbine 2</li><li>Naziv zadužbine 3</li><li>Naziv zadužbine 4</li><li>Naziv zadužbine 5</li><li>Naziv zadužbine 6</li></ul></div></article>
@@ -353,19 +364,19 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <div class="kt-row"><div class="rv"><p>U zaseoku Marići, u selu Osečina, rodnom kraju ktitora Zorana Petrovića iz Valjeva, gradi se crkva posvećena Svetom Simeonu Stolpniku. To je zadužbina <span class="ph-tag" data-placeholder="true">porodice Petrović</span> i delo mnogih ruku.</p>
 <p>Ktitor je ovo započeo iz vere i iz želje za duhovnom obnovom svog kraja. Osečina i njena okolina imaju duboku duhovnu tradiciju: od vladike Nikolaja i bogomoljačkog pokreta do porodica iz kojih su potekli mnogi sveštenici i monasi.</p>
 <p>Nada je da će hram doprineti povratku života u selo i da će mesto postati duhovni centar. Ktitor za sebe kaže da je samo jedan od mnogih koji su učestvovali u gradnji.</p>
-<p>Temelje je osveštao episkop valjevski Isihije, uz prisustvo velikog broja vernika i sveštenstva <span class="ph-tag" data-placeholder="true">(godina osvećenja: [godina])</span>.</p></div>
+<p>Temelje je 2026. godine osveštao episkop valjevski Isihije, uz prisustvo velikog broja vernika i sveštenstva.</p></div>
 <div class="rv"><figure><div class="pic"><img src="../assets/tradicija/dolina.webp" alt="Zelena dolina sa brdima u pozadini" width="1600" height="1000" loading="lazy" decoding="async"></div></figure></div></div>
-<dl class="kt-data rv">
+<section class="kt-data rv" aria-labelledby="kt-data-h"><h3 id="kt-data-h">Podaci o zadužbini</h3><dl>
 <div><dt>Posveta</dt><dd>Sveti Simeon Stolpnik</dd></div>
-<div><dt>Mesto</dt><dd>zaseok Marići, selo Osečina</dd></div>
+<div><dt>Mesto</dt><dd>Zaseok Marići, selo Osečina</dd></div>
 <div><dt>Ktitor</dt><dd>Zoran Petrović, Valjevo</dd></div>
-<div><dt>Projekat</dt><dd>arhitektica Milka Krstivojević</dd></div>
-<div><dt>Stil</dt><dd>srpsko-vizantijski</dd></div>
-<div><dt>Dimenzije</dt><dd>oko 14 × 8 m</dd></div>
-<div><dt>Površina</dt><dd>oko 120 m², od čega oko 50 m² za vernike</dd></div>
-<div><dt>Osnova</dt><dd>centralni naos sa polukružnim završecima</dd></div>
-<div><dt>Status</dt><dd>u izgradnji</dd></div>
-</dl>
+<div><dt>Projekat</dt><dd>Arhitektica Milka Krstivojević</dd></div>
+<div><dt>Stil</dt><dd>Srpsko-vizantijski</dd></div>
+<div><dt>Dimenzije</dt><dd>Oko 14 × 8 m</dd></div>
+<div><dt>Površina</dt><dd>Oko 120 m², od čega oko 50 m² za vernike</dd></div>
+<div><dt>Osnova</dt><dd>Centralni naos sa polukružnim završecima</dd></div>
+<div><dt>Status</dt><dd class="st">U izgradnji</dd></div>
+</dl></section>
 <div class="kt-cards"><div class="kt-card rv"><h3>Vremenska kapsula</h3><p>U temelje, u prostor budućeg oltara, uzidana je vremenska kapsula sa osnovnim podacima o vremenu gradnje i darodavcima. Poruka onima koji dolaze posle nas.</p></div>
 <div class="kt-card rv"><h3>Freskopis rukom</h3><p>Posebna želja ktitora jeste originalan freskopis, rađen rukom, bez šablona.</p></div></div>
 <div class="kt-photos rv"><h3>Osvećenje temelja</h3><p data-placeholder="true">Fotografije sa osvećenja temelja dodaćemo kada ih dobijemo. Do tada su ovde privremene fotografije.</p><div class="kt-grid">
@@ -383,8 +394,8 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <section class="t-sec mapa" id="mapa" aria-labelledby="mapa-h"><div class="wrap mapa-grid"><div class="rv"><span class="gline"></span><span class="eyebrow">Na mapi</span><h2 id="mapa-h">Svetinje na mapi Srbije</h2>
 <ul class="mapa-list"><li><b>Beogradski okrug</b><a href="#hram-svetog-save">Hram Svetog Save</a></li>
 <li><b>Kolubarski okrug</b><a href="#hram-valjevo">Hram u Valjevu</a><a href="#ktitorska-crkva">Crkva Svetog Simeona Stolpnika, Osečina</a></li>
-<li><b>Kosovo i Metohija</b><a href="#kosovo">Crkve i manastiri na Kosovu i Metohiji</a></li>
-<li><b>Širom Srbije</b><a href="#zaduzbine-nemanjica">Zadužbine Nemanjića</a></li></ul></div>
+<li><b>Kosovski okruzi</b><a href="#kosovo">Crkve i manastiri na Kosovu i Metohiji</a></li>
+<li><b>Zadužbine Nemanjića</b><a href="#zaduzbine-nemanjica">U skoro svim delovima Srbije</a></li></ul></div>
 <div class="rv"><div class="map" id="map"><div class="map-tip" id="mapTip" role="status"></div><svg class="srb-map" viewBox="0 0 392 572" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa Srbije: obojeni su Kolubarski okrug, Beograd i Kosovo i Metohija">
 <g clip-path="url(#srbClip)">
 <mask id="path-1-inside-1" fill="white">

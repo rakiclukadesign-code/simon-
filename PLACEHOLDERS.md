@@ -150,10 +150,9 @@ Sve što NIJE na listi potvrđenih činjenica označeno je u HTML-u sa `data-pla
 | Potpis uz citat | Osnivač firme (bez imena) | Ispod citata |
 | Ukupan broj svetinja | 40+ („svetinja ukupno, sve kao donacija“) | Brojke, četvrta stavka |
 | Obim radova na Hilandaru | Izveli smo radove na instalacijama grejanja u obnovljenim objektima manastira. | Izdvojene svetinje, Hilandar |
-| Tačan naziv hrama u Valjevu | oznaka „naziv hrama se potvrđuje“ (fotografija je Saborni hram Vaskrsenja Hristovog) | Izdvojene svetinje, hram u Valjevu |
+| Tačan naziv hrama u Valjevu | oznaka „Naziv hrama se potvrđuje“ (fotografija je Saborni hram Vaskrsenja Hristovog) | Izdvojene svetinje, hram u Valjevu |
 | Lista zadužbina Nemanjića | 6 praznih stavki „Naziv zadužbine 1–6“ | Izdvojene svetinje, zbirni blok |
 | Odnos Zorana Petrovića sa firmom | u tekstu piše „zadužbina porodice Petrović“ (označeno) | Crkva u Osečini, prvi pasus |
-| Godina osvećenja temelja | „(godina osvećenja: [godina])“ | Crkva u Osečini, četvrti pasus |
 | Fotografije sa osvećenja temelja i gradnje | tri privremene fotografije (Unsplash) | Crkva u Osečini, „Osvećenje temelja“ |
 | Fotografija mesta gradnje | privremena fotografija doline | Crkva u Osečini, desno od priče |
 | Objekti na Kosovu i Metohiji | 3 prazne stavke „Naziv objekta 1–3“ | Sekcija Kosovo i Metohija |
@@ -183,7 +182,7 @@ Sve su privremene dok klijent ne pošalje sopstvene. Atribucija autora je uklonj
 
 - potvrda ili korekcija citata osnivača i ime osnivača za potpis
 - odnos Zorana Petrovića sa firmom (osnivač? član porodice?)
-- godina osvećenja temelja crkve u Osečini i trenutni status gradnje (stranica je pisana u vremenu „u izgradnji“)
+- trenutni status gradnje crkve u Osečini (stranica je pisana u vremenu „u izgradnji“; godina osvećenja temelja je 2026.)
 - fotografije sa osvećenja temelja i sa gradnje, uz dozvolu za objavu
 - lista zadužbina Nemanjića u kojima je firma radila
 - obim radova na Hilandaru
