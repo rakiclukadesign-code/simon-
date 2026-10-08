@@ -133,9 +133,8 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 /* brojke */
 .num{background:var(--white);padding:104px 0}
 .num-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-.num-grid div{padding:0 32px}
+.num-grid div{padding:0 32px;text-align:center}
 .num-grid div+div{border-left:1px solid var(--line)}
-.num-grid div:first-child{padding-left:0}
 .num-grid b{display:block;font:700 48px/52px Sora;color:var(--gold-d);font-variant-numeric:tabular-nums;white-space:nowrap}
 .num-grid span{display:block;margin-top:8px;font-size:16px;line-height:24px;color:var(--muted);text-wrap:balance}
 
@@ -161,7 +160,7 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 .kt{background:var(--gold-soft)}
 .kt-head{max-width:760px;margin-bottom:72px}
 .kt-head .lead{margin-top:20px;font-size:20px;line-height:32px;color:var(--muted)}
-.kt-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:start}
+.kt-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
 .kt .pic{height:560px}
 .kt h3{font:700 24px/28px Sora;color:var(--brown);margin-bottom:12px}
 .kt-data{margin-top:72px;padding:56px;background:var(--white);border-radius:var(--r-lg)}
@@ -184,12 +183,14 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 
 /* izazov */
 .chal{background:var(--white)}
-.chal-head{max-width:720px;margin-bottom:72px}
-.chal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 96px;counter-reset:c}
-.chal-item{padding-top:24px;border-top:1px solid var(--line)}
-.chal-item::before{counter-increment:c;content:"0" counter(c);display:block;font:700 40px/44px Sora;color:var(--gold);margin-bottom:12px}
+.chal-layout{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+.chal-head h2{font-size:40px;line-height:44px;text-wrap:balance}
+@media(min-width:981px){.chal-head h2 span{display:block}}
+.chal-grid{counter-reset:c;border-bottom:1px solid var(--line)}
+.chal-item{display:grid;grid-template-columns:64px minmax(0,1fr);gap:24px;padding:28px 0;border-top:1px solid var(--line)}
+.chal-item::before{counter-increment:c;content:"0" counter(c);font:700 32px/32px Sora;color:var(--gold)}
 .chal-item h3{font:700 20px/24px Sora;color:var(--brown);margin-bottom:8px}
-.chal-item p{margin:0}
+.chal-item p{margin:0;max-width:480px;font-size:16px;line-height:24px;text-wrap:pretty}
 
 /* mapa */
 .mapa{background:var(--cream)}
@@ -261,8 +262,8 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
   .num-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 0}
   .num-grid div:nth-child(3){border-left:0;padding-left:0}
   .kt-data dl{column-gap:56px}
-  .kt-cards,.chal-grid,.sved-grid{grid-template-columns:minmax(0,1fr)}
-  .chal-grid{gap:40px}
+  .kt-cards,.sved-grid,.chal-layout{grid-template-columns:minmax(0,1fr)}
+  .chal-layout{gap:40px}
   .thero h1{font-size:64px;line-height:68px}
 }
 @media(max-width:560px){
@@ -280,6 +281,7 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
   .osn .mark{font-size:72px;line-height:56px}
   .num{padding:72px 0}
   .num-grid{grid-template-columns:minmax(0,1fr);gap:0}
+  .num-grid div{text-align:left}
   .num-grid b{font-size:32px;line-height:36px}
   .num-grid div,.num-grid div+div,.num-grid div:first-child,.num-grid div:nth-child(3){padding:24px 0;border-left:0;border-top:1px solid var(--line)}
   .num-grid div:first-child{border-top:0;padding-top:0}
@@ -342,7 +344,7 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <cite>Osnivač firme</cite></blockquote></div></div></section>
 <section class="num" aria-label="U brojkama"><div class="wrap"><div class="num-grid rv">
 <div><b>5.000+ m²</b><span>podnog grejanja u Hramu Svetog Save</span></div>
-<div><b>1.200+ m²</b><span>podnog grejanja u hramu u Valjevu</span></div>
+<div><b>1.200+ m²</b><span>podnog grejanja u Hramu Vaskrsenja Hristovog</span></div>
 <div><b>Skoro sve</b><span>zadužbine Nemanjića, u kojima smo izveli neki vid grejanja</span></div>
 <div><b data-placeholder="true">40+</b><span data-placeholder="true">svetinja ukupno, sve kao donacija</span></div>
 </div></div></section>
@@ -355,8 +357,8 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <figure><div class="pic"><img src="../assets/tradicija/hram-svetog-save-enterijer.webp" alt="Unutrašnjost hrama sa mozaicima i ikonostasom" width="1600" height="1200" loading="lazy" decoding="async"></div></figure></div></div>
 <div class="rv"><span class="eyebrow">Vračar, Beograd · donacija</span><h3>Hram Svetog Save</h3><p>Izveli smo celokupno podno grejanje hrama, na više od 5.000 m² površine.</p>
 <p>Za ovako veliki prostor podno grejanje je pravo rešenje. Toplota se širi ravnomerno od poda, nema vidljivih grejnih tela koja bi narušila enterijer, a zidovi i umetnička dela ostaju zaštićeni od naglih promena temperature.</p><span class="fact">5.000+ m²</span></div></article>
-<article class="blk t-anchor" id="hram-valjevo"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/hram-valjevo.webp" alt="Veliki beli hram u Valjevu na obali reke" width="1600" height="1067" loading="lazy" decoding="async"></div></figure></div>
-<div class="rv"><span class="eyebrow">Valjevo · donacija</span><h3>Hram u Valjevu <span class="ph-tag" data-placeholder="true" style="font:600 12px/16px Manrope;letter-spacing:0">Naziv hrama se potvrđuje</span></h3><p>U Valjevu, gradu u kome je naša firma nastala, izveli smo više od 1.200 m² podnog grejanja u velikom hramu.</p><span class="fact">1.200+ m²</span></div></article>
+<article class="blk t-anchor" id="hram-valjevo"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/hram-valjevo.webp" alt="Hram Vaskrsenja Hristovog u Valjevu, beo hram sa kupolama na obali reke" width="1600" height="1067" loading="lazy" decoding="async"></div></figure></div>
+<div class="rv"><span class="eyebrow">Valjevo · donacija</span><h3>Hram Vaskrsenja Hristovog</h3><p>U Valjevu, gradu u kome je naša firma nastala, izveli smo više od 1.200 m² podnog grejanja u Hramu Vaskrsenja Hristovog.</p><span class="fact">1.200+ m²</span></div></article>
 <article class="blk rev t-anchor" id="zaduzbine-nemanjica"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/fresko2.webp" alt="Oslikana kupola crkve sa zlatnim ornamentima" width="1400" height="1050" loading="lazy" decoding="async"></div></figure></div>
 <div class="rv"><span class="eyebrow">Širom Srbije · donacija</span><h3>Zadužbine Nemanjića</h3><p>U skoro svim zadužbinama Nemanjića izveli smo neki vid grejanja. Nasleđe koje je godinama čuvalo veru i narod zaslužuje da u njemu bude toplo i bezbedno.</p>
 <ul class="zad" data-placeholder="true" aria-label="Zadužbine u kojima smo radili"><li>Naziv zadužbine 1</li><li>Naziv zadužbine 2</li><li>Naziv zadužbine 3</li><li>Naziv zadužbine 4</li><li>Naziv zadužbine 5</li><li>Naziv zadužbine 6</li></ul></div></article>
@@ -386,16 +388,16 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <figure><div class="pic"><img src="../assets/tradicija/svece.webp" alt="Upaljene sveće u mraku" width="1400" height="1050" loading="lazy" decoding="async"></div></figure>
 <figure><div class="pic"><img src="../assets/tradicija/kamen.webp" alt="Kamena kapela sa krstovima" width="1400" height="1050" loading="lazy" decoding="async"></div></figure>
 </div></div></div></section>
-<section class="t-sec chal" id="izazov" aria-labelledby="chal-h"><div class="wrap"><div class="chal-head rv"><span class="gline"></span><span class="eyebrow">Stručni pogled</span><h2 id="chal-h">Zašto je grejanje svetinje poseban izazov</h2></div><div class="chal-grid rv">
-<div class="chal-item"><h3>Freske i ikonostas</h3><p>Oslikane površine ne trpe nagle promene temperature i vlage. Zato se prostor zagreva polako i ravnomerno.</p></div>
-<div class="chal-item"><h3>Kondenzacija</h3><p>Hladne površine zidova i kupola mogu da skupljaju vlagu. Pažljivo planirana toplota i provetravanje sprečavaju je.</p></div>
-<div class="chal-item"><h3>Debeli kameni zidovi</h3><p>Kamen se sporo zagreva i dugo drži hladnoću, pa grejanje mora da radi tiho i dugo, a ne naglo.</p></div>
-<div class="chal-item"><h3>Povremeno korišćenje</h3><p>Hram se ne koristi svakog dana. Sistem mora da prati bogosluženja i da u ostalo vreme čuva osnovnu temperaturu.</p></div>
-<div class="chal-item"><h3>Nevidljiva ugradnja</h3><p>Instalacije se ugrađuju bez vidljivih elemenata i bez zahvata na onome što treba sačuvati, po uslovima zavoda za zaštitu spomenika kulture.</p></div>
+<section class="t-sec chal" id="izazov" aria-labelledby="chal-h"><div class="wrap chal-layout"><div class="chal-head rv"><span class="gline"></span><span class="eyebrow">Stručni pogled</span><h2 id="chal-h"><span class="l1">Zašto je grejanje svetinje</span> <span class="l2">poseban izazov</span></h2></div><div class="chal-grid rv">
+<div class="chal-item"><div><h3>Freske i ikonostas</h3><p>Oslikane površine ne trpe nagle promene temperature i vlage. Zato se prostor zagreva polako i ravnomerno.</p></div></div>
+<div class="chal-item"><div><h3>Kondenzacija</h3><p>Hladne površine zidova i kupola mogu da skupljaju vlagu. Pažljivo planirana toplota i provetravanje sprečavaju je.</p></div></div>
+<div class="chal-item"><div><h3>Debeli kameni zidovi</h3><p>Kamen se sporo zagreva i dugo drži hladnoću, pa grejanje mora da radi tiho i dugo, a ne naglo.</p></div></div>
+<div class="chal-item"><div><h3>Povremeno korišćenje</h3><p>Hram se ne koristi svakog dana. Sistem mora da prati bogosluženja i da u ostalo vreme čuva osnovnu temperaturu.</p></div></div>
+<div class="chal-item"><div><h3>Nevidljiva ugradnja</h3><p>Instalacije se ugrađuju bez vidljivih elemenata i bez zahvata na onome što treba sačuvati, po uslovima zavoda za zaštitu spomenika kulture.</p></div></div>
 </div></div></section>
 <section class="t-sec mapa" id="mapa" aria-labelledby="mapa-h"><div class="wrap mapa-grid"><div class="rv"><span class="gline"></span><span class="eyebrow">Na mapi</span><h2 id="mapa-h">Svetinje na mapi Srbije</h2>
 <ul class="mapa-list"><li><b>Beogradski okrug</b><a href="#hram-svetog-save">Hram Svetog Save</a></li>
-<li><b>Kolubarski okrug</b><a href="#hram-valjevo">Hram u Valjevu</a><a href="#ktitorska-crkva">Crkva Svetog Simeona Stolpnika, Osečina</a></li>
+<li><b>Kolubarski okrug</b><a href="#hram-valjevo">Hram Vaskrsenja Hristovog, Valjevo</a><a href="#ktitorska-crkva">Crkva Svetog Simeona Stolpnika, Osečina</a></li>
 <li><b>Kosovski okruzi</b><a href="#kosovo">Crkve i manastiri na Kosovu i Metohiji</a></li>
 <li><b>Zadužbine Nemanjića</b><a href="#zaduzbine-nemanjica">U skoro svim delovima Srbije</a></li></ul></div>
 <div class="rv"><div class="map" id="map"><div class="map-tip" id="mapTip" role="status"></div><svg class="srb-map" viewBox="0 0 392 572" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa Srbije: obojeni su Kolubarski okrug, Beograd i Kosovo i Metohija">

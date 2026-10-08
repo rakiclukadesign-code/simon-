@@ -150,7 +150,6 @@ Sve što NIJE na listi potvrđenih činjenica označeno je u HTML-u sa `data-pla
 | Potpis uz citat | Osnivač firme (bez imena) | Ispod citata |
 | Ukupan broj svetinja | 40+ („svetinja ukupno, sve kao donacija“) | Brojke, četvrta stavka |
 | Obim radova na Hilandaru | Izveli smo radove na instalacijama grejanja u obnovljenim objektima manastira. | Izdvojene svetinje, Hilandar |
-| Tačan naziv hrama u Valjevu | oznaka „Naziv hrama se potvrđuje“ (fotografija je Saborni hram Vaskrsenja Hristovog) | Izdvojene svetinje, hram u Valjevu |
 | Lista zadužbina Nemanjića | 6 praznih stavki „Naziv zadužbine 1–6“ | Izdvojene svetinje, zbirni blok |
 | Odnos Zorana Petrovića sa firmom | u tekstu piše „zadužbina porodice Petrović“ (označeno) | Crkva u Osečini, prvi pasus |
 | Fotografije sa osvećenja temelja i gradnje | tri privremene fotografije (Unsplash) | Crkva u Osečini, „Osvećenje temelja“ |
@@ -158,7 +157,7 @@ Sve što NIJE na listi potvrđenih činjenica označeno je u HTML-u sa `data-pla
 | Objekti na Kosovu i Metohiji | 3 prazne stavke „Naziv objekta 1–3“ | Sekcija Kosovo i Metohija |
 | Svedočanstva sveštenstva | 2 izmišljena skromna teksta sa oznakom „(primer)“ | Sekcija „Reči zahvalnosti“ |
 
-**Potvrđeno (nije placeholder):** ime firme i monaško ime Svetog Stefana Prvovenčanog; osnivač je otac sadašnjeg vlasnika; osnovano pre više od četvrt veka; Hram Svetog Save (celokupno podno grejanje, preko 5.000 m²); hram u Valjevu (preko 1.200 m² podnog grejanja); Hilandar (obnova nakon požara 2004, jedna od najvećih donacija); skoro sve zadužbine Nemanjića; radovi širom Srbije, na Kosovu i Metohiji i u Beogradu; sve je donacija; svi podaci o crkvi u Osečini (ktitor Zoran Petrović, posveta, mesto, episkop Isihije, arhitektica Milka Krstivojević, dimenzije, vremenska kapsula, freskopis, motiv ktitora).
+**Potvrđeno (nije placeholder):** ime firme i monaško ime Svetog Stefana Prvovenčanog; osnivač je otac sadašnjeg vlasnika; osnovano pre više od četvrt veka; Hram Svetog Save (celokupno podno grejanje, preko 5.000 m²); Hram Vaskrsenja Hristovog u Valjevu (preko 1.200 m² podnog grejanja); Hilandar (obnova nakon požara 2004, jedna od najvećih donacija); skoro sve zadužbine Nemanjića; radovi širom Srbije, na Kosovu i Metohiji i u Beogradu; sve je donacija; svi podaci o crkvi u Osečini (ktitor Zoran Petrović, posveta, mesto, episkop Isihije, arhitektica Milka Krstivojević, dimenzije, vremenska kapsula, freskopis, motiv ktitora).
 
 ### Fotografije (Čuvari tradicije)
 
@@ -186,7 +185,6 @@ Sve su privremene dok klijent ne pošalje sopstvene. Atribucija autora je uklonj
 - fotografije sa osvećenja temelja i sa gradnje, uz dozvolu za objavu
 - lista zadužbina Nemanjića u kojima je firma radila
 - obim radova na Hilandaru
-- tačan naziv hrama u Valjevu
 - objekti na Kosovu i Metohiji (nazivi i, ako može, fotografije)
 - svedočanstva sveštenstva ili bratstava (stvarni tekstovi i dozvola za objavu)
 - sopstvene fotografije objekata, sa dozvolom za objavu i, gde treba, saglasnošću manastira
