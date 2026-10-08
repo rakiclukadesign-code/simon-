@@ -138,7 +138,7 @@ Sve fotografije su besplatne sa [Unsplash](https://unsplash.com) (Unsplash licen
 | poslovni-beograd | `assets/projekti/poslovni-beograd/04.webp` | Arlington Research | https://unsplash.com/photos/kN_kViDchA0 |
 | poslovni-beograd | `assets/projekti/poslovni-beograd/thumb.webp` | isto kao 01.webp (isečak) | |
 
-Logotipi partnera su ispisani tekstom u bojama brendova. Treba ih zameniti pravim logotipima (SVG/PNG), uz dozvolu partnera.
+Logotipi partnera (`assets/partneri/`) su originalni, dobijeni od klijenta, koji ima pravo njihovog korišćenja.
 
 ## Čuvari tradicije (`/cuvari-tradicije/`)
 

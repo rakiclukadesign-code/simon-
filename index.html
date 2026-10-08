@@ -82,6 +82,9 @@ header.solid .burger{color:var(--brown)}
 .brandwrap{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.14)}
 .brandbar{max-width:1440px;margin:0 auto;padding:24px 28px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;color:rgba(255,255,255,.5);font:600 12px/16px Sora;letter-spacing:0;text-transform:uppercase}
 .brandbar .l{font:600 12px/16px Manrope;letter-spacing:4px;margin-right:auto}
+.brandbar .bl{display:grid;place-items:center;height:48px;padding:0 20px;background:#fff;border-radius:12px}
+.brandbar .bl img{display:block;width:auto;height:24px}
+.brandbar .bl-r img{height:28px}.brandbar .bl-c img{height:28px}.brandbar .bl-f img{height:32px}
 
 /* sections */
 section{padding:132px 0}
@@ -113,9 +116,9 @@ section{padding:132px 0}
 .tile{background:var(--cream);border-radius:var(--r-md);padding:24px;text-align:center}
 .tile b{display:block;font:700 56px/60px Sora;color:var(--orange);font-variant-numeric:tabular-nums}
 .tile span{font-size:16px;color:var(--muted)}
-.partners .tile{display:grid;place-items:center;height:96px;padding:0;font:800 24px/32px Sora;color:var(--brown)}
-.partners .p-v{color:#d4502a}.partners .p-t{color:#e60012}.partners .p-c{color:#0a1a8a;font-family:Georgia,serif;font-style:italic;font-weight:700}
-.partners .p-f{color:#2a2a2a;font-size:20px;line-height:24px}.partners .p-d{color:#00a1e4;font-style:italic}.partners .p-r{color:#111}
+.partners .tile{display:grid;place-items:center;height:96px;padding:0 24px}
+.partners .tile img{display:block;width:auto;max-width:100%;height:28px}
+.partners .tl-r img{height:36px}.partners .tl-c img{height:44px}.partners .tl-f img{height:56px}.partners .tl-t img{height:24px}
 .checks{list-style:none;padding:0;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%}
 .checks li{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;background:var(--cream);border-radius:var(--r-md);padding:24px;font-weight:600;color:var(--brown);line-height:24px}
 .checks li::before{content:"\2713";flex:none;width:24px;height:24px;border-radius:1000px;background:var(--orange);color:#fff;display:grid;place-items:center;font-size:12px}
@@ -380,7 +383,7 @@ footer a:hover{color:var(--orange)}
 .opts span{padding:8px 4px;font-size:12px;line-height:16px;text-align:center;white-space:nowrap}
 .out{flex-direction:column;align-items:center;gap:8px;text-align:center}
 .out b{white-space:nowrap}
-.partners .tile{font-size:16px;line-height:24px}.partners .p-f{font-size:16px}
+.partners .tile{height:80px;padding:0 16px}.partners .tile img{height:24px}.partners .tl-r img{height:28px}.partners .tl-c img{height:36px}.partners .tl-f img{height:44px}.partners .tl-t img{height:20px}
 .panel:not(.partners) .tile{display:flex;align-items:center;justify-content:center;gap:12px;text-align:left;padding:16px 20px}
 .panel:not(.partners) .tile b{min-width:72px;text-align:center}
 .panel:not(.partners) .tile span{white-space:nowrap}
@@ -393,7 +396,10 @@ footer a:hover{color:var(--orange)}
 .hero p.lead{font-size:16px;line-height:24px;margin:20px 0 40px}
 .cta-row{flex-direction:column;align-items:flex-start;gap:12px}
 .cta-row .btn{width:auto;padding:12px 24px;font-size:16px}
-.brandbar{gap:16px 24px}
+.brandbar{gap:12px}
+.brandbar .bl{height:40px;padding:0 12px}
+.brandbar .bl img{height:20px}
+.brandbar .bl-r img,.brandbar .bl-c img{height:24px}.brandbar .bl-f img{height:28px}
 .brandbar .l{width:100%;margin-right:0;letter-spacing:0}
 .wrap{padding:0 20px}.steps{grid-template-columns:1fr}.stats b{font-size:36px;line-height:40px}.hero h1{font-size:44px;line-height:48px}.sec-head h2,.about-head h2{font-size:36px;line-height:40px}.panel h3{font-size:28px;line-height:32px}.tile b{font-size:36px;line-height:40px}.tiles{grid-template-columns:1fr}.partners .tiles{grid-template-columns:1fr 1fr}.checks{grid-template-columns:1fr}.panels{padding:40px 24px}}
 </style>
@@ -431,7 +437,7 @@ footer a:hover{color:var(--orange)}
   </div>
   <div class="brandwrap"><div class="brandbar">
     <span class="l">Ovlašćeni partneri i oprema</span>
-    <span>Viessmann</span><span>Toshiba</span><span>Rehau</span><span>Carrier</span><span>Daikin</span><span>Flowair</span>
+    <span class="bl bl-v"><img src="assets/partneri/viessmann.png" alt="Viessmann logotip" width="1280" height="280" loading="lazy" decoding="async"></span><span class="bl bl-t"><img src="assets/partneri/toshiba.png" alt="Toshiba logotip" width="960" height="147" loading="lazy" decoding="async"></span><span class="bl bl-r"><img src="assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" loading="lazy" decoding="async"></span><span class="bl bl-c"><img src="assets/partneri/carrier.png" alt="Carrier logotip" width="1280" height="517" loading="lazy" decoding="async"></span><span class="bl bl-d"><img src="assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" loading="lazy" decoding="async"></span><span class="bl bl-f"><img src="assets/partneri/flowair.png" alt="Flowair logotip" width="514" height="198" loading="lazy" decoding="async"></span>
   </div></div>
 </section>
 </div>
@@ -465,8 +471,8 @@ footer a:hover{color:var(--orange)}
         <p>Pružamo zaokružen ciklus usluga: od konsaltinga i projektovanja, preko izvođenja radova, do tehničkog nadzora i redovnog servisa. Kao regionalni zastupnici svetskih lidera garantujemo ugradnju opreme najnovije generacije, a naša rešenja su energetski optimalna i dugovečna.</p>
         <div class="tiles">
           <!-- zameniti pravim logotipima -->
-          <div class="tile p-v">VIESSMANN</div><div class="tile p-t">TOSHIBA</div><div class="tile p-c">Carrier</div>
-          <div class="tile p-f">FLOWAIR</div><div class="tile p-d">DAIKIN</div><div class="tile p-r">REHAU</div>
+          <div class="tile tl-v"><img src="assets/partneri/viessmann.png" alt="Viessmann logotip" width="1280" height="280" loading="lazy" decoding="async"></div><div class="tile tl-t"><img src="assets/partneri/toshiba.png" alt="Toshiba logotip" width="960" height="147" loading="lazy" decoding="async"></div><div class="tile tl-c"><img src="assets/partneri/carrier.png" alt="Carrier logotip" width="1280" height="517" loading="lazy" decoding="async"></div>
+          <div class="tile tl-f"><img src="assets/partneri/flowair.png" alt="Flowair logotip" width="514" height="198" loading="lazy" decoding="async"></div><div class="tile tl-d"><img src="assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" loading="lazy" decoding="async"></div><div class="tile tl-r"><img src="assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" loading="lazy" decoding="async"></div>
         </div>
       </div>
       <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3">
