@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stručno savetovanje – zatražite ponudu | Simon</title>
+<meta name="description" content="Zatražite stručno savetovanje: recite nam šta vam treba u tri kratka koraka. Inženjer Simon d.o.o. iz Valjeva javlja se u roku od 24 h radnim danima, a ponuda je bez skrivenih troškova.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:site_name" content="Simon d.o.o.">
+<meta property="og:title" content="Stručno savetovanje | Simon">
+<meta property="og:description" content="Započnite planiranje vašeg sistema sa inženjerskom preciznošću. Popunite kratak formular i javljamo vam se u roku od 24 h radnim danima.">
+<!-- TODO: og:image mora biti apsolutni URL (https://...) kada se zna adresa sajta -->
+<meta property="og:image" content="../assets/hero-viessmann.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff4a1c'/><text x='16' y='24' font-size='20' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#ff4a1c; --orange-d:#e03a10; --orange-soft:#fff0ea;
+  --brown:#2b0d08; --brown-2:#4a1810; --ink:#2a1c18; --muted:#7a645d;
+  --cream:#fffaf6; --line:#f0ddd4; --gold:#c9a227; --white:#fff;
+  --r-lg:28px; --r-md:16px; --r-sm:12px;
+  --shadow:0 24px 60px -28px rgba(120,30,10,.35);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:24px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Sora,sans-serif;line-height:32px;letter-spacing:0;text-wrap:balance}
+p,li,small{text-wrap:pretty}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1440px;margin:0 auto;padding:0 28px}
+.skip{position:absolute;left:-1000px;top:8px;background:var(--orange);color:#fff;padding:12px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:4px solid var(--orange);outline-offset:4px;border-radius:8px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;font:600 16px Manrope;padding:16px 28px;border-radius:1000px;border:0;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 16px 32px -12px rgba(255,74,28,.7)}
+.btn-primary:hover{background:var(--orange-d);transform:translateY(-4px)}
+.btn-gold{min-width:240px;justify-content:center;background:linear-gradient(var(--gold),var(--gold)) no-repeat left center/0% 100%,rgba(201,162,39,.3);color:var(--brown);border:1px solid var(--gold);box-shadow:none;transition:background-size .4s cubic-bezier(.4,0,.2,1),color .4s cubic-bezier(.2,.7,.2,1)}
+.btn-gold:hover{background-size:100% 100%;transform:none}
+.btn-light{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px)}
+.btn-light:hover{background:rgba(255,255,255,.22)}
+.link{font-weight:700;color:var(--orange);display:inline-flex;gap:8px;align-items:center}
+.link:hover{gap:12px}
+.link{transition:gap .2s}
+
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:48;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(255,250,246,.9);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font:800 28px/32px Sora;color:#fff;transition:color .3s}
+.logo b{color:var(--orange)}
+header.solid .logo{color:var(--brown)}
+.menu{display:flex;gap:36px;align-items:center}
+.menu a{font-weight:600;font-size:16px;color:rgba(255,255,255,.88);transition:color .2s}
+header.solid .menu a{color:var(--ink)}
+.menu a:hover{color:var(--orange)}
+.menu a:not(.btn){position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;border-radius:1000px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.menu a:not(.btn):hover::after,.menu a:not(.btn):focus-visible::after{transform:scaleX(1)}
+.menu .btn{padding:12px 20px;font-size:16px;color:#fff}
+.menu .btn.btn-primary{background:var(--white);color:var(--ink);border:1px solid var(--orange);box-shadow:none;transition:background .4s,border-color .4s,color .4s}
+.menu .btn.btn-primary:hover{background:var(--orange);border-color:var(--orange);color:#fff!important;transform:none}
+.burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+header.solid .burger{color:var(--brown)}
+
+footer{background:var(--brown);color:rgba(255,255,255,.72);padding:92px 0 36px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px}
+footer .logo{font-size:56px;line-height:56px;color:#fff}
+footer h4{font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:20px}
+footer li{list-style:none;margin-bottom:12px;font-size:16px}
+footer ul{padding:0}
+footer .soc{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font-weight:600;font-size:16px;line-height:24px;color:#fff;transition:color .4s}
+footer .soc-ic{display:grid;place-items:center;width:48px;height:48px;border-radius:1000px;border:1px solid rgba(255,255,255,.3);color:#fff;transition:color .4s,border-color .4s}
+footer .soc-ic svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+footer .soc:hover .soc-ic{color:var(--orange);border-color:var(--orange)}
+footer a:hover{color:var(--orange)}
+.copy{margin-top:72px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:12px}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.menu a::after{transition:none}.pins .ring{animation:none;opacity:0}.rv{opacity:1;transform:none;transition:none}.pin{animation:none}html{scroll-behavior:auto}}
+
+/* partneri: svetla traka sa beskonacnim klizanjem zdesna ulevo */
+.pstrip{padding:0;background:var(--white);border-bottom:1px solid var(--line)}
+.pstrip-in{max-width:1440px;margin:0 auto;padding:32px 28px;display:flex;align-items:center;gap:48px}
+.pstrip-l{flex:none;font:600 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
+.pmarq{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ptrack{display:flex;align-items:center;width:max-content;list-style:none;padding:0;margin:0;animation:pmarq 40s linear infinite}
+.pmarq:hover .ptrack{animation-play-state:paused}
+.pl{flex:none;display:grid;place-items:center;padding:0 40px}
+.pl img{display:block;width:auto;height:28px}
+.pl-t img{height:24px}.pl-r img{height:36px}.pl-c img{height:40px}.pl-f img{height:48px}
+@keyframes pmarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ptrack{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.pl[aria-hidden],.pl:nth-child(n+7){display:none}.pmarq{-webkit-mask-image:none;mask-image:none}}
+
+/* ---- stranica Strucno savetovanje ---- */
+[hidden]{display:none!important}
+.eyebrow{display:inline-block;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
+.menu a[aria-current=page]:not(.btn){color:var(--orange)}
+.btn-lg{padding:20px 32px;font-size:16px}
+.btn[disabled]{opacity:.6;cursor:not-allowed;transform:none}
+.sec{padding:112px 0}
+.sec h2{font-size:44px;line-height:48px;font-weight:700;color:var(--brown)}
+
+/* hero */
+.shero{position:relative;overflow:hidden;margin-top:76px;color:#fff;background:radial-gradient(800px 480px at 84% 0%,rgba(255,74,28,.5),transparent 60%),radial-gradient(600px 400px at 0% 100%,rgba(201,162,39,.16),transparent 60%),linear-gradient(160deg,var(--brown-2),var(--brown) 72%)}
+.shero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");pointer-events:none}
+.shero-in{position:relative;z-index:2;max-width:1440px;margin:0 auto;padding:112px 28px 80px}
+.shero .eyebrow{padding:8px 16px;border:1px solid rgba(255,255,255,.2);border-radius:1000px;color:#fff}
+.shero .eyebrow::before{content:"";display:inline-block;width:8px;height:8px;border-radius:1000px;background:var(--orange);margin-right:12px}
+.shero h1{font-size:56px;line-height:64px;font-weight:800;letter-spacing:0;max-width:1200px}
+.shero h1 span{display:block}
+.shero h1 em{font-style:normal;color:var(--orange)}
+.shero p.lead{max-width:640px;margin-top:24px;font-size:20px;line-height:32px;color:rgba(255,255,255,.78)}
+.trust{list-style:none;padding:0;margin:48px 0 0;display:flex;flex-wrap:wrap;gap:16px 40px}
+.trust li{display:flex;align-items:center;gap:12px;font:600 16px/24px Manrope;color:#fff}
+.trust .ck{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:1000px;background:rgba(255,255,255,.12);color:var(--orange)}
+.trust svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* formular */
+.formsec{background:var(--cream);padding:96px 0 112px}
+.fcard{max-width:1040px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:56px}
+.prog{list-style:none;padding:0;margin:0 0 48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;counter-reset:p}
+.prog li{position:relative;padding-top:20px;font:600 16px/24px Manrope;color:var(--muted);border-top:4px solid var(--line);transition:color .4s,border-color .4s}
+.prog li::before{counter-increment:p;content:counter(p) ". "}
+.prog li.done{color:var(--brown);border-color:var(--gold)}
+.prog li[aria-current=step]{color:var(--orange-d);border-color:var(--orange)}
+.req-note{margin-bottom:32px;font-size:16px;line-height:24px;color:var(--muted)}
+.step h2{font-size:32px;line-height:40px;margin-bottom:32px;outline:none}
+.step h2:focus-visible{outline:none}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px}
+.full{grid-column:1/-1}
+.f{min-width:0;margin:0;padding:0;border:0}
+.f>label,.f>legend{display:block;margin-bottom:8px;font:700 16px/24px Manrope;color:var(--brown);padding:0}
+.rq{color:var(--orange-d)}
+.hint{margin:-4px 0 12px;font-size:16px;line-height:24px;color:var(--muted)}
+.f input[type=text],.f input[type=email],.f input[type=tel],.f select,.f textarea{display:block;width:100%;font:500 16px/24px Manrope;color:var(--ink);padding:14px 20px;border:1px solid var(--line);border-radius:12px;background:var(--cream);transition:border-color .3s,background .3s}
+.f textarea{resize:vertical;min-height:128px}
+.f input:focus,.f select:focus,.f textarea:focus{outline:0;border-color:var(--orange);background:var(--white)}
+.f input:focus-visible,.f select:focus-visible,.f textarea:focus-visible{outline:4px solid rgba(255,74,28,.24);outline-offset:0}
+.sel{position:relative}
+.sel::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;margin-top:-6px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);pointer-events:none}
+.sel select{appearance:none;-webkit-appearance:none;padding-right:48px;cursor:pointer}
+.f.bad input,.f.bad select,.f.bad textarea{border-color:#c0321a}
+.err{margin-top:8px;font:600 16px/24px Manrope;color:#b0301a}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:100%;height:100%;inset:0;margin:0;cursor:pointer}
+.chip span{display:block;padding:12px 20px;border:1px solid var(--line);border-radius:1000px;background:var(--white);font:600 16px/24px Manrope;color:var(--ink);cursor:pointer;transition:background .4s,border-color .4s,color .4s}
+@media(hover:hover){.chip:hover span{border-color:var(--orange)}}
+.chip input:checked+span{background:var(--orange);border-color:var(--orange);color:#fff}
+.chip input:focus-visible+span{outline:4px solid var(--orange);outline-offset:4px}
+.chips-f.bad .chip span{border-color:#c0321a}
+.note{font-size:16px;line-height:24px;color:var(--muted)}
+.note a{color:var(--orange-d);text-decoration:underline;text-underline-offset:4px;font-weight:600}
+.pre{margin-bottom:32px;padding:16px 20px;border-radius:var(--r-md);background:var(--orange-soft);color:var(--brown);font:600 16px/24px Manrope}
+.consent{display:flex;gap:16px;align-items:flex-start}
+.consent input{flex:none;width:24px;height:24px;margin:2px 0 0;accent-color:var(--orange)}
+.consent label{font:500 16px/24px Manrope;color:var(--ink)}
+.consent a{color:var(--orange-d);text-decoration:underline;text-underline-offset:4px;font-weight:600}
+.consent-wrap .err{margin-left:40px}
+.sum{margin-top:8px;padding:32px;background:var(--cream);border-radius:var(--r-md)}
+.sum h3{font:700 20px/24px Sora;color:var(--brown);margin-bottom:16px}
+.sum-sec+.sum-sec{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+.sum-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
+.sum-head b{font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--gold-d,#8a6d0b)}
+.sum-edit{background:none;border:0;padding:4px 0;font:600 16px/24px Manrope;color:var(--orange-d);text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.sum dl{margin:0;display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);gap:8px 24px}
+.sum dt{font:600 16px/24px Manrope;color:var(--muted)}
+.sum dd{margin:0;font:600 16px/24px Manrope;color:var(--brown)}
+.nav-b{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.nav-b .btn{justify-content:center}
+.btn-ghost{background:var(--white);color:var(--brown);border:1px solid var(--line)}
+@media(hover:hover){.btn-ghost:hover{border-color:var(--orange);color:var(--orange-d)}}
+.spin{display:none;width:20px;height:20px;border-radius:1000px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .8s linear infinite}
+.busy .spin{display:inline-block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.fail{margin-top:24px;padding:24px;border-radius:var(--r-md);background:#fdecea;color:#7a1f10;font:500 16px/24px Manrope}
+.fail b{display:block;margin-bottom:8px;font:700 16px/24px Manrope}
+.fail a{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.ok{max-width:760px;margin:0 auto;text-align:center;padding:24px 0}
+.ok .okic{display:grid;place-items:center;width:72px;height:72px;margin:0 auto 24px;border-radius:1000px;background:var(--orange-soft);color:var(--orange)}
+.ok .okic svg{width:36px;height:36px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.ok h2{font-size:36px;line-height:40px;color:var(--brown);outline:none}
+.ok p{margin-top:16px;font-size:20px;line-height:32px;color:var(--muted)}
+.ok .ok-next{margin-top:32px;padding:24px;border-radius:var(--r-md);background:var(--cream);text-align:left;font-size:16px;line-height:24px}
+.ok .ok-next a{color:var(--orange-d);font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* posle slanja */
+.after{background:var(--white)}
+.after-head{max-width:720px;margin-bottom:64px}
+.after-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;counter-reset:s}
+.after-step{padding:0 32px 0 0}
+.after-step::before{counter-increment:s;content:"0" counter(s);display:block;font:800 64px/64px Sora;color:transparent;-webkit-text-stroke:1px var(--orange);margin-bottom:20px}
+.after-step h3{font:700 20px/24px Sora;color:var(--brown);margin-bottom:8px}
+.after-step p{font-size:16px;line-height:24px;color:var(--muted)}
+
+/* alternativni kontakt */
+.alt{background:var(--cream)}
+.alt-head{max-width:720px;margin-bottom:56px}
+.alt-head p{margin-top:20px;font-size:16px;line-height:28px;color:var(--muted)}
+.alt-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.alt-card{padding:32px 24px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);transition:border-color .4s,transform .3s}
+a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
+.alt-card small{display:block;margin-bottom:12px;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
+.alt-card b{display:block;font:700 20px/28px Sora;color:var(--brown);overflow-wrap:anywhere}
+
+/* faq */
+.faq{background:var(--white)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:80px;align-items:start}
+.faq-list{border-bottom:1px solid var(--line)}
+.faq details{border-top:1px solid var(--line)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:24px 0;font:700 20px/28px Sora;color:var(--brown);cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:1000px;border:1px solid var(--line);font:500 24px/24px Manrope;color:var(--orange-d);transition:transform .3s,background .3s,color .3s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--orange);border-color:var(--orange);color:#fff}
+.faq summary:focus-visible{outline:4px solid var(--orange);outline-offset:4px;border-radius:8px}
+.faq details p{padding:0 64px 24px 0;font-size:16px;line-height:28px;color:var(--muted)}
+
+/* dijalog */
+.dlg{margin:auto;border:0;padding:0;border-radius:var(--r-lg);width:calc(100% - 32px);max-width:640px;color:var(--ink);background:var(--white);box-shadow:0 40px 80px -32px rgba(0,0,0,.6)}
+.dlg::backdrop{background:rgba(43,13,8,.56);backdrop-filter:blur(4px)}
+.dlg-in{padding:40px}
+.dlg h3{font:700 28px/32px Sora;color:var(--brown);margin-bottom:16px}
+.dlg p{font-size:16px;line-height:28px;color:var(--muted)}
+.dlg p+p{margin-top:12px}
+.dlg .btn{margin-top:24px}
+
+@media(prefers-reduced-motion:reduce){.spin{animation:none}.alt-card,.faq summary::after{transition:none}}
+
+@media(max-width:1100px){
+  .menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
+  .menu.open{display:flex}.menu a{color:var(--ink)!important}
+  .burger{display:block}
+}
+@media(max-width:980px){
+  .f-grid{grid-template-columns:1fr}
+  .sec{padding:84px 0}
+  .shero h1{font-size:44px;line-height:52px}
+  .fcard{padding:40px 32px}
+  .alt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .faq-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .after-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .after-step{padding:0}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px}
+  .sec{padding:64px 0}
+  .sec h2{font-size:28px;line-height:32px}
+  .shero-in{padding:64px 20px 56px}
+  .shero .eyebrow{letter-spacing:0}
+  .shero h1{font-size:32px;line-height:40px}
+  .shero p.lead{margin-top:20px;font-size:16px;line-height:28px}
+  .trust{flex-direction:column;gap:12px;margin-top:32px}
+  .formsec{padding:48px 0 64px}
+  .fcard{padding:32px 20px;border-radius:24px}
+  .prog{gap:8px;margin-bottom:32px}
+  .prog li{padding-top:12px;font-size:12px;line-height:16px}
+  .step h2{font-size:24px;line-height:32px;margin-bottom:24px}
+  .grid2{grid-template-columns:minmax(0,1fr);gap:24px}
+  .chip span{padding:12px 16px}
+  .sum{padding:24px 20px}
+  .sum dl{grid-template-columns:minmax(0,1fr);gap:0}
+  .sum dt{margin-top:12px}
+  .nav-b{margin-top:32px;padding-top:24px}
+  .nav-b .btn{padding:12px 24px}
+  .ok h2{font-size:28px;line-height:32px}
+  .ok p{font-size:16px;line-height:28px}
+  .after-step::before{font-size:48px;line-height:48px}
+  .alt-grid{grid-template-columns:minmax(0,1fr)}
+  .faq summary{font-size:16px;line-height:24px;padding:20px 0}
+  .faq details p{padding-right:0}
+  .dlg-in{padding:24px}
+  .pstrip-in{flex-direction:column;align-items:flex-start;gap:16px;padding:24px 20px}
+  .pstrip-l{letter-spacing:0}
+  .pl{padding:0 24px}
+  .pl img{height:24px}.pl-t img{height:20px}.pl-r img{height:28px}.pl-c img{height:32px}.pl-f img{height:40px}
+  .pmarq{width:100%}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#formular">Preskoči na formular</a>
+<header id="hdr" class="solid">
+  <div class="wrap nav">
+    <a href="../" class="logo" aria-label="Simon – početna">SIMON<b>.</b></a>
+    <nav class="menu" id="menu" aria-label="Glavna navigacija">
+      <a href="../#usluge">Usluge</a>
+      <a href="../#proces">Kako radimo</a>
+      <a href="../reference/">Reference</a>
+      <a href="../cuvari-tradicije/">Tradicija</a>
+      <a href="../#konfigurator">Konfigurator</a>
+      <a href="../#karijera">Karijera</a>
+      <a href="./" aria-current="page" class="btn btn-primary">Stručno savetovanje</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Meni" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section class="shero" aria-labelledby="h1"><div class="shero-in"><span class="eyebrow">Stručno savetovanje</span>
+<h1 id="h1"><span>Započnite planiranje vašeg sistema</span> <em>sa inženjerskom preciznošću</em></h1>
+<p class="lead">Recite nam šta vam treba u tri kratka koraka. Inženjer pregleda vaš upit i javlja vam se sa konkretnim sledećim koracima.</p>
+<ul class="trust"><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span><span data-placeholder="true">Odgovor u roku od 24 h</span> radnim danima</span></li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>Obilazak objekta</li><li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>Ponuda bez skrivenih troškova</li></ul>
+</div></section>
+<section class="formsec" id="formular" aria-labelledby="f-h"><div class="wrap"><div class="fcard rv">
+<h2 class="live" id="f-h">Formular za stručno savetovanje</h2>
+<div id="formWrap">
+<ol class="prog" id="prog" aria-label="Koraci formulara"><li aria-current="step">Šta vam treba</li><li>O objektu</li><li>Kontakt</li></ol>
+<p class="req-note"><span class="rq" aria-hidden="true">*</span> Polja označena zvezdicom su obavezna.</p>
+<div class="pre" id="pre" hidden>Uneli smo podatke koje ste izabrali na prethodnoj stranici. Možete ih izmeniti.</div>
+<form id="sf" novalidate>
+<div class="live" aria-hidden="true"><label>Ne popunjavajte ako ste čovek<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+<section class="step" data-step="0" aria-labelledby="st0"><h2 id="st0" tabindex="-1">Šta vam treba</h2><div class="grid2">
+<fieldset class="f chips-f full" id="g-1" data-label="Predmet interesovanja" data-req aria-describedby="e-g-1"><legend>Predmet interesovanja <span class="rq" aria-hidden="true">*</span></legend><p class="hint" id="h-g-1">Možete izabrati više opcija.</p><div class="chips"><label class="chip"><input type="checkbox" name="predmet" value="Grejanje"><span>Grejanje</span></label><label class="chip"><input type="checkbox" name="predmet" value="Hlađenje"><span>Hlađenje</span></label><label class="chip"><input type="checkbox" name="predmet" value="Solarni sistemi"><span>Solarni sistemi</span></label><label class="chip"><input type="checkbox" name="predmet" value="Ventilacija"><span>Ventilacija</span></label><label class="chip"><input type="checkbox" name="predmet" value="Klimatizacija"><span>Klimatizacija</span></label><label class="chip"><input type="checkbox" name="predmet" value="Sprinkleri"><span>Sprinkleri</span></label><label class="chip"><input type="checkbox" name="predmet" value="Servis postojećeg sistema"><span>Servis postojećeg sistema</span></label></div><p class="err" id="e-g-1" hidden></p></fieldset>
+<fieldset class="f chips-f full" id="g-2" data-label="Vrsta usluge" data-req aria-describedby="e-g-2"><legend>Vrsta usluge <span class="rq" aria-hidden="true">*</span></legend><p class="hint" id="h-g-2">Možete izabrati više opcija.</p><div class="chips"><label class="chip"><input type="checkbox" name="usluga" value="Projektovanje"><span>Projektovanje</span></label><label class="chip"><input type="checkbox" name="usluga" value="Izvođenje"><span>Izvođenje</span></label><label class="chip"><input type="checkbox" name="usluga" value="Nadzor"><span>Nadzor</span></label><label class="chip"><input type="checkbox" name="usluga" value="Servis i održavanje"><span>Servis i održavanje</span></label><label class="chip"><input type="checkbox" name="usluga" value="Nisam siguran/na"><span>Nisam siguran/na</span></label></div><p class="err" id="e-g-2" hidden></p></fieldset>
+<div class="f"><label for="s-3">Tip objekta <span class="rq" aria-hidden="true">*</span></label><div class="sel"><select id="s-3" name="tip" data-label="Tip objekta" data-req aria-required="true" aria-describedby="e-s-3"><option value="">Izaberite…</option><option>Porodična kuća</option><option>Stan</option><option>Poslovni prostor</option><option>Industrijski objekat</option><option>Javni objekat</option><option>Ugostiteljski objekat</option><option>Drugo</option></select></div><p class="err" id="e-s-3" hidden></p></div>
+<div class="f"><label for="s-4">Status gradnje <span class="rq" aria-hidden="true">*</span></label><div class="sel"><select id="s-4" name="status" data-label="Status gradnje" data-req aria-required="true" aria-describedby="e-s-4"><option value="">Izaberite…</option><option>Novogradnja (u projektu)</option><option>Novogradnja (u izgradnji)</option><option>Adaptacija / rekonstrukcija</option><option>Zamena postojećeg sistema</option></select></div><p class="err" id="e-s-4" hidden></p></div>
+<div class="f"><label for="s-5">Kada planirate radove</label><div class="sel"><select id="s-5" name="kada" data-label="Kada planirate radove" aria-describedby="e-s-5"><option value="">Izaberite…</option><option>Što pre</option><option>U naredna 3 meseca</option><option>Za 3–6 meseci</option><option>Kasnije / informativno</option></select></div><p class="err" id="e-s-5" hidden></p></div>
+</div></section>
+<section class="step" data-step="1" aria-labelledby="st1" hidden><h2 id="st1" tabindex="-1">O objektu</h2><div class="grid2">
+<div class="f"><label for="i-6">Mesto <span class="rq" aria-hidden="true">*</span></label><input id="i-6" name="mesto" type="text" data-label="Mesto" data-req aria-required="true" placeholder="Valjevo" autocomplete="address-level2" aria-describedby="e-i-6"><p class="err" id="e-i-6" hidden></p></div>
+<div class="f"><label for="s-7">Okrug</label><div class="sel"><select id="s-7" name="okrug" data-label="Okrug" aria-describedby="e-s-7"><option value="">Izaberite…</option><option>Beogradski okrug</option><option>Severnobački okrug</option><option>Srednjobanatski okrug</option><option>Severnobanatski okrug</option><option>Južnobanatski okrug</option><option>Zapadnobački okrug</option><option>Južnobački okrug</option><option>Sremski okrug</option><option>Mačvanski okrug</option><option>Kolubarski okrug</option><option>Podunavski okrug</option><option>Braničevski okrug</option><option>Šumadijski okrug</option><option>Pomoravski okrug</option><option>Borski okrug</option><option>Zaječarski okrug</option><option>Zlatiborski okrug</option><option>Moravički okrug</option><option>Raški okrug</option><option>Rasinski okrug</option><option>Nišavski okrug</option><option>Toplički okrug</option><option>Pirotski okrug</option><option>Jablanički okrug</option><option>Pčinjski okrug</option><option>Kosovski okrug</option><option>Pećki okrug</option><option>Prizrenski okrug</option><option>Kosovskomitrovački okrug</option><option>Kosovskopomoravski okrug</option><option>Van Srbije</option></select></div><p class="err" id="e-s-7" hidden></p></div>
+<div class="f"><label for="i-8">Površina koja se greje ili hladi (m²) <span class="rq" aria-hidden="true">*</span></label><input id="i-8" name="povrsina" type="text" data-label="Površina koja se greje ili hladi (m²)" data-req aria-required="true" placeholder="120" inputmode="numeric" data-key="Površina (m²)" aria-describedby="e-i-8"><p class="err" id="e-i-8" hidden></p></div>
+<div class="f"><label for="i-9">Broj etaža</label><input id="i-9" name="etaze" type="text" data-label="Broj etaža" data-opt placeholder="2" inputmode="numeric" aria-describedby="e-i-9"><p class="err" id="e-i-9" hidden></p></div>
+<div class="f"><label for="s-10">Godina gradnje</label><div class="sel"><select id="s-10" name="godina" data-label="Godina gradnje" aria-describedby="e-s-10"><option value="">Izaberite…</option><option>Pre 1970</option><option>1970–1990</option><option>1990–2010</option><option>Posle 2010</option><option>U izgradnji</option></select></div><p class="err" id="e-s-10" hidden></p></div>
+<div class="f"><label for="s-11">Izolacija objekta</label><div class="sel"><select id="s-11" name="izolacija" data-label="Izolacija objekta" aria-describedby="e-s-11"><option value="">Izaberite…</option><option>Nema</option><option>Delimična</option><option>Dobra (fasada + stolarija)</option><option>Ne znam</option></select></div><p class="err" id="e-s-11" hidden></p></div>
+<div class="f c-grej"><label for="s-12">Trenutno grejanje</label><div class="sel"><select id="s-12" name="trenutno" data-label="Trenutno grejanje" aria-describedby="e-s-12"><option value="">Izaberite…</option><option>Nema</option><option>Čvrsto gorivo</option><option>Gas</option><option>Struja</option><option>Daljinsko</option><option>Toplotna pumpa</option><option>Drugo</option></select></div><p class="err" id="e-s-12" hidden></p></div>
+<div class="f c-grej"><label for="s-13">Željeni sistem (opciono)</label><div class="sel"><select id="s-13" name="zeljeni" data-label="Željeni sistem (opciono)" aria-describedby="e-s-13"><option value="">Izaberite…</option><option>Toplotna pumpa</option><option>Gasni kotao</option><option>Podno grejanje</option><option>Radijatori</option><option>Prepuštam preporuci</option></select></div><p class="err" id="e-s-13" hidden></p></div>
+<fieldset class="f chips-f full c-grej" id="g-14" data-label="Dostupni energenti" aria-describedby="e-g-14"><legend>Dostupni energenti</legend><div class="chips"><label class="chip"><input type="checkbox" name="energenti" value="Priključak na gas"><span>Priključak na gas</span></label><label class="chip"><input type="checkbox" name="energenti" value="Trofazna struja"><span>Trofazna struja</span></label><label class="chip"><input type="checkbox" name="energenti" value="Ništa od navedenog"><span>Ništa od navedenog</span></label><label class="chip"><input type="checkbox" name="energenti" value="Ne znam"><span>Ne znam</span></label></div><p class="err" id="e-g-14" hidden></p></fieldset>
+<div class="f full c-namena"><label for="i-15">Namena prostora</label><input id="i-15" name="namena" type="text" data-label="Namena prostora" data-opt placeholder="Npr. škola, magacin, proizvodna hala" aria-describedby="e-i-15"><p class="err" id="e-i-15" hidden></p></div>
+<div class="f"><label for="s-16">Okvirni budžet (opciono)</label><div class="sel"><select id="s-16" name="budzet" data-label="Okvirni budžet (opciono)" data-placeholder="true" aria-describedby="e-s-16"><option value="">Izaberite…</option><option>Do 5.000 €</option><option>5.000 – 15.000 €</option><option>15.000 – 40.000 €</option><option>Preko 40.000 €</option><option>Želim preporuku</option></select></div><p class="err" id="e-s-16" hidden></p></div>
+<div class="f"></div>
+<div class="f full"><label for="t-17">Opis zahteva ili trenutnog problema (opciono)</label><textarea id="t-17" name="opis" rows="4" data-label="Opis zahteva ili trenutnog problema (opciono)" placeholder="Opišite šta želite da postignete ili šta ne radi kako treba."></textarea></div>
+<p class="note full">Imate projekat ili fotografije objekta? Pošaljite ih nakon slanja zahteva na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a> ili Viber <a href="viber://chat?number=%2B381612137321" data-placeholder="true">+381 61 21 37 321</a>, a mi ćemo ih priključiti vašem upitu.</p>
+</div></section>
+<section class="step" data-step="2" aria-labelledby="st2" hidden><h2 id="st2" tabindex="-1">Kontakt</h2><div class="grid2">
+<div class="f"><label for="i-18">Ime i prezime <span class="rq" aria-hidden="true">*</span></label><input id="i-18" name="ime" type="text" data-label="Ime i prezime" data-req aria-required="true" placeholder="Petar Petrović" autocomplete="name" aria-describedby="e-i-18"><p class="err" id="e-i-18" hidden></p></div>
+<div class="f"><label for="i-19">Naziv firme (opciono)</label><input id="i-19" name="firma" type="text" data-label="Naziv firme (opciono)" placeholder="Naziv firme" autocomplete="organization" aria-describedby="e-i-19"><p class="err" id="e-i-19" hidden></p></div>
+<div class="f"><label for="i-20">Telefon <span class="rq" aria-hidden="true">*</span></label><input id="i-20" name="telefon" type="tel" data-label="Telefon" data-req aria-required="true" placeholder="+381 6x xxx xxxx" autocomplete="tel" aria-describedby="e-i-20"><p class="err" id="e-i-20" hidden></p></div>
+<div class="f"><label for="i-21">E-mail <span class="rq" aria-hidden="true">*</span></label><input id="i-21" name="email" type="email" data-label="E-mail" data-req aria-required="true" placeholder="ime@primer.rs" autocomplete="email" aria-describedby="e-i-21"><p class="err" id="e-i-21" hidden></p></div>
+<div class="f"><label for="s-22">Željeni način kontakta</label><div class="sel"><select id="s-22" name="nacin" data-label="Željeni način kontakta" aria-describedby="e-s-22"><option value="">Izaberite…</option><option>Telefon</option><option>E-mail</option><option>Viber/WhatsApp</option></select></div><p class="err" id="e-s-22" hidden></p></div>
+<div class="f"><label for="s-23">Najbolje vreme za poziv</label><div class="sel"><select id="s-23" name="vreme" data-label="Najbolje vreme za poziv" aria-describedby="e-s-23"><option value="">Izaberite…</option><option>Pre podne</option><option>Posle podne</option><option>Svejedno</option></select></div><p class="err" id="e-s-23" hidden></p></div>
+<div class="sum full" id="sum" aria-live="polite"></div>
+<div class="f full consent-wrap"><div class="consent"><input type="checkbox" id="saglasnost" name="saglasnost" data-label="Saglasnost sa obradom podataka" data-req aria-required="true" aria-describedby="e-saglasnost"><label for="saglasnost">Saglasan/na sam da Simon d.o.o. obrađuje podatke koje sam uneo/la radi odgovora na moj upit, u skladu sa Zakonom o zaštiti podataka o ličnosti. <a href="#politika" id="privLink">Politika privatnosti</a> <span class="rq" aria-hidden="true">*</span></label></div><p class="err" id="e-saglasnost" hidden></p></div>
+</div></section>
+<div class="fail" id="fail" role="alert" hidden><b>Slanje nije uspelo.</b>Vaši podaci su sačuvani u formularu, pokušajte ponovo za nekoliko trenutaka. Ako problem potraje, javite nam se direktno: <a href="tel:+381612137321" data-placeholder="true">+381 61 21 37 321</a> ili <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a>.</div>
+<div class="nav-b"><button type="button" class="btn btn-ghost" id="back" hidden>Nazad</button><span></span><button type="button" class="btn btn-primary" id="next">Dalje</button><button type="submit" class="btn btn-primary btn-lg" id="send" hidden><span class="spin" aria-hidden="true"></span><span id="sendT">Pošalji zahtev</span></button></div>
+</form></div>
+<div class="ok" id="ok" hidden><div class="okic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div><h2 id="okH" tabindex="-1">Hvala, vaš zahtev je primljen</h2>
+<p>Javljamo vam se u roku od <span data-placeholder="true">24 h</span> radnim danima, na način koji ste izabrali.</p>
+<div class="ok-next"><b>Šta sledi.</b> Inženjer pregleda vaš upit, kontaktira vas i dogovara obilazak objekta. Imate projekat ili fotografije objekta? Pošaljite ih na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a> ili Viber <a href="viber://chat?number=%2B381612137321" data-placeholder="true">+381 61 21 37 321</a>, a mi ćemo ih priključiti vašem upitu.</div>
+</div>
+<p class="live" id="live" role="status" aria-live="polite"></p>
+</div></div></section>
+<section class="sec after" aria-labelledby="after-h"><div class="wrap"><div class="after-head rv"><span class="eyebrow">Šta sledi</span><h2 id="after-h">Šta se dešava posle slanja</h2></div><div class="after-grid rv">
+<div class="after-step"><h3>Javljamo se u roku od <span data-placeholder="true">24 h</span></h3><p>Inženjer pregleda vaš upit i kontaktira vas na način koji ste izabrali.</p></div>
+<div class="after-step"><h3>Obilazak objekta i procena</h3><p>Dolazimo na lokaciju, merimo i procenjujemo mogućnosti za vaš objekat.</p></div>
+<div class="after-step"><h3>Projekat i ponuda</h3><p>Dobijate jasnu ponudu bez skrivenih troškova i predlog sledećih koraka.</p></div>
+</div></div></section>
+<section class="sec alt" id="kontakt-alt" aria-labelledby="alt-h"><div class="wrap"><div class="alt-head rv"><span class="eyebrow">Direktan kontakt</span><h2 id="alt-h">Više volite da nas pozovete?</h2><p>Ako ne želite da popunjavate formular, javite nam se direktno.</p></div><div class="alt-grid rv">
+<a class="alt-card" href="tel:+381612137321"><small>Telefon</small><b data-placeholder="true">+381 61 21 37 321</b></a>
+<a class="alt-card" href="mailto:simenvaljevo@gmail.com"><small>E-mail</small><b>simenvaljevo@gmail.com</b></a>
+<div class="alt-card"><small>Adresa</small><b>Senjak 23, Valjevo</b></div>
+<div class="alt-card"><small>Radno vreme</small><b>Pon–Sub: 08:00–16:00</b></div>
+</div></div></section>
+<section class="sec faq" id="pitanja" aria-labelledby="faq-h"><div class="wrap faq-grid"><div class="rv"><span class="eyebrow">Česta pitanja</span><h2 id="faq-h">Pitanja koja nam najčešće postavljaju</h2></div><div class="faq-list rv">
+<details name="faq"><summary>Da li je prvo savetovanje besplatno?</summary><p data-placeholder="true">Da, prvo savetovanje i procena su besplatni i bez obaveze.</p></details>
+<details name="faq"><summary>Da li izlazite na teren i koje regione pokrivate?</summary><p data-placeholder="true">Izlazimo na teren u Valjevu i okolini, kao i u većini delova Srbije. Za udaljenije lokacije dogovaramo obilazak unapred.</p></details>
+<details name="faq"><summary>Koliko traje izrada ponude?</summary><p data-placeholder="true">Ponudu pripremamo u roku od nekoliko radnih dana nakon obilaska objekta, u zavisnosti od složenosti posla.</p></details>
+<details name="faq"><summary>Šta ako nemam projekat objekta?</summary><p data-placeholder="true">Projekat nije potreban. Dovoljne su fotografije koje možete poslati naknadno, a obilazak objekta nam daje sve ostalo.</p></details>
+<details name="faq"><summary>Da li radite servis sistema koje niste vi ugradili?</summary><p data-placeholder="true">Da, servisiramo i sisteme drugih proizvođača, uz prethodnu procenu stanja.</p></details>
+<details name="faq" hidden><summary>Da li pomažete oko dokumentacije za državne i opštinske subvencije?</summary><p data-placeholder="true">Pomažemo oko tehničke dokumentacije potrebne za prijavu na subvencije, uz proveru važećih uslova konkursa.</p></details>
+</div></div></section>
+<section class="pstrip" aria-label="Ovlašćeni partneri i oprema">
+  <div class="pstrip-in">
+    <p class="pstrip-l">Ovlašćeni partneri i oprema</p>
+    <div class="pmarq" role="group" aria-label="Logotipi partnera">
+      <ul class="ptrack"><li class="pl pl-v"><img src="../assets/partneri/viessmann.png" alt="Viessmann logotip" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="../assets/partneri/toshiba.png" alt="Toshiba logotip" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="../assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="../assets/partneri/carrier.png" alt="Carrier logotip" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="../assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="../assets/partneri/flowair.png" alt="Flowair logotip" width="514" height="198" decoding="async"></li><li class="pl pl-v"><img src="../assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="../assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="../assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="../assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="../assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="../assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li><li class="pl pl-v"><img src="../assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="../assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="../assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="../assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="../assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="../assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li><li class="pl pl-v"><img src="../assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="../assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="../assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="../assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="../assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="../assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li></ul>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="logo">SIMON<b style="color:var(--orange)">.</b></div>
+        <p style="margin-top:20px;max-width:38ch">Inženjerska rešenja za grejanje, hlađenje i klimatizaciju sa preko 26 godina iskustva.</p>
+        <a class="soc" href="https://www.instagram.com/simon_valjevo/" target="_blank" rel="noopener" aria-label="Simon na Instagramu (otvara se u novoj kartici)"><span class="soc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      </div>
+      <div>
+        <h4>Brzi linkovi</h4>
+        <ul><li><a href="../#usluge">Usluge</a></li><li><a href="../#reference">Reference</a></li><li><a href="../#konfigurator">Konfigurator</a></li><li><a href="../#karijera">Karijera</a></li></ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Senjak 23, Valjevo</li>
+          <li><a href="tel:+381612137321" data-placeholder="true">+381 61 21 37 321</a></li>
+          <li><a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a></li>
+          <li>Pon–Sub: 08:00–16:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy"><span>© 2026 Simon d.o.o. Sva prava zadržana.</span><span><a href="#">Politika privatnosti</a> · <a href="#">Uslovi korišćenja</a></span></div>
+  </div>
+</footer>
+<dialog class="dlg" id="politika" aria-labelledby="pol-h"><div class="dlg-in"><h3 id="pol-h">Politika privatnosti</h3>
+<p data-placeholder="true">Podatke koje unesete u ovaj formular koristimo isključivo da odgovorimo na vaš upit i pripremimo ponudu. Ne prosleđujemo ih trećim licima i ne koristimo ih u marketinške svrhe bez vaše saglasnosti.</p>
+<p data-placeholder="true">Podatke čuvamo onoliko dugo koliko je potrebno za obradu upita. Možete zatražiti uvid, ispravku ili brisanje svojih podataka na e-mail simenvaljevo@gmail.com.</p>
+<button type="button" class="btn btn-primary" id="polX">Zatvori</button></div></dialog>
+<script>
+(()=>{
+// ===== Web3Forms =====
+// Ključ se pravi na https://web3forms.com sa klijentovim e-mailom. Ključ je predviđen da stoji javno u kodu.
+// Dok je 'OVDE_KLJUC', slanje se simulira (poruka u konzoli i demo poruka uspeha).
+const WEB3FORMS_KEY='OVDE_KLJUC';
+const ENDPOINT='https://api.web3forms.com/submit';
+// Prilog fajlova je namerno izostavljen (Web3Forms besplatni paket ih ne podržava).
+// Može se vratiti uz Web3Forms Pro paket ili Cloudflare Worker, ako klijent to bude želeo.
+
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const burger=$('#burger'),menu=$('#menu');
+if(burger){burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)};$$('a',menu).forEach(a=>a.onclick=()=>menu.classList.remove('open'))}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+$$('.rv').forEach(el=>io.observe(el));
+
+const form=$('#sf'),steps=$$('.step',form),prog=$$('#prog li'),live=$('#live');
+const back=$('#back'),next=$('#next'),send=$('#send'),fail=$('#fail');
+let cur=0;
+// polje je aktivno ako nije u sakrivenom uslovnom bloku (koraci se ne računaju, jer podaci iz prethodnih koraka moraju da stignu)
+const visible=el=>{const c=el.closest('.c-grej,.c-namena');return !(c&&c.hidden)};
+
+// ----- validacija -----
+function check(el){
+  if(el.tagName==='FIELDSET')return $$('input:checked',el).length?'':'Izaberite bar jednu opciju.';
+  if(el.type==='checkbox')return el.checked?'':'Za slanje je potrebna saglasnost.';
+  const v=el.value.trim();
+  if(!v)return el.hasAttribute('data-req')?(el.tagName==='SELECT'?'Izaberite jednu opciju.':'Ovo polje je obavezno.'):'';
+  if(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))return 'Unesite ispravnu e-mail adresu, npr. ime@primer.rs.';
+  if(el.type==='tel'&&!(/^[+\d][\d\s\/().-]{5,}$/.test(v)&&v.replace(/\D/g,'').length>=6))return 'Unesite ispravan broj telefona, npr. +381 61 234 5678.';
+  if(el.name==='povrsina'&&!(parseFloat(v.replace(',','.'))>0))return 'Unesite površinu u m², npr. 120.';
+  if(el.name==='etaze'&&!(/^\d{1,2}$/.test(v)&&+v>0))return 'Unesite broj etaža, npr. 2.';
+  return '';
+}
+function show(el,msg){
+  const f=el.closest('.f')||el.closest('.consent-wrap'),err=f&&$('.err',f);
+  if(!err)return;
+  err.textContent=msg;err.hidden=!msg;f.classList.toggle('bad',!!msg);
+  if(el.tagName!=='FIELDSET')el.setAttribute('aria-invalid',msg?'true':'false');
+}
+const controls=n=>$$('[data-req],[data-opt]',steps[n]).filter(visible);
+function validate(n){
+  const bad=[];
+  controls(n).forEach(el=>{const m=check(el);show(el,m);if(m)bad.push(el)});
+  return bad;
+}
+const keyOf=el=>el.dataset.key||el.dataset.label;
+const nameOf=el=>keyOf(el).replace(/\s*\(.*\)\s*$/,'');
+form.addEventListener('input',e=>{const el=e.target.closest('[data-req],[data-opt]');if(el&&el.closest('.f.bad,.consent-wrap'))show(el,check(el))});
+form.addEventListener('change',e=>{
+  const g=e.target.closest('fieldset[data-req]');if(g&&g.classList.contains('bad'))show(g,check(g));
+  const c=e.target.closest('[data-req]');if(c&&c.type==='checkbox'&&c.closest('.bad,.consent-wrap'))show(c,check(c));
+  if(e.target.name==='energenti'){
+    const ex=['Ništa od navedenog','Ne znam'];
+    if(ex.includes(e.target.value)&&e.target.checked)$$('input[name=energenti]').forEach(i=>{if(i!==e.target)i.checked=false});
+    else if(e.target.checked)$$('input[name=energenti]').forEach(i=>{if(ex.includes(i.value))i.checked=false});
+  }
+  cond();
+});
+
+// ----- uslovna polja -----
+function cond(){
+  const p=$$('input[name=predmet]:checked').map(i=>i.value);
+  const g=p.includes('Grejanje')||p.includes('Solarni sistemi');
+  $$('.c-grej').forEach(e=>e.hidden=!g);
+  const t=$('[name=tip]').value;
+  $$('.c-namena').forEach(e=>e.hidden=!(t==='Industrijski objekat'||t==='Javni objekat'));
+}
+
+// ----- koraci -----
+function go(n,focus){
+  cur=n;
+  steps.forEach((s,i)=>s.hidden=i!==n);
+  prog.forEach((li,i)=>{li.classList.toggle('done',i<n);if(i===n)li.setAttribute('aria-current','step');else li.removeAttribute('aria-current')});
+  back.hidden=n===0;next.hidden=n===2;send.hidden=n!==2;fail.hidden=true;
+  if(n===2)summary();
+  if(focus){
+    $('h2',steps[n]).focus({preventScroll:true});
+    $('#prog').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+  }
+}
+function tryNext(){
+  const bad=validate(cur);
+  if(bad.length){
+    live.textContent='Ispravite označena polja: '+bad.map(nameOf).join(', ')+'.';
+    const f=bad[0];(f.tagName==='FIELDSET'?$('input',f):f).focus();
+    return false;
+  }
+  live.textContent='';go(cur+1,true);return true;
+}
+next.onclick=tryNext;
+back.onclick=()=>go(cur-1,true);
+
+// ----- pregled -----
+function val(el){
+  if(el.tagName==='FIELDSET')return $$('input:checked',el).map(i=>i.value).join(', ');
+  if(el.type==='checkbox')return el.checked?'Da':'';
+  return el.value.trim();
+}
+function entries(n){return $$('[data-label]',steps[n]).filter(visible).map(el=>[keyOf(el),val(el)]).filter(([,v])=>v&&!(n===2&&false))}
+function summary(){
+  const secs=[['Šta vam treba',0],['O objektu',1]];
+  const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  $('#sum').innerHTML='<h3>Pregled vašeg zahteva</h3>'+secs.map(([t,n])=>'<div class="sum-sec"><div class="sum-head"><b>'+t+'</b><button type="button" class="sum-edit" data-go="'+n+'">Izmeni</button></div><dl>'+entries(n).map(([k,v])=>'<dt>'+esc(k.replace(/\s*\(opciono\)/,''))+'</dt><dd>'+esc(v)+'</dd>').join('')+'</dl></div>').join('');
+}
+$('#sum').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)go(+b.dataset.go,true)});
+
+// ----- slanje -----
+function payload(){
+  const all=[0,1,2].flatMap(n=>entries(n)).filter(([k])=>k!=='Saglasnost sa obradom podataka');
+  const o={access_key:WEB3FORMS_KEY};
+  const get=l=>(all.find(([k])=>k===l)||[,''])[1];
+  o.subject='Novi upit za stručno savetovanje – '+(get('Predmet interesovanja')||'bez naznake')+' – '+(get('Mesto')||'bez naznake');
+  o.from_name='Simon sajt';
+  const mail=get('E-mail');if(mail)o.replyto=mail;
+  all.forEach(([k,v])=>{o[k.replace(/\s*\(opciono\)/,'')]=v});
+  o['Saglasnost sa obradom podataka']='Da';
+  if($('[name=botcheck]').checked)o.botcheck=true;
+  return o;
+}
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+function busy(b){send.disabled=b;send.classList.toggle('busy',b);$('#sendT').textContent=b?'Šaljem…':'Pošalji zahtev'}
+function done(){
+  $('#sf').hidden=true;$('#prog').hidden=true;$('.req-note').hidden=true;$('#pre').hidden=true;$('#ok').hidden=false;
+  $('#okH').focus({preventScroll:true});$('#ok').scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+}
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  if(cur<2){tryNext();return}
+  const bad=validate(2);
+  if(bad.length){live.textContent='Ispravite označena polja: '+bad.map(nameOf).join(', ')+'.';const f=bad[0];(f.tagName==='FIELDSET'?$('input',f):f).focus();return}
+  fail.hidden=true;busy(true);
+  const data=payload();
+  try{
+    if(WEB3FORMS_KEY==='OVDE_KLJUC'){
+      console.info('[Web3Forms DEMO] Ključ nije upisan, slanje nije izvršeno. Podaci koji bi bili poslati:',data);
+      await delay(800);
+    }else{
+      const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
+      const d=await r.json().catch(()=>({}));
+      if(!r.ok||!d.success)throw new Error(d.message||('HTTP '+r.status));
+    }
+    done();
+  }catch(err){
+    console.warn('Slanje nije uspelo:',err);
+    fail.hidden=false;fail.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+  }finally{busy(false)}
+});
+
+// ----- predpopunjavanje iz URL-a -----
+(function(){
+  const q=new URLSearchParams(location.search);let used=false;
+  const P={grejanje:'Grejanje',hladjenje:'Hlađenje',solarni:'Solarni sistemi',ventilacija:'Ventilacija',klimatizacija:'Klimatizacija',sprinkleri:'Sprinkleri',servis:'Servis postojećeg sistema'};
+  const tick=v=>{const i=$$('input[name=predmet]').find(x=>x.value===v);if(i){i.checked=true;used=true}};
+  const setSel=(n,v)=>{const s=$('[name='+n+']');if(s&&[...s.options].some(o=>o.value===v||o.text===v)){s.value=v;used=true}};
+  (q.get('usluga')||'').split(',').map(x=>x.trim().toLowerCase()).forEach(k=>P[k]&&tick(P[k]));
+  const tip=q.get('tip');
+  if(tip==='pumpa'){tick('Grejanje');setSel('zeljeni','Toplotna pumpa')}
+  else if(tip==='kotao'){tick('Grejanje');setSel('zeljeni','Gasni kotao')}
+  else if(tip==='klima')tick('Klimatizacija');
+  (q.get('dodatno')||'').split(',').map(x=>x.trim()).forEach(k=>{
+    if(k==='podno'){tick('Grejanje');if(!$('[name=zeljeni]').value)setSel('zeljeni','Podno grejanje')}
+    else if(k==='ventilacija')tick('Ventilacija');
+    else if(k==='solarni')tick('Solarni sistemi');
+  });
+  const pov=parseFloat((q.get('povrsina')||'').replace(',','.'));
+  if(pov>0&&pov<100000){$('[name=povrsina]').value=Math.round(pov);used=true}
+  const ob=q.get('objekat');
+  if(ob==='nova')setSel('status','Novogradnja (u projektu)');else if(ob==='adaptacija')setSel('status','Adaptacija / rekonstrukcija');
+  cond();
+  if(used)$('#pre').hidden=false;
+})();
+cond();go(0,false);
+
+// ----- dijalog politike privatnosti -----
+const pol=$('#politika');
+$('#privLink').addEventListener('click',e=>{e.preventDefault();pol.showModal()});
+$('#polX').onclick=()=>pol.close();
+pol.addEventListener('click',e=>{if(e.target===pol)pol.close()});
+})();
+</script>
+</body>
+</html>
