@@ -56,8 +56,8 @@ header.solid .menu a{color:var(--ink)}
 .menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;border-radius:1000px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
 .menu a:not(.btn):hover::after,.menu a:not(.btn):focus-visible::after{transform:scaleX(1)}
 .menu .btn{padding:12px 20px;font-size:16px;color:#fff}
-.menu .btn.btn-primary{background:linear-gradient(var(--orange),var(--orange)) no-repeat left center/0% 100%,rgba(255,74,28,.3);color:var(--brown);border:1px solid var(--orange);box-shadow:none;transition:background-size .4s cubic-bezier(.4,0,.2,1),color .4s cubic-bezier(.2,.7,.2,1)}
-.menu .btn.btn-primary:hover{background-size:100% 100%;color:#fff!important;transform:none}
+.menu .btn.btn-primary{background:var(--white);color:var(--ink);border:1px solid var(--orange);box-shadow:none;transition:background .4s,border-color .4s,color .4s}
+.menu .btn.btn-primary:hover{background:var(--orange);border-color:var(--orange);color:#fff!important;transform:none}
 .burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
 header.solid .burger{color:var(--brown)}
 
@@ -171,10 +171,11 @@ section{padding:132px 0}
 .partner-cta span{font-size:16px;color:var(--muted)}
 .cfg{background:#fff;color:var(--ink);border-radius:var(--r-lg);padding:36px;box-shadow:0 40px 80px -32px rgba(0,0,0,.6)}
 .cfg h3{font-size:20px;line-height:24px;margin-bottom:24px;color:var(--brown)}
-.cfg label{display:block;font-weight:700;font-size:12px;margin:16px 0 8px}
+.cfg label{display:block;font-weight:700;font-size:16px;margin:16px 0 8px}
 .opts{display:flex;gap:8px;flex-wrap:wrap}
 .opts input{position:absolute;opacity:0}
-.opts span{display:block;padding:12px 16px;border:1px solid var(--line);border-radius:1000px;font-weight:600;font-size:16px;cursor:pointer;transition:.2s}
+.opts span{display:block;padding:12px 16px;border:1px solid var(--line);border-radius:1000px;font-weight:600;font-size:16px;cursor:pointer;background:var(--white);transition:background .4s,border-color .4s,color .4s}
+@media(hover:hover){.opts label:hover span{background:var(--orange);border-color:var(--orange);color:#fff}}
 .opts input:checked+span{background:var(--orange);border-color:var(--orange);color:#fff}
 .opts input:focus-visible+span{outline:4px solid var(--orange);outline-offset:4px}
 .opts label{margin:0;position:relative}
