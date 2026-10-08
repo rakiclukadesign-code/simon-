@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reference – studije slučaja | Simon termotehnička rešenja</title>
+<meta name="description" content="Šest projekata Simon d.o.o. iz Valjeva: grejanje, hlađenje, solarni sistemi, ventilacija, klimatizacija i grejanje sakralnih objekata. Izazov, rešenje i rezultati u brojkama.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sr_RS">
+<meta property="og:site_name" content="Simon d.o.o.">
+<meta property="og:title" content="Reference – studije slučaja | Simon termotehnička rešenja">
+<meta property="og:description" content="Šest detaljno opisanih projekata: od porodične kuće do manastirskog hrama. Izazov, rešenje i rezultati u brojkama.">
+<!-- TODO: og:image mora biti apsolutni URL (https://...) kada se zna adresa sajta -->
+<meta property="og:image" content="../assets/projekti/kuca-valjevo/01.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23ff4a1c'/><text x='16' y='24' font-size='20' font-weight='800' text-anchor='middle' fill='white' font-family='sans-serif'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#ff4a1c; --orange-d:#e03a10; --orange-soft:#fff0ea;
+  --brown:#2b0d08; --brown-2:#4a1810; --ink:#2a1c18; --muted:#7a645d;
+  --cream:#fffaf6; --line:#f0ddd4; --gold:#c9a227; --white:#fff;
+  --r-lg:28px; --r-md:16px; --r-sm:12px;
+  --shadow:0 24px 60px -28px rgba(120,30,10,.35);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:24px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Sora,sans-serif;line-height:32px;letter-spacing:0;text-wrap:balance}
+p,li,small{text-wrap:pretty}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1440px;margin:0 auto;padding:0 28px}
+.skip{position:absolute;left:-1000px;top:8px;background:var(--orange);color:#fff;padding:12px 16px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:4px solid var(--orange);outline-offset:4px;border-radius:8px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:12px;font:600 16px Manrope;padding:16px 28px;border-radius:1000px;border:0;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 16px 32px -12px rgba(255,74,28,.7)}
+.btn-primary:hover{background:var(--orange-d);transform:translateY(-4px)}
+.btn-gold{min-width:240px;justify-content:center;background:linear-gradient(var(--gold),var(--gold)) no-repeat left center/0% 100%,rgba(201,162,39,.3);color:var(--brown);border:1px solid var(--gold);box-shadow:none;transition:background-size .4s cubic-bezier(.4,0,.2,1),color .4s cubic-bezier(.2,.7,.2,1)}
+.btn-gold:hover{background-size:100% 100%;transform:none}
+.btn-light{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3);backdrop-filter:blur(8px)}
+.btn-light:hover{background:rgba(255,255,255,.22)}
+.link{font-weight:700;color:var(--orange);display:inline-flex;gap:8px;align-items:center}
+.link:hover{gap:12px}
+.link{transition:gap .2s}
+
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:48;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(255,250,246,.9);backdrop-filter:blur(16px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font:800 28px/32px Sora;color:#fff;transition:color .3s}
+.logo b{color:var(--orange)}
+header.solid .logo{color:var(--brown)}
+.menu{display:flex;gap:36px;align-items:center}
+.menu a{font-weight:600;font-size:16px;color:rgba(255,255,255,.88);transition:color .2s}
+header.solid .menu a{color:var(--ink)}
+.menu a:hover{color:var(--orange)}
+.menu a:not(.btn){position:relative}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;border-radius:1000px;background:var(--orange);transform:scaleX(0);transform-origin:left;transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.menu a:not(.btn):hover::after,.menu a:not(.btn):focus-visible::after{transform:scaleX(1)}
+.menu .btn{padding:12px 20px;font-size:16px;color:#fff}
+.menu .btn.btn-primary{background:var(--white);color:var(--ink);border:1px solid var(--orange);box-shadow:none;transition:background .4s,border-color .4s,color .4s}
+.menu .btn.btn-primary:hover{background:var(--orange);border-color:var(--orange);color:#fff!important;transform:none}
+.burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+header.solid .burger{color:var(--brown)}
+
+footer{background:var(--brown);color:rgba(255,255,255,.72);padding:92px 0 36px}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px}
+footer .logo{font-size:56px;line-height:56px;color:#fff}
+footer h4{font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:20px}
+footer li{list-style:none;margin-bottom:12px;font-size:16px}
+footer ul{padding:0}
+footer a:hover{color:var(--orange)}
+.copy{margin-top:72px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:12px}
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.menu a::after{transition:none}.pins .ring{animation:none;opacity:0}.rv{opacity:1;transform:none;transition:none}.pin{animation:none}html{scroll-behavior:auto}}
+
+
+/* ---- stranica Reference ---- */
+[hidden]{display:none!important}
+:root{--off:176px}
+.eyebrow{display:inline-block;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--orange);margin-bottom:24px}
+.btn-lg{padding:20px 32px;font-size:16px}
+.menu a[aria-current=page]{color:var(--orange)}
+.menu a[aria-current=page]::after{transform:scaleX(1)}
+
+/* hero stranice */
+.phero{position:relative;overflow:hidden;color:#fff;margin-top:76px;background:radial-gradient(800px 480px at 84% 0%,rgba(255,74,28,.5),transparent 60%),radial-gradient(600px 400px at 0% 100%,rgba(201,162,39,.16),transparent 60%),linear-gradient(160deg,var(--brown-2),var(--brown) 72%)}
+.phero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");pointer-events:none}
+.phero-in{position:relative;z-index:2;max-width:1440px;margin:0 auto;padding:96px 28px 80px}
+.phero .eyebrow{padding:8px 16px;border:1px solid rgba(255,255,255,.2);border-radius:1000px;color:#fff;letter-spacing:4px}
+.phero .eyebrow::before{content:"";display:inline-block;width:8px;height:8px;border-radius:1000px;background:var(--orange);margin-right:12px}
+.phero h1{font-size:64px;line-height:68px;font-weight:800;max-width:900px}
+.phero p.lead{max-width:640px;margin-top:20px;font-size:20px;line-height:28px;color:rgba(255,255,255,.78)}
+.pstats-wrap{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,.14)}
+.pstats{max-width:1440px;margin:0 auto;padding:32px 28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.pstats b{display:block;font:700 40px/44px Sora;color:#fff;font-variant-numeric:tabular-nums}
+.pstats b i{font-style:normal;color:var(--orange)}
+.pstats span{font-size:16px;line-height:24px;color:rgba(255,255,255,.7)}
+
+/* izbor projekta */
+.picker{padding:96px 0 80px;background:var(--white)}
+.picker h2{font-size:44px;line-height:48px;font-weight:700;color:var(--brown);margin-bottom:40px}
+.pnav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pcard{display:flex;gap:16px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--cream);transition:border-color .4s,transform .3s}
+.pcard:hover{border-color:var(--orange);transform:translateY(-4px)}
+.pcard img{width:72px;height:72px;border-radius:12px;object-fit:cover;flex:none;background:var(--brown-2)}
+.pcard b{display:block;font:700 16px/24px Sora;color:var(--brown)}
+.pcard span.m{display:block;font-size:12px;line-height:16px;color:var(--muted)}
+.pcard .n{margin-left:auto;align-self:flex-start;font:700 12px/16px Manrope;letter-spacing:4px;color:var(--orange)}
+
+/* filter (lepljiv na desktopu) */
+.refbar{position:sticky;top:76px;z-index:40;background:rgba(255,250,246,.92);backdrop-filter:blur(16px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.refbar-in{max-width:1440px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:16px 24px;justify-content:space-between}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:600 16px/24px Manrope;padding:8px 16px;border:1px solid var(--line);border-radius:1000px;background:var(--white);color:var(--ink);cursor:pointer;transition:background .4s,border-color .4s,color .4s}
+@media(hover:hover){.chip:hover{background:var(--orange);border-color:var(--orange);color:#fff}}
+.chip[aria-pressed=true]{background:var(--orange);border-color:var(--orange);color:#fff}
+.jump{display:flex;align-items:center;gap:8px}
+.jump span{font:600 12px/16px Manrope;color:var(--muted);margin-right:4px}
+.jump a{display:grid;place-items:center;width:32px;height:32px;border-radius:1000px;border:1px solid var(--line);background:var(--white);font:700 12px/16px Manrope;color:var(--brown);transition:background .4s,border-color .4s,color .4s}
+.jump a:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* projekti */
+.proj{--tile:var(--white);scroll-margin-top:var(--off);padding:112px 0;background:var(--cream)}
+.proj[data-tone=w]{--tile:var(--cream);background:var(--white)}
+.proj+.proj{border-top:1px solid var(--line)}
+.proj-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
+.proj.rev .proj-media{order:-1}
+.proj-media{position:relative;display:block;height:560px;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--brown-2)}
+.proj-media img,.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.proj-media:hover img,.gal-grid a:hover img{transform:scale(1.04)}
+.proj-num{position:absolute;top:24px;left:24px;z-index:1;font:800 12px/16px Manrope;letter-spacing:4px;background:var(--white);color:var(--brown);padding:8px 16px;border-radius:1000px}
+.proj h2{font-size:44px;line-height:48px;font-weight:700;color:var(--brown)}
+.proj-meta{margin-top:12px;font-size:16px;line-height:24px;color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tag{font:600 12px/16px Manrope;padding:4px 12px;border-radius:1000px;background:var(--orange-soft);color:var(--orange-d)}
+.tag.g{background:#f6ecc4;color:#7a5f0a}
+.kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px;margin-top:32px;padding:24px;background:var(--tile);border-radius:var(--r-md)}
+.kv div:last-child{grid-column:1/-1}
+.kv dt{font:600 12px/16px Manrope;color:var(--muted)}
+.kv dd{margin:4px 0 0;font:600 16px/24px Manrope;color:var(--brown)}
+.proj-story{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;margin-top:80px}
+.proj h3{font:700 20px/24px Sora;color:var(--brown);margin-bottom:16px}
+.proj-story p{font-size:16px;line-height:28px;color:var(--muted)}
+.proj-story p+p{margin-top:16px}
+.proj-more{margin-top:24px}
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.res{background:var(--tile);border-radius:var(--r-md);padding:32px 24px;text-align:center}
+.res b{display:block;font:700 48px/52px Sora;color:var(--orange);font-variant-numeric:tabular-nums}
+.res span{display:block;margin-top:8px;font-size:16px;line-height:24px;color:var(--muted)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.gal-grid a{display:block;height:240px;border-radius:var(--r-md);overflow:hidden;background:var(--brown-2)}
+.proj-block{margin-top:56px}
+.quote{margin:56px 0 0;padding:32px;border-left:4px solid var(--gold);background:var(--tile);border-radius:0 var(--r-md) var(--r-md) 0}
+.quote p{font:500 20px/32px Manrope;color:var(--brown)}
+.quote cite{display:block;margin-top:16px;font:600 16px/24px Manrope;font-style:normal;color:var(--muted)}
+.equip{display:flex;align-items:center;flex-wrap:wrap;gap:16px 40px;margin-top:40px}
+.equip h3{margin:0}
+.equip .w{font:800 24px/32px Sora;color:var(--brown)}
+.w-v{color:#d4502a!important}.w-t{color:#e60012!important}.w-c{color:#0a1a8a!important;font-family:Georgia,serif!important;font-style:italic;font-weight:700!important}
+.w-f{color:#2a2a2a!important}.w-d{color:#00a1e4!important;font-style:italic}.w-r{color:#111!important}
+
+/* zavrsni CTA */
+.pcta{background:var(--white);padding:96px 0;border-top:1px solid var(--line)}
+.pcta-card{position:relative;overflow:hidden;background:var(--brown);color:#fff;border-radius:var(--r-lg);padding:80px}
+.pcta-card::before{content:"";position:absolute;left:-120px;top:-120px;width:480px;height:480px;border-radius:1000px;background:radial-gradient(circle,rgba(255,74,28,.4),transparent 64%)}
+.pcta-card>*{position:relative}
+.pcta h2{font-size:56px;line-height:60px;font-weight:700;max-width:720px}
+.pcta p{margin:20px 0 40px;max-width:520px;font-size:20px;line-height:28px;color:rgba(255,255,255,.72)}
+
+/* lightbox */
+.lb{margin:0;border:0;padding:0;background:transparent;width:100%;max-width:100%;height:100dvh;max-height:100dvh;color:#fff}
+.lb::backdrop{background:rgba(43,13,8,.94)}
+.lb:focus{outline:none}
+.lb-in{position:relative;display:grid;grid-template-rows:1fr auto;place-items:center;height:100dvh;padding:72px 24px 24px;gap:16px}
+.lb img{max-width:100%;max-height:calc(100dvh - 176px);border-radius:var(--r-md);object-fit:contain}
+.lb-cap{text-align:center;font-size:16px;line-height:24px;color:rgba(255,255,255,.8)}
+.lb-cap small{display:block;font-size:12px;line-height:16px;letter-spacing:4px;color:rgba(255,255,255,.5);margin-top:4px}
+.lb button{position:absolute;width:48px;height:48px;border-radius:1000px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font-size:20px;line-height:24px;cursor:pointer;transition:background .4s,border-color .4s}
+.lb button:hover{background:var(--orange);border-color:var(--orange)}
+.lb-x{top:16px;right:16px}
+.lb-p{left:16px;top:50%;margin-top:-24px}
+.lb-n{right:16px;top:50%;margin-top:-24px}
+
+@media(max-width:980px){
+  .menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
+  .menu.open{display:flex}.menu a{color:var(--ink)!important}
+  .menu a[aria-current=page]{color:var(--orange)!important}
+  .burger{display:block}
+  .f-grid{grid-template-columns:1fr}
+  .pnav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proj-top,.proj-story{grid-template-columns:minmax(0,1fr);gap:40px}
+  .proj-media{order:-1;height:400px}
+  .proj-story{margin-top:56px}
+  .refbar{position:static}
+  .jump{display:none}
+  :root{--off:96px}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px}
+  .phero-in{padding:64px 20px 48px}
+  .phero h1{font-size:40px;line-height:44px}
+  .phero p.lead{font-size:16px;line-height:24px}
+  .phero .eyebrow{letter-spacing:0}
+  .pstats{padding:24px 20px;gap:12px}
+  .pstats b{font-size:28px;line-height:32px}
+  .pstats span{font-size:12px;line-height:16px}
+  .picker{padding:64px 0 56px}
+  .picker h2{font-size:28px;line-height:32px;margin-bottom:24px}
+  .pnav{grid-template-columns:minmax(0,1fr)}
+  .refbar-in{padding:12px 20px}
+  .chip{font-size:12px;line-height:16px;padding:8px 12px}
+  .proj{padding:72px 0}
+  .proj-media{height:240px}
+  .proj h2{font-size:28px;line-height:32px}
+  .proj-top{gap:32px}
+  .kv{padding:20px}
+  .proj-story{gap:32px;margin-top:48px}
+  .proj-block{margin-top:40px}
+  .results{grid-template-columns:minmax(0,1fr)}
+  .res{padding:24px 20px}
+  .res b{font-size:36px;line-height:40px}
+  .gal-grid{gap:8px}
+  .gal-grid a{height:104px}
+  .quote{padding:24px;margin-top:40px}
+  .quote p{font-size:16px;line-height:28px}
+  .equip{gap:12px 24px;margin-top:32px}
+  .equip .w{font-size:20px;line-height:24px}
+  .pcta{padding:56px 0}
+  .pcta-card{padding:40px 24px;border-radius:24px}
+  .pcta h2{font-size:28px;line-height:32px}
+  .pcta p{font-size:16px;line-height:24px}
+  .btn-lg{padding:12px 24px}
+  .lb-in{padding:72px 12px 16px}
+  .lb-p,.lb-n{top:auto;bottom:16px;margin-top:0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#projekti">Preskoči na sadržaj</a>
+<header id="hdr" class="solid">
+  <div class="wrap nav">
+    <a href="../" class="logo" aria-label="Simon – početna">SIMON<b>.</b></a>
+    <nav class="menu" id="menu" aria-label="Glavna navigacija">
+      <a href="../#usluge">Usluge</a>
+      <a href="../#proces">Kako radimo</a>
+      <a href="./" aria-current="page">Reference</a>
+      <a href="../#konfigurator">Konfigurator</a>
+      <a href="../#karijera">Karijera</a>
+      <a href="../#kontakt" class="btn btn-primary">Stručno savetovanje</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Meni" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+<section class="phero" aria-labelledby="h1">
+<div class="phero-in">
+<span class="eyebrow">Reference · studije slučaja</span>
+<h1 id="h1">Projekti koji govore za nas</h1>
+<p class="lead">Šest projekata iz različitih delova Srbije, od porodične kuće do manastirskog hrama. Za svaki opisujemo izazov, rešenje i rezultat u konkretnim brojkama.</p>
+</div>
+<div class="pstats-wrap"><div class="pstats">
+<div><b>26<i>+</i></b><span>godina iskustva</span></div>
+<div><b>64<i>+</i></b><span>završenih projekata</span></div>
+<div><b data-placeholder="true">11</b><span>okruga u kojima smo radili</span></div>
+</div></div>
+</section>
+<section class="picker" aria-labelledby="izbor">
+<div class="wrap">
+<h2 id="izbor">Izaberite projekat</h2>
+<nav class="pnav" aria-label="Lista projekata">
+<a class="pcard" href="#kuca-valjevo" data-cat="grejanje"><img src="../assets/projekti/kuca-valjevo/thumb.webp" alt="Savremena porodična kuća sa spoljnom jedinicom toplotne pumpe pored garaže" width="320" height="320" decoding="async"><span><b>Porodična kuća, Valjevo</b><span class="m">Grejanje</span></span><span class="n">01</span></a>
+<a class="pcard" href="#pogon-sabac" data-cat="hladjenje"><img src="../assets/projekti/pogon-sabac/thumb.webp" alt="Transportna traka u pogonu za preradu hrane" width="320" height="320" loading="lazy" decoding="async"><span><b>Pogon za preradu hrane, Šabac</b><span class="m">Hlađenje</span></span><span class="n">02</span></a>
+<a class="pcard" href="#hotel-zlatibor" data-cat="solarni"><img src="../assets/projekti/hotel-zlatibor/thumb.webp" alt="Planinski hotel sa drvenom fasadom u snežnom pejzažu" width="320" height="320" loading="lazy" decoding="async"><span><b>Hotel, Zlatibor</b><span class="m">Solarni sistemi</span></span><span class="n">03</span></a>
+<a class="pcard" href="#skola-kolubarski" data-cat="ventilacija"><img src="../assets/projekti/skola-kolubarski/thumb.webp" alt="Učionica sa klupama i tablom u svetloj prostoriji" width="320" height="320" loading="lazy" decoding="async"><span><b>Školska zgrada, Kolubarski okrug</b><span class="m">Ventilacija</span></span><span class="n">04</span></a>
+<a class="pcard" href="#poslovni-beograd" data-cat="klimatizacija"><img src="../assets/projekti/poslovni-beograd/thumb.webp" alt="Staklena fasada savremene poslovne zgrade na plavom nebu" width="320" height="320" loading="lazy" decoding="async"><span><b>Poslovni objekat, Beograd</b><span class="m">Klimatizacija</span></span><span class="n">05</span></a>
+<a class="pcard" href="#hram-zapadna-srbija" data-cat="sakralni"><img src="../assets/projekti/hram-zapadna-srbija/thumb.webp" alt="Svetao kameni sakralni enterijer sa visokim lučnim prozorima" width="320" height="320" loading="lazy" decoding="async"><span><b>Manastirski hram, Zapadna Srbija</b><span class="m">Grejanje</span></span><span class="n">06</span></a>
+</nav>
+</div>
+</section>
+<div class="refbar"><div class="refbar-in">
+<div class="filters" role="group" aria-label="Filter po usluzi">
+<button type="button" class="chip" data-f="svi" aria-pressed="true">Svi projekti</button>
+<button type="button" class="chip" data-f="grejanje" aria-pressed="false">Grejanje</button>
+<button type="button" class="chip" data-f="hladjenje" aria-pressed="false">Hlađenje</button>
+<button type="button" class="chip" data-f="solarni" aria-pressed="false">Solarni sistemi</button>
+<button type="button" class="chip" data-f="ventilacija" aria-pressed="false">Ventilacija</button>
+<button type="button" class="chip" data-f="klimatizacija" aria-pressed="false">Klimatizacija</button>
+<button type="button" class="chip" data-f="sakralni" aria-pressed="false">Sakralni objekti</button>
+</div>
+<nav class="jump" aria-label="Skok na projekat"><span>Projekat</span>
+<a href="#kuca-valjevo" data-cat="grejanje" title="Porodična kuća, Valjevo" aria-label="Porodična kuća, Valjevo">01</a>
+<a href="#pogon-sabac" data-cat="hladjenje" title="Pogon za preradu hrane, Šabac" aria-label="Pogon za preradu hrane, Šabac">02</a>
+<a href="#hotel-zlatibor" data-cat="solarni" title="Hotel, Zlatibor" aria-label="Hotel, Zlatibor">03</a>
+<a href="#skola-kolubarski" data-cat="ventilacija" title="Školska zgrada, Kolubarski okrug" aria-label="Školska zgrada, Kolubarski okrug">04</a>
+<a href="#poslovni-beograd" data-cat="klimatizacija" title="Poslovni objekat, Beograd" aria-label="Poslovni objekat, Beograd">05</a>
+<a href="#hram-zapadna-srbija" data-cat="sakralni" title="Manastirski hram, Zapadna Srbija" aria-label="Manastirski hram, Zapadna Srbija">06</a>
+</nav>
+</div><p class="live" id="live" role="status" aria-live="polite"></p></div>
+<div id="projekti">
+<section class="proj" id="kuca-valjevo" data-cat="grejanje" data-tone="c" aria-labelledby="kuca-valjevo-h">
+<div class="wrap">
+<div class="proj-top">
+<div class="rv">
+<span class="eyebrow">Projekat 01 · Grejanje</span>
+<h2 id="kuca-valjevo-h">Porodična kuća, Valjevo</h2>
+<p class="proj-meta">Valjevo, Kolubarski okrug · <span data-placeholder="true">2024</span></p>
+<div class="tags"><span class="tag">Porodična kuća</span><span class="tag">Grejanje</span></div>
+<dl class="kv">
+<div><dt>Površina</dt><dd data-placeholder="true">210 m²</dd></div>
+<div><dt>Instalisana snaga</dt><dd data-placeholder="true">12 kW (toplotna pumpa)</dd></div>
+<div><dt>Oprema</dt><dd>Viessmann</dd></div>
+<div><dt>Trajanje radova</dt><dd data-placeholder="true">9 radnih dana</dd></div>
+<div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, servis</dd></div>
+</dl>
+</div>
+<a class="proj-media rv" href="../assets/projekti/kuca-valjevo/01.webp" data-group="kuca-valjevo"><span class="proj-num">01 / 06</span><img src="../assets/projekti/kuca-valjevo/01.webp" alt="Savremena porodična kuća sa spoljnom jedinicom toplotne pumpe pored garaže" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div>
+<div class="proj-story">
+<div class="rv"><h3>Izazov</h3><p data-placeholder="true">Kuća iz 1998. godine grejala se kotlom na čvrsto gorivo starim više od dvadeset godina. Ručno loženje, neravnomerna temperatura po prostorijama i rastući troškovi ogreva naterali su vlasnike da traže rešenje bez dimnjaka, ali i bez radikalne rekonstrukcije objekta.</p></div>
+<div class="rv"><h3>Rešenje</h3><p data-placeholder="true">Ugradili smo toplotnu pumpu vazduh–voda nominalne snage 12 kW sa spoljnom jedinicom na severnoj strani parcele. Prizemlje je dobilo podno grejanje, a postojeći radijatori na spratu ostali su uz niži temperaturni režim polaza od 45 °C. Akumulator toplote od 200 l i bojler za sanitarnu vodu od 200 l pokrivaju jutarnje i večernje vrhove potrošnje.</p><p data-placeholder="true">Regulacija po prostorijama održava zadatu temperaturu bez ručnog podešavanja, a sistem je povezan sa aplikacijom za nadzor. Stari kotao i dimnjak su demontirani, a prostor kotlarnice pretvoren u ostavu.</p>
+</div>
+</div>
+<div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res" data-placeholder="true"><b>55%</b><span>niži godišnji troškovi grejanja</span></div><div class="res" data-placeholder="true"><b>4,1</b><span>sezonski koeficijent efikasnosti (SCOP)</span></div><div class="res" data-placeholder="true"><b>9 dana</b><span>trajanje radova do puštanja u rad</span></div></div></div>
+<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
+<a href="../assets/projekti/kuca-valjevo/02.webp" data-group="kuca-valjevo"><img src="../assets/projekti/kuca-valjevo/02.webp" alt="Spoljna jedinica toplotne pumpe vazduh–voda u dvorištu" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/kuca-valjevo/03.webp" data-group="kuca-valjevo"><img src="../assets/projekti/kuca-valjevo/03.webp" alt="Radijator ispod prozora u dnevnoj sobi" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/kuca-valjevo/04.webp" data-group="kuca-valjevo"><img src="../assets/projekti/kuca-valjevo/04.webp" alt="Toplotna pumpa uz fasadu porodične kuće" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div></div>
+<figure class="quote" data-placeholder="true"><blockquote><p>„Posle prve zime računi za grejanje su skoro prepolovljeni, a kuća je konačno ravnomerno topla. Više nema nošenja drva ni čišćenja pepela.“</p></blockquote><cite>Milan R., vlasnik kuće</cite></figure>
+<div class="equip"><h3>Korišćena oprema</h3><span class="w w-v">VIESSMANN</span></div>
+</div>
+</section>
+<section class="proj rev" id="pogon-sabac" data-cat="hladjenje" data-tone="w" aria-labelledby="pogon-sabac-h">
+<div class="wrap">
+<div class="proj-top">
+<div class="rv">
+<span class="eyebrow">Projekat 02 · Hlađenje</span>
+<h2 id="pogon-sabac-h">Pogon za preradu hrane, Šabac</h2>
+<p class="proj-meta">Šabac, Mačvanski okrug · <span data-placeholder="true">2023</span></p>
+<div class="tags"><span class="tag">Proizvodni pogon</span><span class="tag">Hlađenje</span></div>
+<dl class="kv">
+<div><dt>Površina</dt><dd data-placeholder="true">1.850 m²</dd></div>
+<div><dt>Instalisana snaga</dt><dd data-placeholder="true">280 kW (hlađenje)</dd></div>
+<div><dt>Oprema</dt><dd>Toshiba, Carrier</dd></div>
+<div><dt>Trajanje radova</dt><dd data-placeholder="true">5 nedelja, u tri etape</dd></div>
+<div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, nadzor, servis</dd></div>
+</dl>
+</div>
+<a class="proj-media rv" href="../assets/projekti/pogon-sabac/01.webp" data-group="pogon-sabac"><span class="proj-num">02 / 06</span><img src="../assets/projekti/pogon-sabac/01.webp" alt="Transportna traka u pogonu za preradu hrane" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div>
+<div class="proj-story">
+<div class="rv"><h3>Izazov</h3><p data-placeholder="true">Širenje linije pakovanja zahtevalo je stabilnih 12 °C u hali od 1.850 m², dok je proizvodnja radila u tri smene. Pogon nije smeo da stane ni na jedan dan, a higijenski zahtevi isključivali su prašnjave radove u blizini proizvodnje.</p></div>
+<div class="rv"><h3>Rešenje</h3><p data-placeholder="true">Projektovali smo centralni sistem hlađenja sa dva vodom hlađena agregata od po 140 kW (Carrier) i razvodom ledene vode 7/12 °C do 18 ventilokonvektora u hali. Kancelarije i prostor za kontrolu kvaliteta dobili su Toshiba split jedinice sa nezavisnim upravljanjem.</p><p data-placeholder="true">Radovi su izvedeni u tri etape tokom noćnih smena i vikenda, uz prefabrikovane cevne module koji su spajanje na postojeće instalacije skratili na nekoliko sati. Sistem je uključen u nadzor pogona sa alarmima za odstupanje temperature.</p>
+</div>
+</div>
+<div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res" data-placeholder="true"><b>±1 °C</b><span>stabilnost temperature u hali</span></div><div class="res" data-placeholder="true"><b>0 sati</b><span>zastoja u proizvodnji tokom radova</span></div><div class="res" data-placeholder="true"><b>5 nedelja</b><span>od početka radova do puštanja u rad</span></div></div></div>
+<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
+<a href="../assets/projekti/pogon-sabac/02.webp" data-group="pogon-sabac"><img src="../assets/projekti/pogon-sabac/02.webp" alt="Radnici u zaštitnoj opremi na proizvodnoj liniji" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/pogon-sabac/03.webp" data-group="pogon-sabac"><img src="../assets/projekti/pogon-sabac/03.webp" alt="Spoljne rashladne jedinice ispred industrijskog objekta" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/pogon-sabac/04.webp" data-group="pogon-sabac"><img src="../assets/projekti/pogon-sabac/04.webp" alt="Proizvodna linija sa pakovanjem voća" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div></div>
+<figure class="quote" data-placeholder="true"><blockquote><p>„Proizvodnja nijednog dana nije stala, a temperatura u pakovanju sada ne odstupa ni kada je napolju preko trideset stepeni.“</p></blockquote><cite>Dragan P., rukovodilac proizvodnje</cite></figure>
+<div class="equip"><h3>Korišćena oprema</h3><span class="w w-t">TOSHIBA</span><span class="w w-c">Carrier</span></div>
+</div>
+</section>
+<section class="proj" id="hotel-zlatibor" data-cat="solarni" data-tone="c" aria-labelledby="hotel-zlatibor-h">
+<div class="wrap">
+<div class="proj-top">
+<div class="rv">
+<span class="eyebrow">Projekat 03 · Solarni sistemi</span>
+<h2 id="hotel-zlatibor-h">Hotel, Zlatibor</h2>
+<p class="proj-meta">Zlatibor, Zlatiborski okrug · <span data-placeholder="true">2022</span></p>
+<div class="tags"><span class="tag">Ugostiteljski objekat</span><span class="tag">Solarni sistemi</span></div>
+<dl class="kv">
+<div><dt>Površina</dt><dd data-placeholder="true">2.400 m² (38 soba)</dd></div>
+<div><dt>Instalisana snaga</dt><dd data-placeholder="true">oko 40 kW (solarni učinak)</dd></div>
+<div><dt>Oprema</dt><dd>Viessmann</dd></div>
+<div><dt>Trajanje radova</dt><dd data-placeholder="true">3 nedelje, van sezone</dd></div>
+<div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, servis</dd></div>
+</dl>
+</div>
+<a class="proj-media rv" href="../assets/projekti/hotel-zlatibor/01.webp" data-group="hotel-zlatibor"><span class="proj-num">03 / 06</span><img src="../assets/projekti/hotel-zlatibor/01.webp" alt="Planinski hotel sa drvenom fasadom u snežnom pejzažu" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div>
+<div class="proj-story">
+<div class="rv"><h3>Izazov</h3><p data-placeholder="true">Hotel sa 38 soba troši velike količine tople vode, a postojeća kotlarnica na pelet radila je i leti, samo zbog sanitarne vode. Vlasnik je tražio rešenje koje smanjuje potrošnju goriva bez prekida rada hotela.</p></div>
+<div class="rv"><h3>Rešenje</h3><p data-placeholder="true">Na ravnom krovu postavili smo 24 solarna kolektora ukupne površine od oko 56 m², sa nagibom prilagođenim planinskoj klimi i opterećenju snegom. Toplota se skladišti u tri akumulatora od po 1.000 l, a regulacija prvo koristi solarnu energiju i tek potom pokreće postojeći kotao.</p><p data-placeholder="true">Uvezivanje u kotlarnicu izvedeno je u jednom danu, bez prekida snabdevanja toplom vodom. Cevi su izolovane i zaštićene od mraza glikolnom smešom, a nadzor prikazuje dnevni solarni prinos.</p>
+</div>
+</div>
+<div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res" data-placeholder="true"><b>62%</b><span>godišnjih potreba za toplom vodom pokriva sunce</span></div><div class="res" data-placeholder="true"><b>38%</b><span>manja potrošnja peleta</span></div><div class="res" data-placeholder="true"><b>6,5 god.</b><span>procenjeni povrat investicije</span></div></div></div>
+<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
+<a href="../assets/projekti/hotel-zlatibor/02.webp" data-group="hotel-zlatibor"><img src="../assets/projekti/hotel-zlatibor/02.webp" alt="Solarni kolektori na kosom krovu od crepa" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/hotel-zlatibor/03.webp" data-group="hotel-zlatibor"><img src="../assets/projekti/hotel-zlatibor/03.webp" alt="Veliko polje solarnih panela na ravnom krovu" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/hotel-zlatibor/04.webp" data-group="hotel-zlatibor"><img src="../assets/projekti/hotel-zlatibor/04.webp" alt="Hotelski lobi sa drvenom oblogom zidova i sedećim garniturama" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div></div>
+<figure class="quote" data-placeholder="true"><blockquote><p>„Leti se kotao skoro i ne pali, a gosti ne primećuju nikakvu razliku. Investicija se vraća brže nego što smo planirali.“</p></blockquote><cite>Ivana S., direktorka hotela</cite></figure>
+<div class="equip"><h3>Korišćena oprema</h3><span class="w w-v">VIESSMANN</span></div>
+</div>
+</section>
+<section class="proj rev" id="skola-kolubarski" data-cat="ventilacija" data-tone="w" aria-labelledby="skola-kolubarski-h">
+<div class="wrap">
+<div class="proj-top">
+<div class="rv">
+<span class="eyebrow">Projekat 04 · Ventilacija</span>
+<h2 id="skola-kolubarski-h">Školska zgrada, Kolubarski okrug</h2>
+<p class="proj-meta">Kolubarski okrug · <span data-placeholder="true">2023</span></p>
+<div class="tags"><span class="tag">Obrazovna ustanova</span><span class="tag">Ventilacija</span></div>
+<dl class="kv">
+<div><dt>Površina</dt><dd data-placeholder="true">1.650 m² (12 učionica)</dd></div>
+<div><dt>Instalisana snaga</dt><dd data-placeholder="true">18 kW (protok 9.600 m³/h)</dd></div>
+<div><dt>Oprema</dt><dd>Rehau, Flowair</dd></div>
+<div><dt>Trajanje radova</dt><dd data-placeholder="true">7 nedelja, tokom letnjeg raspusta</dd></div>
+<div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, nadzor</dd></div>
+</dl>
+</div>
+<a class="proj-media rv" href="../assets/projekti/skola-kolubarski/01.webp" data-group="skola-kolubarski"><span class="proj-num">04 / 06</span><img src="../assets/projekti/skola-kolubarski/01.webp" alt="Učionica sa klupama i tablom u svetloj prostoriji" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div>
+<div class="proj-story">
+<div class="rv"><h3>Izazov</h3><p data-placeholder="true">U zimskim mesecima prozori u učionicama bili su zatvoreni, pa je koncentracija CO₂ tokom časova prelazila 2.000 ppm. Škola nije imala prostora za velike kanale, a radovi su morali da stanu u letnji raspust.</p></div>
+<div class="rv"><h3>Rešenje</h3><p data-placeholder="true">Ugradili smo šest ventilacionih jedinica sa rekuperacijom toplote ukupnog protoka 9.600 m³/h, po jednu na dve učionice, sa povratom toplote od najmanje 80%. Kratki kanali vođeni su kroz spušteni plafon hodnika, pa nije bilo zahvata na fasadi.</p><p data-placeholder="true">Jedinice rade tiho (ispod 35 dB(A) u učionici) i upravljaju se prema senzorima CO₂. Razvod i oprema izvedeni su sa Rehau i Flowair komponentama.</p>
+</div>
+</div>
+<div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res" data-placeholder="true"><b>&lt; 800 ppm</b><span>CO₂ u učionicama tokom nastave</span></div><div class="res" data-placeholder="true"><b>80%</b><span>povrat toplote iz otpadnog vazduha</span></div><div class="res" data-placeholder="true"><b>10 dana</b><span>pre početka školske godine završeni radovi</span></div></div></div>
+<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
+<a href="../assets/projekti/skola-kolubarski/02.webp" data-group="skola-kolubarski"><img src="../assets/projekti/skola-kolubarski/02.webp" alt="Učionica sa drvenim klupama i velikim prozorima" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/skola-kolubarski/03.webp" data-group="skola-kolubarski"><img src="../assets/projekti/skola-kolubarski/03.webp" alt="Fleksibilni ventilacioni kanal vidljiv kroz otvor u zidu" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/skola-kolubarski/04.webp" data-group="skola-kolubarski"><img src="../assets/projekti/skola-kolubarski/04.webp" alt="Školska učionica sa redovima klupa" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div></div>
+<figure class="quote" data-placeholder="true"><blockquote><p>„Deca su tokom časova koncentrisanija, a u učionicama više nema zagušljivog vazduha. Radovi su završeni pre nego što su se vratili sa raspusta.“</p></blockquote><cite>Snežana M., direktorka škole</cite></figure>
+<div class="equip"><h3>Korišćena oprema</h3><span class="w w-r">REHAU</span><span class="w w-f">FLOWAIR</span></div>
+</div>
+</section>
+<section class="proj" id="poslovni-beograd" data-cat="klimatizacija" data-tone="c" aria-labelledby="poslovni-beograd-h">
+<div class="wrap">
+<div class="proj-top">
+<div class="rv">
+<span class="eyebrow">Projekat 05 · Klimatizacija</span>
+<h2 id="poslovni-beograd-h">Poslovni objekat, Beograd</h2>
+<p class="proj-meta">Beograd · <span data-placeholder="true">2024</span></p>
+<div class="tags"><span class="tag">Poslovna zgrada</span><span class="tag">Klimatizacija</span></div>
+<dl class="kv">
+<div><dt>Površina</dt><dd data-placeholder="true">4.200 m² (6 spratova)</dd></div>
+<div><dt>Instalisana snaga</dt><dd data-placeholder="true">168 kW (hlađenje)</dd></div>
+<div><dt>Oprema</dt><dd>Toshiba (VRF sistem)</dd></div>
+<div><dt>Trajanje radova</dt><dd data-placeholder="true">10 nedelja, sprat po sprat</dd></div>
+<div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, nadzor, servis</dd></div>
+</dl>
+</div>
+<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="poslovni-beograd"><span class="proj-num">05 / 06</span><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Staklena fasada savremene poslovne zgrade na plavom nebu" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div>
+<div class="proj-story">
+<div class="rv"><h3>Izazov</h3><p data-placeholder="true">Zgrada sa šest spratova imala je zastarele pojedinačne split uređaje različitih proizvođača, bez kontrole potrošnje po zakupcu. Vlasnik je tražio jedinstven sistem sa upravljanjem po spratovima, uz neometan rad zgrade tokom radova.</p></div>
+<div class="rv"><h3>Rešenje</h3><p data-placeholder="true">Ugradili smo VRF sistem Toshiba sa tri spoljne jedinice ukupnog učinka hlađenja od 168 kW i 74 unutrašnje jedinice u kasetnoj i kanalskoj izvedbi. Svaki sprat ima nezavisnu zonu upravljanja, a sve je povezano na centralni sistem sa merenjem potrošnje po spratu.</p><p data-placeholder="true">Radovi su izvođeni sprat po sprat, van radnog vremena zakupaca. Spoljne jedinice raspoređene su na tehničkoj terasi, a cevni razvod vođen je postojećim šahtovima.</p>
+</div>
+</div>
+<div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res" data-placeholder="true"><b>30%</b><span>niža potrošnja struje za klimatizaciju</span></div><div class="res" data-placeholder="true"><b>74</b><span>unutrašnje jedinice sa individualnim upravljanjem</span></div><div class="res" data-placeholder="true"><b>10 nedelja</b><span>rok izvođenja svih šest spratova</span></div></div></div>
+<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
+<a href="../assets/projekti/poslovni-beograd/02.webp" data-group="poslovni-beograd"><img src="../assets/projekti/poslovni-beograd/02.webp" alt="Moderna poslovna zgrada sa metalnim i staklenim panelima" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/poslovni-beograd/03.webp" data-group="poslovni-beograd"><img src="../assets/projekti/poslovni-beograd/03.webp" alt="Spoljne klima jedinice sa ventilatorima na tehničkoj terasi" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/poslovni-beograd/04.webp" data-group="poslovni-beograd"><img src="../assets/projekti/poslovni-beograd/04.webp" alt="Otvoreni kancelarijski prostor sa radnim stolovima" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div></div>
+<figure class="quote" data-placeholder="true"><blockquote><p>„Svaki zakupac sada sam bira temperaturu na svom spratu, a mi vidimo potrošnju u realnom vremenu.“</p></blockquote><cite>Nikola T., upravnik objekta</cite></figure>
+<div class="equip"><h3>Korišćena oprema</h3><span class="w w-t">TOSHIBA</span></div>
+</div>
+</section>
+<section class="proj rev" id="hram-zapadna-srbija" data-cat="sakralni" data-tone="w" aria-labelledby="hram-zapadna-srbija-h">
+<div class="wrap">
+<div class="proj-top">
+<div class="rv">
+<span class="eyebrow">Projekat 06 · Sakralni objekti</span>
+<h2 id="hram-zapadna-srbija-h">Manastirski hram, Zapadna Srbija</h2>
+<p class="proj-meta">Zapadna Srbija · <span data-placeholder="true">2021</span></p>
+<div class="tags"><span class="tag g">Sakralni objekat</span><span class="tag">Grejanje</span></div>
+<dl class="kv">
+<div><dt>Površina</dt><dd data-placeholder="true">340 m²</dd></div>
+<div><dt>Instalisana snaga</dt><dd data-placeholder="true">22 kW</dd></div>
+<div><dt>Oprema</dt><dd>Viessmann</dd></div>
+<div><dt>Trajanje radova</dt><dd data-placeholder="true">12 nedelja, uz stalni konzervatorski nadzor</dd></div>
+<div><dt>Obim posla</dt><dd data-placeholder="true">Projektovanje, izvođenje, nadzor, servis</dd></div>
+</dl>
+</div>
+<a class="proj-media rv" href="../assets/projekti/hram-zapadna-srbija/01.webp" data-group="hram-zapadna-srbija"><span class="proj-num">06 / 06</span><img src="../assets/projekti/hram-zapadna-srbija/01.webp" alt="Svetao kameni sakralni enterijer sa visokim lučnim prozorima" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div>
+<div class="proj-story">
+<div class="rv"><h3>Izazov</h3><p data-placeholder="true">Freske i ikonostas starog hrama osetljivi su na nagle promene temperature i vlage, pa klasično grejanje nije dolazilo u obzir. Nije smelo biti vidljivih elemenata, a svaki zahvat morao je da prođe odobrenje Zavoda za zaštitu spomenika kulture.</p></div>
+<div class="rv"><h3>Rešenje</h3><p data-placeholder="true">Projektovali smo niskotemperaturno grejanje sa cevima ugrađenim u pod, bez ijednog zahvata na zidovima sa freskama. Osnovna temperatura u hramu drži se na 12–14 °C, a za bogosluženja se postepeno podiže do 18 °C, najviše 0,5 °C na sat.</p><p data-placeholder="true">Senzori temperature i vlažnosti u šest tačaka hrama upravljaju radom sistema i održavaju relativnu vlažnost između 45% i 60%. Izvor toplote izmešten je van hrama, a svi radovi izvedeni su po uslovima i uz nadzor konzervatora.</p>
+<a class="link proj-more" href="../#cuvari-tradicije">Više o našem radu na crkvama i manastirima →</a>
+</div>
+</div>
+<div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res" data-placeholder="true"><b>≤ 0,5 °C/h</b><span>najveća brzina promene temperature</span></div><div class="res" data-placeholder="true"><b>45–60%</b><span>stabilna relativna vlažnost tokom cele godine</span></div><div class="res" data-placeholder="true"><b>0</b><span>zahvata na freskama i ikonostasu</span></div></div></div>
+<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
+<a href="../assets/projekti/hram-zapadna-srbija/02.webp" data-group="hram-zapadna-srbija"><img src="../assets/projekti/hram-zapadna-srbija/02.webp" alt="Unutrašnjost kamene crkve sa stubovima i lusterom" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/hram-zapadna-srbija/03.webp" data-group="hram-zapadna-srbija"><img src="../assets/projekti/hram-zapadna-srbija/03.webp" alt="Tamni enterijer crkve sa vitražom i klupama" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a href="../assets/projekti/hram-zapadna-srbija/04.webp" data-group="hram-zapadna-srbija"><img src="../assets/projekti/hram-zapadna-srbija/04.webp" alt="Kamena crkvena građevina u zelenom planinskom pejzažu" width="1400" height="1050" loading="lazy" decoding="async"></a>
+</div></div>
+<figure class="quote" data-placeholder="true"><blockquote><p>„Hram je prvi put posle decenija suv i topao, a freske nisu pretrpele nikakvu promenu. Bili smo mirni jer su radili sa velikim poštovanjem.“</p></blockquote><cite>Jeromonah S., starešina manastira</cite></figure>
+<div class="equip"><h3>Korišćena oprema</h3><span class="w w-v">VIESSMANN</span></div>
+</div>
+</section>
+</div>
+<section class="pcta" aria-labelledby="cta-h"><div class="wrap"><div class="pcta-card rv"><h2 id="cta-h">Imate sličan objekat? Zakažite obilazak.</h2><p>Dođemo na lokaciju, izmerimo, predložimo rešenje i pripremimo ponudu bez obaveze.</p><a class="btn btn-primary btn-lg" href="../#kontakt">Zakažite obilazak</a></div></div></section>
+</main>
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="logo">SIMON<b style="color:var(--orange)">.</b></div>
+        <p style="margin-top:20px;max-width:38ch">Inženjerska rešenja za grejanje, hlađenje i klimatizaciju sa preko 26 godina iskustva.</p>
+      </div>
+      <div>
+        <h4>Brzi linkovi</h4>
+        <ul><li><a href="../#usluge">Usluge</a></li><li><a href="../#reference">Reference</a></li><li><a href="../#konfigurator">Konfigurator</a></li><li><a href="../#karijera">Karijera</a></li></ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Senjak 23, Valjevo</li>
+          <li><a href="tel:+381612137321">+381 61 21 37 321</a></li>
+          <li><a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a></li>
+          <li>Pon–Sub: 08:00–16:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy"><span>© 2026 Simon d.o.o. Sva prava zadržana.</span><span><a href="#">Politika privatnosti</a> · <a href="#">Uslovi korišćenja</a></span></div>
+  </div>
+</footer>
+<dialog class="lb" id="lb" aria-label="Pregled fotografije" tabindex="-1"><div class="lb-in"><img id="lbImg" src="" alt=""><div class="lb-cap"><span id="lbCap"></span><small id="lbCnt"></small></div><button type="button" class="lb-x" id="lbX" aria-label="Zatvori">✕</button><button type="button" class="lb-p" id="lbP" aria-label="Prethodna fotografija">←</button><button type="button" class="lb-n" id="lbN" aria-label="Sledeća fotografija">→</button></div></dialog>
+<script>
+(()=>{
+const hdr=document.getElementById('hdr'),burger=document.getElementById('burger'),menu=document.getElementById('menu');
+if(burger){burger.onclick=()=>{const o=menu.classList.toggle('open');burger.setAttribute('aria-expanded',o)};menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'))}
+
+// pojavljivanje sadrzaja pri skrolu
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+// filter po usluzi
+const chips=[...document.querySelectorAll('.chip')],projs=[...document.querySelectorAll('.proj')],links=[...document.querySelectorAll('.pcard,.jump a')],live=document.getElementById('live');
+function setFilter(f){
+  chips.forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===f));
+  let n=0;
+  projs.forEach(p=>{const show=f==='svi'||p.dataset.cat===f;p.hidden=!show;if(show){p.dataset.tone=n%2?'w':'c';p.classList.toggle('rev',n%2===1);n++}});
+  links.forEach(a=>{a.hidden=!(f==='svi'||a.dataset.cat===f)});
+  live.textContent='Prikazano '+n+' od '+projs.length+' projekata';
+}
+chips.forEach(c=>c.addEventListener('click',()=>setFilter(c.dataset.f)));
+
+// sidra: ako je projekat sakriven filterom, filter se resetuje
+function goHash(){
+  const id=decodeURIComponent(location.hash.slice(1)),el=id&&document.getElementById(id);
+  if(el&&el.classList.contains('proj')){if(el.hidden)setFilter('svi');requestAnimationFrame(()=>el.scrollIntoView({block:'start'}))}
+}
+addEventListener('hashchange',goHash);
+addEventListener('load',goHash);
+
+// lightbox
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap'),lbCnt=document.getElementById('lbCnt');
+let grp=[],idx=0;
+function show(i){idx=(i+grp.length)%grp.length;const a=grp[idx],im=a.querySelector('img');lbImg.src=a.getAttribute('href');lbImg.alt=im.alt;lbCap.textContent=im.alt;lbCnt.textContent=(idx+1)+' / '+grp.length}
+document.querySelectorAll('a[data-group]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();grp=[...document.querySelectorAll('a[data-group="'+a.dataset.group+'"]')];show(grp.indexOf(a));lb.showModal();lb.focus()}));
+document.getElementById('lbX').onclick=()=>lb.close();
+document.getElementById('lbP').onclick=()=>show(idx-1);
+document.getElementById('lbN').onclick=()=>show(idx+1);
+lb.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();show(idx-1)}else if(e.key==='ArrowRight'){e.preventDefault();show(idx+1)}});
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('lb-in'))lb.close()});
+})();
+</script>
+</body>
+</html>

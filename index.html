@@ -207,13 +207,14 @@ section{padding:132px 0}
 .pin{position:absolute;width:16px;height:16px;border-radius:1000px;background:var(--orange);box-shadow:0 0 0 0 rgba(255,74,28,.5);animation:pulse 2.4s infinite;cursor:pointer}
 .pin span{position:absolute;left:20px;top:-4px;font:700 12px Manrope;color:var(--brown);white-space:nowrap;background:#fff;padding:4px 8px;border-radius:8px;box-shadow:0 4px 12px -4px rgba(0,0,0,.2)}
 @keyframes pulse{72%{box-shadow:0 0 0 16px rgba(255,74,28,0)}100%{box-shadow:0 0 0 0 rgba(255,74,28,0)}}
+.refs-all{margin-top:32px}
 .map-hint{display:none}
 .refs .sec-head h2{white-space:nowrap}
 .legend{justify-content:center;display:flex;gap:24px;margin-top:20px;font-size:12px;color:var(--muted);flex-wrap:wrap}
 .legend i{display:inline-block;width:12px;height:12px;border-radius:1000px;margin-right:8px;background:var(--orange)}
 .legend i.g{background:var(--gold)}
 .legend i.n{background:#ecd4c5}
-.tradition{margin-top:36px;padding:32px;border-left:4px solid var(--gold);background:#fff;border-radius:0 var(--r-md) var(--r-md) 0}
+.tradition{scroll-margin-top:108px;margin-top:36px;padding:32px;border-left:4px solid var(--gold);background:#fff;border-radius:0 var(--r-md) var(--r-md) 0}
 .tradition h3{font-size:24px;line-height:28px;color:var(--brown);margin-bottom:8px}
 .tradition p{font-size:16px;color:var(--muted);margin-bottom:16px}
 
@@ -322,6 +323,7 @@ footer a:hover{color:var(--orange)}
 .refs .eyebrow{order:1}
 .refs .sec-head{order:2;margin-bottom:52px!important}
 .refs .sec-head p{margin-top:20px}
+.refs-all{padding:12px 24px}
 #konfigurator{padding-bottom:0}
 .tradition{order:4;margin-top:0}
 .map{height:480px}
@@ -711,8 +713,9 @@ footer a:hover{color:var(--orange)}
     <div class="rv">
       <span class="eyebrow">Reference</span>
       <div class="sec-head" style="margin-bottom:0"><h2>Naša rešenja u praksi</h2>
-      <p>Preko dve decenije gradimo poverenje kroz realizaciju kompleksnih HVAC sistema na teritoriji cele Srbije, od porodičnih domova do velikih industrijskih postrojenja.</p></div>
-      <div class="tradition">
+      <p>Preko dve decenije gradimo poverenje kroz realizaciju kompleksnih HVAC sistema na teritoriji cele Srbije, od porodičnih domova do velikih industrijskih postrojenja.</p>
+      <a class="btn btn-primary refs-all" href="reference/">Svi projekti</a></div>
+      <div class="tradition" id="cuvari-tradicije">
         <h3>Čuvari tradicije kroz inženjerski rad</h3>
         <p>Postoje projekti koji se mere kvadratima i oni koji se mere trajanjem. Naš rad na crkvama i manastirima širom Srbije, na Kosovu i Metohiji i u Beogradu za nas je odgovornost, a ne samo posao.</p>
         <a href="#kontakt" class="btn btn-gold">Saznaj više</a>
@@ -806,14 +809,14 @@ const NAZIVI=['Beogradski','Severnobački','Srednjobanatski','Severnobanatski','
 // PRIMER PODACI: [naziv, mesto, usluga, godina, crkva/manastir]
 const P={
 0:[['Hram Svetog Save','Vračar',['Grejanje','Ventilacija'],2019,1],
-['Poslovni kompleks','Novi Beograd',['Klimatizacija','Ventilacija'],2022],['Stambena zgrada','Zvezdara','Grejanje',2021],['Osnovna škola','Voždovac','Grejanje',2018],
+['Poslovni kompleks','Novi Beograd','Klimatizacija',2024,0,'poslovni-beograd'],['Stambena zgrada','Zvezdara','Grejanje',2021],['Osnovna škola','Voždovac','Grejanje',2018],
 ['Sportska hala','Čukarica',['Ventilacija','Grejanje'],2020],['Porodična kuća','Zemun','Toplotna pumpa',2023],['Poslovna zgrada','Palilula','Hlađenje',2022],
 ['Stambeni kompleks','Novi Beograd','Grejanje',2017],['Vrtić','Rakovica','Grejanje',2019],['Hotel','Stari grad',['Klimatizacija','Grejanje'],2021],
 ['Skladišni prostor','Surčin','Ventilacija',2016],['Porodična kuća','Barajevo','Solarni sistem',2023],['Poslovni centar','Savski venac','Hlađenje',2020],
 ['Zdravstvena ustanova','Zvezdara','Ventilacija',2018],['Stambena zgrada','Vračar','Grejanje',2015],['Prodajni centar','Novi Beograd','Sprinkleri',2019],
 ['Poslovna zgrada','Čukarica','Klimatizacija',2024],['Porodična kuća','Grocka','Toplotna pumpa',2024],['Restoran','Stari grad','Ventilacija',2022],
 ['Fabrička hala','Obrenovac','Grejanje',2017]],
-9:[['Porodična kuća','Valjevo','Toplotna pumpa',2023],['Poslovni prostor','Valjevo','Klimatizacija',2022],['Škola','Lajkovac','Grejanje',2019],
+9:[['Porodična kuća','Valjevo','Toplotna pumpa',2024,0,'kuca-valjevo'],['Poslovni prostor','Valjevo','Klimatizacija',2022],['Škola','Lajkovac','Ventilacija',2023,0,'skola-kolubarski'],
 ['Stambena zgrada','Valjevo','Grejanje',2018],['Hala','Ub','Ventilacija',2020],['Porodična kuća','Mionica',['Toplotna pumpa','Solarni sistem'],2021]],
 25:[['Manastir (primer)','Priština','Grejanje',2020,1],['Crkva (primer)','Gračanica','Grejanje',2018,1]],
 26:[['Manastir (primer)','Peć','Grejanje',2017,1],['Manastir (primer)','Dečani','Grejanje',2019,1],['Crkva (primer)','Peć','Ventilacija',2021,1]],
@@ -849,7 +852,8 @@ function open(p){
     body.innerHTML='<div class="okr-empty">Za ovaj okrug još nemamo objavljenih projekata. Ako imate objekat u ovom delu Srbije, javite nam se.</div>';
     more.style.display='none';
   }else{
-    more.style.display='';
+    more.style.display=list.some(x=>x[5])?'':'none';
+    more.setAttribute('href','reference/');
     body.innerHTML='<div class="okr-grid"><ol class="okr-list">'+list.map((r,i)=>'<li'+(r[4]?' class="holy"':'')+'><button type="button" data-j="'+i+'"><span class="n">'+String(i+1).padStart(2,'0')+'</span><span><b>'+esc(r[0])+'</b><span class="m">'+esc(r[1])+' · '+r[3]+'</span></span><span class="ts">'+sv(r).map(x=>'<span class="t">'+esc(x)+'</span>').join('')+'</span></button></li>').join('')+'</ol><aside class="okr-d" id="okrD" aria-live="polite" hidden></aside></div>';
     const mq=matchMedia('(max-width:560px)');
     const dock=()=>{const a=document.getElementById('okrD'),cur=body.querySelector('.okr-list button[aria-current=true]');if(!a||!cur)return;if(mq.matches)cur.parentElement.appendChild(a);else body.querySelector('.okr-grid').appendChild(a)};
@@ -860,7 +864,7 @@ function open(p){
       const r=list[j],d=detalj(r);
       body.querySelectorAll('.okr-list button').forEach(b=>b.setAttribute('aria-current',+b.dataset.j===j));
       document.getElementById('okrD').innerHTML='<div class="ph"><img src="https://picsum.photos/seed/simon-'+k+'-'+j+'/720/416" alt="Fotografija projekta: '+esc(r[0])+'" loading="lazy" onerror="this.remove()"></div><div class="bd"><h4>'+esc(r[0])+'</h4><div class="loc">'+esc(r[1])+' · '+esc(naz(p))+'</div><p>'+esc(d.opis)+'</p><dl><div><dt>Usluga</dt><dd>'+sv(r).map(esc).join('<br>')+'</dd></div><div><dt>Površina</dt><dd>'+d.pov+'</dd></div><div><dt>Godina</dt><dd>'+r[3]+'</dd></div><div><dt>Oprema</dt><dd>'+esc(d.opr)+'</dd></div></dl></div>';
-      more.setAttribute('href','#'+'projekat-'+k+'-'+j); // TODO: projekti.html#projekat-...
+      more.setAttribute('href',r[5]?'reference/#'+r[5]:'reference/');
       dock();
       if(mq.matches)setTimeout(()=>body.querySelector('.okr-list button[aria-current=true]').scrollIntoView({block:'nearest',behavior:'smooth'}),50);
     };
