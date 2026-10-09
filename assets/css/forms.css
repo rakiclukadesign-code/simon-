@@ -1,4 +1,5 @@
 /* Zajednički stilovi za formulare (stručno savetovanje i karijera): prilozi, greške, stanje slanja */
+[hidden]{display:none!important}
 .vh{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;clip:rect(0 0 0 0)}
 .live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .err{margin-top:8px;font:600 16px/24px Manrope,system-ui,sans-serif;color:#b0301a}

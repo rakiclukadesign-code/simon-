@@ -179,6 +179,7 @@ section{padding:132px 0}
 .config-left .partner-cta{margin-top:auto}
 .cfg{display:flex;flex-direction:column}
 .cfg .out{margin-top:auto}
+.cfg [aria-labelledby=l4]{margin-bottom:24px}
 .config h2{font-size:56px;line-height:60px;font-weight:700}
 .config h2 em{font-style:normal;color:var(--orange)}
 .config p.lead{margin:20px 0 32px;color:rgba(255,255,255,.72);max-width:432px}
@@ -300,6 +301,7 @@ section{padding:132px 0}
 .form .cf.bad input,.form .cf.bad textarea{border-color:#c0321a}
 .form .btn{justify-content:center}
 .cv-fields{display:grid;gap:16px}
+.cv-fields #cvSend{margin-top:16px}
 .career .err{max-width:none;color:#b0301a}
 .career .lim,.career .cv-note{max-width:none}
 .cv-l{display:block;margin-bottom:8px;font:700 16px/24px Manrope;color:var(--brown)}
@@ -408,6 +410,7 @@ footer a:hover{color:var(--orange)}
 .config h2{font-size:28px;line-height:32px}
 .partner-cta{padding:24px;align-items:center;text-align:center}
 .cfg .out{margin-top:24px}
+.cfg [aria-labelledby=l4]{margin-bottom:0}
 .config h2+p.lead{margin:20px 0 0}
 .config-left{gap:52px}
 .partner-cta img{height:56px}
@@ -794,8 +797,8 @@ footer a:hover{color:var(--orange)}
         <div class="cf"><input type="text" id="cv-ime" name="ime" placeholder="Ime i prezime *" aria-label="Ime i prezime" autocomplete="name" data-req data-label="Ime i prezime" aria-required="true"><p class="err" hidden></p></div>
         <div class="cf"><input type="email" id="cv-email" name="email" placeholder="E-mail adresa *" aria-label="E-mail adresa" autocomplete="email" data-req data-label="E-mail" aria-required="true"><p class="err" hidden></p></div>
         <div class="cf"><input type="tel" id="cv-tel" name="tel" placeholder="Telefon *" aria-label="Telefon" autocomplete="tel" data-req data-label="Telefon" aria-required="true"><p class="err" hidden></p></div>
-        <div class="cf"><input type="text" id="cv-poz" name="pozicija" placeholder="Pozicija ili oblast (opciono)" aria-label="Pozicija ili oblast interesovanja (opciono)" data-label="Pozicija ili oblast interesovanja"></div>
-        <div class="cf"><textarea id="cv-por" name="poruka" rows="4" placeholder="Kratka poruka (opciono)" aria-label="Kratka poruka (opciono)" data-label="Poruka"></textarea></div>
+        <div class="cf"><input type="text" id="cv-poz" name="pozicija" placeholder="Pozicija ili oblast interesovanja" aria-label="Pozicija ili oblast interesovanja" data-label="Pozicija ili oblast interesovanja"></div>
+        <div class="cf"><textarea id="cv-por" name="poruka" rows="4" placeholder="Kratka poruka" aria-label="Kratka poruka" data-label="Poruka"></textarea></div>
         <div class="cf" id="cvWrap"><span class="cv-l" id="cv-l">Priložite CV (PDF, DOC, DOCX) <span class="rq" aria-hidden="true">*</span></span>
           <div class="drop" id="cvDrop"><input type="file" id="cvFile" class="vh" accept=".pdf,.doc,.docx" aria-labelledby="cv-l" aria-describedby="cvLim"><button type="button" class="btn btn-ghost" id="cvPick">Priloži CV</button><span class="drop-t">ili prevucite fajl ovde</span></div>
           <p class="lim" id="cvLim"></p><p class="err" id="e-cv" hidden></p><ul class="flist" id="cvList"></ul></div>
