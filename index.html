@@ -303,9 +303,7 @@ section{padding:132px 0}
 .cv-fields{display:grid;gap:16px}
 .cv-fields #cvSend{margin-top:16px}
 .career .err{max-width:none;color:#b0301a}
-.career .lim,.career .cv-note{max-width:none}
-.cv-l{display:block;margin-bottom:8px;font:700 16px/24px Manrope;color:var(--brown)}
-.cv-l .rq{color:var(--orange-d)}
+.career .cv-note{max-width:none}
 .cv-note{font-size:16px;line-height:24px;color:var(--muted)}
 .cv-note a,.cv-ok a{color:var(--orange-d);font-weight:700;text-decoration:underline;text-underline-offset:4px}
 .form .ck{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:24px;color:var(--ink);cursor:pointer}
@@ -797,11 +795,9 @@ footer a:hover{color:var(--orange)}
         <div class="cf"><input type="text" id="cv-ime" name="ime" placeholder="Ime i prezime *" aria-label="Ime i prezime" autocomplete="name" data-req data-label="Ime i prezime" aria-required="true"><p class="err" hidden></p></div>
         <div class="cf"><input type="email" id="cv-email" name="email" placeholder="E-mail adresa *" aria-label="E-mail adresa" autocomplete="email" data-req data-label="E-mail" aria-required="true"><p class="err" hidden></p></div>
         <div class="cf"><input type="tel" id="cv-tel" name="tel" placeholder="Telefon *" aria-label="Telefon" autocomplete="tel" data-req data-label="Telefon" aria-required="true"><p class="err" hidden></p></div>
-        <div class="cf"><input type="text" id="cv-poz" name="pozicija" placeholder="Pozicija ili oblast interesovanja" aria-label="Pozicija ili oblast interesovanja" data-label="Pozicija ili oblast interesovanja"></div>
-        <div class="cf"><textarea id="cv-por" name="poruka" rows="4" placeholder="Kratka poruka" aria-label="Kratka poruka" data-label="Poruka"></textarea></div>
-        <div class="cf" id="cvWrap"><span class="cv-l" id="cv-l">Priložite CV (PDF, DOC, DOCX) <span class="rq" aria-hidden="true">*</span></span>
-          <div class="drop" id="cvDrop"><input type="file" id="cvFile" class="vh" accept=".pdf,.doc,.docx" aria-labelledby="cv-l" aria-describedby="cvLim"><button type="button" class="btn btn-ghost" id="cvPick">Priloži CV</button><span class="drop-t">ili prevucite fajl ovde</span></div>
-          <p class="lim" id="cvLim"></p><p class="err" id="e-cv" hidden></p><ul class="flist" id="cvList"></ul></div>
+        <div class="cf" id="cvWrap">
+          <div class="drop" id="cvDrop"><input type="file" id="cvFile" class="vh" accept=".pdf,.doc,.docx" aria-label="Priložite CV (PDF, DOC, DOCX), obavezno"><button type="button" class="btn btn-ghost" id="cvPick">Priloži CV</button><span class="drop-t">ili prevucite fajl ovde</span></div>
+          <p class="err" id="e-cv" hidden></p><ul class="flist" id="cvList"></ul></div>
         <p class="cv-note" id="cvNoAtt" hidden>Pošaljite CV na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a>.</p>
         <div class="cf"><label class="ck"><input type="checkbox" name="saglasnost" id="cv-sag" data-req data-label="Saglasnost sa obradom podataka" aria-required="true"><span>Prijavom se slažete sa obradom podataka u svrhu zapošljavanja.</span></label><p class="err" hidden></p></div>
         <div class="fail" id="cvFail" role="alert" hidden><b>Slanje nije uspelo.</b>Vaši podaci su sačuvani u formularu, pokušajte ponovo za nekoliko trenutaka. Ako problem potraje, prijavu i CV možete poslati direktno na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a>.</div>
@@ -983,7 +979,6 @@ const reqs=[...form.querySelectorAll('[data-req]')];
 $('#cvWrap').hidden=!ATT;$('#cvNoAtt').hidden=ATT;
 const att=SF.attachments({input:$('#cvFile'),pick:$('#cvPick'),drop:$('#cvDrop'),list:$('#cvList'),err:$('#e-cv'),live,
   allowed:['pdf','doc','docx'],extLabel:'PDF, DOC, DOCX',max:1});
-$('#cvLim').textContent=att.limitsText();
 function check(el){
   if(el.type==='checkbox')return el.checked?'':'Za slanje je potrebna saglasnost.';
   const v=el.value.trim();
@@ -1001,12 +996,10 @@ form.addEventListener('input',e=>{const el=e.target;if(el.matches('[data-req]')&
 form.addEventListener('change',e=>{const el=e.target;if(el.matches('[data-req]')&&el.closest('.cf.bad'))show(el,check(el))});
 const val=n=>(form.elements[n].value||'').trim();
 function payload(){
-  const ime=val('ime'),poz=val('pozicija'),mail=val('email');
-  const d={subject:'Nova prijava za posao – '+ime+(poz?' – '+poz:''),from_name:'Simon sajt – Karijera'};
+  const ime=val('ime'),mail=val('email');
+  const d={subject:'Nova prijava za posao – '+ime,from_name:'Simon sajt – Karijera'};
   if(mail)d.replyto=mail;
   d['Ime i prezime']=ime;d['E-mail']=mail;d['Telefon']=val('tel');
-  if(poz)d['Pozicija ili oblast interesovanja']=poz;
-  if(val('poruka'))d['Poruka']=val('poruka');
   if(ATT&&att.files.length)d['Priloženi CV']=att.files[0].name+' ('+SF.fmtSize(att.files[0].size)+')';
   d['Saglasnost sa obradom podataka']='Da';
   if(form.elements.botcheck.checked)d.botcheck=true;

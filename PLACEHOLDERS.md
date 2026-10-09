@@ -230,4 +230,4 @@ Izmišljene vrednosti su u HTML-u označene sa `data-placeholder="true"`.
 ### Šta treba tražiti od klijenta (karijera)
 
 - na koji e-mail stižu prijave za posao (isti kao upiti ili drugi); ako je drugi, pravi se poseban Web3Forms ključ za `WEB3FORMS_KEY_KARIJERA`
-- da li je CV obavezan (sada jeste kad su prilozi uključeni) i koje pozicije da se nude u polju „Pozicija ili oblast interesovanja“
+- da li je CV obavezan (sada jeste kad su prilozi uključeni)

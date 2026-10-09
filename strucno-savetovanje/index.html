@@ -196,18 +196,9 @@ a[href^="tel:"],a[href^="viber:"]{white-space:nowrap}
 .after-step h3{font:700 20px/24px Sora;color:var(--brown);margin-bottom:8px}
 .after-step p{font-size:16px;line-height:24px;color:var(--muted)}
 
-/* alternativni kontakt */
-.alt{background:var(--cream)}
-.alt-head{max-width:720px;margin-bottom:56px}
-.alt-head p{margin-top:20px;font-size:16px;line-height:28px;color:var(--muted)}
-.alt-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.alt-card{padding:32px 24px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);transition:border-color .4s,transform .3s}
-a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
-.alt-card small{display:block;margin-bottom:12px;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
-.alt-card b{display:block;font:700 20px/28px Sora;color:var(--brown);overflow-wrap:anywhere}
 
 /* faq */
-.faq{background:var(--white)}
+.faq{background:var(--cream)}
 .faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:80px;align-items:start}
 .faq-list{border-bottom:1px solid var(--line)}
 .faq details{border-top:1px solid var(--line)}
@@ -227,7 +218,7 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
 .dlg p+p{margin-top:12px}
 .dlg .btn{margin-top:24px}
 
-@media(prefers-reduced-motion:reduce){.alt-card,.faq summary::after{transition:none}}
+@media(prefers-reduced-motion:reduce){.faq summary::after{transition:none}}
 
 @media(max-width:1100px){
   .menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
@@ -239,7 +230,6 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
   .sec{padding:84px 0}
   .shero h1{font-size:44px;line-height:52px}
   .fcard{padding:40px 32px}
-  .alt-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .faq-grid{grid-template-columns:minmax(0,1fr);gap:40px}
   .after-grid{grid-template-columns:minmax(0,1fr);gap:40px}
   .after-step{padding:0}
@@ -268,7 +258,6 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
   .ok h2{font-size:28px;line-height:32px}
   .ok p{font-size:16px;line-height:28px}
   .after-step::before{font-size:48px;line-height:48px}
-  .alt-grid{grid-template-columns:minmax(0,1fr)}
   .faq summary{font-size:16px;line-height:24px;padding:20px 0}
   .faq details p{padding-right:0}
   .dlg-in{padding:24px}
@@ -358,12 +347,6 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
 <div class="after-step"><h3>Javljamo se u roku od <span data-placeholder="true">24 h</span></h3><p>Inženjer pregleda vaš upit i kontaktira vas na način koji ste izabrali.</p></div>
 <div class="after-step"><h3>Obilazak objekta i procena</h3><p>Dolazimo na lokaciju, merimo i procenjujemo mogućnosti za vaš objekat.</p></div>
 <div class="after-step"><h3>Projekat i ponuda</h3><p>Dobijate jasnu ponudu bez skrivenih troškova i predlog sledećih koraka.</p></div>
-</div></div></section>
-<section class="sec alt" id="kontakt-alt" aria-labelledby="alt-h"><div class="wrap"><div class="alt-head rv"><span class="eyebrow">Direktan kontakt</span><h2 id="alt-h">Više volite da nas pozovete?</h2><p>Ako ne želite da popunjavate formular, javite nam se direktno.</p></div><div class="alt-grid rv">
-<a class="alt-card" href="tel:+381648745419"><small>Telefon</small><b>+381 64 874 5419</b></a>
-<a class="alt-card" href="mailto:simenvaljevo@gmail.com"><small>E-mail</small><b>simenvaljevo@gmail.com</b></a>
-<div class="alt-card"><small>Adresa</small><b>Senjak 23, Valjevo</b></div>
-<div class="alt-card"><small>Radno vreme</small><b>Pon–Sub: 08:00–16:00</b></div>
 </div></div></section>
 <section class="sec faq" id="pitanja" aria-labelledby="faq-h"><div class="wrap faq-grid"><div class="rv"><span class="eyebrow">Česta pitanja</span><h2 id="faq-h">Pitanja koja nam najčešće postavljaju</h2></div><div class="faq-list rv">
 <details name="faq"><summary>Da li je prvo savetovanje besplatno?</summary><p data-placeholder="true">Da, prvo savetovanje i procena su besplatni i bez obaveze.</p></details>
