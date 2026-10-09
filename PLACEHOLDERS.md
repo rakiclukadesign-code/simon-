@@ -201,22 +201,33 @@ Izmišljene vrednosti su u HTML-u označene sa `data-placeholder="true"`.
 
 | Polje | Privremena vrednost | Mesto na stranici |
 |---|---|---|
-| Broj telefona | +381 61 21 37 321 (isti kao na ostalim stranicama; na slici prvobitnog dizajna stajao je +381 61 21 87 321) | Alternativni kontakt, poruke uspeha i greške, napomena uz opis, footer na svim stranicama |
+| Ograničenja priloga | najviše 5 fajlova, 5 MB po fajlu, 15 MB ukupno; formati PDF, JPG, JPEG, PNG, HEIC, DWG, DXF. Web3Forms dokumentacija navodi samo 5 MB po fajlu (Pro). Ukupna veličina, broj fajlova i dozvoljeni tipovi nisu dokumentovani, pa ih treba proveriti pravim Pro ključem | Konstanta `LIMITS` u `assets/js/forms.js` (zajednička za oba formulara); formati su u skripti stranice |
 | Rok za odgovor | 24 h radnim danima | Hero (stavka poverenja), „Šta se dešava posle slanja“, poruka uspeha |
 | Okvirni budžet (opsezi) | Do 5.000 €, 5.000 – 15.000 €, 15.000 – 40.000 €, preko 40.000 € | Formular, korak 2 |
 | Odgovori u „Čestim pitanjima“ | svih šest odgovora su izmišljeni (besplatno prvo savetovanje, pokrivenost regiona, trajanje ponude, servis tuđih sistema, subvencije) | Sekcija „Česta pitanja“ |
 | Pitanje o subvencijama | sakriveno atributom `hidden` dok klijent ne potvrdi da pomaže oko dokumentacije | Sekcija „Česta pitanja“, poslednje pitanje (ukloniti `hidden` iz `<details>`) |
 | Politika privatnosti | kratak izmišljen tekst u dijalogu (nema posebne stranice) | Dijalog koji se otvara iz saglasnosti u koraku 3; potreban pravi tekst |
-| Web3Forms ključ | `OVDE_KLJUC` | `WEB3FORMS_KEY` na vrhu skripte u `strucno-savetovanje/index.html` |
+| Web3Forms ključ | `OVDE_KLJUC` | `WEB3FORMS_KEY` na vrhu `assets/js/forms.js` (jedan ključ za oba formulara; za karijeru po želji `WEB3FORMS_KEY_KARIJERA`) |
 
 ### Šta treba tražiti od klijenta
 
-- tačan broj telefona (na sajtu +381 61 21 37 321, na prvobitnom dizajnu +381 61 21 87 321)
-- da li je na tom broju aktivan Viber (stranica upućuje klijente na Viber)
+- da li je na broju +381 64 874 5419 aktivan Viber (stranica upućuje klijente na Viber)
 - rok za odgovor na upit (sada: 24 h radnim danima)
 - da li su prvo savetovanje i obilazak besplatni
 - koje regione pokrivaju (odgovor u FAQ-u je izmišljen)
 - da li pomažu oko subvencija (pitanje je sakriveno dok se ne potvrdi)
 - e-mail na koji stižu upiti: sa njim se pravi besplatan Web3Forms ključ (web3forms.com) koji se upisuje u `WEB3FORMS_KEY`
-- napomena: prilog fajlova je uklonjen; po želji klijenta može se dodati uz Web3Forms Pro paket ili Cloudflare Worker
+- odluka o prilozima: Web3Forms Pro paket (plaćeno, godišnje) ili `ATTACHMENTS_ENABLED = false` u `assets/js/forms.js` (besplatno); važi za oba formulara
 - tekst Politike privatnosti (u skladu sa Zakonom o zaštiti podataka o ličnosti)
+
+## Karijera (landing page, formular za prijavu)
+
+| Polje | Privremena vrednost | Mesto |
+|---|---|---|
+| Ključ za prijave | koristi se isti `WEB3FORMS_KEY` kao za upite (`WEB3FORMS_KEY_KARIJERA` je prazan) | `assets/js/forms.js` |
+| CV | jedan fajl, PDF/DOC/DOCX, do 5 MB (Web3Forms dokumentacija navodi samo 5 MB po fajlu; tipove treba proveriti pravim Pro ključem). Obavezan je kad je `ATTACHMENTS_ENABLED = true` | Formular za karijeru |
+
+### Šta treba tražiti od klijenta (karijera)
+
+- na koji e-mail stižu prijave za posao (isti kao upiti ili drugi); ako je drugi, pravi se poseban Web3Forms ključ za `WEB3FORMS_KEY_KARIJERA`
+- da li je CV obavezan (sada jeste kad su prilozi uključeni) i koje pozicije da se nude u polju „Pozicija ili oblast interesovanja“

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/forms.css">
 <style>
 :root{
   --orange:#ff4a1c; --orange-d:#e03a10; --orange-soft:#fff0ea;
@@ -286,18 +287,30 @@ section{padding:132px 0}
 /* career */
 .career{position:relative;overflow:hidden;background:var(--white);border-top:1px solid var(--line)}
 .career .form{background:var(--cream)}
-.career .form input{background:var(--white)}
+.career .form input,.career .form textarea{background:var(--white)}
+.career .drop{background:var(--white)}
 .career-in{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
 .career h2{font-size:52px;line-height:56px;color:var(--brown);margin-bottom:20px}
 .career h2 em{font-style:normal;color:var(--orange)}
 .career p{color:var(--muted);max-width:468px}
 .form{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:32px;box-shadow:var(--shadow);display:grid;gap:16px}
-.form input{font:500 16px Manrope;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--cream);width:100%;transition:border-color .2s}
-.form input:focus{outline:0;border-color:var(--orange)}
-.form input:user-invalid{border-color:#c0321a}
-.form small{color:var(--muted);font-size:12px}
+.form input,.form textarea{font:500 16px Manrope;padding:16px 20px;border:1px solid var(--line);border-radius:12px;background:var(--cream);width:100%;transition:border-color .2s}
+.form textarea{display:block;resize:vertical;min-height:112px}
+.form input:focus,.form textarea:focus{outline:0;border-color:var(--orange)}
+.form .cf.bad input,.form .cf.bad textarea{border-color:#c0321a}
 .form .btn{justify-content:center}
-.ok{display:none;color:#1d7a46;font-weight:600;font-size:16px}
+.cv-fields{display:grid;gap:16px}
+.career .err{max-width:none;color:#b0301a}
+.career .lim,.career .cv-note{max-width:none}
+.cv-l{display:block;margin-bottom:8px;font:700 16px/24px Manrope;color:var(--brown)}
+.cv-l .rq{color:var(--orange-d)}
+.cv-note{font-size:16px;line-height:24px;color:var(--muted)}
+.cv-note a,.cv-ok a{color:var(--orange-d);font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.form .ck{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:24px;color:var(--ink);cursor:pointer}
+.form .ck input{flex:none;width:24px;height:24px;margin:0;padding:0;accent-color:var(--orange)}
+.cv-ok{display:grid;gap:12px;padding:32px 0;text-align:center;font-size:16px;line-height:24px;color:var(--muted)}
+.cv-ok b{font:700 24px/32px Sora;color:var(--brown)}
+.cv-ok:focus{outline:none}
 
 /* footer */
 footer{background:var(--brown);color:rgba(255,255,255,.72);padding:92px 0 36px}
@@ -776,13 +789,23 @@ footer a:hover{color:var(--orange)}
       <p>Pridružite se timu koji 26 godina gradi ugled u HVAC industriji. Nudimo rad na raznovrsnim projektima, usavršavanje i stabilno okruženje u kojem se ceni struka.</p>
     </div>
     <form class="form rv" id="cv" novalidate>
-      <input type="text" name="ime" placeholder="Ime i prezime" required aria-label="Ime i prezime">
-      <input type="email" name="email" placeholder="E-mail adresa" required aria-label="E-mail">
-      <input type="tel" name="tel" placeholder="Telefon" aria-label="Telefon">
-      <input type="file" name="cv" aria-label="Priloži CV">
-      <button class="btn btn-primary" type="submit">Pošalji prijavu</button>
-      <small>Prijavom se slažete sa obradom podataka u svrhu zapošljavanja.</small>
-      <span class="ok" id="ok" role="status">Hvala, prijava je primljena.</span>
+      <div class="cv-fields">
+        <div class="live" aria-hidden="true"><label>Ne popunjavajte ako ste čovek<input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label></div>
+        <div class="cf"><input type="text" id="cv-ime" name="ime" placeholder="Ime i prezime *" aria-label="Ime i prezime" autocomplete="name" data-req data-label="Ime i prezime" aria-required="true"><p class="err" hidden></p></div>
+        <div class="cf"><input type="email" id="cv-email" name="email" placeholder="E-mail adresa *" aria-label="E-mail adresa" autocomplete="email" data-req data-label="E-mail" aria-required="true"><p class="err" hidden></p></div>
+        <div class="cf"><input type="tel" id="cv-tel" name="tel" placeholder="Telefon *" aria-label="Telefon" autocomplete="tel" data-req data-label="Telefon" aria-required="true"><p class="err" hidden></p></div>
+        <div class="cf"><input type="text" id="cv-poz" name="pozicija" placeholder="Pozicija ili oblast (opciono)" aria-label="Pozicija ili oblast interesovanja (opciono)" data-label="Pozicija ili oblast interesovanja"></div>
+        <div class="cf"><textarea id="cv-por" name="poruka" rows="4" placeholder="Kratka poruka (opciono)" aria-label="Kratka poruka (opciono)" data-label="Poruka"></textarea></div>
+        <div class="cf" id="cvWrap"><span class="cv-l" id="cv-l">Priložite CV (PDF, DOC, DOCX) <span class="rq" aria-hidden="true">*</span></span>
+          <div class="drop" id="cvDrop"><input type="file" id="cvFile" class="vh" accept=".pdf,.doc,.docx" aria-labelledby="cv-l" aria-describedby="cvLim"><button type="button" class="btn btn-ghost" id="cvPick">Priloži CV</button><span class="drop-t">ili prevucite fajl ovde</span></div>
+          <p class="lim" id="cvLim"></p><p class="err" id="e-cv" hidden></p><ul class="flist" id="cvList"></ul></div>
+        <p class="cv-note" id="cvNoAtt" hidden>Pošaljite CV na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a>.</p>
+        <div class="cf"><label class="ck"><input type="checkbox" name="saglasnost" id="cv-sag" data-req data-label="Saglasnost sa obradom podataka" aria-required="true"><span>Prijavom se slažete sa obradom podataka u svrhu zapošljavanja.</span></label><p class="err" hidden></p></div>
+        <div class="fail" id="cvFail" role="alert" hidden><b>Slanje nije uspelo.</b>Vaši podaci su sačuvani u formularu, pokušajte ponovo za nekoliko trenutaka. Ako problem potraje, prijavu i CV možete poslati direktno na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a>.</div>
+        <button class="btn btn-primary" type="submit" id="cvSend"><span class="spin" aria-hidden="true"></span><span id="cvSendT">Pošalji prijavu</span></button>
+      </div>
+      <div class="cv-ok" id="cvOk" role="status" tabindex="-1" hidden><b>Hvala, prijava je primljena.</b><span id="cvRemind" hidden>Ne zaboravite da CV pošaljete na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a>.</span></div>
+      <p class="live" id="cvLive" role="status" aria-live="polite"></p>
     </form>
   </div>
 </section>
@@ -804,7 +827,7 @@ footer a:hover{color:var(--orange)}
         <h4>Kontakt</h4>
         <ul>
           <li>Senjak 23, Valjevo</li>
-          <li><a href="tel:+381612137321" data-placeholder="true">+381 61 21 37 321</a></li>
+          <li><a href="tel:+381648745419">+381 64 874 5419</a></li>
           <li><a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a></li>
           <li>Pon–Sub: 08:00–16:00</li>
         </ul>
@@ -828,6 +851,7 @@ footer a:hover{color:var(--orange)}
   </div>
 </dialog>
 
+<script src="assets/js/forms.js"></script>
 <script>
 const hdr=document.getElementById('hdr');
 const burger=document.getElementById('burger'),menu=document.getElementById('menu');
@@ -948,11 +972,69 @@ function calc(){
 }
 cfg.addEventListener('input',calc);calc();
 
-document.getElementById('cv').addEventListener('submit',e=>{
-  e.preventDefault();const f=e.target;
-  if(!f.checkValidity()){f.reportValidity();return}
-  document.getElementById('ok').style.display='block';f.reset();
+// formular za karijeru: logika slanja i prilog su u assets/js/forms.js (zajednički sa formularom za savetovanje)
+(()=>{
+const SF=window.SimonForms,ATT=SF.ATTACHMENTS_ENABLED;
+const form=document.getElementById('cv'),$=s=>form.querySelector(s),live=$('#cvLive');
+const reqs=[...form.querySelectorAll('[data-req]')];
+$('#cvWrap').hidden=!ATT;$('#cvNoAtt').hidden=ATT;
+const att=SF.attachments({input:$('#cvFile'),pick:$('#cvPick'),drop:$('#cvDrop'),list:$('#cvList'),err:$('#e-cv'),live,
+  allowed:['pdf','doc','docx'],extLabel:'PDF, DOC, DOCX',max:1});
+$('#cvLim').textContent=att.limitsText();
+function check(el){
+  if(el.type==='checkbox')return el.checked?'':'Za slanje je potrebna saglasnost.';
+  const v=el.value.trim();
+  if(!v)return 'Ovo polje je obavezno.';
+  if(el.type==='email'&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))return 'Unesite ispravnu e-mail adresu, npr. ime@primer.rs.';
+  if(el.type==='tel'&&!(/^[+\d][\d\s\/().-]{5,}$/.test(v)&&v.replace(/\D/g,'').length>=6))return 'Unesite ispravan broj telefona, npr. +381 64 123 4567.';
+  return '';
+}
+function show(el,msg){
+  const w=el.closest('.cf'),err=w.querySelector('.err');
+  err.textContent=msg;err.hidden=!msg;w.classList.toggle('bad',!!msg);
+  el.setAttribute('aria-invalid',msg?'true':'false');
+}
+form.addEventListener('input',e=>{const el=e.target;if(el.matches('[data-req]')&&el.closest('.cf.bad'))show(el,check(el))});
+form.addEventListener('change',e=>{const el=e.target;if(el.matches('[data-req]')&&el.closest('.cf.bad'))show(el,check(el))});
+const val=n=>(form.elements[n].value||'').trim();
+function payload(){
+  const ime=val('ime'),poz=val('pozicija'),mail=val('email');
+  const d={subject:'Nova prijava za posao – '+ime+(poz?' – '+poz:''),from_name:'Simon sajt – Karijera'};
+  if(mail)d.replyto=mail;
+  d['Ime i prezime']=ime;d['E-mail']=mail;d['Telefon']=val('tel');
+  if(poz)d['Pozicija ili oblast interesovanja']=poz;
+  if(val('poruka'))d['Poruka']=val('poruka');
+  if(ATT&&att.files.length)d['Priloženi CV']=att.files[0].name+' ('+SF.fmtSize(att.files[0].size)+')';
+  d['Saglasnost sa obradom podataka']='Da';
+  if(form.elements.botcheck.checked)d.botcheck=true;
+  return d;
+}
+const btn=$('#cvSend');
+function busy(b){
+  btn.disabled=b;btn.classList.toggle('busy',b);
+  $('#cvSendT').textContent=b?(ATT&&att.files.length?'Šaljem… slanje CV-ja može potrajati':'Šaljem…'):'Pošalji prijavu';
+}
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const bad=reqs.filter(el=>{const m=check(el);show(el,m);return m});
+  const cvErr=$('#e-cv');
+  let cvBad=false;
+  if(ATT&&!att.files.length){cvErr.textContent='Priložite CV (PDF, DOC ili DOCX).';cvErr.hidden=false;cvBad=true}
+  if(bad.length||cvBad){
+    live.textContent='Ispravite označena polja: '+bad.map(el=>el.dataset.label).concat(cvBad?['CV']:[]).join(', ')+'.';
+    (bad[0]||$('#cvPick')).focus();return;
+  }
+  $('#cvFail').hidden=true;busy(true);
+  try{
+    await SF.send({key:SF.keyFor('karijera'),data:payload(),files:att.files,withFiles:ATT&&att.files.length>0});
+    $('.cv-fields').hidden=true;$('#cvRemind').hidden=ATT;$('#cvOk').hidden=false;$('#cvOk').focus();
+  }catch(err){
+    console.warn('Slanje prijave nije uspelo:',err);
+    $('#cvFail').hidden=false;
+  }finally{busy(false)}
 });
+window.__cv={add:att.add,get files(){return att.files}}; // pomoć za testiranje
+})();
 </script>
 </body>
 </html>

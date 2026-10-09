@@ -18,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/forms.css">
 <style>
 :root{
   --orange:#ff4a1c; --orange-d:#e03a10; --orange-soft:#fff0ea;
@@ -105,7 +106,6 @@ footer a:hover{color:var(--orange)}
 .eyebrow{display:inline-block;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--orange);margin-bottom:20px}
 .menu a[aria-current=page]:not(.btn){color:var(--orange)}
 .btn-lg{padding:20px 32px;font-size:16px}
-.btn[disabled]{opacity:.6;cursor:not-allowed;transform:none}
 .sec{padding:112px 0}
 .sec h2{font-size:44px;line-height:48px;font-weight:700;color:var(--brown)}
 
@@ -149,7 +149,6 @@ footer a:hover{color:var(--orange)}
 .sel::after{content:"";position:absolute;right:20px;top:50%;width:8px;height:8px;margin-top:-6px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);pointer-events:none}
 .sel select{appearance:none;-webkit-appearance:none;padding-right:48px;cursor:pointer}
 .f.bad input,.f.bad select,.f.bad textarea{border-color:#c0321a}
-.err{margin-top:8px;font:600 16px/24px Manrope;color:#b0301a}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{position:relative}
 .chip input{position:absolute;opacity:0;width:100%;height:100%;inset:0;margin:0;cursor:pointer}
@@ -160,13 +159,13 @@ footer a:hover{color:var(--orange)}
 .chips-f.bad .chip span{border-color:#c0321a}
 .note{font-size:16px;line-height:24px;color:var(--muted)}
 .note a{color:var(--orange-d);text-decoration:underline;text-underline-offset:4px;font-weight:600}
+a[href^="tel:"],a[href^="viber:"]{white-space:nowrap}
 .pre{margin-bottom:32px;padding:16px 20px;border-radius:var(--r-md);background:var(--orange-soft);color:var(--brown);font:600 16px/24px Manrope}
 .consent{display:flex;gap:16px;align-items:flex-start}
 .consent input{flex:none;width:24px;height:24px;margin:2px 0 0;accent-color:var(--orange)}
 .consent label{font:500 16px/24px Manrope;color:var(--ink)}
 .consent a{color:var(--orange-d);text-decoration:underline;text-underline-offset:4px;font-weight:600}
-.consent-wrap .err{margin-left:40px}
-.sum{margin-top:8px;padding:32px;background:var(--cream);border-radius:var(--r-md)}
+.consent-wrap .sum{margin-top:8px;padding:32px;background:var(--cream);border-radius:var(--r-md)}
 .sum h3{font:700 20px/24px Sora;color:var(--brown);margin-bottom:16px}
 .sum-sec+.sum-sec{margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
 .sum-head{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:12px}
@@ -177,14 +176,6 @@ footer a:hover{color:var(--orange)}
 .sum dd{margin:0;font:600 16px/24px Manrope;color:var(--brown)}
 .nav-b{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
 .nav-b .btn{justify-content:center}
-.btn-ghost{background:var(--white);color:var(--brown);border:1px solid var(--line)}
-@media(hover:hover){.btn-ghost:hover{border-color:var(--orange);color:var(--orange-d)}}
-.spin{display:none;width:20px;height:20px;border-radius:1000px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .8s linear infinite}
-.busy .spin{display:inline-block}
-@keyframes spin{to{transform:rotate(360deg)}}
-.fail{margin-top:24px;padding:24px;border-radius:var(--r-md);background:#fdecea;color:#7a1f10;font:500 16px/24px Manrope}
-.fail b{display:block;margin-bottom:8px;font:700 16px/24px Manrope}
-.fail a{font-weight:700;text-decoration:underline;text-underline-offset:4px}
 .ok{max-width:760px;margin:0 auto;text-align:center;padding:24px 0}
 .ok .okic{display:grid;place-items:center;width:72px;height:72px;margin:0 auto 24px;border-radius:1000px;background:var(--orange-soft);color:var(--orange)}
 .ok .okic svg{width:36px;height:36px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
@@ -192,8 +183,10 @@ footer a:hover{color:var(--orange)}
 .ok p{margin-top:16px;font-size:20px;line-height:32px;color:var(--muted)}
 .ok .ok-next{margin-top:32px;padding:24px;border-radius:var(--r-md);background:var(--cream);text-align:left;font-size:16px;line-height:24px}
 .ok .ok-next a{color:var(--orange-d);font-weight:700;text-decoration:underline;text-underline-offset:4px}
-.live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
+/* prilozi (zajednicki stilovi su u assets/css/forms.css) */
+.att .hint{margin:12px 0 0}
+.att .note{margin-top:12px}
 /* posle slanja */
 .after{background:var(--white)}
 .after-head{max-width:720px;margin-bottom:64px}
@@ -234,7 +227,7 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
 .dlg p+p{margin-top:12px}
 .dlg .btn{margin-top:24px}
 
-@media(prefers-reduced-motion:reduce){.spin{animation:none}.alt-card,.faq summary::after{transition:none}}
+@media(prefers-reduced-motion:reduce){.alt-card,.faq summary::after{transition:none}}
 
 @media(max-width:1100px){
   .menu{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;padding:28px;gap:20px;box-shadow:0 20px 40px -20px rgba(0,0,0,.3)}
@@ -339,7 +332,8 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
 <div class="f"><label for="s-16">Okvirni budžet (opciono)</label><div class="sel"><select id="s-16" name="budzet" data-label="Okvirni budžet (opciono)" data-placeholder="true" aria-describedby="e-s-16"><option value="">Izaberite…</option><option>Do 5.000 €</option><option>5.000 – 15.000 €</option><option>15.000 – 40.000 €</option><option>Preko 40.000 €</option><option>Želim preporuku</option></select></div><p class="err" id="e-s-16" hidden></p></div>
 <div class="f"></div>
 <div class="f full"><label for="t-17">Opis zahteva ili trenutnog problema (opciono)</label><textarea id="t-17" name="opis" rows="4" data-label="Opis zahteva ili trenutnog problema (opciono)" placeholder="Opišite šta želite da postignete ili šta ne radi kako treba."></textarea></div>
-<p class="note full">Imate projekat ili fotografije objekta? Pošaljite ih nakon slanja zahteva na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a> ili Viber <a href="viber://chat?number=%2B381612137321" data-placeholder="true">+381 61 21 37 321</a>, a mi ćemo ih priključiti vašem upitu.</p>
+<div class="f full att" id="attWrap"><label id="att-l" for="files">Priložite osnovu, projekat ili fotografije objekta (opciono)</label><div class="drop" id="drop"><input type="file" id="files" class="vh" multiple accept=".pdf,.jpg,.jpeg,.png,.heic,.dwg,.dxf" aria-describedby="att-h att-lim"><button type="button" class="btn btn-ghost" id="pick">Priloži</button><span class="drop-t">ili prevucite fajlove ovde</span></div><p class="hint" id="att-h">Dovoljne su i fotografije sa telefona.</p><p class="lim" id="att-lim">Formati: PDF, JPG, JPEG, PNG, HEIC, DWG, DXF. Najviše 5 fajlova, do 5 MB po fajlu i do 15 MB ukupno.</p><p class="err" id="e-att" hidden></p><ul class="flist" id="flist"></ul><p class="note">Fajlovi su preveliki? Pošaljite ih nakon slanja zahteva na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a> ili Viber <a href="viber://chat?number=%2B381648745419">+381 64 874 5419</a>.</p></div>
+<p class="note full" id="noAtt" hidden>Imate projekat ili fotografije objekta? Pošaljite ih nakon slanja zahteva na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a> ili Viber <a href="viber://chat?number=%2B381648745419">+381 64 874 5419</a>.</p>
 </div></section>
 <section class="step" data-step="2" aria-labelledby="st2" hidden><h2 id="st2" tabindex="-1">Kontakt</h2><div class="grid2">
 <div class="f"><label for="i-18">Ime i prezime <span class="rq" aria-hidden="true">*</span></label><input id="i-18" name="ime" type="text" data-label="Ime i prezime" data-req aria-required="true" placeholder="Petar Petrović" autocomplete="name" aria-describedby="e-i-18"><p class="err" id="e-i-18" hidden></p></div>
@@ -351,12 +345,12 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
 <div class="sum full" id="sum" aria-live="polite"></div>
 <div class="f full consent-wrap"><div class="consent"><input type="checkbox" id="saglasnost" name="saglasnost" data-label="Saglasnost sa obradom podataka" data-req aria-required="true" aria-describedby="e-saglasnost"><label for="saglasnost">Saglasan/na sam da Simon d.o.o. obrađuje podatke koje sam uneo/la radi odgovora na moj upit, u skladu sa Zakonom o zaštiti podataka o ličnosti. <a href="#politika" id="privLink">Politika privatnosti</a> <span class="rq" aria-hidden="true">*</span></label></div><p class="err" id="e-saglasnost" hidden></p></div>
 </div></section>
-<div class="fail" id="fail" role="alert" hidden><b>Slanje nije uspelo.</b>Vaši podaci su sačuvani u formularu, pokušajte ponovo za nekoliko trenutaka. Ako problem potraje, javite nam se direktno: <a href="tel:+381612137321" data-placeholder="true">+381 61 21 37 321</a> ili <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a>.</div>
+<div class="fail" id="fail" role="alert" hidden><b>Slanje nije uspelo.</b>Vaši podaci su sačuvani u formularu, pokušajte ponovo za nekoliko trenutaka. Ako problem potraje, javite nam se direktno: <a href="tel:+381648745419">+381 64 874 5419</a> ili <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a>.<button type="button" class="btn btn-primary retry" id="retryBtn" hidden>Pošalji bez priloga</button></div>
 <div class="nav-b"><button type="button" class="btn btn-ghost" id="back" hidden>Nazad</button><span></span><button type="button" class="btn btn-primary" id="next">Dalje</button><button type="submit" class="btn btn-primary btn-lg" id="send" hidden><span class="spin" aria-hidden="true"></span><span id="sendT">Pošalji zahtev</span></button></div>
 </form></div>
 <div class="ok" id="ok" hidden><div class="okic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></div><h2 id="okH" tabindex="-1">Hvala, vaš zahtev je primljen</h2>
 <p>Javljamo vam se u roku od <span data-placeholder="true">24 h</span> radnim danima, na način koji ste izabrali.</p>
-<div class="ok-next"><b>Šta sledi.</b> Inženjer pregleda vaš upit, kontaktira vas i dogovara obilazak objekta. Imate projekat ili fotografije objekta? Pošaljite ih na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a> ili Viber <a href="viber://chat?number=%2B381612137321" data-placeholder="true">+381 61 21 37 321</a>, a mi ćemo ih priključiti vašem upitu.</div>
+<div class="ok-next"><b>Šta sledi.</b> Inženjer pregleda vaš upit, kontaktira vas i dogovara obilazak objekta.<span id="okRemind" hidden> Imate projekat ili fotografije objekta? Pošaljite ih na e-mail <a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a> ili Viber <a href="viber://chat?number=%2B381648745419">+381 64 874 5419</a>, a mi ćemo ih priključiti vašem upitu.</span></div>
 </div>
 <p class="live" id="live" role="status" aria-live="polite"></p>
 </div></div></section>
@@ -366,7 +360,7 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
 <div class="after-step"><h3>Projekat i ponuda</h3><p>Dobijate jasnu ponudu bez skrivenih troškova i predlog sledećih koraka.</p></div>
 </div></div></section>
 <section class="sec alt" id="kontakt-alt" aria-labelledby="alt-h"><div class="wrap"><div class="alt-head rv"><span class="eyebrow">Direktan kontakt</span><h2 id="alt-h">Više volite da nas pozovete?</h2><p>Ako ne želite da popunjavate formular, javite nam se direktno.</p></div><div class="alt-grid rv">
-<a class="alt-card" href="tel:+381612137321"><small>Telefon</small><b data-placeholder="true">+381 61 21 37 321</b></a>
+<a class="alt-card" href="tel:+381648745419"><small>Telefon</small><b>+381 64 874 5419</b></a>
 <a class="alt-card" href="mailto:simenvaljevo@gmail.com"><small>E-mail</small><b>simenvaljevo@gmail.com</b></a>
 <div class="alt-card"><small>Adresa</small><b>Senjak 23, Valjevo</b></div>
 <div class="alt-card"><small>Radno vreme</small><b>Pon–Sub: 08:00–16:00</b></div>
@@ -404,7 +398,7 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
         <h4>Kontakt</h4>
         <ul>
           <li>Senjak 23, Valjevo</li>
-          <li><a href="tel:+381612137321" data-placeholder="true">+381 61 21 37 321</a></li>
+          <li><a href="tel:+381648745419">+381 64 874 5419</a></li>
           <li><a href="mailto:simenvaljevo@gmail.com">simenvaljevo@gmail.com</a></li>
           <li>Pon–Sub: 08:00–16:00</li>
         </ul>
@@ -417,15 +411,11 @@ a.alt-card:hover{border-color:var(--orange);transform:translateY(-4px)}
 <p data-placeholder="true">Podatke koje unesete u ovaj formular koristimo isključivo da odgovorimo na vaš upit i pripremimo ponudu. Ne prosleđujemo ih trećim licima i ne koristimo ih u marketinške svrhe bez vaše saglasnosti.</p>
 <p data-placeholder="true">Podatke čuvamo onoliko dugo koliko je potrebno za obradu upita. Možete zatražiti uvid, ispravku ili brisanje svojih podataka na e-mail simenvaljevo@gmail.com.</p>
 <button type="button" class="btn btn-primary" id="polX">Zatvori</button></div></dialog>
+<script src="../assets/js/forms.js"></script>
 <script>
 (()=>{
-// ===== Web3Forms =====
-// Ključ se pravi na https://web3forms.com sa klijentovim e-mailom. Ključ je predviđen da stoji javno u kodu.
-// Dok je 'OVDE_KLJUC', slanje se simulira (poruka u konzoli i demo poruka uspeha).
-const WEB3FORMS_KEY='OVDE_KLJUC';
-const ENDPOINT='https://api.web3forms.com/submit';
-// Prilog fajlova je namerno izostavljen (Web3Forms besplatni paket ih ne podržava).
-// Može se vratiti uz Web3Forms Pro paket ili Cloudflare Worker, ako klijent to bude želeo.
+// Podešavanja slanja (ključ, prilozi, ograničenja) i komponenta za priloge su u assets/js/forms.js, zajednički za sve formulare.
+const SF=window.SimonForms,ATT=SF.ATTACHMENTS_ENABLED;
 
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -521,51 +511,56 @@ function entries(n){return $$('[data-label]',steps[n]).filter(visible).map(el=>[
 function summary(){
   const secs=[['Šta vam treba',0],['O objektu',1]];
   const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-  $('#sum').innerHTML='<h3>Pregled vašeg zahteva</h3>'+secs.map(([t,n])=>'<div class="sum-sec"><div class="sum-head"><b>'+t+'</b><button type="button" class="sum-edit" data-go="'+n+'">Izmeni</button></div><dl>'+entries(n).map(([k,v])=>'<dt>'+esc(k.replace(/\s*\(opciono\)/,''))+'</dt><dd>'+esc(v)+'</dd>').join('')+'</dl></div>').join('');
+  $('#sum').innerHTML='<h3>Pregled vašeg zahteva</h3>'+secs.map(([t,n])=>'<div class="sum-sec"><div class="sum-head"><b>'+t+'</b><button type="button" class="sum-edit" data-go="'+n+'">Izmeni</button></div><dl>'+entries(n).concat(n===1&&ATT&&att.files.length?[['Prilozi',SF.fileCount(att.files.length)]]:[]).map(([k,v])=>'<dt>'+esc(k.replace(/\s*\(opciono\)/,''))+'</dt><dd>'+esc(v)+'</dd>').join('')+'</dl></div>').join('');
 }
 $('#sum').addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)go(+b.dataset.go,true)});
 
 // ----- slanje -----
 function payload(){
   const all=[0,1,2].flatMap(n=>entries(n)).filter(([k])=>k!=='Saglasnost sa obradom podataka');
-  const o={access_key:WEB3FORMS_KEY};
+  const o={};
   const get=l=>(all.find(([k])=>k===l)||[,''])[1];
   o.subject='Novi upit za stručno savetovanje – '+(get('Predmet interesovanja')||'bez naznake')+' – '+(get('Mesto')||'bez naznake');
   o.from_name='Simon sajt';
   const mail=get('E-mail');if(mail)o.replyto=mail;
   all.forEach(([k,v])=>{o[k.replace(/\s*\(opciono\)/,'')]=v});
+  if(ATT&&att.files.length)o['Priloženi fajlovi']=att.files.map(f=>f.name+' ('+SF.fmtSize(f.size)+')').join(', ');
   o['Saglasnost sa obradom podataka']='Da';
   if($('[name=botcheck]').checked)o.botcheck=true;
   return o;
 }
-const delay=ms=>new Promise(r=>setTimeout(r,ms));
-function busy(b){send.disabled=b;send.classList.toggle('busy',b);$('#sendT').textContent=b?'Šaljem…':'Pošalji zahtev'}
+let skipped=false;
+function busy(b,withFiles){
+  send.disabled=b;send.classList.toggle('busy',b);
+  $('#sendT').textContent=b?(withFiles?'Šaljem… slanje priloga može potrajati':'Šaljem…'):'Pošalji zahtev';
+  if(b&&withFiles)live.textContent='Šaljem zahtev sa prilozima. Slanje može potrajati.';
+}
 function done(){
   $('#sf').hidden=true;$('#prog').hidden=true;$('.req-note').hidden=true;$('#pre').hidden=true;$('#ok').hidden=false;
+  $('#okRemind').hidden=ATT&&!skipped;
   $('#okH').focus({preventScroll:true});$('#ok').scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
 }
-form.addEventListener('submit',async e=>{
+async function submit(withFiles){
+  fail.hidden=true;busy(true,withFiles);
+  const data=payload();
+  if(!withFiles){delete data['Priloženi fajlovi'];if(ATT&&att.files.length){skipped=true;data['Napomena']='Korisnik je pokušao da priloži fajlove, ali slanje priloga nije uspelo. Fajlovi stižu naknadno na e-mail ili Viber.'}}
+  try{
+    await SF.send({key:SF.keyFor('savetovanje'),data,files:att.files,withFiles});
+    done();
+  }catch(err){
+    console.warn('Slanje nije uspelo:',err);
+    $('#retryBtn').hidden=!(withFiles&&ATT&&att.files.length);
+    fail.hidden=false;fail.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+  }finally{busy(false)}
+}
+form.addEventListener('submit',e=>{
   e.preventDefault();
   if(cur<2){tryNext();return}
   const bad=validate(2);
   if(bad.length){live.textContent='Ispravite označena polja: '+bad.map(nameOf).join(', ')+'.';const f=bad[0];(f.tagName==='FIELDSET'?$('input',f):f).focus();return}
-  fail.hidden=true;busy(true);
-  const data=payload();
-  try{
-    if(WEB3FORMS_KEY==='OVDE_KLJUC'){
-      console.info('[Web3Forms DEMO] Ključ nije upisan, slanje nije izvršeno. Podaci koji bi bili poslati:',data);
-      await delay(800);
-    }else{
-      const r=await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(data)});
-      const d=await r.json().catch(()=>({}));
-      if(!r.ok||!d.success)throw new Error(d.message||('HTTP '+r.status));
-    }
-    done();
-  }catch(err){
-    console.warn('Slanje nije uspelo:',err);
-    fail.hidden=false;fail.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
-  }finally{busy(false)}
+  submit(ATT&&att.files.length>0);
 });
+$('#retryBtn').onclick=()=>submit(false);
 
 // ----- predpopunjavanje iz URL-a -----
 (function(){
@@ -591,6 +586,14 @@ form.addEventListener('submit',async e=>{
   if(used)$('#pre').hidden=false;
 })();
 cond();go(0,false);
+
+// ----- prilozi (zajednička komponenta iz assets/js/forms.js) -----
+const attWrap=$('#attWrap'),noAtt=$('#noAtt');
+attWrap.hidden=!ATT;noAtt.hidden=ATT;
+const att=SF.attachments({input:$('#files'),pick:$('#pick'),drop:$('#drop'),list:$('#flist'),err:$('#e-att'),live,
+  allowed:['pdf','jpg','jpeg','png','heic','dwg','dxf'],extLabel:'PDF, JPG, JPEG, PNG, HEIC, DWG, DXF'});
+$('#att-lim').textContent=att.limitsText();
+window.__att={add:att.add,get files(){return att.files}}; // pomoć za testiranje
 
 // ----- dijalog politike privatnosti -----
 const pol=$('#politika');
