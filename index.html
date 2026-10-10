@@ -103,6 +103,7 @@ header.solid .burger{color:var(--brown)}
 @media(prefers-reduced-motion:reduce){.ptrack{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.pl[aria-hidden],.pl:nth-child(n+7){display:none}.pmarq{-webkit-mask-image:none;mask-image:none}}
 /* sections */
 section{padding:132px 0}
+.m-only{display:none}
 .sec-head{max-width:720px;margin-bottom:60px}
 .sec-head h2{font-size:56px;line-height:60px;font-weight:700;color:var(--brown)}
 .sec-head h2 em{font-style:normal;color:var(--orange)}
@@ -445,7 +446,7 @@ footer a:hover{color:var(--orange)}
 .brandbar .l{width:100%;margin-right:0;letter-spacing:0}
 .about{padding:80px 0}.about-head{margin-bottom:36px}.about-head .eyebrow{margin-bottom:12px}
 .services{padding:80px 0}.services .sec-head{margin-bottom:36px}.services .sec-head .eyebrow{margin-bottom:12px}.services .sec-head p{margin-top:16px}.services .bento{gap:16px}
-#proces .sec-head .eyebrow{margin-bottom:12px}
+#proces .sec-head .eyebrow{margin-bottom:12px}#proces .sec-head .m-only{display:block;margin-top:16px}
 .wrap{padding:0 20px}.steps{grid-template-columns:1fr}.stats b{font-size:36px;line-height:40px}.hero h1{font-size:44px;line-height:48px}.sec-head h2,.about-head h2{font-size:36px;line-height:40px}.panel h3{font-size:28px;line-height:32px}.tile b{font-size:36px;line-height:40px}.tiles{grid-template-columns:1fr}.partners .tiles{grid-template-columns:1fr 1fr}.checks{grid-template-columns:1fr}.panels{padding:40px 24px}}
 </style>
 </head>
@@ -606,6 +607,7 @@ footer a:hover{color:var(--orange)}
     <div class="sec-head rv">
       <span class="eyebrow">Kako radimo</span>
       <h2>Četiri koraka do sistema koji radi</h2>
+      <p class="m-only">Od prvog razgovora do puštanja u rad, svaki korak vodi isti tim inženjera.</p>
     </div>
     <div class="steps">
       <div class="step rv"><h3>Razgovor i obilazak</h3><p>Slušamo potrebe, obilazimo objekat i procenjujemo mogućnosti.</p></div>
