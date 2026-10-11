@@ -199,6 +199,9 @@ Blok „Crkva Svetog Simeona Stolpnika, Osečina“ treba ažurirati kako gradnj
 
 Izmišljene vrednosti su u HTML-u označene sa `data-placeholder="true"`.
 
+**Ažurirano podacima klijenta (dokument „Simon strucno savetovanje-podaci“):** rok za odgovor je 48 h radnim danima, prvo savetovanje i obilazak su besplatni, ponuda stiže pismeno (PDF, e-mail) do 7 dana od obilaska, regioni i FAQ odgovori su uneti, subvencije su zamenjene tekstom o kreditima/GEFF programu, servis tuđih sistema je izbačen, e-mail je simonvaljevo@gmail.com, radno vreme Pon–Pet 08–16, Sub 08–12, a usluge u formularu imaju dva solarna tipa. **Još otvoreno:** pitanje o budžetu (klijent nije siguran), Web3Forms ključ, pravni tekst Politike privatnosti (pregled pravnika), prilozi (Pro paket ili `ATTACHMENTS_ENABLED=false`).
+
+
 | Polje | Privremena vrednost | Mesto na stranici |
 |---|---|---|
 | Ograničenja priloga | najviše 5 fajlova, 5 MB po fajlu, 15 MB ukupno; formati PDF, JPG, JPEG, PNG, HEIC, DWG, DXF. Web3Forms dokumentacija navodi samo 5 MB po fajlu (Pro). Ukupna veličina, broj fajlova i dozvoljeni tipovi nisu dokumentovani, pa ih treba proveriti pravim Pro ključem | Konstanta `LIMITS` u `assets/js/forms.js` (zajednička za oba formulara); formati su u skripti stranice |
