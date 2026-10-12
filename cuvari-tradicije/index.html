@@ -160,6 +160,11 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 .fact{display:inline-block;margin-top:24px;padding:8px 16px;border:1px solid var(--gold);border-radius:1000px;font:700 16px/24px Manrope;color:var(--gold-d);background:var(--gold-soft)}
 .zad{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
 .zad li{padding:8px 16px;border:1px dashed var(--gold-d);border-radius:1000px;font-size:16px;line-height:24px;color:var(--gold-d)}
+.zad.set li{border:1px solid var(--gold);background:var(--gold-soft)}
+.manast{background:var(--white)}
+.man-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.man-grid h3{font:700 20px/24px Sora;color:var(--brown)}
+@media(max-width:980px){.man-grid{grid-template-columns:1fr;gap:40px}}
 
 /* ktitorska crkva */
 .kt{background:var(--gold-soft)}
@@ -351,7 +356,7 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <div><b>5.000+ m²</b><span>podnog grejanja u Hramu Svetog Save</span></div>
 <div><b>1.200+ m²</b><span>podnog grejanja u Hramu Vaskrsenja Hristovog</span></div>
 <div><b>Skoro sve</b><span>zadužbine Nemanjića, u kojima smo izveli neki vid grejanja</span></div>
-<div><b data-placeholder="true">40+</b><span data-placeholder="true">svetinja ukupno, sve kao donacija</span></div>
+<div><b>20+</b><span>manastira i hramova u kojima smo izveli radove</span></div>
 </div></div></section>
 <section class="t-sec svet" id="svetinje" aria-labelledby="svet-h"><div class="wrap">
 <div class="svet-head rv"><span class="gline"></span><span class="eyebrow">Izdvojene svetinje</span><h2 id="svet-h">Mesta na kojima smo bili gosti</h2><p>Sve što je navedeno u nastavku izvedeno je kao donacija.</p></div>
@@ -366,8 +371,15 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <div class="rv"><span class="eyebrow">Valjevo · donacija</span><h3>Hram Vaskrsenja Hristovog</h3><p>U Valjevu, gradu u kome je naša firma nastala, izveli smo više od 1.200 m² podnog grejanja u Hramu Vaskrsenja Hristovog.</p><span class="fact">1.200+ m²</span></div></article>
 <article class="blk rev t-anchor" id="zaduzbine-nemanjica"><div class="blk-media rv"><figure><div class="pic"><img src="../assets/tradicija/fresko2.webp" alt="Oslikana kupola crkve sa zlatnim ornamentima" width="1400" height="1050" loading="lazy" decoding="async"></div></figure></div>
 <div class="rv"><span class="eyebrow">Širom Srbije · donacija</span><h3>Zadužbine Nemanjića</h3><p>U skoro svim zadužbinama Nemanjića izveli smo neki vid grejanja. Nasleđe koje je godinama čuvalo veru i narod zaslužuje da u njemu bude toplo i bezbedno.</p>
-<ul class="zad" data-placeholder="true" aria-label="Zadužbine u kojima smo radili"><li>Naziv zadužbine 1</li><li>Naziv zadužbine 2</li><li>Naziv zadužbine 3</li><li>Naziv zadužbine 4</li><li>Naziv zadužbine 5</li><li>Naziv zadužbine 6</li></ul></div></article>
+<ul class="zad set" aria-label="Zadužbine u kojima smo radili"><li>Manastir Hilandar</li><li>Manastir Studenica</li><li>Manastir Sopoćani</li><li>Manastir Visoki Dečani</li></ul></div></article>
 </div></section>
+<section class="t-sec manast t-anchor" id="manastiri" aria-labelledby="man-h"><div class="wrap">
+<div class="svet-head rv"><span class="gline"></span><span class="eyebrow">Spisak svetinja</span><h2 id="man-h">Manastiri i hramovi u kojima smo radili</h2><p>U svim ovim manastirima i hramovima je u velikom delu donirani materijal i rad.</p></div>
+<div class="man-grid rv">
+<div><h3>Manastiri</h3><ul class="zad set" aria-label="Manastiri u kojima smo radili"><li>Manastir Hilandar, 2005.</li><li>Manastir Ostrog</li><li>Manastir Sopoćani</li><li>Manastir Studenica, rekonstrukcija kotlarnice</li><li>Manastir Tušimlja</li><li>Manastir Preradovac</li><li>Manastir Ždrebaonik</li><li>Manastir Piperska ćelija</li><li>Manastir Lelić</li><li>Manastir Pustinja</li><li>Manastir Ćelije</li><li>Manastir Visoki Dečani, Dečani</li></ul></div>
+<div><h3>Hramovi u Valjevu</h3><ul class="zad set" aria-label="Hramovi u Valjevu u kojima smo radili"><li>Veliki Hram Vaskrsenja Gospodnjeg</li><li>Hram Vaznesenja Gospodnjeg</li><li>Hram Pokrova presvete Bogorodice</li><li>Hram Svetog Nektarija</li><li>Hram Svetih Kozme i Damjana, bolnički hram</li><li>Hram Svetog Georgija</li></ul></div>
+<div><h3>Ostale svetinje</h3><ul class="zad set" aria-label="Ostale svetinje u kojima smo radili"><li>Hram Svetog Save, Beograd</li><li>Saborni hram, Mojkovac</li><li>Prizrenska bogoslovija, Prizren</li><li>Dečanska vinarija, Velika Hoča</li></ul></div>
+</div></div></section>
 <section class="t-sec kt t-anchor" id="ktitorska-crkva" aria-labelledby="kt-h"><div class="wrap">
 <div class="kt-head rv"><span class="gline"></span><span class="eyebrow">Porodična zadužbina · u izgradnji</span><h2 id="kt-h">Crkva Svetog Simeona Stolpnika</h2><p class="lead">Zaseok Marići, selo Osečina</p></div>
 <div class="kt-row"><div class="rv"><p>U zaseoku Marići, u selu Osečina, rodnom kraju ktitora Zorana Petrovića iz Valjeva, gradi se crkva posvećena Svetom Simeonu Stolpniku. To je zadužbina <span class="ph-tag" data-placeholder="true">porodice Petrović</span> i delo mnogih ruku.</p>
@@ -402,10 +414,11 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 </div></div></section>
 <section class="t-sec mapa" id="mapa" aria-labelledby="mapa-h"><div class="wrap mapa-grid"><div class="rv"><span class="gline"></span><span class="eyebrow">Na mapi</span><h2 id="mapa-h">Svetinje na mapi Srbije</h2>
 <ul class="mapa-list"><li><b>Beogradski okrug</b><a href="#hram-svetog-save">Hram Svetog Save</a></li>
-<li><b>Kolubarski okrug</b><a href="#hram-valjevo">Hram Vaskrsenja Hristovog, Valjevo</a><a href="#ktitorska-crkva">Crkva Svetog Simeona Stolpnika, Osečina</a></li>
+<li><b>Kolubarski okrug</b><a href="#hram-valjevo">Hram Vaskrsenja Hristovog, Valjevo</a><a href="#manastiri">Hramovi u Valjevu</a><a href="#ktitorska-crkva">Crkva Svetog Simeona Stolpnika, Osečina</a></li>
+<li><b>Raški okrug</b><a href="#manastiri">Manastiri Studenica i Sopoćani</a></li>
 <li><b>Kosovski okruzi</b><a href="#kosovo">Crkve i manastiri na Kosovu i Metohiji</a></li>
 <li><b>Zadužbine Nemanjića</b><a href="#zaduzbine-nemanjica">U skoro svim delovima Srbije</a></li></ul></div>
-<div class="rv"><div class="map" id="map"><div class="map-tip" id="mapTip" role="status"></div><svg class="srb-map" viewBox="0 0 392 572" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa Srbije: obojeni su Kolubarski okrug, Beograd i Kosovo i Metohija">
+<div class="rv"><div class="map" id="map"><div class="map-tip" id="mapTip" role="status"></div><svg class="srb-map" viewBox="0 0 392 572" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa Srbije: zlatnom bojom su obojeni okruzi sa svetinjama">
 <g clip-path="url(#srbClip)">
 <mask id="path-1-inside-1" fill="white">
 <path d="M148.869 248.669L147.414 248.943L144.619 251.39L144.1 253.837L139.908 254.537L137.466 255.937L132.063 250.343L128.922 245.796L128.742 244.577L131.71 244.223L132.236 242.477L130.139 240.557L131.883 238.283L131.71 236.01L133.806 234.79L134.325 231.99L132.754 230.77L133.806 229.197L134.152 225.877L130.665 223.076L130.492 218.356L129.268 216.436L125.255 223.776L123.166 222.376L122.287 220.283L120.198 218.71L118.455 218.883L117.756 221.676L115.487 222.557L113.916 220.63L111.301 219.756L109.205 218.01L110.249 215.736L110.43 212.416L108.506 211.016L107.793 207.436L109.752 206.007L110.955 203.835L112.994 202.009L121.848 197.779L117.655 194.532L117.749 193.478L120.998 191.139L122.057 188.83L120.861 186.239L121.091 184.492L125.831 183.244L127.445 182.11L127.603 180.508L125.284 177.701L125.241 175.413L126.681 172.49L130.269 169.516L138.69 165.453L137.905 162.753L138.395 160.632L139.475 159.47L142.84 158.466L144.136 156.835L144.734 154.879L144.417 152.252L143.524 150.441L141.55 149.914L142.768 148.34L146.607 147.467L149.359 147.323L149.568 152.166L153.436 155.832L155.165 159.982L159.898 162.147L159.711 163.648L162.139 169.04L166.944 168.895L168.384 169.661L171.345 181.454L169.371 187.17L170.545 191.414L174.407 194.07L179.327 201.179L182.936 203.488L185.774 203.907L186.142 203.921L185.58 206.722L185.933 210.561L187.849 211.088L189.945 213.881L183.311 214.935L180.35 217.208L182.792 219.475L184.009 221.748H186.632L186.452 223.848L189.945 227.688L190.99 231.015L189.074 232.589L187.15 232.408L185.234 231.189L183.491 231.715L182.439 235.728L180.696 237.829L185.58 242.549L183.311 243.768L183.476 247.226L181.956 245.977L179.514 245.45L178.815 243.35L176.193 243.177L174.803 244.404L171.835 244.05L170.265 241.957L170.092 239.33L168.168 238.456L166.425 238.983L165.553 240.203L162.067 241.084L160.669 234.963L154.913 233.917L153.869 232.69L151.427 231.99L150.901 234.436L149.676 235.837L150.555 237.756L152.118 238.63L153.17 240.903L149.157 245.977L148.869 248.669Z"/>
@@ -503,7 +516,7 @@ figcaption a{text-decoration:underline;text-underline-offset:2px}
 <section class="t-sec kos t-anchor" id="kosovo" aria-labelledby="kos-h"><div class="wrap"><div class="kos-in rv"><span class="gline"></span><span class="eyebrow">Kosovo i Metohija</span><h2 id="kos-h">Svetinje na Kosovu i Metohiji</h2>
 <p style="margin-top:24px">Radove na crkvama i manastirima izveli smo i na Kosovu i Metohiji, takođe kao donaciju.</p>
 <p class="zemlja">Naša izgradnja na našoj svetoj zemlji.</p>
-<ul class="zad" data-placeholder="true" aria-label="Objekti na Kosovu i Metohiji"><li>Naziv objekta 1</li><li>Naziv objekta 2</li><li>Naziv objekta 3</li></ul></div></div></section>
+<ul class="zad set" aria-label="Objekti na Kosovu i Metohiji"><li>Manastir Visoki Dečani, Dečani</li><li>Prizrenska bogoslovija, Prizren</li><li>Dečanska vinarija, Velika Hoča</li></ul></div></div></section>
 <section class="t-sec sved" id="svedocanstva" aria-labelledby="sved-h"><div class="wrap"><div class="rv"><span class="gline"></span><span class="eyebrow">Svedočanstva</span><h2 id="sved-h">Reči zahvalnosti</h2></div><div class="sved-grid rv">
 <blockquote data-placeholder="true"><p>Hvala vam što ste hram ogrejali, a da freske nisu pretrpele ni najmanju promenu. Molimo se za vas i vaše porodice.</p><cite>Starešina manastira (primer)</cite></blockquote>
 <blockquote data-placeholder="true"><p>Došli ste tiho, radili pažljivo i otišli bez traženja ičega zauzvrat.</p><cite>Bratstvo manastira (primer)</cite></blockquote>
@@ -552,7 +565,7 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
 // mapa: nazivi okruga, zlatni su okruzi sa svetinjama i vode na odgovarajuci deo stranice
 const NAZIVI=['Beogradski','Severnobački','Srednjobanatski','Severnobanatski','Južnobanatski','Zapadnobački','Južnobački','Sremski','Mačvanski','Kolubarski','Podunavski','Braničevski','Šumadijski','Pomoravski','Borski','Zaječarski','Zlatiborski','Moravički','Raški','Rasinski','Nišavski','Toplički','Pirotski','Jablanički','Pčinjski','Kosovski','Pećki','Prizrenski','Kosovskomitrovački','Kosovskopomoravski'].map(n=>n+' okrug');
-const LINK={0:'#hram-svetog-save',9:'#hram-valjevo',25:'#kosovo',26:'#kosovo',27:'#kosovo',28:'#kosovo',29:'#kosovo'};
+const LINK={0:'#hram-svetog-save',9:'#hram-valjevo',18:'#manastiri',25:'#kosovo',26:'#kosovo',27:'#kosovo',28:'#kosovo',29:'#kosovo'};
 const map=document.getElementById('map'),tip=document.getElementById('mapTip');
 function show(p,x,y){tip.textContent=NAZIVI[+p.dataset.i];const w=map.clientWidth;tip.style.left=Math.min(Math.max(x,64),w-64)+'px';tip.style.top=y+'px';tip.classList.add('on')}
 document.querySelectorAll('.okrug').forEach(p=>{

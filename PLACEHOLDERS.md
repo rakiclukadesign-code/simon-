@@ -171,6 +171,10 @@ Sve što NIJE na listi potvrđenih činjenica označeno je u HTML-u sa `data-pla
 
 **Potvrđeno (nije placeholder):** ime firme i monaško ime Svetog Stefana Prvovenčanog; osnivač je otac sadašnjeg vlasnika; osnovano pre više od četvrt veka; Hram Svetog Save (celokupno podno grejanje, preko 5.000 m²); Hram Vaskrsenja Hristovog u Valjevu (preko 1.200 m² podnog grejanja); Hilandar (obnova nakon požara 2004, jedna od najvećih donacija); skoro sve zadužbine Nemanjića; radovi širom Srbije, na Kosovu i Metohiji i u Beogradu; sve je donacija; svi podaci o crkvi u Osečini (ktitor Zoran Petrović, posveta, mesto, episkop Isihije, arhitektica Milka Krstivojević, dimenzije, vremenska kapsula, freskopis, motiv ktitora).
 
+**Ažurirano podacima klijenta (referent lista, 30.09.2023.):** dodata je sekcija „Manastiri i hramovi u kojima smo radili“ (`#manastiri`) sa kompletnim spiskom; popunjene su liste „Zadužbine Nemanjića“ (Hilandar, Studenica, Sopoćani, Visoki Dečani) i „Kosovo i Metohija“ (Visoki Dečani, Prizrenska bogoslovija, Dečanska vinarija); brojka „40+“ je zamenjena sa „20+“ jer lista ima 22 svetinje. Mapa ima i Raški okrug (Studenica, Sopoćani).
+
+**Treba potvrditi:** lista kaže da je „u velikom delu“ donirano, a stranica na drugim mestima tvrdi da je sve donacija. Hram Vaskrsenja: lista 1.300 m², stranica 1.200 m². Za manastire na listi (Tušimlja, Preradovac, Piperska ćelija…) nema mesta, pa su navedeni bez lokacije. Obim radova na Hilandaru i dalje čeka potvrdu.
+
 ### Fotografije (Čuvari tradicije)
 
 Sve su privremene dok klijent ne pošalje sopstvene. Atribucija autora je uklonjena sa stranice radi dizajna. Fotografije sa Wikimedia Commons (CC BY-SA 4.0) zahtevaju navođenje autora, pa ih treba zameniti sopstvenim fotografijama pre objave, ili vratiti atribuciju. Spisak autora je u tabeli ispod.
