@@ -106,13 +106,13 @@ Naziv projekta, lokacija, vrsta usluge i brend opreme dolaze iz zadatka i nisu i
 | Cene u brzoj proceni | 96 / 56 / 40 € po m², dodaci 24 / 20 / 16 € po m², korekcija 124% za adaptaciju | Konfigurator |
 | Brojke „64+“ i „16+“ | preuzete sa starog sajta | Sekcija „O nama“ |
 
-**Ažurirano: popup mape (landing page) sada koristi referent listu klijenta** (Prilog 2, 30.09.2023.): 58 objekata u Kolubarskom okrugu, 8 u Beogradskom, po jedan u Mačvanskom, Zaječarskom i Zlatiborskom, a crkve i manastiri u Raškom, Pećkom i Prizrenskom okrugu. Izmišljene stavke su uklonjene. Okruzi se boje prema podacima (narandžasto: izvedeni radovi, zlatno: samo crkve i manastiri). Podaci su u JS bloku „mapa: nazivi okruga, tooltip i popup“ u `index.html`.
+**Ažurirano: popup mape (landing page) sada koristi referent listu klijenta** (Prilog 2, 30.09.2023.): 62 objekta u Kolubarskom okrugu, 8 u Beogradskom, po jedan u Mačvanskom, Zaječarskom i Zlatiborskom, a crkve i manastiri u Raškom, Pećkom i Prizrenskom okrugu. Izmišljene stavke su uklonjene. Okruzi se boje prema podacima (narandžasto: izvedeni radovi, zlatno: samo crkve i manastiri). Podaci su u JS bloku „mapa: nazivi okruga, tooltip i popup“ u `index.html`.
 
 Fotografije u popupu su **ilustrativne** (po vrsti objekta, iz postojećih Unsplash fotografija) i označene su na stranici kao „Ilustrativna fotografija“. Zameniti ih fotografijama klijenta.
 
 **Treba potvrditi sa klijentom:**
 
-- lokacija za objekte bez mesta u listi (nisu na mapi): porodična kuća „Publik“ (M. Kraljević), porodična kuća „Urban Tehnik“, porodična kuća prof. Dragana Lazića, poslovni objekat „Poliform“
+- objekti bez mesta u listi (kuće „Publik“, „Urban Tehnik“, kuća prof. Lazića i „Poliform“): vlasnik sajta je potvrdio da su u Valjevu, uneti su u popup. Imena privatnih lica (M. Kraljević, prof. Lazić) nisu objavljena na sajtu
 - datum završetka za 11 poslednjih stavki u listi (nemaju datum, prikazuju se bez godine)
 - „Zdravstveni centar, Stomatologija“ (bez mesta u listi, uneto kao Valjevo) i Pantićeva 122 (uneto kao Valjevo)
 - manastiri bez mesta u listi: lokacija je određena po znanju (Lelić, Pustinja, Ćelije, Ždrebaonik: Valjevo; Studenica: Kraljevo; Sopoćani: Novi Pazar). Tušimlja, Preradovac, Piperska ćelija nisu na mapi (nepoznato mesto). Hilandar, Ostrog i Mojkovac su van Srbije, pa nisu na mapi
