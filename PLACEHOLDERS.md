@@ -118,6 +118,25 @@ Fotografije u popupu su **ilustrativne** (po vrsti objekta, iz postojećih Unspl
 - manastiri bez mesta u listi: lokacija je određena po znanju (Lelić, Pustinja, Ćelije, Ždrebaonik: Valjevo; Studenica: Kraljevo; Sopoćani: Novi Pazar). Tušimlja, Preradovac, Piperska ćelija nisu na mapi (nepoznato mesto). Hilandar, Ostrog i Mojkovac su van Srbije, pa nisu na mapi
 - površina Hrama Vaskrsenja u Valjevu: lista navodi 1.300 m², stranica „Čuvari tradicije“ 1.200 m²
 
+### Fotografije u popupu mape (stvarni objekti)
+
+Za 12 objekata u popupu su stvarne fotografije sa Wikimedia Commons (preuzete 720 px, u `assets/reference/`). Popup ih ne označava kao „ilustrativne“. Autori i licence su zapisani ovde, jer **licence CC BY-SA / CC BY zahtevaju navođenje autora** (ne može da se ukine dozvolom klijenta, jer klijent nije autor fotografije). Ako se autori ne navode na sajtu, ove fotografije treba zameniti ili dodati stranicu/sekciju „Izvori fotografija“.
+
+| Fajl | Autor | Licenca | Izvor |
+|---|---|---|---|
+| `assets/reference/studenica.jpg` | Pudelek | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Manastir_Studenica_(by_Pudelek).JPG |
+| `assets/reference/sopocani.jpg` | Pudelek (Marcin Szala) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Manastir_Sopo%C4%87ani_(by_Pudelek).jpg |
+| `assets/reference/decani.jpg` | Julian Nyča | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Visoki_De%C4%8Dani,_exterior_view_(Julian_Ny%C4%8Da).jpg |
+| `assets/reference/lelic.jpg` | Mickey Mystique | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Manastir_Leli%C4%87,_Valjevo,_015.jpg |
+| `assets/reference/celije.jpg` | Mickey Mystique | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Manastir_%C4%86elije,_Valjevo,_002.jpg |
+| `assets/reference/pustinja.jpg` | Vladimir Pecikoza | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Medvednik_-_zapadna_Srbija_-_selo_Vujinova%C4%8Da_-_manastir_Pustinja.jpg |
+| `assets/reference/zdrebaonik.jpg` | ? | CC BY 3.0 rs | https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B0%D0%BD%D0%B0%D1%81%D1%82%D0%B8%D1%80_%D0%96%D0%B4%D1%80%D0%B5%D0%B1%D0%B0%D0%BE%D0%BD%D0%B8%D0%BA.jpg |
+| `assets/reference/pokrova.jpg` | Nenad Sakovic | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Crkva_Pokrova_Presvete_Bogorodice_Valjevo_-_panoramio.jpg |
+| `assets/reference/bogoslovija.jpg` | VisarHaxhifazliu | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Bogoslovija_2.jpg |
+| `assets/reference/osnovni-sud.jpg` | Dungodung | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Valjevo,_Osnovni_sud,_02.jpg |
+| `assets/reference/gimnazija-knjazevac.jpg` | ImperatorkA | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Gimnazija_u_Knja%C5%BEevcu.JPG |
+| `assets/reference/nektarije.jpg` | Društvo za akademski razvoj | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Hram_Svetog_Nektarija_u_Valjevu.jpg |
+
 ## Fotografije
 
 Sve fotografije su besplatne sa [Unsplash](https://unsplash.com) (Unsplash licenca dozvoljava komercijalnu upotrebu). One su **ilustrativne** i ne prikazuju stvarne Simon projekte. Treba ih zameniti klijentovim fotografijama. Fotografije sakralnog objekta su opšte (zapadnoevropske) crkve, ne srpski manastir, pa ih svakako treba zameniti.

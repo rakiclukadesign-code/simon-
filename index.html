@@ -272,6 +272,7 @@ section{padding:132px 0}
 .okr-d{background:var(--cream);border-radius:var(--r-md);overflow:hidden}
 .okr-d .ph{height:208px;background:linear-gradient(150deg,var(--brown-2),var(--brown));position:relative}
 .okr-d .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.okr-d .ph.real::after{display:none}
 .okr-d .ph::after{content:"Ilustrativna fotografija";position:absolute;left:12px;bottom:12px;padding:4px 12px;border-radius:1000px;background:rgba(43,13,8,.65);color:#fff;font:600 12px/16px Manrope}
 .okr-d .bd{padding:24px}
 .okr-d h4{font:700 20px/24px Sora;color:var(--brown)}
@@ -892,10 +893,10 @@ t.nodeValue=t.nodeValue.replace(/\s+(\S+\s*)$/,' $1')})})();
 const NAZIVI=['Beogradski','Severnobački','Srednjobanatski','Severnobanatski','Južnobanatski','Zapadnobački','Južnobački','Sremski','Mačvanski','Kolubarski','Podunavski','Braničevski','Šumadijski','Pomoravski','Borski','Zaječarski','Zlatiborski','Moravički','Raški','Rasinski','Nišavski','Toplički','Pirotski','Jablanički','Pčinjski','Kosovski','Pećki','Prizrenski','Kosovskomitrovački','Kosovskopomoravski'].map(n=>n+' okrug');
 // Podaci iz klijentove referent liste (Prilog 2, 30.09.2023.). Fotografije su ilustrativne.
 // H(naziv, mesto, usluge, godina|status|null, {holy,link,opis,mj:[labela,vrednost],opr,img})
-const H=(n,m,u,g,o)=>{o=o||{};return[n,m,u,g,o.holy?1:0,o.link||'',o.opis||'',o.mj||null,o.opr||'',o.img||'']};
+const H=(n,m,u,g,o)=>{o=o||{};return[n,m,u,g,o.holy?1:0,o.link||'',o.opis||'',o.mj||null,o.opr||'',o.img||'',o.real?1:0]};
 const T='Termotehničke instalacije',TP='Toplotna podstanica',GR='Grejanje',KL='Klimatizacija',VE='Ventilacija',TPU='Toplotna pumpa',KO='Kotlarnica',DON='U velikom delu doniran materijal i rad.';
 const P={
-0:[H('Hram Svetog Save','Vračar',['Podno grejanje'],2019,{holy:1,link:'cuvari-tradicije/#hram-svetog-save',opis:'Podno grejanje celog hrama, izvedeno kao donacija.',mj:['Površina','preko 5.000 m²'],img:'assets/tradicija/hram-svetog-save.webp'}),
+0:[H('Hram Svetog Save','Vračar',['Podno grejanje'],2019,{holy:1,link:'cuvari-tradicije/#hram-svetog-save',opis:'Podno grejanje celog hrama, izvedeno kao donacija.',mj:['Površina','preko 5.000 m²'],img:'assets/tradicija/hram-svetog-save.webp',real:1}),
 H('Poslovno-stambeni objekat „Cerska Kej“','Beograd',[GR,TP,KL,VE],2014,{opis:'Centralno grejanje priključeno na toplotnu podstanicu JKP Toplana Beograd, uz split klimatizacione sisteme i ventilaciju.',img:'stambeni'}),
 H('Laboratorija za metalografska ispitivanja','Obrenovac',[GR,KL,TPU],2013,{opis:'Instalacija grejanja i klimatizacije.',opr:'Toplotna pumpa vazduh–voda i elektro kotao',img:'industrija'}),
 H('Stambeno-poslovni objekat Carigradska 9','Beograd',[GR],2012,{opis:'Izvedeni radovi na instalaciji centralnog grejanja.',img:'stambeni'}),
@@ -904,24 +905,24 @@ H('Dom zdravlja Rakovica','Rakovica',[GR,KL],2011,{opis:'Rekonstrukcija i dograd
 H('Stambeno-poslovni objekat Ivankovačka 8–10','Beograd',[GR,VE,TP],2010,{opis:'Radovi na centralnom grejanju, ventilaciji i toplotnoj podstanici.',mj:['Snaga','600 kW'],img:'stambeni'}),
 H('Stambeno-poslovni objekat Porečka 5','Beograd',[GR,VE,TP],null,{opis:'Radovi na centralnom grejanju, ventilaciji i toplotnoj podstanici.',img:'stambeni'})],
 8:[H('Rauch Serbia','Koceljeva',[GR,KL,TPU],2023,{opis:'Instalacija grejanja i klimatizacije.',opr:'Toplotna pumpa vazduh–voda',img:'industrija'})],
-15:[H('Gimnazija Knjaževac','Knjaževac',[GR],2014,{opis:'Instalacija centralnog grejanja.',img:'skola'})],
+15:[H('Gimnazija Knjaževac','Knjaževac',[GR],2014,{opis:'Instalacija centralnog grejanja.',img:'assets/reference/gimnazija-knjazevac.jpg',real:1})],
 16:[H('Cementara „Titan“','Kosjerić',[T],2012,{opis:'Izvedeni radovi.',img:'industrija'})],
-18:[H('Manastir Studenica','Kraljevo',[KO],'donacija',{holy:1,opis:'Rekonstrukcija kotlarnice. '+DON,img:'assets/tradicija/svece.webp'}),
-H('Manastir Sopoćani','Novi Pazar',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/tradicija/fresko2.webp'})],
-26:[H('Manastir Visoki Dečani','Dečani',[T],'donacija',{holy:1,link:'cuvari-tradicije/#kosovo',opis:'Radovi na manastiru. '+DON,img:'assets/tradicija/svece.webp'})],
-27:[H('Prizrenska bogoslovija','Prizren',[T],'donacija',{holy:1,link:'cuvari-tradicije/#kosovo',opis:'Radovi na bogosloviji. '+DON,img:'assets/tradicija/fresko2.webp'}),
+18:[H('Manastir Studenica','Kraljevo',[KO],'donacija',{holy:1,opis:'Rekonstrukcija kotlarnice. '+DON,img:'assets/reference/studenica.jpg',real:1}),
+H('Manastir Sopoćani','Novi Pazar',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/reference/sopocani.jpg',real:1})],
+26:[H('Manastir Visoki Dečani','Dečani',[T],'donacija',{holy:1,link:'cuvari-tradicije/#kosovo',opis:'Radovi na manastiru. '+DON,img:'assets/reference/decani.jpg',real:1})],
+27:[H('Prizrenska bogoslovija','Prizren',[T],'donacija',{holy:1,link:'cuvari-tradicije/#kosovo',opis:'Radovi na bogosloviji. '+DON,img:'assets/reference/bogoslovija.jpg',real:1}),
 H('Dečanska vinarija','Velika Hoča',[T],'donacija',{holy:1,link:'cuvari-tradicije/#kosovo',opis:'Radovi u vinariji manastira Visoki Dečani. '+DON,img:'assets/tradicija/kamen.webp'})],
-9:[H('Veliki Hram Vaskrsenja Gospodnjeg','Valjevo',['Podno grejanje',KO],2015,{holy:1,link:'cuvari-tradicije/#hram-valjevo',opis:'Centralno grejanje hrama, sa podnim grejanjem i kotlom na pelet. '+DON,mj:['Površina','1.300 m²'],opr:'Kotao na pelet',img:'assets/tradicija/hram-valjevo.webp'}),
+9:[H('Veliki Hram Vaskrsenja Gospodnjeg','Valjevo',['Podno grejanje',KO],2015,{holy:1,link:'cuvari-tradicije/#hram-valjevo',opis:'Centralno grejanje hrama, sa podnim grejanjem i kotlom na pelet. '+DON,mj:['Površina','1.300 m²'],opr:'Kotao na pelet',img:'assets/tradicija/hram-valjevo.webp',real:1}),
 H('Crkva Svetog Simeona Stolpnika','Osečina',['Zadužbina'],'u izgradnji',{holy:1,link:'cuvari-tradicije/#ktitorska-crkva',opis:'Porodična zadužbina u izgradnji, srpsko-vizantijski stil.',img:'assets/tradicija/temelj.webp'}),
 H('Hram Vaznesenja Gospodnjeg','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na hramu. '+DON,img:'assets/tradicija/hram-valjevo.webp'}),
-H('Hram Pokrova presvete Bogorodice','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na hramu. '+DON,img:'assets/tradicija/fresko2.webp'}),
-H('Hram Svetog Nektarija','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na hramu. '+DON,img:'assets/tradicija/svece.webp'}),
+H('Hram Pokrova presvete Bogorodice','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na hramu. '+DON,img:'assets/reference/pokrova.jpg',real:1}),
+H('Hram Svetog Nektarija','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na hramu. '+DON,img:'assets/reference/nektarije.jpg',real:1}),
 H('Hram Svetih Kozme i Damjana, bolnički hram','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na bolničkom hramu. '+DON,img:'assets/tradicija/hram-valjevo.webp'}),
 H('Hram Svetog Georgija','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na hramu. '+DON,img:'assets/tradicija/fresko2.webp'}),
-H('Manastir Lelić','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/tradicija/kamen.webp'}),
-H('Manastir Pustinja','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/tradicija/svece.webp'}),
-H('Manastir Ćelije','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/tradicija/kamen.webp'}),
-H('Manastir Ždrebaonik','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/tradicija/fresko2.webp'}),
+H('Manastir Lelić','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/reference/lelic.jpg',real:1}),
+H('Manastir Pustinja','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/reference/pustinja.jpg',real:1}),
+H('Manastir Ćelije','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/reference/celije.jpg',real:1}),
+H('Manastir Ždrebaonik','Valjevo',[T],'donacija',{holy:1,opis:'Radovi na manastiru. '+DON,img:'assets/reference/zdrebaonik.jpg',real:1}),
 H('Hotel Sanjar','Divčibare',[GR,KL,TPU],2023,{opis:'Instalacija grejanja i klimatizacije.',opr:'Toplotna pumpa vazduh–voda',img:'hotel'}),
 H('Farmaceutska kuća Vega','Valjevo',[T],2022,{img:'poslovni'}),
 H('Stambeno-poslovni objekat Pantićeva 122','Valjevo',[T],2022,{img:'stambeni'}),
@@ -949,7 +950,7 @@ H('Toplotna podstanica poslovnog objekta „Vega“','Valjevo',[TP],2012,{opis:'
 H('Toplotna podstanica Pantićeva 99','Valjevo',[TP],2011,{opis:'Projekat toplotne podstanice poslovno-stambenog objekta.',mj:['Snaga','150 kW'],img:'podstanica'}),
 H('Vila „Plamenac“','Divčibare',[GR,'Podno grejanje',KO],2011,{opis:'Projektovanje i izvođenje radova na centralnom grejanju: radijatorsko i podno grejanje, kotlarnica.',img:'hotel'}),
 H('Predškolska ustanova „Milica Nožica“','Valjevo',[KO],2011,{opis:'Rekonstrukcija kotlarnice.',mj:['Snaga','270 kW'],img:'skola'}),
-H('Toplotna podstanica Osnovnog suda','Valjevo',[TP],2011,{opis:'Projekat i izvođenje radova.',mj:['Snaga','400 kW'],img:'podstanica'}),
+H('Toplotna podstanica Osnovnog suda','Valjevo',[TP],2011,{opis:'Projekat i izvođenje radova.',mj:['Snaga','400 kW'],img:'assets/reference/osnovni-sud.jpg',real:1}),
 H('Toplovod od OŠ „Nada Purić“ do Sportske hale „Student“','Valjevo',['Toplovod'],2011,{opis:'Projekat i izvođenje radova.',img:'podstanica'}),
 H('Zdravstveni centar Valjevo, Urgentni centar','Valjevo',['Podno grejanje',TPU],2011,{opis:'Projektovanje i izvođenje radova na podnom grejanju i vazdušnim zavesama, sa toplotnom pumpom kao izvorom toplote.',img:'zdravlje'}),
 H('Stambeno-poslovni objekat „Građevinar“','Ub',[GR,KO],2011,{opis:'Projekat centralnog grejanja i kotlarnice.',mj:['Površina','1.100 m²'],img:'stambeni'}),
@@ -1014,7 +1015,7 @@ function open(p){
       a.hidden=false;
       const r=list[j];
       body.querySelectorAll('.okr-list button').forEach(b=>b.setAttribute('aria-current',+b.dataset.j===j));
-      {const dl=[['Usluga',sv(r).map(esc).join('<br>')]];if(r[3]!=null)dl.push([isNaN(r[3])?'Status':'Godina',esc(isNaN(r[3])?r[3].charAt(0).toUpperCase()+r[3].slice(1):r[3])]);if(r[7])dl.push([esc(r[7][0]),esc(r[7][1])]);if(r[8])dl.push(['Oprema',esc(r[8])]);const im=slika(r,j);document.getElementById('okrD').innerHTML='<div class="ph">'+(im?'<img src="'+esc(im)+'" alt="Ilustrativna fotografija: '+esc(r[0])+'" loading="lazy" onerror="this.remove()">':'')+'</div><div class="bd"><h4>'+esc(r[0])+'</h4><div class="loc">'+esc(r[1])+' · '+esc(naz(p))+'</div>'+(r[6]?'<p>'+esc(r[6])+'</p>':'')+'<dl>'+dl.map(x=>'<div><dt>'+x[0]+'</dt><dd>'+x[1]+'</dd></div>').join('')+'</dl></div>'}
+      {const dl=[['Usluga',sv(r).map(esc).join('<br>')]];if(r[3]!=null)dl.push([isNaN(r[3])?'Status':'Godina',esc(isNaN(r[3])?r[3].charAt(0).toUpperCase()+r[3].slice(1):r[3])]);if(r[7])dl.push([esc(r[7][0]),esc(r[7][1])]);if(r[8])dl.push(['Oprema',esc(r[8])]);const im=slika(r,j);document.getElementById('okrD').innerHTML='<div class="ph'+(r[10]?' real':'')+'">'+(im?'<img src="'+esc(im)+'" alt="Ilustrativna fotografija: '+esc(r[0])+'" loading="lazy" onerror="this.remove()">':'')+'</div><div class="bd"><h4>'+esc(r[0])+'</h4><div class="loc">'+esc(r[1])+' · '+esc(naz(p))+'</div>'+(r[6]?'<p>'+esc(r[6])+'</p>':'')+'<dl>'+dl.map(x=>'<div><dt>'+x[0]+'</dt><dd>'+x[1]+'</dd></div>').join('')+'</dl></div>'}
       more.setAttribute('href',r[5]?(r[5].indexOf('/')>-1?r[5]:'reference/#'+r[5]):'reference/');
       dock();
       if(mq.matches)setTimeout(()=>body.querySelector('.okr-list button[aria-current=true]').scrollIntoView({block:'nearest',behavior:'smooth'}),50);
