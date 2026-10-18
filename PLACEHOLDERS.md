@@ -241,7 +241,7 @@ Izmišljene vrednosti su u HTML-u označene sa `data-placeholder="true"`.
 |---|---|---|
 | Ograničenja priloga | najviše 5 fajlova, 5 MB po fajlu, 15 MB ukupno; formati PDF, JPG, JPEG, PNG, HEIC, DWG, DXF. Web3Forms dokumentacija navodi samo 5 MB po fajlu (Pro). Ukupna veličina, broj fajlova i dozvoljeni tipovi nisu dokumentovani, pa ih treba proveriti pravim Pro ključem | Konstanta `LIMITS` u `assets/js/forms.js` (zajednička za oba formulara); formati su u skripti stranice |
 | Rok za odgovor | 24 h radnim danima | Hero (stavka poverenja), „Šta se dešava posle slanja“, poruka uspeha |
-| Okvirni budžet (opsezi) | Do 5.000 €, 5.000 – 15.000 €, 15.000 – 40.000 €, preko 40.000 € | Formular, korak 2 |
+| Okvirni budžet (opsezi) | Do 3.000 € (ili Do 5.000 € ako je željeni sistem toplotna pumpa), 3.000 – 15.000 € (odnosno 5.000 – 15.000 €), 15.000 – 40.000 €, preko 40.000 €. Polje „Okrug“ je uklonjeno iz koraka 2 | Formular, korak 2 |
 | Odgovori u „Čestim pitanjima“ | svih šest odgovora su izmišljeni (besplatno prvo savetovanje, pokrivenost regiona, trajanje ponude, servis tuđih sistema, subvencije) | Sekcija „Česta pitanja“ |
 | Pitanje o subvencijama | sakriveno atributom `hidden` dok klijent ne potvrdi da pomaže oko dokumentacije | Sekcija „Česta pitanja“, poslednje pitanje (ukloniti `hidden` iz `<details>`) |
 | Politika privatnosti | kratak izmišljen tekst u dijalogu (nema posebne stranice) | Dijalog koji se otvara iz saglasnosti u koraku 3; potreban pravi tekst |

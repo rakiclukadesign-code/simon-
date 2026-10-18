@@ -312,7 +312,6 @@ a[href^="tel:"],a[href^="viber:"]{white-space:nowrap}
 </div></section>
 <section class="step" data-step="1" aria-labelledby="st1" hidden><h2 id="st1" tabindex="-1">O objektu</h2><div class="grid2">
 <div class="f"><label for="i-6">Mesto <span class="rq" aria-hidden="true">*</span></label><input id="i-6" name="mesto" type="text" data-label="Mesto" data-req aria-required="true" placeholder="Valjevo" autocomplete="address-level2" aria-describedby="e-i-6"><p class="err" id="e-i-6" hidden></p></div>
-<div class="f"><label for="s-7">Okrug</label><div class="sel"><select id="s-7" name="okrug" data-label="Okrug" aria-describedby="e-s-7"><option value="">Izaberite…</option><option>Beogradski okrug</option><option>Severnobački okrug</option><option>Srednjobanatski okrug</option><option>Severnobanatski okrug</option><option>Južnobanatski okrug</option><option>Zapadnobački okrug</option><option>Južnobački okrug</option><option>Sremski okrug</option><option>Mačvanski okrug</option><option>Kolubarski okrug</option><option>Podunavski okrug</option><option>Braničevski okrug</option><option>Šumadijski okrug</option><option>Pomoravski okrug</option><option>Borski okrug</option><option>Zaječarski okrug</option><option>Zlatiborski okrug</option><option>Moravički okrug</option><option>Raški okrug</option><option>Rasinski okrug</option><option>Nišavski okrug</option><option>Toplički okrug</option><option>Pirotski okrug</option><option>Jablanički okrug</option><option>Pčinjski okrug</option><option>Kosovski okrug</option><option>Pećki okrug</option><option>Prizrenski okrug</option><option>Kosovskomitrovački okrug</option><option>Kosovskopomoravski okrug</option><option>Van Srbije</option></select></div><p class="err" id="e-s-7" hidden></p></div>
 <div class="f"><label for="i-8">Površina koja se greje ili hladi (m²) <span class="rq" aria-hidden="true">*</span></label><input id="i-8" name="povrsina" type="text" data-label="Površina koja se greje ili hladi (m²)" data-req aria-required="true" placeholder="120" inputmode="numeric" data-key="Površina (m²)" aria-describedby="e-i-8"><p class="err" id="e-i-8" hidden></p></div>
 <div class="f"><label for="i-9">Broj etaža</label><input id="i-9" name="etaze" type="text" data-label="Broj etaža" data-opt placeholder="2" inputmode="numeric" aria-describedby="e-i-9"><p class="err" id="e-i-9" hidden></p></div>
 <div class="f"><label for="s-10">Godina gradnje</label><div class="sel"><select id="s-10" name="godina" data-label="Godina gradnje" aria-describedby="e-s-10"><option value="">Izaberite…</option><option>Pre 1970</option><option>1970–1990</option><option>1990–2010</option><option>Posle 2010</option><option>U izgradnji</option></select></div><p class="err" id="e-s-10" hidden></p></div>
@@ -469,6 +468,18 @@ function cond(){
   $$('.c-grej').forEach(e=>e.hidden=!g);
   const t=$('[name=tip]').value;
   $$('.c-namena').forEach(e=>e.hidden=!(t==='Industrijski objekat'||t==='Javni objekat'));
+  budzet();
+}
+// prva stavka okvirnog budžeta zavisi od željenog sistema: toplotna pumpa do 5.000 €, ostalo do 3.000 €
+function budzet(){
+  const s=$('#s-16'),z=$('[name=zeljeni]');if(!s||!z)return;
+  const pump=!z.closest('.c-grej').hidden&&z.value==='Toplotna pumpa';
+  const opts=pump?['Do 5.000 €','5.000 – 15.000 €']:['Do 3.000 €','3.000 – 15.000 €'];
+  opts.push('15.000 – 40.000 €','Preko 40.000 €','Želim preporuku');
+  if(s.dataset.mode===(pump?'p':'o'))return;
+  const cur=s.value;s.dataset.mode=pump?'p':'o';
+  s.innerHTML='<option value="">Izaberite…</option>'+opts.map(o=>'<option>'+o+'</option>').join('');
+  if(opts.includes(cur))s.value=cur;
 }
 
 // ----- koraci -----
