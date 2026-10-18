@@ -56,6 +56,8 @@ header.solid{background:rgba(255,250,246,.9);backdrop-filter:blur(16px);box-shad
 .logo{font:800 28px/32px Sora;color:#fff;transition:color .3s}
 .logo b{color:var(--orange)}
 header.solid .logo{color:var(--brown)}
+.logo{display:block;line-height:0}.logo img{display:block;height:44px;width:auto}
+@media(max-width:560px){.logo img{height:36px}}
 .menu{display:flex;gap:36px;align-items:center}
 .menu a{font-weight:600;font-size:16px;color:rgba(255,255,255,.88);transition:color .2s}
 header.solid .menu a{color:var(--ink)}
@@ -71,7 +73,7 @@ header.solid .burger{color:var(--brown)}
 
 footer{background:var(--brown);color:rgba(255,255,255,.72);padding:92px 0 36px}
 .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px}
-footer .logo{font-size:56px;line-height:56px;color:#fff}
+footer .logo{font-size:56px;line-height:0;color:#fff}footer .logo img{height:72px}@media(max-width:560px){footer .logo img{height:60px}}
 footer h4{font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:#fff;margin-bottom:20px}
 footer li{list-style:none;margin-bottom:12px;font-size:16px}
 footer ul{padding:0}
@@ -273,7 +275,7 @@ footer a:hover{color:var(--orange)}
 <a class="skip" href="#projekti">Preskoči na sadržaj</a>
 <header id="hdr" class="solid">
   <div class="wrap nav">
-    <a href="../" class="logo" aria-label="Simon – početna">SIMON<b>.</b></a>
+    <a href="../" class="logo" aria-label="Simon – početna"><img src="../assets/logo-simon.webp" alt="" width="800" height="182"></a>
     <nav class="menu" id="menu" aria-label="Glavna navigacija">
       <a href="../#usluge">Usluge</a>
       <a href="../#proces">Kako radimo</a>
@@ -503,7 +505,7 @@ footer a:hover{color:var(--orange)}
   <div class="wrap">
     <div class="f-grid">
       <div>
-        <div class="logo">SIMON<b style="color:var(--orange)">.</b></div>
+        <div class="logo"><img src="../assets/logo-simon-light.webp" alt="Simon – termotehnička rešenja" width="800" height="182" loading="lazy"></div>
         <p style="margin-top:20px;max-width:38ch">Inženjerska rešenja za grejanje, hlađenje i klimatizaciju sa preko 26 godina iskustva.</p>
         <div class="socs">
           <a class="soc" href="https://www.instagram.com/simon_valjevo/" target="_blank" rel="noopener" aria-label="Simon na Instagramu (otvara se u novoj kartici)"><span class="soc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></span></a>
