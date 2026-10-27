@@ -11,90 +11,22 @@ Naziv projekta, lokacija, vrsta usluge i brend opreme dolaze iz zadatka i nisu i
 | Okruga u kojima smo radili | 11 | Hero, treća brojka |
 | Godina iskustva, završenih projekata | 26, 64+ | Hero (preuzeto sa starog sajta, proveriti) |
 
-## 1. Porodična kuća, Valjevo (`#kuca-valjevo`)
+## Reference (`/reference/`): istaknuti projekti iz upitnika klijenta
 
-| Polje | Izmišljena vrednost | Mesto na stranici |
-|---|---|---|
-| Godina | 2024 | Zaglavlje projekta, ispod naslova |
-| Površina | 210 m² | Blok „Ključni podaci“ |
-| Instalisana snaga | 12 kW (toplotna pumpa) | Blok „Ključni podaci“ |
-| Trajanje radova | 9 radnih dana | Blok „Ključni podaci“ |
-| Obim posla | Projektovanje, izvođenje, servis | Blok „Ključni podaci“ |
-| Izazov (ceo tekst i brojke u njemu) | Kuća iz 1998. godine grejala se kotlom na čvrsto gorivo starim više od dvadeset godina. Ručno loženje, neravnomerna temperatura po prostorijama i rastući troškovi ogreva naterali su vlasnike da traže rešenje bez dimnjaka, ali i bez radikalne rekonstrukcije objekta. | Sekcija „Izazov“ |
-| Rešenje (ceo tekst, tehničke vrednosti) | Ugradili smo toplotnu pumpu vazduh–voda nominalne snage 12 kW sa spoljnom jedinicom na severnoj strani parcele. Prizemlje je dobilo podno grejanje, a postojeći radijatori na spratu ostali su uz niži temperaturni režim polaza od 45 °C. Akumulator toplote od 200 l i bojler za sanitarnu vodu od 200 l pokrivaju jutarnje i večernje vrhove potrošnje. Regulacija po prostorijama održava zadatu temperaturu bez ručnog podešavanja, a sistem je povezan sa aplikacijom za nadzor. Stari kotao i dimnjak su demontirani, a prostor kotlarnice pretvoren u ostavu. | Sekcija „Rešenje“ |
-| Rezultat 1 | 55%: niži godišnji troškovi grejanja | Sekcija „Rezultat“ |
-| Rezultat 2 | 4,1: sezonski koeficijent efikasnosti (SCOP) | Sekcija „Rezultat“ |
-| Rezultat 3 | 9 dana: trajanje radova do puštanja u rad | Sekcija „Rezultat“ |
-| Izjava klijenta | „Posle prve zime računi za grejanje su skoro prepolovljeni, a kuća je konačno ravnomerno topla. Više nema nošenja drva ni čišćenja pepela.“ | Citat na kraju projekta |
-| Ime i funkcija klijenta | Milan R., vlasnik kuće | Potpis uz citat |
+Izmišljenih pet projekata je zamenjeno sa 9 stvarnih iz upitnika („Simon upitnik-projekti“): Hotel Sanjar, Rauch Serbia, Farmaceutska kuća Vega, Dom zdravlja Valjevo, Gradska kuća, Dom zdravlja Ub, Štamparija Crveno, Kazneno-popravni zavod Valjevo i Hotel Crni Vrh. Hram Svetog Save (projekat 05 u upitniku) nije na ovoj stranici, jer upitnik traži da se svetinje ne upisuju ovde (one su na stranici „Čuvari tradicije“).
 
-## 2. Pogon za preradu hrane, Šabac (`#pogon-sabac`)
+**Iz upitnika (potvrđeno):** naziv, mesto, godina, tip objekta, usluge, površina, oprema, trajanje radova i obim posla.
 
-| Polje | Izmišljena vrednost | Mesto na stranici |
-|---|---|---|
-| Godina | 2023 | Zaglavlje projekta, ispod naslova |
-| Površina | 1.850 m² | Blok „Ključni podaci“ |
-| Instalisana snaga | 280 kW (hlađenje) | Blok „Ključni podaci“ |
-| Trajanje radova | 5 nedelja, u tri etape | Blok „Ključni podaci“ |
-| Obim posla | Projektovanje, izvođenje, nadzor, servis | Blok „Ključni podaci“ |
-| Izazov (ceo tekst i brojke u njemu) | Širenje linije pakovanja zahtevalo je stabilnih 12 °C u hali od 1.850 m², dok je proizvodnja radila u tri smene. Pogon nije smeo da stane ni na jedan dan, a higijenski zahtevi isključivali su prašnjave radove u blizini proizvodnje. | Sekcija „Izazov“ |
-| Rešenje (ceo tekst, tehničke vrednosti) | Projektovali smo centralni sistem hlađenja sa dva vodom hlađena agregata od po 140 kW (Carrier) i razvodom ledene vode 7/12 °C do 18 ventilokonvektora u hali. Kancelarije i prostor za kontrolu kvaliteta dobili su Toshiba split jedinice sa nezavisnim upravljanjem. Radovi su izvedeni u tri etape tokom noćnih smena i vikenda, uz prefabrikovane cevne module koji su spajanje na postojeće instalacije skratili na nekoliko sati. Sistem je uključen u nadzor pogona sa alarmima za odstupanje temperature. | Sekcija „Rešenje“ |
-| Rezultat 1 | ±1 °C: stabilnost temperature u hali | Sekcija „Rezultat“ |
-| Rezultat 2 | 0 sati: zastoja u proizvodnji tokom radova | Sekcija „Rezultat“ |
-| Rezultat 3 | 5 nedelja: od početka radova do puštanja u rad | Sekcija „Rezultat“ |
-| Izjava klijenta | „Proizvodnja nijednog dana nije stala, a temperatura u pakovanju sada ne odstupa ni kada je napolju preko trideset stepeni.“ | Citat na kraju projekta |
-| Ime i funkcija klijenta | Dragan P., rukovodilac proizvodnje | Potpis uz citat |
+**Napisano mi (polja koja su u upitniku bila prazna):** tekstovi „Izazov“ i „Rešenje“ (izvedeni samo iz podataka iz upitnika, bez izmišljenih brojki). „Rezultat“ prikazuje samo potvrđene brojke (površina, trajanje, godina). Izjave klijenata nisu objavljene, jer nijedna nije data. Investitori se ne navode (upitnik ne kaže da li smemo).
 
-## 3. Hotel, Zlatibor (`#hotel-zlatibor`)
+**Fotografije su privremene** (ilustrativne, iz postojećih Unsplash fotografija) i označene su „Ilustrativna fotografija“. Zameniti ih fotografijama klijenta (`assets/projekti/<naziv>/01–04.webp`, kod u `reference/index.html`).
 
-| Polje | Izmišljena vrednost | Mesto na stranici |
-|---|---|---|
-| Godina | 2022 | Zaglavlje projekta, ispod naslova |
-| Površina | 2.400 m² (38 soba) | Blok „Ključni podaci“ |
-| Instalisana snaga | oko 40 kW (solarni učinak) | Blok „Ključni podaci“ |
-| Trajanje radova | 3 nedelje, van sezone | Blok „Ključni podaci“ |
-| Obim posla | Projektovanje, izvođenje, servis | Blok „Ključni podaci“ |
-| Izazov (ceo tekst i brojke u njemu) | Hotel sa 38 soba troši velike količine tople vode, a postojeća kotlarnica na pelet radila je i leti, samo zbog sanitarne vode. Vlasnik je tražio rešenje koje smanjuje potrošnju goriva bez prekida rada hotela. | Sekcija „Izazov“ |
-| Rešenje (ceo tekst, tehničke vrednosti) | Na ravnom krovu postavili smo 24 solarna kolektora ukupne površine od oko 56 m², sa nagibom prilagođenim planinskoj klimi i opterećenju snegom. Toplota se skladišti u tri akumulatora od po 1.000 l, a regulacija prvo koristi solarnu energiju i tek potom pokreće postojeći kotao. Uvezivanje u kotlarnicu izvedeno je u jednom danu, bez prekida snabdevanja toplom vodom. Cevi su izolovane i zaštićene od mraza glikolnom smešom, a nadzor prikazuje dnevni solarni prinos. | Sekcija „Rešenje“ |
-| Rezultat 1 | 62%: godišnjih potreba za toplom vodom pokriva sunce | Sekcija „Rezultat“ |
-| Rezultat 2 | 38%: manja potrošnja peleta | Sekcija „Rezultat“ |
-| Rezultat 3 | 6,5 god.: procenjeni povrat investicije | Sekcija „Rezultat“ |
-| Izjava klijenta | „Leti se kotao skoro i ne pali, a gosti ne primećuju nikakvu razliku. Investicija se vraća brže nego što smo planirali.“ | Citat na kraju projekta |
-| Ime i funkcija klijenta | Ivana S., direktorka hotela | Potpis uz citat |
+**Treba potvrditi sa klijentom:**
 
-## 4. Školska zgrada, Kolubarski okrug (`#skola-kolubarski`)
-
-| Polje | Izmišljena vrednost | Mesto na stranici |
-|---|---|---|
-| Godina | 2023 | Zaglavlje projekta, ispod naslova |
-| Površina | 1.650 m² (12 učionica) | Blok „Ključni podaci“ |
-| Instalisana snaga | 18 kW (protok 9.600 m³/h) | Blok „Ključni podaci“ |
-| Trajanje radova | 7 nedelja, tokom letnjeg raspusta | Blok „Ključni podaci“ |
-| Obim posla | Projektovanje, izvođenje, nadzor | Blok „Ključni podaci“ |
-| Izazov (ceo tekst i brojke u njemu) | U zimskim mesecima prozori u učionicama bili su zatvoreni, pa je koncentracija CO₂ tokom časova prelazila 2.000 ppm. Škola nije imala prostora za velike kanale, a radovi su morali da stanu u letnji raspust. | Sekcija „Izazov“ |
-| Rešenje (ceo tekst, tehničke vrednosti) | Ugradili smo šest ventilacionih jedinica sa rekuperacijom toplote ukupnog protoka 9.600 m³/h, po jednu na dve učionice, sa povratom toplote od najmanje 80%. Kratki kanali vođeni su kroz spušteni plafon hodnika, pa nije bilo zahvata na fasadi. Jedinice rade tiho (ispod 35 dB(A) u učionici) i upravljaju se prema senzorima CO₂. Razvod i oprema izvedeni su sa Rehau i Flowair komponentama. | Sekcija „Rešenje“ |
-| Rezultat 1 | < 800 ppm: CO₂ u učionicama tokom nastave | Sekcija „Rezultat“ |
-| Rezultat 2 | 80%: povrat toplote iz otpadnog vazduha | Sekcija „Rezultat“ |
-| Rezultat 3 | 10 dana: pre početka školske godine završeni radovi | Sekcija „Rezultat“ |
-| Izjava klijenta | „Deca su tokom časova koncentrisanija, a u učionicama više nema zagušljivog vazduha. Radovi su završeni pre nego što su se vratili sa raspusta.“ | Citat na kraju projekta |
-| Ime i funkcija klijenta | Snežana M., direktorka škole | Potpis uz citat |
-
-## 5. Poslovni objekat, Beograd (`#poslovni-beograd`)
-
-| Polje | Izmišljena vrednost | Mesto na stranici |
-|---|---|---|
-| Godina | 2024 | Zaglavlje projekta, ispod naslova |
-| Površina | 4.200 m² (6 spratova) | Blok „Ključni podaci“ |
-| Instalisana snaga | 168 kW (hlađenje) | Blok „Ključni podaci“ |
-| Trajanje radova | 10 nedelja, sprat po sprat | Blok „Ključni podaci“ |
-| Obim posla | Projektovanje, izvođenje, nadzor, servis | Blok „Ključni podaci“ |
-| Izazov (ceo tekst i brojke u njemu) | Zgrada sa šest spratova imala je zastarele pojedinačne split uređaje različitih proizvođača, bez kontrole potrošnje po zakupcu. Vlasnik je tražio jedinstven sistem sa upravljanjem po spratovima, uz neometan rad zgrade tokom radova. | Sekcija „Izazov“ |
-| Rešenje (ceo tekst, tehničke vrednosti) | Ugradili smo VRF sistem Toshiba sa tri spoljne jedinice ukupnog učinka hlađenja od 168 kW i 74 unutrašnje jedinice u kasetnoj i kanalskoj izvedbi. Svaki sprat ima nezavisnu zonu upravljanja, a sve je povezano na centralni sistem sa merenjem potrošnje po spratu. Radovi su izvođeni sprat po sprat, van radnog vremena zakupaca. Spoljne jedinice raspoređene su na tehničkoj terasi, a cevni razvod vođen je postojećim šahtovima. | Sekcija „Rešenje“ |
-| Rezultat 1 | 30%: niža potrošnja struje za klimatizaciju | Sekcija „Rezultat“ |
-| Rezultat 2 | 74: unutrašnje jedinice sa individualnim upravljanjem | Sekcija „Rezultat“ |
-| Rezultat 3 | 10 nedelja: rok izvođenja svih šest spratova | Sekcija „Rezultat“ |
-| Izjava klijenta | „Svaki zakupac sada sam bira temperaturu na svom spratu, a mi vidimo potrošnju u realnom vremenu.“ | Citat na kraju projekta |
-| Ime i funkcija klijenta | Nikola T., upravnik objekta | Potpis uz citat |
+- godine u upitniku se razlikuju od referent liste: Hotel Sanjar (2022 / 2023), Rauch Serbia (2022 / 2023), Gradska kuća (2025 / 2018), KPZ Valjevo (2015 / 2012). Na sajtu su godine iz upitnika
+- Hram Svetog Save u upitniku: 3.200 m² (a u nazivu „preko 5000 m²“); na sajtu stoji 5.000+ m²
+- da li smemo navesti investitore (GP Kej, Sport Agent, Crveno d.o.o.)
+- Koceljeva je u upitniku bez okruga; uneto kao Mačvanski okrug
 
 ## Landing page: ilustrativni podaci (nisu deo ove stranice, ali treba ih zameniti)
 
