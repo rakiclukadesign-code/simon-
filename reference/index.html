@@ -92,7 +92,7 @@ footer a:hover{color:var(--orange)}
 
 /* ---- stranica Reference ---- */
 [hidden]{display:none!important}
-:root{--off:176px;--gold-d:#8a6d0b}
+:root{--off:96px;--gold-d:#8a6d0b}
 .eyebrow{display:inline-block;font:700 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--orange);margin-bottom:24px}
 .btn-lg{padding:20px 32px;font-size:16px}
 .menu a[aria-current=page]{color:var(--orange)}
@@ -113,7 +113,7 @@ footer a:hover{color:var(--orange)}
 .pstats b{display:block;font:700 40px/44px Sora;color:#fff;font-variant-numeric:tabular-nums}
 .pstats b i{font-style:normal;color:var(--orange)}
 .pstats span{font-size:16px;line-height:24px;color:rgba(255,255,255,.7)}
-.pstrip{padding:0;background:var(--white)}
+.pstrip{padding:0;background:var(--cream)}
 .pstrip-in{max-width:1440px;margin:0 auto;padding:32px 28px;display:flex;align-items:center;gap:48px}
 .pstrip-l{flex:none;font:600 12px/16px Manrope;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
 .pmarq{flex:1;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -127,11 +127,6 @@ footer a:hover{color:var(--orange)}
 
 
 /* filter (lepljiv na desktopu) */
-.refbar{position:sticky;top:76px;z-index:40;background:rgba(255,250,246,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.refbar-in{max-width:1440px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:flex-start}
-.jump{display:flex;align-items:center;gap:8px}
-.jump a{display:grid;place-items:center;width:32px;height:32px;border-radius:1000px;border:1px solid var(--line);background:var(--white);font:700 12px/16px Manrope;color:var(--brown);transition:background .4s,border-color .4s,color .4s}
-.jump a:hover{background:var(--orange);border-color:var(--orange);color:#fff}
 .live{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
 /* projekti */
@@ -221,8 +216,6 @@ footer a:hover{color:var(--orange)}
   .proj-top,.proj-story{grid-template-columns:minmax(0,1fr);gap:40px}
   .proj-media{order:-1;height:400px}
   .proj-story{margin-top:56px}
-  .refbar{position:static}
-  :root{--off:96px}
 }
 @media(max-width:560px){
   .wrap{padding:0 20px}
@@ -240,8 +233,6 @@ footer a:hover{color:var(--orange)}
   .pl{padding:0 24px}
   .pl img{height:24px}.pl-t img{height:20px}.pl-r img{height:28px}.pl-c img{height:32px}.pl-f img{height:40px}.pl-s img{height:22px}
   .pmarq{width:100%}
-  .refbar-in{padding:12px 20px}
-  .jump{width:100%;justify-content:space-between;gap:4px}
   .proj{padding:72px 0}
   .proj-media{height:240px}
   .proj h2{font-size:28px;line-height:32px}
@@ -309,19 +300,6 @@ footer a:hover{color:var(--orange)}
     </div>
   </div>
 </section>
-<div class="refbar"><div class="refbar-in">
-<nav class="jump" aria-label="Skok na projekat">
-<a href="#hotel-sanjar" data-cat="grejanje klimatizacija ventilacija" title="Hotel Sanjar, Divčibare" aria-label="Hotel Sanjar, Divčibare">01</a>
-<a href="#rauch-serbia" data-cat="grejanje klimatizacija" title="Rauch Serbia, Koceljeva" aria-label="Rauch Serbia, Koceljeva">02</a>
-<a href="#vega-farmaceutska" data-cat="grejanje klimatizacija ventilacija" title="Farmaceutska kuća Vega, Valjevo" aria-label="Farmaceutska kuća Vega, Valjevo">03</a>
-<a href="#dom-zdravlja-valjevo" data-cat="grejanje klimatizacija" title="Dom zdravlja Valjevo" aria-label="Dom zdravlja Valjevo">04</a>
-<a href="#gradska-kuca" data-cat="grejanje klimatizacija ventilacija" title="Gradska kuća, Valjevo" aria-label="Gradska kuća, Valjevo">05</a>
-<a href="#dom-zdravlja-ub" data-cat="grejanje ventilacija" title="Dom zdravlja Ub" aria-label="Dom zdravlja Ub">06</a>
-<a href="#stamparija-crveno" data-cat="grejanje klimatizacija ventilacija" title="Štamparija Crveno d.o.o., Valjevo" aria-label="Štamparija Crveno d.o.o., Valjevo">07</a>
-<a href="#kpz-valjevo" data-cat="grejanje klimatizacija ventilacija" title="Kazneno-popravni zavod, Valjevo" aria-label="Kazneno-popravni zavod, Valjevo">08</a>
-<a href="#hotel-crni-vrh" data-cat="grejanje klimatizacija ventilacija" title="Hotel Crni Vrh, Divčibare" aria-label="Hotel Crni Vrh, Divčibare">09</a>
-</nav>
-</div></div>
 <div id="projekti">
 <section class="proj" id="hotel-sanjar" data-cat="grejanje klimatizacija ventilacija" data-tone="c" aria-labelledby="hotel-sanjar-h">
 <div class="wrap">
