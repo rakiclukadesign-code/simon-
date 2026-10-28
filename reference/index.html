@@ -125,16 +125,6 @@ footer a:hover{color:var(--orange)}
 @keyframes pmarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.ptrack{animation:none;flex-wrap:wrap;width:auto;justify-content:center}.pl[aria-hidden],.pl:nth-child(n+8){display:none}.pmarq{-webkit-mask-image:none;mask-image:none}}
 
-/* izbor projekta */
-.picker{padding:96px 0 80px;background:var(--white)}
-.picker h2{font-size:44px;line-height:48px;font-weight:700;color:var(--brown);margin-bottom:40px}
-.pnav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.pcard{display:flex;gap:16px;align-items:center;padding:16px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--cream);transition:border-color .4s,transform .3s}
-.pcard:hover{border-color:var(--orange);transform:translateY(-4px)}
-.pcard img{width:72px;height:72px;border-radius:12px;object-fit:cover;flex:none;background:var(--brown-2)}
-.pcard b{display:block;font:700 16px/24px Sora;color:var(--brown)}
-.pcard span.m{display:block;font-size:12px;line-height:16px;color:var(--muted)}
-.pcard .n{margin-left:auto;align-self:flex-start;font:700 12px/16px Manrope;letter-spacing:4px;color:var(--orange)}
 
 /* filter (lepljiv na desktopu) */
 .refbar{position:sticky;top:76px;z-index:40;background:rgba(255,250,246,.92);backdrop-filter:blur(16px);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -190,10 +180,7 @@ footer a:hover{color:var(--orange)}
 .w-v{color:#d4502a!important}.w-t{color:#e60012!important}.w-c{color:#0a1a8a!important;font-family:Georgia,serif!important;font-style:italic;font-weight:700!important}
 .w-f{color:#2a2a2a!important}.w-d{color:#00a1e4!important;font-style:italic}.w-r{color:#111!important}
 
-.pcard-holy{border-color:var(--gold);background:#fbf5df}
-.pcard-holy:hover{border-color:var(--gold-d)}
 .holy-ic{display:grid;place-items:center;flex:none;width:72px;height:72px;border-radius:12px;background:var(--gold);color:var(--brown);font-size:32px}
-.pcard-holy .n{letter-spacing:0;font-size:16px;color:var(--gold-d)}
 .holy-block{padding:112px 0;background:#fbf5df;border-top:1px solid var(--line)}
 .holy-in{max-width:720px;margin:0 auto;text-align:center}
 .holy-cross{display:block;margin-bottom:16px;font-size:32px;line-height:40px;color:var(--gold-d)}
@@ -236,7 +223,6 @@ footer a:hover{color:var(--orange)}
   .menu a[aria-current=page]{color:var(--orange)!important}
   .burger{display:block}
   .f-grid{grid-template-columns:1fr}
-  .pnav{grid-template-columns:repeat(2,minmax(0,1fr))}
   .proj-top,.proj-story{grid-template-columns:minmax(0,1fr);gap:40px}
   .proj-media{order:-1;height:400px}
   .proj-story{margin-top:56px}
@@ -260,9 +246,6 @@ footer a:hover{color:var(--orange)}
   .pl{padding:0 24px}
   .pl img{height:24px}.pl-t img{height:20px}.pl-r img{height:28px}.pl-c img{height:32px}.pl-f img{height:40px}.pl-s img{height:22px}
   .pmarq{width:100%}
-  .picker{padding:64px 0 56px}
-  .picker h2{font-size:28px;line-height:32px;margin-bottom:24px}
-  .pnav{grid-template-columns:minmax(0,1fr)}
   .refbar-in{padding:12px 20px}
   .chip{font-size:12px;line-height:16px;padding:8px 12px}
   .proj{padding:72px 0}
@@ -331,23 +314,6 @@ footer a:hover{color:var(--orange)}
       <ul class="ptrack"><li class="pl pl-v"><img src="../assets/partneri/viessmann.png" alt="Viessmann logotip" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="../assets/partneri/toshiba.png" alt="Toshiba logotip" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="../assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="../assets/partneri/carrier.png" alt="Carrier logotip" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="../assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="../assets/partneri/flowair.png" alt="Flowair logotip" width="514" height="198" decoding="async"></li><li class="pl pl-s"><img src="../assets/partneri/sabiana.png" alt="Sabiana logotip" width="640" height="129" decoding="async"></li><li class="pl pl-v"><img src="../assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="../assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="../assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="../assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="../assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="../assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li><li class="pl pl-s"><img src="../assets/partneri/sabiana.png" alt="" width="640" height="129" decoding="async"></li><li class="pl pl-v"><img src="../assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="../assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="../assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="../assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="../assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="../assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li><li class="pl pl-s"><img src="../assets/partneri/sabiana.png" alt="" width="640" height="129" decoding="async"></li><li class="pl pl-v"><img src="../assets/partneri/viessmann.png" alt="" width="1280" height="280" decoding="async"></li><li class="pl pl-t"><img src="../assets/partneri/toshiba.png" alt="" width="960" height="147" decoding="async"></li><li class="pl pl-r"><img src="../assets/partneri/rehau.png" alt="" width="1280" height="407" decoding="async"></li><li class="pl pl-c"><img src="../assets/partneri/carrier.png" alt="" width="1280" height="517" decoding="async"></li><li class="pl pl-d"><img src="../assets/partneri/daikin.webp" alt="" width="2000" height="431" decoding="async"></li><li class="pl pl-f"><img src="../assets/partneri/flowair.png" alt="" width="514" height="198" decoding="async"></li><li class="pl pl-s"><img src="../assets/partneri/sabiana.png" alt="" width="640" height="129" decoding="async"></li></ul>
     </div>
   </div>
-</section>
-<section class="picker" aria-labelledby="izbor">
-<div class="wrap">
-<h2 id="izbor">Izaberite projekat</h2>
-<nav class="pnav" aria-label="Lista projekata">
-<a class="pcard" href="#hotel-sanjar" data-cat="grejanje klimatizacija ventilacija"><img src="../assets/projekti/hotel-zlatibor/thumb.webp" alt="Ilustrativna fotografija: Hotel Sanjar, Divčibare" width="320" height="320" decoding="async"><span><b>Hotel Sanjar, Divčibare</b><span class="m">Grejanje · Klimatizacija · Ventilacija</span></span><span class="n">01</span></a>
-<a class="pcard" href="#rauch-serbia" data-cat="grejanje klimatizacija"><img src="../assets/projekti/pogon-sabac/thumb.webp" alt="Ilustrativna fotografija: Rauch Serbia, Koceljeva" width="320" height="320" loading="lazy" decoding="async"><span><b>Rauch Serbia, Koceljeva</b><span class="m">Grejanje · Klimatizacija</span></span><span class="n">02</span></a>
-<a class="pcard" href="#vega-farmaceutska" data-cat="grejanje klimatizacija ventilacija"><img src="../assets/projekti/poslovni-beograd/thumb.webp" alt="Ilustrativna fotografija: Farmaceutska kuća Vega, Valjevo" width="320" height="320" loading="lazy" decoding="async"><span><b>Farmaceutska kuća Vega, Valjevo</b><span class="m">Grejanje · Klimatizacija · Ventilacija</span></span><span class="n">03</span></a>
-<a class="pcard" href="#dom-zdravlja-valjevo" data-cat="grejanje klimatizacija"><img src="../assets/projekti/poslovni-beograd/thumb.webp" alt="Ilustrativna fotografija: Dom zdravlja Valjevo" width="320" height="320" loading="lazy" decoding="async"><span><b>Dom zdravlja Valjevo</b><span class="m">Grejanje · Klimatizacija</span></span><span class="n">04</span></a>
-<a class="pcard" href="#gradska-kuca" data-cat="grejanje klimatizacija ventilacija"><img src="../assets/projekti/poslovni-beograd/thumb.webp" alt="Ilustrativna fotografija: Gradska kuća, Valjevo" width="320" height="320" loading="lazy" decoding="async"><span><b>Gradska kuća, Valjevo</b><span class="m">Grejanje · Klimatizacija · Ventilacija</span></span><span class="n">05</span></a>
-<a class="pcard" href="#dom-zdravlja-ub" data-cat="grejanje ventilacija"><img src="../assets/projekti/poslovni-beograd/thumb.webp" alt="Ilustrativna fotografija: Dom zdravlja Ub" width="320" height="320" loading="lazy" decoding="async"><span><b>Dom zdravlja Ub</b><span class="m">Grejanje · Ventilacija</span></span><span class="n">06</span></a>
-<a class="pcard" href="#stamparija-crveno" data-cat="grejanje klimatizacija ventilacija"><img src="../assets/projekti/poslovni-beograd/thumb.webp" alt="Ilustrativna fotografija: Štamparija Crveno d.o.o., Valjevo" width="320" height="320" loading="lazy" decoding="async"><span><b>Štamparija Crveno d.o.o., Valjevo</b><span class="m">Grejanje · Klimatizacija · Ventilacija</span></span><span class="n">07</span></a>
-<a class="pcard" href="#kpz-valjevo" data-cat="grejanje klimatizacija ventilacija"><img src="../assets/projekti/skola-kolubarski/thumb.webp" alt="Ilustrativna fotografija: Kazneno-popravni zavod, Valjevo" width="320" height="320" loading="lazy" decoding="async"><span><b>Kazneno-popravni zavod, Valjevo</b><span class="m">Grejanje · Klimatizacija · Ventilacija</span></span><span class="n">08</span></a>
-<a class="pcard" href="#hotel-crni-vrh" data-cat="grejanje klimatizacija ventilacija"><img src="../assets/projekti/hotel-zlatibor/thumb.webp" alt="Ilustrativna fotografija: Hotel Crni Vrh, Divčibare" width="320" height="320" loading="lazy" decoding="async"><span><b>Hotel Crni Vrh, Divčibare</b><span class="m">Grejanje · Klimatizacija · Ventilacija</span></span><span class="n">09</span></a>
-<a class="pcard pcard-holy" href="../cuvari-tradicije/" data-always="1"><span class="holy-ic" aria-hidden="true">✝</span><span><b>Čuvari tradicije</b><span class="m">Rad na svetinjama</span></span><span class="n">→</span></a>
-</nav>
-</div>
 </section>
 <div class="refbar"><div class="refbar-in">
 <div class="filters" role="group" aria-label="Filter po usluzi">
@@ -675,7 +641,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
 // filter po usluzi
-const chips=[...document.querySelectorAll('.chip')],projs=[...document.querySelectorAll('.proj')],links=[...document.querySelectorAll('.pcard,.jump a')],live=document.getElementById('live');
+const chips=[...document.querySelectorAll('.chip')],projs=[...document.querySelectorAll('.proj')],links=[...document.querySelectorAll('.jump a')],live=document.getElementById('live');
 function setFilter(f){
   chips.forEach(c=>c.setAttribute('aria-pressed',c.dataset.f===f));
   let n=0;
