@@ -21,7 +21,7 @@ Izmišljenih pet projekata je zamenjeno sa 9 stvarnih iz upitnika („Simon upit
 
 **Fotografije su privremene** (ilustrativne, iz postojećih Unsplash fotografija) i označene su „Ilustrativna fotografija“. Zameniti ih fotografijama klijenta (`assets/projekti/<naziv>/01–04.webp`, kod u `reference/index.html`).
 
-**Stvarne fotografije projekata (poslao klijent):** Rauch Serbia (`assets/projekti/rauch-serbia/01.webp`), Farmaceutska kuća Vega (`assets/projekti/vega-farmaceutska/01.webp`), Dom zdravlja Valjevo (`assets/projekti/dom-zdravlja-valjevo/01.webp`, slika je 1170 px, manja od ostalih). Ostali projekti i dalje imaju privremene fotografije.
+**Stvarne fotografije projekata (poslao klijent):** Rauch Serbia (`assets/projekti/rauch-serbia/01.webp`), Farmaceutska kuća Vega (`assets/projekti/vega-farmaceutska/01.webp`), Dom zdravlja Valjevo (`assets/projekti/dom-zdravlja-valjevo/01.webp`, Full HD). Ostali projekti i dalje imaju privremene fotografije.
 
 **Privremeni logotipi opreme:** za Farmaceutsku kuću Vega (Viessmann), Dom zdravlja Valjevo (Toshiba), Gradsku kuću (Carrier) i Dom zdravlja Ub (Viessmann) stavljeni su logotipi koji **nisu povezani sa projektom**, samo kao privremeni, dok klijent ne potvrdi partnere (oznaka `data-placeholder` na slici). Zameniti pre objave. Galerija je uklonjena sa projekata (ostaje samo glavna fotografija).
 
