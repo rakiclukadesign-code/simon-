@@ -137,9 +137,8 @@ footer a:hover{color:var(--orange)}
 .proj-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
 .proj.rev .proj-media{order:-1}
 .proj-media{position:relative;display:block;height:560px;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);background:var(--brown-2)}
-.proj-media img,.gal-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.proj-media:hover img,.gal-grid a:hover img{transform:scale(1.04)}
-.proj-num{position:absolute;top:24px;left:24px;z-index:1;font:800 12px/16px Manrope;letter-spacing:4px;background:var(--white);color:var(--brown);padding:8px 16px;border-radius:1000px}
+.proj-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.proj-media:hover img{transform:scale(1.04)}
 .proj h2{font-size:44px;line-height:48px;font-weight:700;color:var(--brown)}
 .proj-meta{margin-top:12px;font-size:16px;line-height:24px;color:var(--muted)}
 .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
@@ -158,13 +157,11 @@ footer a:hover{color:var(--orange)}
 .res{background:var(--tile);border-radius:var(--r-md);padding:32px 24px;text-align:center}
 .res b{display:block;font:700 48px/52px Sora;color:var(--orange);font-variant-numeric:tabular-nums}
 .res span{display:block;margin-top:8px;font-size:16px;line-height:24px;color:var(--muted)}
-.gal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.gal-grid a{display:block;height:240px;border-radius:var(--r-md);overflow:hidden;background:var(--brown-2)}
 .proj-block{margin-top:56px}
 .quote{margin:56px 0 0;padding:32px;border-left:4px solid var(--gold);background:var(--tile);border-radius:0 var(--r-md) var(--r-md) 0}
 .quote p{font:500 20px/32px Manrope;color:var(--brown)}
 .quote cite{display:block;margin-top:16px;font:600 16px/24px Manrope;font-style:normal;color:var(--muted)}
-.equip{display:flex;align-items:center;flex-wrap:wrap;gap:16px 40px;margin-top:40px}
+.equip{display:flex;align-items:center;flex-wrap:wrap;gap:16px 32px;margin-top:28px}
 .equip h3{margin:0}
 .equip .eq-logo{display:block;width:auto}
 .proj-media::after{content:"Ilustrativna fotografija";position:absolute;left:16px;bottom:16px;padding:4px 12px;border-radius:1000px;background:rgba(43,13,8,.65);color:#fff;font:600 12px/16px Manrope}
@@ -248,8 +245,6 @@ footer a:hover{color:var(--orange)}
   .results{grid-template-columns:minmax(0,1fr)}
   .res{padding:24px 20px}
   .res b{font-size:36px;line-height:40px}
-  .gal-grid{gap:8px}
-  .gal-grid a{height:104px}
   .quote{padding:24px;margin-top:40px}
   .quote p{font-size:16px;line-height:28px}
   .equip{gap:12px 24px;margin-top:32px}
@@ -323,20 +318,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>14 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/sabiana.png" alt="Sabiana logotip" width="640" height="129" style="height:24px" loading="lazy" decoding="async"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/hotel-zlatibor/01.webp" data-group="hotel-sanjar"><span class="proj-num">01 / 04</span><img src="../assets/projekti/hotel-zlatibor/01.webp" alt="Ilustrativna fotografija: Hotel Sanjar, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/hotel-zlatibor/01.webp" data-group="hotel-sanjar"><img src="../assets/projekti/hotel-zlatibor/01.webp" alt="Ilustrativna fotografija: Hotel Sanjar, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Hotel na Divčibarama ima 3.735 m² površine i koristi se tokom cele godine, u planinskoj klimi sa hladnim zimama. Trebalo je povezati više izvora toplote i više vrsta potrošača u jedan usklađen sistem koji je jednostavan za upravljanje.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Izveli smo instalaciju toplotne podstanice, toplotne pumpe vazduh–voda, podnog grejanja, fan coil uređaja, klimatizacije i ventilacije, uz nabavku celokupnog materijala i opreme.</p><p>Toplotnu pumpu Hisense dopunjuje kotao na pelet Termofluks Pelling snage 150 kW, pa objekat ima više izvora toplote. Prostorije se greju i hlade Sabiana fan coil uređajima, a ventilaciju obezbeđuju SMGS ventilatori.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>3.735 m²</b><span>površina objekta</span></div><div class="res"><b>14 meseci</b><span>trajanje radova</span></div><div class="res"><b>2022</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/hotel-zlatibor/02.webp" data-group="hotel-sanjar"><img src="../assets/projekti/hotel-zlatibor/02.webp" alt="Ilustrativna fotografija: Hotel Sanjar, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/hotel-zlatibor/03.webp" data-group="hotel-sanjar"><img src="../assets/projekti/hotel-zlatibor/03.webp" alt="Ilustrativna fotografija: Hotel Sanjar, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/hotel-zlatibor/04.webp" data-group="hotel-sanjar"><img src="../assets/projekti/hotel-zlatibor/04.webp" alt="Ilustrativna fotografija: Hotel Sanjar, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/sabiana.png" alt="Sabiana logotip" width="640" height="129" style="height:24px" loading="lazy" decoding="async"></div>
 </div>
 </section>
 <section class="proj rev" id="rauch-serbia" data-cat="grejanje klimatizacija" data-tone="w" aria-labelledby="rauch-serbia-h">
@@ -352,20 +342,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>6 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" style="height:22px" loading="lazy" decoding="async"><img class="eq-logo" src="../assets/partneri/sabiana.png" alt="Sabiana logotip" width="640" height="129" style="height:24px" loading="lazy" decoding="async"><img class="eq-logo" src="../assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" style="height:28px" loading="lazy" decoding="async"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/pogon-sabac/01.webp" data-group="rauch-serbia"><span class="proj-num">01 / 04</span><img src="../assets/projekti/pogon-sabac/01.webp" alt="Ilustrativna fotografija: Rauch Serbia, Koceljeva" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/pogon-sabac/01.webp" data-group="rauch-serbia"><img src="../assets/projekti/pogon-sabac/01.webp" alt="Ilustrativna fotografija: Rauch Serbia, Koceljeva" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Poslovni objekat od 590 m² u Koceljevi trebalo je opremiti sistemom koji zimi greje, a leti hladi, uz ravnomernu temperaturu u svim prostorijama.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Ugradili smo toplotnu pumpu vazduh–voda Daikin, podno grejanje sa opremom Rehau i Sabiana fan coil uređaje, uz nabavku materijala i opreme.</p><p>Podno grejanje daje ravnomernu toplotu, a fan coil jedinice omogućavaju hlađenje leti i dogrevanje u prelaznim periodima.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>590 m²</b><span>površina objekta</span></div><div class="res"><b>6 meseci</b><span>trajanje radova</span></div><div class="res"><b>2022</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/pogon-sabac/02.webp" data-group="rauch-serbia"><img src="../assets/projekti/pogon-sabac/02.webp" alt="Ilustrativna fotografija: Rauch Serbia, Koceljeva" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/pogon-sabac/03.webp" data-group="rauch-serbia"><img src="../assets/projekti/pogon-sabac/03.webp" alt="Ilustrativna fotografija: Rauch Serbia, Koceljeva" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/pogon-sabac/04.webp" data-group="rauch-serbia"><img src="../assets/projekti/pogon-sabac/04.webp" alt="Ilustrativna fotografija: Rauch Serbia, Koceljeva" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" style="height:22px" loading="lazy" decoding="async"><img class="eq-logo" src="../assets/partneri/sabiana.png" alt="Sabiana logotip" width="640" height="129" style="height:24px" loading="lazy" decoding="async"><img class="eq-logo" src="../assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" style="height:28px" loading="lazy" decoding="async"></div>
 </div>
 </section>
 <section class="proj" id="vega-farmaceutska" data-cat="grejanje klimatizacija ventilacija" data-tone="c" aria-labelledby="vega-farmaceutska-h">
@@ -381,20 +366,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>6 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/viessmann.png" alt="Viessmann logotip" width="1280" height="280" style="height:28px" loading="lazy" decoding="async" data-placeholder="true"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="vega-farmaceutska"><span class="proj-num">01 / 04</span><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Farmaceutska kuća Vega, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="vega-farmaceutska"><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Farmaceutska kuća Vega, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Objekat od 6.500 m² ima više vrsta prostora, pa je grejanje, ventilaciju i klimatizaciju trebalo uskladiti u jedan sistem sa više izvora toplote.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Izveli smo kotlarnicu sa kotlom na pelet Cemtrometal PelTec snage 36 kW i toplotnom pumpom Gree, radijatorsko grejanje sa panelnim radijatorima Jugoterm T22, kalorifersko grejanje sa kaloriferima SMGS LEO2, kao i ventilaciju i klimatizaciju.</p><p>Materijal i opremu nabavili smo mi, a radovi su trajali 6 meseci.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>6.500 m²</b><span>površina objekta</span></div><div class="res"><b>6 meseci</b><span>trajanje radova</span></div><div class="res"><b>2022</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/poslovni-beograd/02.webp" data-group="vega-farmaceutska"><img src="../assets/projekti/poslovni-beograd/02.webp" alt="Ilustrativna fotografija: Farmaceutska kuća Vega, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/03.webp" data-group="vega-farmaceutska"><img src="../assets/projekti/poslovni-beograd/03.webp" alt="Ilustrativna fotografija: Farmaceutska kuća Vega, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/04.webp" data-group="vega-farmaceutska"><img src="../assets/projekti/poslovni-beograd/04.webp" alt="Ilustrativna fotografija: Farmaceutska kuća Vega, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-
 </div>
 </section>
 <section class="proj rev" id="dom-zdravlja-valjevo" data-cat="grejanje klimatizacija" data-tone="w" aria-labelledby="dom-zdravlja-valjevo-h">
@@ -410,20 +390,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>9 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/toshiba.png" alt="Toshiba logotip" width="960" height="147" style="height:24px" loading="lazy" decoding="async" data-placeholder="true"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="dom-zdravlja-valjevo"><span class="proj-num">01 / 04</span><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Dom zdravlja Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="dom-zdravlja-valjevo"><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Dom zdravlja Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Zdravstvena ustanova od 5.580 m² zahteva pouzdano grejanje i ugodnu temperaturu u ordinacijama i čekaonicama tokom cele godine.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Ugradili smo toplotnu podstanicu, radijatorsko grejanje i klimatizaciju, uz nabavku materijala i opreme. Radijatori su aluminijumski Global Vox, a cirkulacione pumpe Wilo.</p><p>Klimatizaciju čini Hisense VRF sistem, koji omogućava različitu temperaturu po prostorijama.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>5.580 m²</b><span>površina objekta</span></div><div class="res"><b>9 meseci</b><span>trajanje radova</span></div><div class="res"><b>2021</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/poslovni-beograd/02.webp" data-group="dom-zdravlja-valjevo"><img src="../assets/projekti/poslovni-beograd/02.webp" alt="Ilustrativna fotografija: Dom zdravlja Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/03.webp" data-group="dom-zdravlja-valjevo"><img src="../assets/projekti/poslovni-beograd/03.webp" alt="Ilustrativna fotografija: Dom zdravlja Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/04.webp" data-group="dom-zdravlja-valjevo"><img src="../assets/projekti/poslovni-beograd/04.webp" alt="Ilustrativna fotografija: Dom zdravlja Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-
 </div>
 </section>
 <section class="proj" id="gradska-kuca" data-cat="grejanje klimatizacija ventilacija" data-tone="c" aria-labelledby="gradska-kuca-h">
@@ -439,20 +414,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>9 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/carrier.png" alt="Carrier logotip" width="1280" height="517" style="height:32px" loading="lazy" decoding="async" data-placeholder="true"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="gradska-kuca"><span class="proj-num">01 / 04</span><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Gradska kuća, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="gradska-kuca"><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Gradska kuća, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Na 500 m² trebalo je u jednom objektu objediniti grejanje, hlađenje i ventilaciju sa povratom toplote.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Izveli smo instalaciju paketne toplotne podstanice snage 35 kW, toplotne pumpe Omnia 30T, Reverso fan coil uređaja, aluminijumskih radijatora Global Vox i SMGS rekuperatora sa opremom za ventilaciju.</p><p>Rekuperatori vraćaju toplotu iz otpadnog vazduha, a radovi su, sa nabavkom materijala i opreme, trajali 9 meseci.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>500 m²</b><span>površina objekta</span></div><div class="res"><b>9 meseci</b><span>trajanje radova</span></div><div class="res"><b>2025</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/poslovni-beograd/02.webp" data-group="gradska-kuca"><img src="../assets/projekti/poslovni-beograd/02.webp" alt="Ilustrativna fotografija: Gradska kuća, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/03.webp" data-group="gradska-kuca"><img src="../assets/projekti/poslovni-beograd/03.webp" alt="Ilustrativna fotografija: Gradska kuća, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/04.webp" data-group="gradska-kuca"><img src="../assets/projekti/poslovni-beograd/04.webp" alt="Ilustrativna fotografija: Gradska kuća, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-
 </div>
 </section>
 <section class="proj rev" id="dom-zdravlja-ub" data-cat="grejanje ventilacija" data-tone="w" aria-labelledby="dom-zdravlja-ub-h">
@@ -468,20 +438,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>10 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/viessmann.png" alt="Viessmann logotip" width="1280" height="280" style="height:28px" loading="lazy" decoding="async" data-placeholder="true"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="dom-zdravlja-ub"><span class="proj-num">01 / 04</span><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Dom zdravlja Ub" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="dom-zdravlja-ub"><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Dom zdravlja Ub" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Zdravstveni objekat od 2.500 m² trebalo je opremiti pouzdanim grejanjem i ventilacijom.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Izveli smo radijatorsko grejanje i kotlarnicu sa kotlom na pelet Gilles, aluminijumske radijatore Global Vox, cirkulacione pumpe Grundfos, armaturu Heimeier i Herz i SMGS rekuperatore.</p><p>Materijal i opremu nabavili smo mi, a radovi su trajali 10 meseci.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>2.500 m²</b><span>površina objekta</span></div><div class="res"><b>10 meseci</b><span>trajanje radova</span></div><div class="res"><b>2021</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/poslovni-beograd/02.webp" data-group="dom-zdravlja-ub"><img src="../assets/projekti/poslovni-beograd/02.webp" alt="Ilustrativna fotografija: Dom zdravlja Ub" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/03.webp" data-group="dom-zdravlja-ub"><img src="../assets/projekti/poslovni-beograd/03.webp" alt="Ilustrativna fotografija: Dom zdravlja Ub" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/04.webp" data-group="dom-zdravlja-ub"><img src="../assets/projekti/poslovni-beograd/04.webp" alt="Ilustrativna fotografija: Dom zdravlja Ub" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-
 </div>
 </section>
 <section class="proj" id="stamparija-crveno" data-cat="grejanje klimatizacija ventilacija" data-tone="c" aria-labelledby="stamparija-crveno-h">
@@ -497,20 +462,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>10 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" style="height:22px" loading="lazy" decoding="async"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="stamparija-crveno"><span class="proj-num">01 / 04</span><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Štamparija Crveno d.o.o., Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/poslovni-beograd/01.webp" data-group="stamparija-crveno"><img src="../assets/projekti/poslovni-beograd/01.webp" alt="Ilustrativna fotografija: Štamparija Crveno d.o.o., Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Poslovni objekat od 1.200 m² trebalo je opremiti grejanjem, klimatizacijom i ventilacijom prilagođenim radnom prostoru.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Ugradili smo toplotnu podstanicu, podno grejanje, fan coil uređaje Daikin, klimatizaciju Hisense i ventilaciju SMGS, uz Termovent klima komore i Herz armaturu. Izvor toplote je kotao Topling.</p><p>Materijal i opremu nabavili smo mi, a radovi su trajali 10 meseci.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>1.200 m²</b><span>površina objekta</span></div><div class="res"><b>10 meseci</b><span>trajanje radova</span></div><div class="res"><b>2025</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/poslovni-beograd/02.webp" data-group="stamparija-crveno"><img src="../assets/projekti/poslovni-beograd/02.webp" alt="Ilustrativna fotografija: Štamparija Crveno d.o.o., Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/03.webp" data-group="stamparija-crveno"><img src="../assets/projekti/poslovni-beograd/03.webp" alt="Ilustrativna fotografija: Štamparija Crveno d.o.o., Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/poslovni-beograd/04.webp" data-group="stamparija-crveno"><img src="../assets/projekti/poslovni-beograd/04.webp" alt="Ilustrativna fotografija: Štamparija Crveno d.o.o., Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/daikin.webp" alt="Daikin logotip" width="2000" height="431" style="height:22px" loading="lazy" decoding="async"></div>
 </div>
 </section>
 <section class="proj rev" id="kpz-valjevo" data-cat="grejanje klimatizacija ventilacija" data-tone="w" aria-labelledby="kpz-valjevo-h">
@@ -525,20 +485,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>11 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" style="height:28px" loading="lazy" decoding="async"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/skola-kolubarski/01.webp" data-group="kpz-valjevo"><span class="proj-num">01 / 04</span><img src="../assets/projekti/skola-kolubarski/01.webp" alt="Ilustrativna fotografija: Kazneno-popravni zavod, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/skola-kolubarski/01.webp" data-group="kpz-valjevo"><img src="../assets/projekti/skola-kolubarski/01.webp" alt="Ilustrativna fotografija: Kazneno-popravni zavod, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Javna ustanova sa više vrsta prostorija zahtevala je pouzdan sistem grejanja, klimatizacije i ventilacije, sa toplotom iz podstanice i toplovoda.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Izveli smo instalaciju toplotne podstanice, toplovoda, radijatorskog grejanja, Gree fan coil uređaja, Mitsubishi klimatizacije i SMGS ventilacije, uz Herz i Rehau opremu.</p><p>Materijal i opremu nabavili smo mi, a radovi su trajali 11 meseci.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>3</b><span>sistema u jednom objektu</span></div><div class="res"><b>11 meseci</b><span>trajanje radova</span></div><div class="res"><b>2015</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/skola-kolubarski/02.webp" data-group="kpz-valjevo"><img src="../assets/projekti/skola-kolubarski/02.webp" alt="Ilustrativna fotografija: Kazneno-popravni zavod, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/skola-kolubarski/03.webp" data-group="kpz-valjevo"><img src="../assets/projekti/skola-kolubarski/03.webp" alt="Ilustrativna fotografija: Kazneno-popravni zavod, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/skola-kolubarski/04.webp" data-group="kpz-valjevo"><img src="../assets/projekti/skola-kolubarski/04.webp" alt="Ilustrativna fotografija: Kazneno-popravni zavod, Valjevo" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" style="height:28px" loading="lazy" decoding="async"></div>
 </div>
 </section>
 <section class="proj" id="hotel-crni-vrh" data-cat="grejanje klimatizacija ventilacija" data-tone="c" aria-labelledby="hotel-crni-vrh-h">
@@ -554,20 +509,15 @@ footer a:hover{color:var(--orange)}
 <div><dt>Trajanje radova</dt><dd>11 meseci</dd></div>
 <div><dt>Obim posla</dt><dd>Montaža instalacija sa nabavkom materijala i opreme</dd></div>
 </dl>
+<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/sabiana.png" alt="Sabiana logotip" width="640" height="129" style="height:24px" loading="lazy" decoding="async"><img class="eq-logo" src="../assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" style="height:28px" loading="lazy" decoding="async"></div>
 </div>
-<a class="proj-media rv" href="../assets/projekti/hotel-zlatibor/01.webp" data-group="hotel-crni-vrh"><span class="proj-num">01 / 04</span><img src="../assets/projekti/hotel-zlatibor/01.webp" alt="Ilustrativna fotografija: Hotel Crni Vrh, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
+<a class="proj-media rv" href="../assets/projekti/hotel-zlatibor/01.webp" data-group="hotel-crni-vrh"><img src="../assets/projekti/hotel-zlatibor/01.webp" alt="Ilustrativna fotografija: Hotel Crni Vrh, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
 </div>
 <div class="proj-story">
 <div class="rv"><h3>Izazov</h3><p>Hotel od 13.000 m² je veliki objekat sa različitim potrošačima: sobama, kuhinjom i zajedničkim prostorima. Svaki od njih traži drugačije grejanje, hlađenje i ventilaciju.</p></div>
 <div class="rv"><h3>Rešenje</h3><p>Izveli smo instalaciju toplotne podstanice, toplotne pumpe, podnog grejanja Rehau, Sabiana fan coil uređaja, klimatizacije i ventilacije, uz nabavku materijala i opreme.</p><p>Ventilaciju čine Systemair i Soler &amp; Palau oprema, Termovent klima komore i Halton kuhinjske nape, a klimatizaciju Mitsubishi Electric jedinice, uz Frico vazdušne zavese i Danfoss AB-QM regulatore. Radovi su trajali 11 meseci.</p></div>
 </div>
 <div class="proj-block"><h3>Rezultat</h3><div class="results"><div class="res"><b>13.000 m²</b><span>površina objekta</span></div><div class="res"><b>11 meseci</b><span>trajanje radova</span></div><div class="res"><b>2019</b><span>godina završetka</span></div></div></div>
-<div class="proj-block"><h3>Galerija</h3><div class="gal-grid">
-<a href="../assets/projekti/hotel-zlatibor/02.webp" data-group="hotel-crni-vrh"><img src="../assets/projekti/hotel-zlatibor/02.webp" alt="Ilustrativna fotografija: Hotel Crni Vrh, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/hotel-zlatibor/03.webp" data-group="hotel-crni-vrh"><img src="../assets/projekti/hotel-zlatibor/03.webp" alt="Ilustrativna fotografija: Hotel Crni Vrh, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
-<a href="../assets/projekti/hotel-zlatibor/04.webp" data-group="hotel-crni-vrh"><img src="../assets/projekti/hotel-zlatibor/04.webp" alt="Ilustrativna fotografija: Hotel Crni Vrh, Divčibare" width="1400" height="1050" loading="lazy" decoding="async"></a>
-</div></div>
-<div class="equip"><h3>Korišćena oprema</h3><img class="eq-logo" src="../assets/partneri/sabiana.png" alt="Sabiana logotip" width="640" height="129" style="height:24px" loading="lazy" decoding="async"><img class="eq-logo" src="../assets/partneri/rehau.png" alt="Rehau logotip" width="1280" height="407" style="height:28px" loading="lazy" decoding="async"></div>
 </div>
 </section>
 <section class="holy-block" id="svetinje" aria-labelledby="holy-h"><div class="wrap"><div class="holy-in rv"><span class="holy-cross" aria-hidden="true">✝</span><h2 id="holy-h">Čuvari tradicije</h2><p>Radove na hramovima i manastirima izveli smo kao donaciju. O njima ne pišemo kao o projektima, nego kao o dugu i zahvalnosti.</p><a class="link holy-link" href="../cuvari-tradicije/">Pročitajte priču o našim svetinjama →</a></div></div></section>

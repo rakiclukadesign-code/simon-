@@ -21,6 +21,8 @@ Izmišljenih pet projekata je zamenjeno sa 9 stvarnih iz upitnika („Simon upit
 
 **Fotografije su privremene** (ilustrativne, iz postojećih Unsplash fotografija) i označene su „Ilustrativna fotografija“. Zameniti ih fotografijama klijenta (`assets/projekti/<naziv>/01–04.webp`, kod u `reference/index.html`).
 
+**Privremeni logotipi opreme:** za Farmaceutsku kuću Vega (Viessmann), Dom zdravlja Valjevo (Toshiba), Gradsku kuću (Carrier) i Dom zdravlja Ub (Viessmann) stavljeni su logotipi koji **nisu povezani sa projektom**, samo kao privremeni, dok klijent ne potvrdi partnere (oznaka `data-placeholder` na slici). Zameniti pre objave. Galerija je uklonjena sa projekata (ostaje samo glavna fotografija).
+
 **Treba potvrditi sa klijentom:**
 
 - godine u upitniku se razlikuju od referent liste: Hotel Sanjar (2022 / 2023), Rauch Serbia (2022 / 2023), Gradska kuća (2025 / 2018), KPZ Valjevo (2015 / 2012). Na sajtu su godine iz upitnika
