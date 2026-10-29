@@ -103,7 +103,7 @@ footer a:hover{color:var(--orange)}
 .phero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");pointer-events:none}
 .phero{min-height:746px;display:flex;flex-direction:column}
 .phero-bg{position:absolute;inset:0;background:var(--brown);overflow:hidden}
-.phero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity 1.4s ease}
+.phero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .9s ease}
 .phero-bg:not(.js) img:first-child,.phero-bg img.on{opacity:1}
 .phero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(800px 480px at 84% 0%,rgba(255,74,28,.28),transparent 60%),linear-gradient(90deg,rgba(43,13,8,.9),rgba(43,13,8,.68) 55%,rgba(43,13,8,.45)),linear-gradient(180deg,rgba(43,13,8,.1),rgba(43,13,8,.8))}
 .phero-in{position:relative;z-index:2;max-width:1440px;width:100%;margin:0 auto;padding:96px 28px 80px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
@@ -589,7 +589,7 @@ document.getElementById('lbN').onclick=()=>show(idx+1);
 lb.addEventListener('keydown',e=>{if(e.key==='ArrowLeft'){e.preventDefault();show(idx-1)}else if(e.key==='ArrowRight'){e.preventDefault();show(idx+1)}});
 lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('lb-in'))lb.close()});
 })();
-(function(){var b=document.querySelector(".phero-bg");if(!b)return;var im=b.querySelectorAll("img"),i=0;if(im.length<2||matchMedia("(prefers-reduced-motion:reduce)").matches)return;b.classList.add("js");im[0].classList.add("on");setInterval(function(){im[i].classList.remove("on");i=(i+1)%im.length;im[i].classList.add("on")},5000)})();
+(function(){var b=document.querySelector(".phero-bg");if(!b)return;var im=b.querySelectorAll("img"),i=0;if(im.length<2||matchMedia("(prefers-reduced-motion:reduce)").matches)return;b.classList.add("js");im[0].classList.add("on");setInterval(function(){im[i].classList.remove("on");i=(i+1)%im.length;im[i].classList.add("on")},3000)})();
 </script>
 </body>
 </html>
