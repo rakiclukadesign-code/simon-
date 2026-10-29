@@ -102,6 +102,9 @@ footer a:hover{color:var(--orange)}
 .phero{position:relative;overflow:hidden;color:#fff;margin-top:76px;background:radial-gradient(800px 480px at 84% 0%,rgba(255,74,28,.5),transparent 60%),radial-gradient(600px 400px at 0% 100%,rgba(201,162,39,.16),transparent 60%),linear-gradient(160deg,var(--brown-2),var(--brown) 72%)}
 .phero::after{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.07'/%3E%3C/svg%3E");pointer-events:none}
 .phero{min-height:746px;display:flex;flex-direction:column}
+.phero-bg{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:4px;background:var(--brown)}
+.phero-bg img{width:100%;height:100%;object-fit:cover;display:block}
+.phero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(800px 480px at 84% 0%,rgba(255,74,28,.28),transparent 60%),linear-gradient(90deg,rgba(43,13,8,.9),rgba(43,13,8,.68) 55%,rgba(43,13,8,.45)),linear-gradient(180deg,rgba(43,13,8,.1),rgba(43,13,8,.8))}
 .phero-in{position:relative;z-index:2;max-width:1440px;width:100%;margin:0 auto;padding:96px 28px 80px;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
 .pstats-wrap{margin-top:auto}
 .phero .eyebrow{padding:8px 16px;border:1px solid rgba(255,255,255,.2);border-radius:1000px;color:#fff;letter-spacing:4px}
@@ -282,6 +285,7 @@ footer a:hover{color:var(--orange)}
 </header>
 <main>
 <section class="phero" aria-labelledby="h1">
+<div class="phero-bg" aria-hidden="true"><img src="../assets/projekti/hotel-crni-vrh/01.webp" alt="" loading="eager" decoding="async"><img src="../assets/projekti/rauch-serbia/01.webp" alt="" loading="eager" decoding="async"><img src="../assets/projekti/gradska-kuca/01.webp" alt="" loading="eager" decoding="async"><img src="../assets/projekti/dom-zdravlja-valjevo/01.webp" alt="" loading="eager" decoding="async"><img src="../assets/projekti/stamparija-crveno/01.webp" alt="" loading="eager" decoding="async"><img src="../assets/projekti/hotel-zlatibor/01.webp" alt="" loading="eager" decoding="async"><img src="../assets/projekti/vega-farmaceutska/01.webp" alt="" loading="eager" decoding="async"><img src="../assets/projekti/kpz-valjevo/01.webp" alt="" loading="eager" decoding="async"><img src="../assets/projekti/dom-zdravlja-ub/01.webp" alt="" loading="eager" decoding="async"></div>
 <div class="phero-in">
 <span class="eyebrow">Reference · studije slučaja</span>
 <h1 id="h1">Projekti koji govore za nas</h1>
