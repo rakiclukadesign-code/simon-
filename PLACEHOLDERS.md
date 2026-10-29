@@ -205,3 +205,5 @@ Izmišljene vrednosti su u HTML-u označene sa `data-placeholder="true"`.
 
 - na koji e-mail stižu prijave za posao (isti kao upiti ili drugi); ako je drugi, pravi se poseban Web3Forms ključ za `WEB3FORMS_KEY_KARIJERA`
 - da li je CV obavezan (sada jeste kad su prilozi uključeni)
+
+**Hotel Sanjar (`assets/projekti/hotel-sanjar/01.webp`, 1024×768):** ovo je 3D vizuelizacija (render) hotela, ne fotografija izvedenog objekta. Zameniti fotografijom kada je klijent dostavi; proveriti i pravo korišćenja.
